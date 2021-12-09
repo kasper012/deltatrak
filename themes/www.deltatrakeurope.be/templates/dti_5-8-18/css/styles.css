@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "delta";
+  src:url("fonts/delta.eot");
+  src:url("fonts/delta.eot%3F") format("embedded-opentype"),
+    url("fonts/delta.woff") format("woff"),
+    url("fonts/delta.ttf") format("truetype"),
+    url("fonts/delta.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "delta" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="dt-icon-"]:before,
+[class*=" dt-icon-"]:before {
+  font-family: "delta" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dt-icon-chartrecorder:before {
+  content: "\e000";
+}
+.dt-icon-foodsafety:before {
+  content: "\e001";
+}
+.dt-icon-intransit:before {
+  content: "\e002";
+}
+.dt-icon-reusable:before {
+  content: "\e003";
+}
+.dt-icon-software:before {
+  content: "\e005";
+}
+.dt-icon-thermal:before {
+  content: "\e006";
+}
+.dt-icon-thermometer:before {
+  content: "\e007";
+}
+.dt-icon-thermotrace:before {
+  content: "\e008";
+}
+.dt-icon-wireless:before {
+  content: "\e009";
+}
+.dt-icon-shelflife:before {
+  content: "\e004";
+}
+.dt-icon-industrial-icon:before {
+  content: "\e045";
+}
+.dt-icon-deltatraklogo:before {
+  content: "\e047";
+}
+.dt-icon-coldtraklogo:before {
+  content: "\e046";
+}
+.dt-icon-deltatrak:before {
+  content: "\e04c";
+}
+.dt-icon-coldtrak:before {
+  content: "\e04b";
+}
+.dt-icon-rf:before {
+  content: "\e04d";
+}
+.dt-icon-youtube:before {
+  content: "\e00a";
+}
+.dt-icon-rss:before {
+  content: "\e00b";
+}
+.dt-icon-twitter:before {
+  content: "\e00c";
+}
+.dt-icon-googleplus:before {
+  content: "\e00d";
+}
+.dt-icon-chevron-down:before {
+  content: "\e00e";
+}
+.dt-icon-chevron-left:before {
+  content: "\e00f";
+}
+.dt-icon-chevron-right:before {
+  content: "\e010";
+}
+.dt-icon-chevron-up:before {
+  content: "\e011";
+}
+.dt-icon-linkedin:before {
+  content: "\e012";
+}
+.dt-icon-facebook:before {
+  content: "\e013";
+}
+.dt-icon-users:before {
+  content: "\e014";
+}
+.dt-icon-briefcase:before {
+  content: "\e015";
+}
+.dt-icon-book:before {
+  content: "\e016";
+}
+.dt-icon-cogs:before {
+  content: "\e017";
+}
+.dt-icon-cubes:before {
+  content: "\e018";
+}
+.dt-icon-cutlery:before {
+  content: "\e019";
+}
+.dt-icon-fighter-jet:before {
+  content: "\e01a";
+}
+.dt-icon-file-o:before {
+  content: "\e01b";
+}
+.dt-icon-file-text-o:before {
+  content: "\e01c";
+}
+.dt-icon-floppy-o:before {
+  content: "\e01d";
+}
+.dt-icon-flask:before {
+  content: "\e01e";
+}
+.dt-icon-file-pdf-o:before {
+  content: "\e01f";
+}
+.dt-icon-medkit:before {
+  content: "\e020";
+}
+.dt-icon-check-circle:before {
+  content: "\e021";
+}
+.dt-icon-newspaper-o:before {
+  content: "\e022";
+}
+.dt-icon-recycle:before {
+  content: "\e023";
+}
+.dt-icon-sitemap:before {
+  content: "\e024";
+}
+.dt-icon-shield:before {
+  content: "\e025";
+}
+.dt-icon-truck:before {
+  content: "\e026";
+}
+.dt-icon-user-plus:before {
+  content: "\e027";
+}
+.dt-icon-user-secret:before {
+  content: "\e028";
+}
+.dt-icon-television:before {
+  content: "\e029";
+}
+.dt-icon-money:before {
+  content: "\e02a";
+}
+.dt-icon-question-circle:before {
+  content: "\e02b";
+}
+.dt-icon-exchange:before {
+  content: "\e02c";
+}
+.dt-icon-bookmark:before {
+  content: "\e02d";
+}
+.dt-icon-calendar:before {
+  content: "\e02e";
+}
+.dt-icon-clipboard:before {
+  content: "\e02f";
+}
+.dt-icon-corn:before {
+  content: "\e036";
+}
+.dt-icon-close:before {
+  content: "\e030";
+}
+.dt-icon-bars:before {
+  content: "\e03a";
+}
+.dt-icon-caret-down:before {
+  content: "\e031";
+}
+.dt-icon-caret-right:before {
+  content: "\e032";
+}
+.dt-icon-caret-left:before {
+  content: "\e033";
+}
+.dt-icon-caret-up:before {
+  content: "\e034";
+}
+.dt-icon-play:before {
+  content: "\e035";
+}
+.dt-icon-play-1:before {
+  content: "\e037";
+}
+.dt-icon-blog-icon:before {
+  content: "\e038";
+}
+.dt-icon-checkicon:before {
+  content: "\e039";
+}
+.dt-icon-user-manual:before {
+  content: "\e03b";
+}

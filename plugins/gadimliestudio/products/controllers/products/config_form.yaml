@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Product
+
+# Model Form Field configuration
+form: $/gadimliestudio/products/models/product/fields.yaml
+
+# Model Class name
+modelClass: Gadimliestudio\Products\Models\Product
+
+# Default redirect location
+defaultRedirect: gadimliestudio/products/products
+
+# Create page
+create:
+    title: Yeni Layihə
+    redirect: gadimliestudio/products/products/update/:id
+    redirectClose: gadimliestudio/products/products
+
+# Update page
+update:
+    title: Layihəni dəyişmək
+    redirect: gadimliestudio/products/products
+    redirectClose: gadimliestudio/products/products
+
+# Preview page
+preview:
+    title: Layihəni göstərmək

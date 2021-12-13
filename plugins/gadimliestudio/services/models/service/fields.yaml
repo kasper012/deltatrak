@@ -1,0 +1,41 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+
+    title:
+        label: Xidmətin adı
+        span: auto
+        required: true
+        span: storm
+        cssClass: col-md-6
+
+
+
+
+    
+    image:
+        label: Şəkil başlıq
+        type: mediafinder
+        comment: Tövsiyə olunan ölçülər - 3x2 (məsələn, 1500x1000 və ya 3000x2000)
+        span: storm
+        cssClass: col-md-6
+
+    excerpt:
+        label: Xidmət haqqında qısa məlumat
+        type: richeditor
+        required: true
+        span: storm
+        cssClass: col-md-4
+        
+    description:
+        label: Xidmət haqqında məlumat
+        type: richeditor
+        required: true
+        span: storm
+        cssClass: col-md-8

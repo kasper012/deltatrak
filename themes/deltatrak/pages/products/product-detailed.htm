@@ -1,0 +1,211 @@
+title = ""
+url = "/products/:id?"
+layout = "default"
+is_hidden = 0
+
+
+[viewBag]
+
+==
+use Gadimliestudio\Products\Models\Product;
+public function onStart() {
+    $product = Product::find($this->param('id'));
+    $this->page->title = $product->title;
+    $this['product'] = $product;
+}
+==
+{{ this.page.id }}
+<div class="container-fluid p-5">
+
+    <div class="product-layout item-page " itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="inLanguage" content="en-GB" />
+
+        <div class="product-delta">
+
+            <h1 class="prod-title"><span itemprop="name">{{ product.title }}</span></h1>
+
+
+
+            <div class="prod-top">
+                <div class="prod-right">
+                    <div class="prod-image" itemprop="image"><a
+                            href="{{ product.product_image | media }}"
+                            data-uk-lightbox> <img
+                                src="{{ product.product_image | media }}"
+                                alt="FlashCheck Lollipop Waterproof Min/Max Digital Thermometer w/105mm Probe" /></a>
+                    </div>
+                    <div class="prod-order"><a class="button order"
+                            data-uk-modal="{target:'#order'}">Order</a>
+                        <div id="order" class="uk-modal">
+                            <div class="uk-modal-dialog uk-panel-box uk-panel-box-delta">
+                                <iframe class="order"
+                                    src="https://analytics.clickdimensions.com/deltatrakcom-a3kza/pages/kanlmkgeeibcahg3kn0q.html?Name=FlashCheck Lollipop Waterproof Min/Max Digital Thermometer with 105mm Probe&Model=11036"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- End Prod-Right -->
+
+                <div class="prod-left">
+
+                    <div class="prod-intro">
+                        <p>{{ product.short_info }}</p>
+
+                        <ul>
+                            {% for feature in product.key_features %}
+                            <li class="pb-3">{{ feature.feature }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="prod-app"><b>Applications:</b> {{ product.applications | raw }}</div>
+
+                </div><!-- End Prod-Left -->
+
+            </div><!-- End Prod-Top -->
+
+            <div class="prod-bottom">
+
+                <div class="prod-desc" itemprop="description">
+                    <p>{{ product.info | raw }}</p>
+                </div>
+
+                <div class="prod-tabs">
+                    <!-- START: Tabs -->
+                    <div class="rl_tabs nn_tabs outline_handles outline_content top align_left"
+                        role="presentation">
+                        <!--googleoff: index-->
+                        <a id="rl_tabs-scrollto_1" class="anchor rl_tabs-scroll nn_tabs-scroll"></a>
+                        <ul class="nav nav-tabs" id="set-rl_tabs-1" role="tablist" style="margin-bottom: 0;">
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item active"><a
+                                    href="#specifications" title="Specifications"
+                                    class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                    id="tab-specifications" data-toggle="tab" data-id="specifications"
+                                    role="tab" aria-controls="specifications" aria-selected="true"><span
+                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">Specifications</span></a>
+                            </li>
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item"><a href="#literature"
+                                    title="Literature" class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                    id="tab-literature" data-toggle="tab" data-id="literature"
+                                    role="tab" aria-controls="literature" aria-selected="false"><span
+                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">Literature</span></a>
+                            </li>
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item"><a href="#support"
+                                    title="Support" class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                    id="tab-support" data-toggle="tab" data-id="support" role="tab"
+                                    aria-controls="support" aria-selected="false"><span
+                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">Support</span></a>
+                            </li>
+                        </ul>
+                        <!--googleon: index-->
+                        <div class="tab-content" style="border: 1px solid #ddd;border-top: none;">
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane active" id="specifications"
+                                role="tabpanel" aria-labelledby="tab-specifications"
+                                aria-hidden="false" style="padding: 12px;">
+                                <h2 class="rl_tabs-title nn_tabs-title">
+                                    <a id="anchor-specifications" class="anchor"></a>
+                                    Specifications
+                                </h2>
+                                <table>
+                                    <caption>{{ product.title }}</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Feature</th>
+                                            <th scope="col">Specification</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2">DeltaTrak manufactures products under an ISO
+                                                9001:2015 registered quality management system</td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {% for specification in product.specifications %}
+                                        <tr>  
+                                            <td>{{ specification.feature }}</td>
+                                            <td>{{ specification.specification }}</td>
+                                        </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="literature"
+                                role="tabpanel" aria-labelledby="tab-literature" aria-hidden="true" style="padding: 12px;">
+                                <h2 class="rl_tabs-title nn_tabs-title">
+                                    <a id="anchor-literature" class="anchor"></a>
+                                    Literature
+                                </h2><a href="{{ product.literature_file | media }}"
+                                    target="_blank"> <img
+                                        src="{{ product.literature_image | media }}"
+                                        alt="FlashCheck Lollipop Waterproof Min/Max Digital Thermometer w/105mm Probe" />
+                                    <br />Download {{ product.title }} Probe Spec Sheet</a>
+                            </div>
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="support" role="tabpanel"
+                                aria-labelledby="tab-support" aria-hidden="true" style="padding: 12px;">
+                                <h2 class="rl_tabs-title nn_tabs-title">
+                                    <a id="anchor-support" class="anchor"></a>
+                                    Support
+                                </h2><!-- START: Modules Anywhere -->
+
+                                <div class="custom">
+                                    <div class="support-link">
+                                        <a href="https://forum.deltatraksales.com/forum/"
+                                            target="_blank" title="Forum opens in a new window">
+                                            <img src="https://www.deltatrak.com/images/logos-icons/Icon_forum.png"
+                                                alt="support forum">
+                                            Technical Support Forum<br />
+                                            <span>a resource for all product support
+                                                needs</span></a><br />
+                                        <a href="https://forum.deltatraksales.com/forum/"
+                                            target="_blank"
+                                            title="Forum opens in a new window"><button>Support
+                                                Forum</button></a>
+                                    </div>
+
+                                    <style>
+                                        .support-link {
+                                            text-align: center;
+                                            width: 290px;
+                                            margin: 0 auto 20px auto !important;
+                                            background: #ddd;
+                                            padding: 20px 10px;
+                                            border-radius: 15px;
+                                            border: 1px solid #bbb;
+                                            font-size: 110%;
+                                            font-weight: 500;
+                                        }
+
+                                        .support-link span {
+                                            font-size: 80%;
+                                            color: #666;
+                                            display: inline-block;
+                                            line-height: 1.2em;
+                                            padding: 0.3em 1em 1em;
+                                            font-weight: 400;
+                                        }
+
+                                        .support-link img {
+                                            width: 200px;
+                                        }
+                                    </style>
+                                </div>
+                                <!-- END: Modules Anywhere -->
+
+
+                            </div>
+                        </div>
+                    </div><!-- END: Tabs -->
+
+                </div><!-- End Prod-Tabs -->
+
+            </div><!-- End Prod-Bottom -->
+
+        </div><!-- End Product Delta -->
+
+        <!-- Main article text disabled -->
+
+    </div><!-- End Product Layout -->
+</div>

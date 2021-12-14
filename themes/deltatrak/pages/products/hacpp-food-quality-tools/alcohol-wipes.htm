@@ -1,0 +1,123 @@
+title = 'Alcohol Wipes'
+layout = 'default'
+url= '/products/alcohol-wipes'
+
+[products]
+==
+<div class="container-fluid pt-0">
+    <div class="moduletable mod-page-title narrow">
+        <div class="mod-title-wrap">
+            <H1 class="mod-title-heading">
+                {{ this.page.title }}</H1>
+        </div>
+    </div>
+    <div class="moduletable breadcrumb">
+        <div aria-label="Breadcrumbs" role="navigation">
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb breadcrumb">
+                <li class="active">
+                    <span class="divider icon-location"></span>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="{{ 'home' | page }}" class="pathway"><span
+                            itemprop="name">Home</span></a>
+                    <span class="divider">
+                        <img src="media/system/images/arrow.png" alt="" /> </span>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">
+                        Products </span>
+
+                    <span class="divider">
+                        <img src="media/system/images/arrow.png" alt="" /> </span>
+                    <meta itemprop="position" content="2">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">
+                        Column 1 of 2 </span>
+
+                    <span class="divider">
+                        <img src="media/system/images/arrow.png" alt="" /> </span>
+                    <meta itemprop="position" content="3">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">
+                        HACPP Food Quality Tools </span>
+
+                    <span class="divider">
+                        <img src="media/system/images/arrow.png" alt="" /> </span>
+                    <meta itemprop="position" content="4">
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+                    <span itemprop="name">
+                        {{ this.page.title }} </span>
+                    <meta itemprop="position" content="5">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row-fluid mt-5">
+        <main id="content" role="main" class="span12">
+            <!-- Begin Content -->
+            <div id="system-message-container">
+            </div>
+            <!--<h3 style="color: red;">This is the custom Blog layout</h3>-->
+            <div class="delta-products blog" itemscope itemtype="https://schema.org/Blog">
+                <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
+                    {% for product in products %}
+                        {% if product.status_type == 'ninth-third' %}
+                    <div class="prod-block span4">
+                        <div class="item column-1" itemprop="blogPost" itemscope
+                            itemtype="https://schema.org/BlogPosting">
+
+
+                            <!--<h3 style="color: red;">This is the custom Item layout</h3>-->
+                            <div class="delta-product-category">
+
+                                <!--<h3 class="prod-model">Model 11036</h3>-->
+                                <div class="page-header">
+                                    <h2 itemprop="name">
+                                                    <a href="/products/{{product.id}}" itemprop="url">
+                                        <span class="sup"></span> {{ product.title }}	</a>
+                                            </h2>
+                                </div>
+                                <div class="prod-image"><a
+                                        href="{{ product.product_image | media }}"
+                                        data-uk-lightbox> <img
+                                            src="{{ product.product_image | media }}"
+                                            alt="" /></a>
+                                </div>
+                                <div class="key-features"><b>Key Features:</b>
+                                    <ul>
+                                        {% for feature in product.key_features %}
+                                        <li>{{ feature.feature }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+
+                                <div class="prod-app"><b>Applications:</b> {{ product.applications | raw }}</div>
+                                <div class="product read-more">
+                                    <p class="readmore">
+                                        <a class="btn"
+                                            href="/products/{{product.id}}"
+                                            itemprop="url"
+                                            aria-label="{{ product.title }}">
+                                            <span class="icon-chevron-right" aria-hidden="true"></span>
+                                            Read more ... </a>
+                                    </p>
+                                </div>
+
+                            </div><!-- end delta-product-category -->
+                        </div>
+                        <!-- end item -->
+                    </div><!-- end span -->
+                        {% endif %}
+                    {% endfor %}
+                </div><!-- end row -->
+            </div>
+            <div class="clearfix"></div>
+            <!-- End Content -->
+        </main>
+    </div>
+</div>

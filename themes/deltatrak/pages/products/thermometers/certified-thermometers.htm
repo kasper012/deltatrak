@@ -6,11 +6,9 @@ url= '/products/certified-thermometers'
 ==
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
-
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
-                Certified Thermometers</H1>
-
+                {{ this.page.title }}</H1>
         </div>
     </div>
     <div class="moduletable breadcrumb">
@@ -20,7 +18,7 @@ url= '/products/certified-thermometers'
                     <span class="divider icon-location"></span>
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="index.html%3FrCH=2.html" class="pathway"><span
+                    <a itemprop="item" href="{{ 'home' | page }}" class="pathway"><span
                             itemprop="name">Home</span></a>
                     <span class="divider">
                         <img src="media/system/images/arrow.png" alt="" /> </span>
@@ -52,7 +50,7 @@ url= '/products/certified-thermometers'
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
                     <span itemprop="name">
-                        Digital &amp; Min/Max Thermometers </span>
+                        {{ this.page.title }} </span>
                     <meta itemprop="position" content="5">
                 </li>
             </ul>
@@ -62,15 +60,10 @@ url= '/products/certified-thermometers'
     <div class="row-fluid mt-5">
         <main id="content" role="main" class="span12">
             <!-- Begin Content -->
-
             <div id="system-message-container">
             </div>
-
             <!--<h3 style="color: red;">This is the custom Blog layout</h3>-->
-
-
             <div class="delta-products blog" itemscope itemtype="https://schema.org/Blog">
-
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
                         {% if product.status_type == 'first-second' %}
@@ -85,17 +78,16 @@ url= '/products/certified-thermometers'
                                 <!--<h3 class="prod-model">Model 11036</h3>-->
                                 <div class="page-header">
                                     <h2 itemprop="name">
-                                                    <a href="/digital-min-max-thermometers/11040-flashcheck-lollipop-min-max-thermometer" itemprop="url">
-                                        <span class="sup">®</span> {{ product.title }}	</a>
+                                                    <a href="/products/{{product.id}}" itemprop="url">
+                                        <span class="sup"></span> {{ product.title }}	</a>
                                             </h2>
-                            </div>
+                                </div>
                                 <div class="prod-image"><a
                                         href="{{ product.product_image | media }}"
                                         data-uk-lightbox> <img
                                             src="{{ product.product_image | media }}"
                                             alt="" /></a>
                                 </div>
-
                                 <div class="key-features"><b>Key Features:</b>
                                     <ul>
                                         {% for feature in product.key_features %}
@@ -105,38 +97,26 @@ url= '/products/certified-thermometers'
                                 </div>
 
                                 <div class="prod-app"><b>Applications:</b> {{ product.applications | raw }}</div>
-
-
-
                                 <div class="product read-more">
-
                                     <p class="readmore">
                                         <a class="btn"
-                                            href="digital-min-max-thermometers/11036-flashcheck-lollipop-waterproof-min-max-digital-thermometer-w-105mm-probe.html"
+                                            href="/products/{{product.id}}"
                                             itemprop="url"
-                                            aria-label="Read more:  FlashCheck® Lollipop Waterproof Min/Max Digital Thermometer w/105mm Probe, Model 11036">
+                                            aria-label="{{ product.title }}">
                                             <span class="icon-chevron-right" aria-hidden="true"></span>
                                             Read more ... </a>
                                     </p>
                                 </div>
 
                             </div><!-- end delta-product-category -->
-
-
                         </div>
                         <!-- end item -->
                     </div><!-- end span -->
                         {% endif %}
-
                     {% endfor %}
                 </div><!-- end row -->
-
-
-
-
             </div>
             <div class="clearfix"></div>
-
             <!-- End Content -->
         </main>
     </div>

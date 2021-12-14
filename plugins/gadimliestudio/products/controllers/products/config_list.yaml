@@ -9,13 +9,13 @@ list: $/gadimliestudio/products/models/product/columns.yaml
 modelClass: Gadimliestudio\Products\Models\Product
 
 # List Title
-title: Layihələrin idarə etməsi
+title: Manage products
 
 # Link URL for each record
 recordUrl: gadimliestudio/products/products/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: Layihə yoxdur
+noRecordsMessage: There is no product here
 
 # Records to display per page
 recordsPerPage: 20
@@ -44,6 +44,6 @@ toolbar:
 
     # Search widget configuration
     search:
-        prompt: Axtar
+        prompt: Search
 
 

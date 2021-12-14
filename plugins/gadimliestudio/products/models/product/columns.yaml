@@ -5,7 +5,7 @@
 columns:
 
     title:
-        label: Layihənin adı
+        label: Product name
         searchable: true
         span: storm
         cssClass: col-md-12

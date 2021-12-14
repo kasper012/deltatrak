@@ -16,16 +16,16 @@ defaultRedirect: gadimliestudio/products/products
 
 # Create page
 create:
-    title: Yeni Layihə
+    title: New Product
     redirect: gadimliestudio/products/products/update/:id
     redirectClose: gadimliestudio/products/products
 
 # Update page
 update:
-    title: Layihəni dəyişmək
+    title: Edit product data
     redirect: gadimliestudio/products/products
     redirectClose: gadimliestudio/products/products
 
 # Preview page
 preview:
-    title: Layihəni göstərmək
+    title: Show product

@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('gadimliestudio/products/products') ?>">Layihələr</a></li>
+        <li><a href="<?= Backend::url('gadimliestudio/products/products') ?>">Products</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -22,7 +22,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Layihə yenilənir..."
                     class="btn btn-primary">
-                    <u>Saxla</u>
+                    <u>Save</u>
                 </button>
                 <button
                     type="button"
@@ -31,7 +31,7 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Layihə yenilənir..."
                     class="btn btn-default">
-                    Saxla və bağla
+                    Save and close
                 </button>
                 <button
                     type="button"
@@ -41,7 +41,7 @@
                     data-request-confirm="Layihəni silmək?">
                 </button>
                 <span class="btn-text">
-                     <a href="<?= Backend::url('gadimliestudio/products/products') ?>">Ləğv et</a>
+                     <a href="<?= Backend::url('gadimliestudio/products/products') ?>">Delete</a>
                 </span>
             </div>
         </div>
@@ -51,6 +51,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('gadimliestudio/products/products') ?>" class="btn btn-default">Layihə siyahisinə qayıtmaq</a></p>
+    <p><a href="<?= Backend::url('gadimliestudio/products/products') ?>" class="btn btn-default">Return to products list</a></p>
 
 <?php endif ?>

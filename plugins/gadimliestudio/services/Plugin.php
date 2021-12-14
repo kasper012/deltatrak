@@ -119,16 +119,16 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerNavigation()
-    {
-        return [
-            'services' => [
-                'label'       => 'Xidmətlər',
-                'url'         => Backend::url('gadimliestudio/services/services'),
-                'icon'        => 'icon-leaf',
-                'permissions' => ['gadimliestudio.services.*'],
-                'order'       => 500,
-            ],
-        ];
-    }
+    // public function registerNavigation()
+    // {
+    //     return [
+    //         'services' => [
+    //             'label'       => 'Xidmətlər',
+    //             'url'         => Backend::url('gadimliestudio/services/services'),
+    //             'icon'        => 'icon-leaf',
+    //             'permissions' => ['gadimliestudio.services.*'],
+    //             'order'       => 500,
+    //         ],
+    //     ];
+    // }
 }

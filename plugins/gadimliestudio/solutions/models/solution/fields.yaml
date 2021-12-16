@@ -1,0 +1,95 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+
+    title:
+        label: Solution name
+        span: storm
+        cssClass: col-md-4
+
+    type:
+        label: Type
+        type: dropdown
+        span: storm
+        cssClass: col-md-4 
+        options:
+            first-first: Food Solutions - Produce Floral
+            first-second: Food Solutions - Meat
+            first-third: Food Solutions - Poultry
+            first-fourth: Food Solutions - Dairy
+            first-fivth: Food Solutions - Seafood
+
+
+            second: Life Science Solutions
+
+
+            third: Food Safety Solutions
+            
+            fourth: Aerospace and Industrial Solutions
+
+            fifth: In-Transit and Distribution Solutions
+
+
+    icon:
+        label: Solution icon
+        type: mediafinder
+        span: storm
+        cssClass: col-md-4
+
+    banner_text:
+        label: Main banner text
+        type: richeditor
+        span: storm
+        cssClass: col-md-6
+
+    banner_image:
+        label: Main banner image
+        type: mediafinder
+        span: storm
+        cssClass: col-md-6 mb-15
+ 
+
+
+
+    problem_text:
+        label:  Problem text
+        type: richeditor
+        span: storm
+        cssClass: col-md-6
+
+    problem_image:
+        label:  Problem image
+        type: mediafinder
+        span: storm
+        cssClass: col-md-6 mb-15
+
+
+
+    currently_text:
+        label:  Currently text
+        type: richeditor
+        span: storm
+        cssClass: col-md-6
+
+    currently_image:
+        label:  Currently image
+        type: mediafinder
+        span: storm
+        cssClass: col-md-6 mb-15
+
+
+
+    product_about_text:
+        label:  Product about text
+        type: richeditor
+        span: storm
+        cssClass: col-md-12
+
+
+    

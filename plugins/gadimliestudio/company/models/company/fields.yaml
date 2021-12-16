@@ -1,0 +1,196 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+fields:
+    
+    name:
+        label: Company name
+        span: storm
+        cssClass: col-md-6
+        tab: Main info
+    address:
+        tab: Contacts
+        label: Address
+        span: storm
+        cssClass: col-md-6
+    logo_white:
+        label: Light logo
+        type: mediafinder
+        span: storm
+        cssClass: col-md-6
+
+    dark_logo:
+        label: Dark logo
+        type: mediafinder
+        cssClass: col-md-6
+        span: storm
+
+tabs:
+    fields:
+# Main Info
+        homepage_banner_image:
+            label: Home page banner logo
+            type: mediafinder
+        homepage_banner_text:
+            label: Home page banner text
+
+
+        homepage_solutions_text:
+            label: Home page solutions text
+            type: richeditor
+
+
+        homepage_solutions_items:
+            label: Home page solutions
+            type: repeater
+            form:
+                fields:
+                    icon:
+                        label: Icon
+                        type: mediafinder
+                    title:
+                        label: Title
+                    text:
+                        label: Solution about text
+                    is_nested:
+                        label: Nested?
+                        type: checkbox
+
+                    nested_solution:
+                        trigger:
+                            action: enable
+                            field: is_nested
+                            condition: checked
+                        type: repeater
+                        label: Nested solutions
+                        form:
+                            fields:
+                                icon:
+                                    label: Icon
+                                    type: mediafinder
+                                title:
+                                    label: Title
+                                text:
+                                    label: Solution about text
+
+        video:
+            tab:  Main info
+            label: Video link
+            span: storm
+            cssClass: col-md-6
+
+        image:
+            tab:  Main info
+            label: Haqqimizda shekil
+            type: mediafinder 
+            span: storm
+            cssClass: col-md-6
+
+        about:
+            tab:  Main info
+            label: Haqqımızda mətn
+            type: richeditor
+# Partners 
+        partners:
+            tab: Partnyorlar
+            type: repeater
+            prompt: Add partner info
+            form:
+                fields:
+                    name:
+                        label: Name
+                    address:
+                        label: Address
+                    phone:
+                        label: Phone
+                    fax:
+                        label: Fax
+                    partners_site:
+                        label: Partner site
+                    email:
+                        type: repeater
+                        form:
+                            fields:
+                                email:
+                                    label: Email
+# FAQ
+
+        is_faq_active:
+            label: FAQ bölməsi aktivdirmi?
+            type: radio
+            default: no
+            tab: FAQ
+            options:
+                yes: Bəli
+                no: Xeyr
+
+        faq:
+            type: repeater
+            prompt: Yeni sual-cavab əlavə et
+            tab: FAQ
+            form:
+                fields:
+                    question:
+                        label: Sual
+                    answer:
+                        label: Cavab
+# Contacts        
+        phone:
+            tab: Əlaqə
+            label: Telefon nömrəsi
+
+
+        fax:
+            tab: Əlaqə
+            label: Fax
+
+        email:
+            tab: Əlaqə
+            label: Elektron ünvan
+
+
+        socials:
+            tab: Əlaqə
+            type: repeater
+            prompt: Sosial şəbəkə əlavə et
+            form:
+                fields:
+                    name:
+                        label: Sosial şəbəkənin adı
+                        default: fab fa-
+                    url:
+                        label: Sosial şəbəkənin linki
+                
+
+
+
+
+
+        team:
+            tab: Komanda
+            type: repeater
+            prompt: Yeni komanda üzvü əlavə et
+            form:
+                fields:
+                    image:
+                        label: Komanda üzvün şəkili
+                        type: mediafinder
+                    name:
+                        label: Komanda üzvün adı və soyadı
+                    post:
+                        label: Komanda üzvün vəzifəsi
+        docs:
+            tab: Sənədlər
+            type: repeater
+            prompt: Yeni sənəd əlavə et
+            form:
+                fields:
+                    title:
+                        label: Sənədin adı
+                    doc:
+                        label: Sənəd
+                        type: mediafinder
+
+                    

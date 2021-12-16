@@ -4,7 +4,6 @@ url= '/products/thermometers/digital-min-max-thermometers'
 
 [products]
 ==
-{{ this.page.id }}
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
         <div class="mod-title-wrap">
@@ -35,7 +34,7 @@ url= '/products/thermometers/digital-min-max-thermometers'
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     <span itemprop="name">
-                        Column 1 of 2 </span>
+                          </span>
 
                     <span class="divider">
                         <img src="media/system/images/arrow.png" alt="" /> </span>
@@ -65,7 +64,7 @@ url= '/products/thermometers/digital-min-max-thermometers'
             </div>
             <!--<h3 style="color: red;">This is the custom Blog layout</h3>-->
             <div class="delta-products blog" itemscope itemtype="https://schema.org/Blog">
-                <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
+                <div class="prod-row items-row cols-3 row-fluid clearfix">
                     {% for product in products %}
                         {% if product.status_type == 'first-first' %}
                     <div class="prod-block span4">

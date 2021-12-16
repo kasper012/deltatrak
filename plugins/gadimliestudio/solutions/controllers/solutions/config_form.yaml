@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Solution
+
+# Model Form Field configuration
+form: $/gadimliestudio/solutions/models/solution/fields.yaml
+
+# Model Class name
+modelClass: Gadimliestudio\Solutions\Models\Solution
+
+# Default redirect location
+defaultRedirect: gadimliestudio/solutions/solutions
+
+# Create page
+create:
+    title: New solution
+    redirect: gadimliestudio/solutions/solutions/update/:id
+    redirectClose: gadimliestudio/solutions/solutions
+
+# Update page
+update:
+    title: Edit solution data
+    redirect: gadimliestudio/solutions/solutions
+    redirectClose: gadimliestudio/solutions/solutions
+
+# Preview page
+preview:
+    title: Show solution

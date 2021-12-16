@@ -1,0 +1,15 @@
+{% for code, name in locales %}
+    <a href="{{''|app}}{{ '/' ~ code ~ localeLinks[code] }}">
+        {% if code == 'az' %}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg" height="24"
+        width="36" alt="az" />
+        
+        {% elseif code == 'ru' %}
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" height="24" width="36" alt="da" />
+        {% else %}
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" height="24" width="36" alt="nl" />
+        {% endif %}
+    </a>
+{% endfor %}
+
+

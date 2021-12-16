@@ -1,0 +1,19 @@
+{% page %}
+
+<div class="custom">
+    <script>
+        jQuery(function ($) {
+            jQuery.fn.sup = function (str, className) {
+                var regex = new RegExp(str, "gi");
+                return this.each(function () {
+                    this.innerHTML = this.innerHTML.replace(regex, function (matched) {
+                        return "<span class=\"" + className +
+                            "\">" + matched + "</span>";
+                    });
+                });
+            };
+            $("h1.mod-title-heading,h1.prod-title,h1 > a,h2 > a,h2.item-title,h3 > a,li > a,.item-page p").sup("®", "sup");
+        });
+    </script>
+
+</div>

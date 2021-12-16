@@ -1,0 +1,139 @@
+title = "Solution"
+url = "/solution/:id?"
+layout = "default"
+is_hidden = 0
+
+
+[viewBag]
+
+==
+use Gadimliestudio\Solutions\Models\Solution;
+public function onStart() {
+    $solution = Solution::find($this->param('id'));
+    $this->page->title = $solution->title;
+    $this['solution'] = $solution;
+}
+==
+<div itemprop="articleBody">
+    <div id="top" class="green full-modal full-page">
+        <div class="solution-inner">
+
+            <div class="head">
+                <div class="sticker"><img
+                            src="{{ solution.icon | media }}"
+                            alt=""></div>
+                <h1>{{ solution.title }} 
+</h1>
+                <ul class="spy-nav"
+                    data-uk-scrollspy-nav="{closest:'li', smoothscroll:true, topoffset:-400}">
+                    <li class="top uk-active"><a href="#top-spacer"></a></li>
+                    <li class=""><a href="#problem-1">Problem</a></li>
+                    <li class=""><a href="#current-1">Currently</a></li>
+                    <li class=""><a href="#solution-1">Solutions</a></li>
+                    <li class="exit"><a href="
+                        {% if solution.type == 'first-first' %}{{ 'solutions/food-solutions/produce-floral/main' | page }}
+                        {% elseif solution.type == 'first-second' %}{{ 'solutions/food-solutions/meat/main' | page }}
+                        {% endif %}
+                        {% if solution.type == 'first-third' %}{{ 'solutions/food-solutions/poultry/main' | page }}
+                        {% elseif solution.type == 'first-fourth' %}{{ 'solutions/food-solutions/dairy/main' | page }}
+                        {% endif %}
+                        {% if solution.type == 'first-fivth' %}{{ 'solutions/food-solutions/seafood/main' | page }}
+                        {% elseif solution.type == 'second' %}{{ 'solutions/life-science-solutions/main' | page }}
+                        {% endif %}
+                        {% if solution.type == 'third' %}{{ 'solutions/food-safety-solutions/main' | page }}
+                        {% elseif solution.type == 'fourth' %}{{ 'solutions/aerospace-industrial-solutions/main' | page }}
+                        {% endif %}
+                        {% if solution.type == 'fivth' %}{{ 'solutions/in-transit-distribution-solutions/main' | page }}
+                        {% endif %}
+
+
+
+                        " class="close"
+                            title="Back to Produce/Floral Solutions">BACK</a></li>
+                </ul>
+            </div>
+
+            <!--  -------------  Page Title Banner ----------------  -->
+            <div id="top-spacer"></div>
+            <div>
+                <div class="moduletable mod-page-title">
+
+                    <div class="mod-title-wrap" style="background-image: url({{ solution.banner_image | media }})">
+                        {{ solution.banner_text | raw }}
+                    </div>
+
+                </div>
+            </div>
+            <ul class="scroller spy-nav"
+                data-uk-scrollspy-nav="{closest:'li', smoothscroll:true, topoffset:-400}">
+                <li><a href="#problem-1"></a></li>
+            </ul>
+
+
+            <!--  -------------  PROBLEM ----------------  -->
+            <div id="problem-1" class="scroll-anchor"></div>
+            <section id="problem">
+                <div class="dt-width-1-2 dt-width-sm-1-1 pull-right text-150"
+                    data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:400}"
+                    style="order: 2;">
+                    {{ solution.problem_text | raw }}
+                </div>
+                <div class="dt-width-1-2 dt-width-sm-1-1 float-center-sm"
+                    data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:500}">
+                    <img class="border-x"
+                        src="{{ solution.problem_image | media }}"
+                        alt="" />
+                </div>
+            </section>
+            <!--  -------------  END PROBLEM ----------------  -->
+
+            <!--  -------------  CURRENT ----------------  -->
+            <div id="current-1" class="scroll-anchor"></div>
+            <section id="current" class="tint eee">
+                <div class="dt-width-1-2 dt-width-sm-1-1 text-140"
+                    data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:500}">
+                    {{ solution.currently_text | raw }}
+
+                </div>
+                <div class="dt-width-1-2 dt-width-sm-1-1 float-center-sm"
+                    data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:400}">
+                    <img class="border-x"
+                        src="{{ solution.currently_image | media }}"
+                        alt="cut to cool first in, first out" />
+                </div>
+            </section>
+            <!--  -------------  END CURRENT ----------------  -->
+
+            <!--  -------------  SOLUTION ----------------  -->
+            <div id="solution-1" class="scroll-anchor"></div>
+            <section id="solution" class="exit">
+                <div>
+                    <div class="text-130"
+                        data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:400}">
+                        {{ solution.product_about_text | raw }}
+                    </div>
+                    <div class="solution-exit-nav">
+                        <!-- NAV TO PRODUCTS-->
+                        <h5>Selected DeltaTrak Cut to Cool Solutions</h5>
+                        <p class="link-2">
+                            <a href="../../../reusable-ble-data-loggers%3FrCH=2.html"><span>Reusable
+                                    BLE Data Loggers</span><img
+                                    src="https://www.deltatrak.com/images/solution-pages/buttons/ble.jpg"
+                                    alt="" /></a>
+                            <a href="../../../telematics-fcs2%3FrCH=2.html"><span>FlashTrak
+                                    Telematics FCS2</span><img
+                                    src="https://www.deltatrak.com/images/solution-pages/buttons/fcs2-non-facility.jpg"
+                                    alt="" /></a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!--  -------------  END SOLUTION ----------------  -->
+
+
+        </div>
+
+
+    </div>
+    <div class="clearfix"></div>
+</div>

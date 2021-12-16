@@ -1,8 +1,13 @@
-title = "Contact us"
+url = "/elaqe"
 layout = "default"
-url = "/contact-us"
-==
+title = "Əlaqə"
 
+[viewBag]
+localeUrl[ru] = "/kontakti"
+localeUrl[en] = "/contacts"
+localeTitle[ru] = "Контакты"
+localeTitle[en] = "Contacts"
+==
 <div class="moduletable mod-page-title narrow">
 
     <div class="mod-title-wrap">
@@ -76,32 +81,14 @@ url = "/contact-us"
 
                     <p>
                         <b>For sales and general information:</b><br />
-                        <b>Phone:</b> +32 3 455 61 25<br />
-                        <b>Fax:</b>&nbsp; &nbsp; &nbsp; +32 3 454 02 15
+                        <b> Phone:</b> {{ company.phone }}<br />
+                        <b>Fax:</b>&nbsp; &nbsp; &nbsp; {{ company.phone }}
                     </p>
-                    <p><b>Email:</b>&nbsp;<span id="cloakc9a579d21e115620674f6308858ef2cb">This email
-                            address is being protected from spambots. You need JavaScript enabled to view
-                            it.</span>
-                        <script type='text/javascript'>
-                            document.getElementById('cloakc9a579d21e115620674f6308858ef2cb').innerHTML = '';
-                            var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
-                            var path = 'hr' + 'ef' + '=';
-                            var addyc9a579d21e115620674f6308858ef2cb = 's&#97;l&#101;s&#105;nf&#111;' + '&#64;';
-                            addyc9a579d21e115620674f6308858ef2cb = addyc9a579d21e115620674f6308858ef2cb + 'd&#101;lt&#97;tr&#97;k&#101;&#117;r&#111;p&#101;' + '&#46;' + 'b&#101;';
-                            var addy_textc9a579d21e115620674f6308858ef2cb = 's&#97;l&#101;s&#105;nf&#111;' + '&#64;' + 'd&#101;lt&#97;tr&#97;k&#101;&#117;r&#111;p&#101;' + '&#46;' + 'b&#101;'; document.getElementById('cloakc9a579d21e115620674f6308858ef2cb').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyc9a579d21e115620674f6308858ef2cb + '\'>' + addy_textc9a579d21e115620674f6308858ef2cb + '<\/a>';
-                        </script>
+                    <p>
+                        <b>Email:</b> {{ company.email }}
                     </p>
-                    <p><b>For questions or problems with DeltaTrak Europe website:</b><br />
-                        <span id="cloak818cb72ba4bd43b030884c7d2fa93c64">This email address is being
-                            protected from spambots. You need JavaScript enabled to view it.</span>
-                        <script type='text/javascript'>
-                            document.getElementById('cloak818cb72ba4bd43b030884c7d2fa93c64').innerHTML = '';
-                            var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
-                            var path = 'hr' + 'ef' + '=';
-                            var addy818cb72ba4bd43b030884c7d2fa93c64 = 's&#97;l&#101;s&#105;nf&#111;' + '&#64;';
-                            addy818cb72ba4bd43b030884c7d2fa93c64 = addy818cb72ba4bd43b030884c7d2fa93c64 + 'd&#101;lt&#97;tr&#97;k&#101;&#117;r&#111;p&#101;' + '&#46;' + 'b&#101;';
-                            var addy_text818cb72ba4bd43b030884c7d2fa93c64 = 's&#97;l&#101;s&#105;nf&#111;' + '&#64;' + 'd&#101;lt&#97;tr&#97;k&#101;&#117;r&#111;p&#101;' + '&#46;' + 'b&#101;'; document.getElementById('cloak818cb72ba4bd43b030884c7d2fa93c64').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy818cb72ba4bd43b030884c7d2fa93c64 + '\'>' + addy_text818cb72ba4bd43b030884c7d2fa93c64 + '<\/a>';
-                        </script>
+                    <p><b>For questions or problems with website:</b><br />
+                        {{ company.email }}
                     </p>
                 </div>
             </div>
@@ -117,11 +104,7 @@ url = "/contact-us"
 <div class="footer">
     <div class="container-fluid">
         <div id="btcontentslider262" style="width:auto" class="bt-cs bt-cs testimonials">
-            <a class="prev" href="contact-us%3FrCH=2.html#">Prev</a><a class="next"
-                href="contact-us%3FrCH=2.html#">Next</a>
-            <h3 style="width:auto">
-                <a href="about-us/testimonials%3FrCH=2.html"><span>view all testimonials </span></a>
-            </h3>
+
             <div class="slides_container" style="width:auto;border: 1px solid #CFCFCF;padding:10px 0px;">
 
                 <div class="slide" style="width:auto">

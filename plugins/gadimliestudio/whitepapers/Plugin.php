@@ -20,7 +20,7 @@ class Plugin extends PluginBase
             'name'        => 'whitepapers',
             'description' => 'No description provided yet...',
             'author'      => 'gadimlie',
-            'icon'        => 'icon-rocket'
+            'icon'        => 'icon-file'
         ];
     }
 

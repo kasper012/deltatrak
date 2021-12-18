@@ -33,23 +33,26 @@ tabs:
         homepage_banner_image:
             label: Home page banner image
             type: mediafinder
-            tab: Home page
+            tab: Pages content
         homepage_banner_animated_image:
             label: Home page banner animated image
             type: mediafinder
-            tab: Home page
+            tab: Pages content
         homepage_banner_text:
             label: Home page banner text
             type: richeditor
-            tab: Home page
+            tab: Pages content
 
 
         homepage_solutions_text:
             label: Home page solutions text
             type: richeditor
-            tab: Home page
+            tab: Pages content
 
-
+        anniversary_pic:
+            tab: Pages content
+            label: Image on "Company overview" page
+            type: mediafinder
 
         support:
             tab: Support
@@ -58,10 +61,14 @@ tabs:
             prompt: Add new category
             form:
                 fields:
+                    id:
+                        label: ID
+                        span: storm
+                        cssClass: col-md-2
                     category_name:
                         label: Category name
                         span: storm
-                        cssClass: col-md-12
+                        cssClass: col-md-10
                     soft_item:
                         type: repeater
                         prompt: Add new soft item
@@ -100,9 +107,6 @@ tabs:
                                     label: Full description of soft
                                     type: richeditor
 
-
-                                
-
         video:
             type: repeater
             tab: Video
@@ -139,17 +143,8 @@ tabs:
                         type: richeditor
 
 
-        image:
-            tab:  Main info
-            label: Haqqimizda shekil
-            type: mediafinder 
-            span: storm
-            cssClass: col-md-6
 
-        about:
-            tab:  Main info
-            label: Haqqımızda mətn
-            type: richeditor
+
 # Partners 
         partners:
             tab: Partners
@@ -211,37 +206,7 @@ tabs:
         #                 label: Sual
         #             answer:
         #                 label: Cavab
-# Contacts        
-        phone:
-            tab: Əlaqə
-            label: Telefon nömrəsi
-
-
-        fax:
-            tab: Əlaqə
-            label: Fax
-
-        email:
-            tab: Əlaqə
-            label: Elektron ünvan
-
-
-        socials:
-            tab: Əlaqə
-            type: repeater
-            prompt: Sosial şəbəkə əlavə et
-            form:
-                fields:
-                    name:
-                        label: Sosial şəbəkənin adı
-                        default: fab fa-
-                    url:
-                        label: Sosial şəbəkənin linki
-                
-
-
-
-
+        
 
         team:
             tab: Team
@@ -291,19 +256,34 @@ tabs:
                         label: Place
                         span: storm
                         cssClass: col-md-12
-        docs:
-            tab: Sənədlər
+
+
+
+
+# Contacts        
+        phone:
+            tab: Contacts
+            label: Telephone number
+
+
+        fax:
+            tab: Contacts
+            label: Fax
+
+        email:
+            tab: Contacts
+            label: Email
+
+
+        socials:
+            tab: Contacts
             type: repeater
-            prompt: Yeni sənəd əlavə et
+            prompt: Add social
             form:
                 fields:
-                    title:
-                        label: Sənədin adı
-                    doc:
-                        label: Sənəd
-                        type: mediafinder
-
-
-
-
+                    name:
+                        label: Social network name
+                        default: fab fa-
+                    url:
+                        label: Link
                     

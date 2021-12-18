@@ -55,8 +55,9 @@ class Company extends ComponentBase
 
         $company->is_faq_active = $settings->is_faq_active;
         $company->solution_briefs = $settings->solution_briefs;
-
         
+        $company->anniversary_pic = $settings->anniversary_pic;
+
         $company->support = $settings->support;
 
         $this->page['company'] = $company;

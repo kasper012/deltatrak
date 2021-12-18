@@ -45,14 +45,12 @@ fields:
     banner_text:
         label: Main banner text
         type: richeditor
-        span: storm
-        cssClass: col-md-6
+        span: left
 
     banner_image:
         label: Main banner image
         type: mediafinder
-        span: storm
-        cssClass: col-md-6 mb-15
+        span: right
  
 
 
@@ -60,36 +58,31 @@ fields:
     problem_text:
         label:  Problem text
         type: richeditor
-        span: storm
-        cssClass: col-md-6
+        span: left
 
     problem_image:
         label:  Problem image
         type: mediafinder
-        span: storm
-        cssClass: col-md-6 mb-15
+        span: right
 
 
 
     currently_text:
         label:  Currently text
         type: richeditor
-        span: storm
-        cssClass: col-md-6
+        span: left
 
     currently_image:
         label:  Currently image
         type: mediafinder
-        span: storm
-        cssClass: col-md-6 mb-15
+        span: right
 
 
 
     product_about_text:
         label:  Product about text
         type: richeditor
-        span: storm
-        cssClass: col-md-12
+
 
 
     

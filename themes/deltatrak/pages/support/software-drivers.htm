@@ -8,13 +8,7 @@ layout = "default"
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
                 Software and Drivers</H1>
-
         </div>
-
-
-
-
-
     </div>
     <div class="moduletable breadcrumb">
         <div aria-label="Breadcrumbs" role="navigation">
@@ -58,8 +52,6 @@ layout = "default"
             <div class="item-page software-page" itemscope itemtype="https://schema.org/Article">
                 <meta itemprop="inLanguage" content="en-GB" />
 
-
-
                 <div class="icons">
 
                     <div class="btn-group pull-right">
@@ -79,10 +71,6 @@ layout = "default"
                     </div>
 
                 </div>
-
-
-
-
 
                 <div itemprop="articleBody">
                     <section id="software-drivers">
@@ -114,7 +102,7 @@ layout = "default"
                                         <a id="rl_sliders-scrollto_fpm"
                                             class="anchor rl_sliders-scroll nn_sliders-scroll"></a>
                                         <div class="accordion-heading panel-heading" aria-controls="fpm">
-                                            <a href="#fpm"
+                                            <a href="#cat{{ support.id }}-item{{ loop.index }}"
                                                 title=""
                                                 class="accordion-toggle rl_sliders-toggle nn_sliders-toggle collapsed"
                                                 data-toggle="collapse" id="slider-fpm" data-id="fpm"
@@ -128,7 +116,7 @@ layout = "default"
                                             </a>
                                         </div>
                                         <div class="accordion-body rl_sliders-body nn_sliders-body collapse"
-                                            role="region" aria-labelledby="slider-fpm" aria-hidden="true" id="fpm">
+                                            role="region" aria-labelledby="slider-fpm" aria-hidden="true" id="cat{{ support.id }}-item{{ loop.index }}">
                                             <div class="accordion-inner panel-body">
                                                 <h3 class="rl_sliders-title nn_sliders-title">{{ soft_item.soft_version }}</h3>
                                                 <div class="moduletable">

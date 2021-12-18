@@ -56,9 +56,9 @@ public function onStart() {
                             {% endfor %}
                         </ul>
                     </div>
-
-                    <div class="prod-app"><b>Applications:</b> {{ product.applications | raw }}</div>
-
+                    {% if product.application %}
+                        <div class="prod-app"><b>Applications:</b> {{ product.applications | raw }}</div>
+                    {% endif %}
                 </div><!-- End Prod-Left -->
 
             </div><!-- End Prod-Top -->

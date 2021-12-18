@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+
+
+    title:
+        label: Title
+    description:
+        label: Description on whitepapers list
+        type: richeditor
+    image:
+        label: Document image
+        type: mediafinder
+    file:
+        label: Document (file)
+        type: mediafinder
+    full_description:
+        label: Full description
+        type: richeditor
+
+

@@ -15,7 +15,7 @@ fields:
         label: Address
         span: storm
         cssClass: col-md-6
-    logo_white:
+    light_logo:
         label: Light logo
         type: mediafinder
         span: storm
@@ -31,55 +31,113 @@ tabs:
     fields:
 # Main Info
         homepage_banner_image:
-            label: Home page banner logo
+            label: Home page banner image
             type: mediafinder
+            tab: Home page
+        homepage_banner_animated_image:
+            label: Home page banner animated image
+            type: mediafinder
+            tab: Home page
         homepage_banner_text:
             label: Home page banner text
+            type: richeditor
+            tab: Home page
 
 
         homepage_solutions_text:
             label: Home page solutions text
             type: richeditor
+            tab: Home page
 
 
-        homepage_solutions_items:
-            label: Home page solutions
+
+        support:
+            tab: Support
+            label: Software and drivers
             type: repeater
+            prompt: Add new category
             form:
                 fields:
-                    icon:
-                        label: Icon
-                        type: mediafinder
-                    title:
-                        label: Title
-                    text:
-                        label: Solution about text
-                    is_nested:
-                        label: Nested?
-                        type: checkbox
-
-                    nested_solution:
-                        trigger:
-                            action: enable
-                            field: is_nested
-                            condition: checked
+                    category_name:
+                        label: Category name
+                        span: storm
+                        cssClass: col-md-12
+                    soft_item:
                         type: repeater
-                        label: Nested solutions
+                        prompt: Add new soft item
                         form:
                             fields:
-                                icon:
-                                    label: Icon
+                                soft_name:
+                                    label: Name of soft
+                                    span: storm
+                                    cssClass: col-md-6
+                                soft_image:
+                                    label: Soft image
+                                    span: storm
+                                    cssClass: col-md-6
                                     type: mediafinder
-                                title:
-                                    label: Title
-                                text:
-                                    label: Solution about text
+                                soft_short_desc:
+                                    label: Short description of soft
+                                    span: storm
+                                    cssClass: col-md-6
+                                    type: richeditor
+                                soft_version:
+                                    label: Version
+                                    span: storm
+                                    cssClass: col-md-6
+                                download:
+                                    label: File
+                                    type: mediafinder
+                                    span: storm
+                                    cssClass: col-md-6
+                                last_revised:
+                                    label: Last revised
+                                    span: storm
+                                    cssClass: col-md-6
+                                    type: datepicker
+                                    mode: date
+                                soft_desc:
+                                    label: Full description of soft
+                                    type: richeditor
+
+
+                                
 
         video:
-            tab:  Main info
-            label: Video link
-            span: storm
-            cssClass: col-md-6
+            type: repeater
+            tab: Video
+            prompt: Add new video
+            form:
+                fields:
+                    title:
+                        label: Video title
+                    link:
+                        label: Video link
+                    preview_image:
+                        label: Preview image
+                        type: mediafinder
+                    
+        white_papers:
+            type: repeater
+            tab: White papers
+            prompt: Add new whitepaper
+            form:
+                fields:
+                    title:
+                        label: Title
+                    description:
+                        label: Description on whitepapers list
+                        type: richeditor
+                    image:
+                        label: Document image
+                        type: mediafinder
+                    file:
+                        label: Document (file)
+                        type: mediafinder
+                    full_description:
+                        label: Full description
+                        type: richeditor
+
 
         image:
             tab:  Main info
@@ -94,7 +152,7 @@ tabs:
             type: richeditor
 # Partners 
         partners:
-            tab: Partnyorlar
+            tab: Partners
             type: repeater
             prompt: Add partner info
             form:
@@ -115,27 +173,44 @@ tabs:
                             fields:
                                 email:
                                     label: Email
-# FAQ
-
-        is_faq_active:
-            label: FAQ bölməsi aktivdirmi?
-            type: radio
-            default: no
-            tab: FAQ
-            options:
-                yes: Bəli
-                no: Xeyr
-
-        faq:
+        solution_briefs:
+            tab: Solution briefs
             type: repeater
-            prompt: Yeni sual-cavab əlavə et
-            tab: FAQ
+            prompt: Add new brief
             form:
                 fields:
-                    question:
-                        label: Sual
-                    answer:
-                        label: Cavab
+                    title:
+                        label: Title
+                    description:
+                        label: Description
+                        type: richeditor
+                    image:
+                        label: Document image
+                        type: mediafinder
+                    file:
+                        label: Document (file)
+                        type: mediafinder
+# FAQ
+
+        # is_faq_active:
+        #     label: FAQ bölməsi aktivdirmi?
+        #     type: radio
+        #     default: no
+        #     tab: FAQ
+        #     options:
+        #         yes: Bəli
+        #         no: Xeyr
+
+        # faq:
+        #     type: repeater
+        #     prompt: Yeni sual-cavab əlavə et
+        #     tab: FAQ
+        #     form:
+        #         fields:
+        #             question:
+        #                 label: Sual
+        #             answer:
+        #                 label: Cavab
 # Contacts        
         phone:
             tab: Əlaqə
@@ -169,18 +244,53 @@ tabs:
 
 
         team:
-            tab: Komanda
+            tab: Team
             type: repeater
-            prompt: Yeni komanda üzvü əlavə et
+            prompt: Add team member
             form:
                 fields:
                     image:
-                        label: Komanda üzvün şəkili
+                        label: Team member photo
                         type: mediafinder
                     name:
-                        label: Komanda üzvün adı və soyadı
+                        label: Team member name and surname
                     post:
-                        label: Komanda üzvün vəzifəsi
+                        label: Team member post
+                    about:
+                        label: Team member about
+                        type: richeditor
+
+        event:
+            type: repeater
+            prompt: Add new event
+            tab: Events
+            form:
+                fields:
+                    title:
+                        label: Event title
+                        span: storm
+                        cssClass: col-md-6
+                    image:
+                        label: Event image
+                        span: storm
+                        cssClass: col-md-6
+                        type: mediafinder
+                    start_date:
+                        label: Event start date
+                        type: datepicker
+                        span: storm
+                        cssClass: col-md-6
+                        mode: date
+                    finish_date:
+                        label: Event finish date
+                        type: datepicker
+                        span: storm
+                        cssClass: col-md-6
+                        mode: date
+                    address:
+                        label: Place
+                        span: storm
+                        cssClass: col-md-12
         docs:
             tab: Sənədlər
             type: repeater
@@ -192,5 +302,8 @@ tabs:
                     doc:
                         label: Sənəd
                         type: mediafinder
+
+
+
 
                     

@@ -11,7 +11,8 @@
         "october/all": "^2.0",
         "rainlab/pages-plugin": "^1.4",
         "rainlab/translate-plugin": "^1.9",
-        "excodus/translateextended-plugin": "dev-master"
+        "excodus/translateextended-plugin": "dev-master",
+        "euknyaz/relationdynamicdropdown-plugin": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0|^9.0",

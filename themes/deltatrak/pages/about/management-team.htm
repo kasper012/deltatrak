@@ -12,10 +12,6 @@ layout = "default"
             <p>Meet the DeltaTrak Leadership Group</p>
         </div>
 
-
-
-
-
     </div>
     <div class="moduletable breadcrumb">
         <div aria-label="Breadcrumbs" role="navigation">
@@ -59,12 +55,6 @@ layout = "default"
             <div class="item-page headshots" itemscope itemtype="https://schema.org/Article">
                 <meta itemprop="inLanguage" content="en-GB" />
 
-
-                <div class="page-header">
-                    <h2 itemprop="headline">
-                        Management Team </h2>
-                </div>
-
                 <div class="icons">
 
                     <div class="btn-group pull-right">
@@ -91,375 +81,28 @@ layout = "default"
 
                 <div itemprop="articleBody">
                     <div class="team-bios columns-5">
-
+                        {% for member in company.team %}
                         <div class="head">
-                            <a href="management-team%3FrCH=2.html#fred-w" data-uk-modal><img
+                            <a href="#{{ loop.index}}" data-uk-modal><img
                                     src="https://www.deltatrak.com/images/company/headshots/Headshot_F_Wu_Web.png"
                                     alt="Frederick Wu" /></a>
-                            <h4>Frederick Wu</h4>
-                            <p>President and Company Founder</p>
+                            <h4>{{ member.name }}</h4>
+                            <p>{{ member.post }}</p>
                         </div>
-                        <div id="fred-w" class="uk-modal">
+                        <div id="{{ loop.index }}" class="uk-modal">
                             <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
                                 <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_F_Wu_Web.png"
+                                    <img src="{{ member.image | media }}"
                                         alt="Frederick Wu" />
-                                    <h4>Frederick Wu</h4>
-                                    <p>President and Company Founder</p>
+                                    <h4>{{ member.name }}</h4>
+                                    <p>{{ member.post }}</p>
                                 </div>
-                                <p>Fred Wu founded DeltaTrak, Inc. in 1989 and is a pioneer and entrepreneur in
-                                    developing cold chain and food safety solutions.</p>
-                                <p>Mr. Wu holds multiple patents related to unique technology features,
-                                    including a single use, in-transit temperature recorder that was the first
-                                    product that launched DeltaTrak back in 1989, and to this date it is still
-                                    tracking over a million trips per year.</p>
-                                <p>Mr. Wu has a diverse background in engineering, product development, clinical
-                                    trials, international sales and marketing working in the medical device and
-                                    instrumentation field for American Hospital Supply , IVAC Corporation, a
-                                    pioneer of clinical electronic thermometers, and Camino Laboratories, a
-                                    fiber optic medical technology startup company, prior to founding DeltaTrak.
-                                </p>
-                                <p>Mr. Wu attended the University of Southern California and holds a BS in
-                                    Industrial Engineering and a Masters in Finance.</p>
-                            </div>
-                        </div>
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#ray-c" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_R_Caron_Web.png"
-                                    alt="Ray Caron" /></a>
-                            <h4>Ray Caron</h4>
-                            <p>Chief Operating Officer</p>
-                        </div>
-                        <div id="ray-c" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_R_Caron_Web.png"
-                                        alt="Ray Caron" />
-                                    <h4>Ray Caron</h4>
-                                    <p>Chief Operating Officer</p>
-                                </div>
-                                <p>Ray joined DeltaTrak in 2010 as Marketing Manager and currently holds the
-                                    position of Chief Operating Officer.</p>
-                                <p>Mr. Caron is an experienced executive and has held multiple positions as Vice
-                                    President in Marketing and Vice President in Sales. Prior to DeltaTrak, Mr.
-                                    Caron was President and part owner of a supplies distribution company, and
-                                    he has held various positions at Hewlett-Packard, Inc., Fairchild/Sentry
-                                    Test System, Ungermann-Bass, Inc., and four silicon valley startups.</p>
-                                <p>Mr. Caron attended San Jose State University in San Jose California and has
-                                    B.S. degrees in Aeronautics and Computer Science.</p>
-                            </div>
-                        </div>
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#steve-s" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_S_Stringer.png"
-                                    alt="Steve Stringer" /></a>
-                            <h4>Steve Stringer</h4>
-                            <p>Chief Financial Officer</p>
-                        </div>
-                        <div id="steve-s" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_S_Stringer.png"
-                                        alt="Steve Stringer" />
-                                    <h4>Steve Stringer</h4>
-                                    <p>Chief Financial Officer</p>
-                                </div>
-                                <p>Steve joined DeltaTrak in 2020 in the position of Chief Financial Officer for
-                                    the DeltaTrak Corporate Group. He has previously worked for DeltaTrak in
-                                    1998 - 2000 as the Vice President of Finance and Administration.</p>
-                                <p>Mr. Stringer is an experienced financial executive and has held the Chief
-                                    Financial Officer position in a diverse group of public and private
-                                    organizations in the medical device, software and high-tech industries with
-                                    significant international operations and M&A growth strategies. Mr.
-                                    Stringer’s company portfolio included divisions of Eastman Kodak, Corning
-                                    and Eli Lilly as well as PE backed mid-size, high-growth organizations.</p>
-                                <p>Mr. Stringer attended the University of Southern California and holds a
-                                    Master of Business Administration and a BBA in Accounting from Boise State
-                                    University.</p>
-                            </div>
-                        </div>
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#erich-h" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_E_Hugo.png"
-                                    alt="Erich Hugo" /></a>
-                            <h4>Erich Hugo</h4>
-                            <p>Managing Director: Business Innovation</p>
-                        </div>
-                        <div id="erich-h" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_E_Hugo.png"
-                                        alt="Erich Hugo" />
-                                    <h4>Erich Hugo</h4>
-                                    <p>Managing Director: Business Innovation</p>
-                                </div>
-                                <p>Erich joined DeltaTrak in 2020 as Managing Director - Business Innovation and
-                                    is located in the EU.</p>
-                                <p>Mr. Hugo is an experienced entrepreneur and executive and launched the Real
-                                    Time Logging revolution in 2014 with the world’s first GSM connected logging
-                                    device. Prior to DeltaTrak Mr. Hugo was head of Business Development Nordics
-                                    and Eastern Europe at Nokia. He has held various positions at Wunderman,
-                                    Bonnier etc and has launched several successful start-ups in the electronics
-                                    and retail space.</p>
-                                <p>Mr. Hugo attended Stellenbosch University in South Africa and UCLA Berkeley
-                                    where he has achieved various accolades in Business Administration and
-                                    E-Commerce.</p>
-                            </div>
-                        </div>
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#david-p" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_D_Porcelli.png"
-                                    alt="David Porcelli" /></a>
-                            <h4>David Porcelli</h4>
-                            <p>Executive Vice President of US Sales</p>
-                        </div>
-                        <div id="david-p" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_D_Porcelli.png"
-                                        alt="David Porcelli" />
-                                    <h4>David Porcelli</h4>
-                                    <p>Executive Vice President of US Sales</p>
-                                </div>
-                                <p>David joined DeltaTrak in 2021 as the Executive Vice President of US Sales.
-                                    In his role he is partnering with our customers to create solutions to help
-                                    them meet their food safety protocols and to ensure their cold chain
-                                    integrity.</p>
-                                <p>Mr. Porcelli is an experienced cross-functional leader who has led teams
-                                    across Sales, Marketing, Field Operations, Manufacturing, Supply Chain,
-                                    Research & Development, and Regulatory Compliance. Prior to joining
-                                    DeltaTrak, Mr. Porcelli held leadership roles in both large and small
-                                    companies including Heinz, Nestle, L’Oreal, Primo Water, California Scents
-                                    and The Bu.</p>
-                                <p>Mr. Porcelli attended The College of New Jersey and has a Bachelor of Science
-                                    degree in Business Administration and Marketing.</p>
-                            </div>
-                        </div>
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#george-k" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_G_Krastev_Web.png"
-                                    alt="George Krastev" /></a>
-                            <h4>George Krastev</h4>
-                            <p>Vice President of Research and Development</p>
-                        </div>
-                        <div id="george-k" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_G_Krastev_Web.png"
-                                        alt="George Krastev" />
-                                    <h4>George Krastev</h4>
-                                    <p>Vice President of Research and Development</p>
-                                </div>
-                                <p>George joined DeltaTrak in 1997 as an Electronic Technician/Design Engineer
-                                    and currently holds the position of Vice President of Research and
-                                    Development.</p>
-                                <p>Mr. Krastev is an experienced engineering executive and has advanced through
-                                    increasingly responsible management positions to his current position. He
-                                    possess more than 20 years of engineering experience in design, CAD, test
-                                    and product engineering, as well as program management. &nbsp;Mr. Krastev is
-                                    a patent holder for his work developing a Magneto-Resistive sensor that
-                                    detects magnetic features producing a linear analog output.</p>
-                                <p>Mr. Krastev attended the Institute of Technologies in Sofia (Bulgaria) and
-                                    has a degree in Electronics and Microelectronics Design.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#cecilia-s" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_C_Sun.png"
-                                    alt="Cecilia Sun" /></a>
-                            <h4>Cecilia Sun</h4>
-                            <p>Vice President of China Operations</p>
-                        </div>
-                        <div id="cecilia-s" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_C_Sun.png"
-                                        alt="Cecilia Sun" />
-                                    <h4>Cecilia Sun</h4>
-                                    <p>Vice President of China Operations</p>
-                                </div>
-                                <p>Cecilia joined DeltaTrak International in 2002, and was instrumental in
-                                    setting up the manufacturing company in Shenzhen, China, followed by
-                                    incorporating and managing DeltaTrak's China domestic sales company, DTI
-                                    China Ltd. in 2008. Cecilia currently holds the position of Vice President
-                                    of China Operations.</p>
-                                <p>Cecilia has extensive experience in sales, marketing and administration,
-                                    working in China's real estate and consumer electronics industries. She also
-                                    held senior positions as a certified management and operations hotelier with
-                                    major international brands, Crowne Plaza and Shangri-La hotels &amp; Resorts
-                                    in China. Over the past several years, she successfully expanded DeltaTrak's
-                                    Cold Chain and Food safety Solution sales channels in China.</p>
-                                <p>Ms. Sun holds a BA in English Literature from Sichuan International Studies
-                                    University, and additionally holds a foreign language teaching credential.
+                                <p>
+                                    {{ member.about | raw }}
                                 </p>
                             </div>
                         </div>
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#robert-b" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_R_Bright_Web.png"
-                                    alt="" /></a>
-                            <h4>F. Robert Bright</h4>
-                            <p>Vice President of Strategic Sales</p>
-                        </div>
-                        <div id="robert-b" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_R_Bright_Web.png"
-                                        alt="" />
-                                    <h4>F. Robert Bright</h4>
-                                    <p>Vice President of Strategic Sales</p>
-                                </div>
-                                <p>Robert Bright joined DeltaTrak in 2003 as a Regional Sales Manager and
-                                    currently holds the position of Vice President of Strategic Sales.</p>
-                                <p>Mr. Bright has over 25 years’ experience providing cold chain logistics
-                                    solutions. He began his career working at Stires Recording Thermometer
-                                    Company where he spent 12 years servicing the produce industry. Since
-                                    joining the DeltaTrak team, Mr. Bright has expanded into several industries
-                                    including aerospace/chemical, protein, and foodservice. He has completed the
-                                    UC Davis Postharvest Technology Short Course and HACCP: A Food Safety
-                                    System.</p>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#steve-h" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_S_Hibbs.png"
-                                    alt="Steve Hibbs" /></a>
-                            <h4>Stephen Hibbs</h4>
-                            <p>Vice President of Operations</p>
-                        </div>
-                        <div id="steve-h" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_S_Hibbs.png"
-                                        alt="Steve Hibbs" />
-                                    <h4>Stephen Hibbs</h4>
-                                    <p>Vice President of Operations</p>
-                                </div>
-                                <p>Stephen Hibbs, V.P. of Operations for the DeltaTrak Modesto facility, is a
-                                    graduate of the CAF School of Aerospace Engineering, and has 30+ years of
-                                    experience in both high volume, and custom manufacturing / service
-                                    operations for Fortune 500 companies. In previous positions, Steve has been
-                                    heavily involved in ISO 9000 certification, the implementation of WCM
-                                    principles, and extensive process automation / maintenance projects. </p>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#jeanne-s" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_J_Solis.png"
-                                    alt="Jeanne Solis" /></a>
-                            <h4>Jeanne Solis</h4>
-                            <p>Director of Administration</p>
-                        </div>
-                        <div id="jeanne-s" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_J_Solis.png"
-                                        alt="Jeanne Solis" />
-                                    <h4>Jeanne Solis</h4>
-                                    <p>Director of Administration</p>
-                                </div>
-                                <p>Jeanne joined DeltaTrak in 1993 as a Customer Service Representative and
-                                    currently holds the positon of Director of Administration.</p>
-                                <p>Jeanne is an experienced administrative professional who has held progressive
-                                    management positions within the company. &nbsp;She possesses more than 25
-                                    years of experience in the disciplines of human resources, customer service,
-                                    and accounting. &nbsp;Prior to joining DeltaTrak, Jeanne worked as a Bank
-                                    Program Administrator and Production Analyst for John H. Harland Company.
-                                </p>
-                                <p>Educated in San Diego, Jeanne has an AS in Business Administration and is a
-                                    certified Human Resources Professional.</p>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#benlih-h" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_B_Huang.png"
-                                    alt="Benlih Huang" /></a>
-                            <h4>Benlih Huang</h4>
-                            <p>Director of Process Compliance</p>
-                        </div>
-                        <div id="benlih-h" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_B_Huang.png"
-                                        alt="Benlih Huang" />
-                                    <h4>Benlih Huang</h4>
-                                    <p>Director of Process Compliance</p>
-                                </div>
-                                <p>Benlih Huang has over 20 years of experience in electronic manufacturing and
-                                    semiconductor packaging industries and is currently the Director of Process
-                                    Compliance of Quality Assurance and Technical Support.</p>
-                                <p>Benlih began his career working on developing soldering technologies and flux
-                                    chemistries for surface mount technology (SMT) and semiconductor packaging.
-                                    He holds 3 patents in solder alloy development. He later moved on to work on
-                                    the manufacturing processes and quality issues of semiconductor devices,
-                                    photonic devices and printed circuit board assembly.</p>
-                                <p>Benlih holds a Ph.D. in Materials Science from Rutgers University, New
-                                    Brunswick, New Jersey, and conducted his postdoctoral research at the
-                                    University of California, Irvine.</p>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="head">
-                            <a href="management-team%3FrCH=2.html#ali-w" data-uk-modal><img
-                                    src="https://www.deltatrak.com/images/company/headshots/Headshot_A_Wu.png"
-                                    alt="Alexandra Wu" /></a>
-                            <h4>Alexandra Wu</h4>
-                            <p>Director International Partner Sales and Health Service Products</p>
-                        </div>
-                        <div id="ali-w" class="uk-modal">
-                            <div class="uk-modal-dialog"><a class="uk-modal-close uk-close"></a>
-                                <div class="modal-head">
-                                    <img src="https://www.deltatrak.com/images/company/headshots/Headshot_A_Wu.png"
-                                        alt="Alexandra Wu" />
-                                    <h4>Alexandra Wu</h4>
-                                    <p>Director International Partner Sales and Health Service Products</p>
-                                </div>
-                                <p>Alexandra joined DeltaTrak in 2017 and currently holds the position of
-                                    Director International Partner Sales and Health Service Products</p>
-                                <p>Alexandra is a sales and marketing professional who has 7 years of experience
-                                    working for Fortune 500 companies such as Intuit as well as tech startups in
-                                    the San Francisco Bay Area.</p>
-                                <p>Alexandra attended American University – Washington, DC and holds a degree in
-                                    Strategic Communication and International Business Marketing.</p>
-                            </div>
-                        </div>
+                        {% endfor %}
 
 
 

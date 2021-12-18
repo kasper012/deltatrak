@@ -11,7 +11,11 @@ class Company extends Model
       'RainLab.Translate.Behaviors.TranslatableModel'
     ];
 
+    public $jsonable = [
+      
+      'support'
 
+    ];   
     public $translatable = [
       'address',
       'excerpt',

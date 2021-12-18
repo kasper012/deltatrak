@@ -2,20 +2,16 @@ title = "Solutions partners"
 url = "/about/solutions-partners"
 layout = "default"
 ==
+
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
 
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
-                Solution Partners</H1>
+                {{ this.page.title }}</H1>
 
             <p>Meet our industry-leading solutions providers</p>
         </div>
-
-
-
-
-
     </div>
     <div class="moduletable breadcrumb">
         <div aria-label="Breadcrumbs" role="navigation">
@@ -29,7 +25,7 @@ layout = "default"
                             itemprop="name">Home</span></a>
 
                     <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
+                        <img src="{{ 'assets/media/system/images/arrow.png' | theme }}" alt="" /> </span>
                     <meta itemprop="position" content="1">
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -37,19 +33,19 @@ layout = "default"
                         About </span>
 
                     <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
+                        <img src="{{ 'assets/media/system/images/arrow.png' | theme }}" alt="" /> </span>
                     <meta itemprop="position" content="2">
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
                     <span itemprop="name">
-                        Solution Partners </span>
+                        {{ this.page.title }} </span>
                     <meta itemprop="position" content="3">
                 </li>
             </ul>
         </div>
     </div>
 
-    <div class="row-fluid mt-5">
+    <div class="row-fluid">
         <main id="content" role="main" class="span12">
             <!-- Begin Content -->
 
@@ -57,91 +53,12 @@ layout = "default"
             </div>
 
             <div class="item-page" itemscope itemtype="https://schema.org/Article">
-                <meta itemprop="inLanguage" content="en-GB" />
+                
+                <div itemprop="articleBody" style="margin-top: 3rem">
+                    <div class="pull-right item-image"> <img
+                            src="https://www.deltatrak.com/images/logos-icons/modality-logo-stacked-500.jpg"> </div>
 
-                <div class="icons">
-
-                    <div class="btn-group pull-right">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-12"
-                            aria-label="User tools" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <span class="icon-cog" aria-hidden="true"></span>
-                            <span class="caret" aria-hidden="true"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-12">
-                            <li class="print-icon"> <a
-                                    href="solution-partners%3Ftmpl=component&amp;print=1&amp;layout=default.html"
-                                    title="Print article < Solution Partners >"
-                                    onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;"
-                                    rel="nofollow"> <span class="icon-print" aria-hidden="true"></span>
-                                    Print </a> </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
-
-
-
-                <div itemprop="articleBody">
-                    <div class="pull-right item-image">
-                        <img src="https://www.deltatrak.com/images/logos-icons/modality-logo-stacked-500.jpg">
-                    </div>
-
-                    <div class="block-center">
-
-                        <h3>DeltaTrak forms alliances with industry-leading solutions providers who have proven
-                            skill sets and complementary technology application expertise.</h3>
-                        <hr />
-                        <p class="text-120">Modality Solutions provides insight into cold chain thermal
-                            packaging, transport validation, and logistics solutions in highly-regulated and
-                            tightly-controlled industries such as life sciences, food, and biotechnology.</p>
-
-                        <p>We integrate your quality systems, risk management, product requirements, validation
-                            activities, and your partners seamlessly. Our unique simulation capabilities provide
-                            valuable data on the impact of environmental hazards to the critical-to-quality
-                            attributes of your product. We enhance our clients’ reputations by ensuring
-                            regulatory compliance, product quality, and consumer safety around the globe.</p>
-
-                        <h3>Cold Chain Management Solutions</h3>
-                        <ul>
-                            <li><a title="Product Characterization"
-                                    href="http://www.modality-solutions.com/coldchainlogistics/"
-                                    target="_blank">Product Characterization</a></li>
-                            <li><a title="Risk Management"
-                                    href="http://www.modality-solutions.com/coldchainlogistics/"
-                                    target="_blank">Risk Management</a></li>
-                            <li><a title="Training" href="http://www.modality-solutions.com/coldchainlogistics/"
-                                    target="_blank">Training</a></li>
-                            <li><a title="Monitoring and Controls"
-                                    href="http://www.modality-solutions.com/coldchainlogistics/"
-                                    target="_blank">Monitoring and Controls</a></li>
-                        </ul>
-                        <ul>
-                            <li><a title="Product Validation"
-                                    href="http://www.modality-solutions.com/coldchainlogistics/"
-                                    target="_blank">Product Validation</a></li>
-                            <li><a title="Packaging and Logistics"
-                                    href="http://www.modality-solutions.com/coldchainlogistics/"
-                                    target="_blank">Packaging and Logistics</a></li>
-                            <li><a title="Management Review"
-                                    href="http://www.modality-solutions.com/coldchainlogistics/"
-                                    target="_blank">Management Review</a></li>
-                        </ul>
-
-                    </div>
-
-                    <style>
-                        /* .block-center { text-align: center; overflow: hidden; }
-.block-center p { text-align: left; } */
-                        .block-center ul {
-                            display: inline-block;
-                            margin: 0 30px;
-                            text-align: left;
-                            vertical-align: top;
-                        }
-                    </style>
+                            {% content 'solutions-partners' %}
                 </div>
 
 

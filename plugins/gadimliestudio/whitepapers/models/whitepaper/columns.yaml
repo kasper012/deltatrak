@@ -1,0 +1,13 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+
+    title:
+        label: Whitepaper name
+        searchable: true
+        span: storm
+        cssClass: col-md-12
+
+

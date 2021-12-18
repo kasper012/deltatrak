@@ -1,9 +1,4 @@
-title = 'Circular Chart Recorders'
-layout = 'default'
-url= '/products/chart-recorders/circular-chart-recorders'
-
-[products]
-==
+title = 'Circular Chart Recorders' layout = 'default' url= '/products/chart-recorders/circular-chart-recorders' [products] ==
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
         <div class="mod-title-wrap">
@@ -66,10 +61,9 @@ url= '/products/chart-recorders/circular-chart-recorders'
             <div class="delta-products blog" itemscope itemtype="https://schema.org/Blog">
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
-                        {% if product.status_type == 'second-first' %}
+                     {% if product.status_type == 'second-first' %}
                     <div class="prod-block span4">
-                        <div class="item column-1" itemprop="blogPost" itemscope
-                            itemtype="https://schema.org/BlogPosting">
+                        <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 
 
                             <!--<h3 style="color: red;">This is the custom Item layout</h3>-->
@@ -78,15 +72,12 @@ url= '/products/chart-recorders/circular-chart-recorders'
                                 <!--<h3 class="prod-model">Model 11036</h3>-->
                                 <div class="page-header">
                                     <h2 itemprop="name">
-                                                    <a href="/products/{{product.id}}" itemprop="url">
-                                        <span class="sup"></span> {{ product.title }}	</a>
-                                            </h2>
+                                        <a href="/products/{{product.id}}" itemprop="url">
+                                            <span class="sup"></span> {{ product.title }} </a>
+                                    </h2>
                                 </div>
-                                <div class="prod-image"><a
-                                        href="{{ product.product_image | media }}"
-                                        data-uk-lightbox> <img
-                                            src="{{ product.product_image | media }}"
-                                            alt="" /></a>
+                                <div class="prod-image">
+                                    <a href="{{ product.product_image | media }}" data-uk-lightbox> <img src="{{ product.product_image | media }}" alt="" /></a>
                                 </div>
                                 <div class="key-features"><b>Key Features:</b>
                                     <ul>
@@ -99,22 +90,20 @@ url= '/products/chart-recorders/circular-chart-recorders'
                                 <div class="prod-app"><b>Applications:</b> {{ product.applications | raw }}</div>
                                 <div class="product read-more">
                                     <p class="readmore">
-                                        <a class="btn"
-                                            href="/products/{{product.id}}"
-                                            itemprop="url"
-                                            aria-label="{{ product.title }}">
-                                            <span class="icon-chevron-right" aria-hidden="true"></span>
-                                            Read more ... </a>
+                                        <a class="btn" href="/products/{{product.id}}" itemprop="url" aria-label="{{ product.title }}">
+                                            <span class="icon-chevron-right" aria-hidden="true"></span> Read more ... </a>
                                     </p>
                                 </div>
 
-                            </div><!-- end delta-product-category -->
+                            </div>
+                            <!-- end delta-product-category -->
                         </div>
                         <!-- end item -->
-                    </div><!-- end span -->
-                        {% endif %}
-                    {% endfor %}
-                </div><!-- end row -->
+                    </div>
+                    <!-- end span -->
+                    {% endif %} {% endfor %}
+                </div>
+                <!-- end row -->
             </div>
             <div class="clearfix"></div>
             <!-- End Content -->

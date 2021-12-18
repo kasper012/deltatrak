@@ -11,10 +11,6 @@ layout = "default"
     
         </div>
     
-    
-    
-    
-    
     </div>
     <div class="moduletable breadcrumb">
         <div aria-label="Breadcrumbs" role="navigation">
@@ -57,9 +53,7 @@ layout = "default"
     
             <div class="item-page" itemscope itemtype="https://schema.org/Article">
                 <meta itemprop="inLanguage" content="en-GB" />
-    
-    
-    
+        
                 <div class="icons">
     
                     <div class="btn-group pull-right">
@@ -80,10 +74,7 @@ layout = "default"
                     </div>
     
                 </div>
-    
-    
-    
-    
+
     
                 <div itemprop="articleBody">
                     <p>DeltaTrak is committed to providing its customers with the knowledge and tools needed to
@@ -93,88 +84,16 @@ layout = "default"
                         solution training, technology presentations, and more.&nbsp;</p>
     
                     <div class="vimeo thumbs text-center">
-    
+                        {% for video in company.video %}
                         <div>
-                            <a href="https://player.vimeo.com/video/468292632?playsinline=0" class="modal_link"
+                            <a href="{{ video.link }}" class="modal_link"
                                 data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
                                 data-modal-iframe="true" data-modal-inner-width="1200"
                                 data-modal-inner-height="680"><img
-                                    src="https://www.deltatrak.com/assets/videos/vimeo/468292632.jpg"></a>
-                            How to Calibrate a Digital Thermometer
-                        </div>
-    
-                        <div>
-                            <a href="https://player.vimeo.com/video/468292666?playsinline=0" class="modal_link"
-                                data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
-                                data-modal-iframe="true" data-modal-inner-width="1200"
-                                data-modal-inner-height="680"><img
-                                    src="https://www.deltatrak.com/assets/videos/vimeo/468292666.jpg"></a>
-                            Cómo calibrar un termómetro digital (español)
-                        </div>
-    
-                        <div>
-                            <a href="https://player.vimeo.com/video/468329190?playsinline=0" class="modal_link"
-                                data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
-                                data-modal-iframe="true" data-modal-inner-width="1200"
-                                data-modal-inner-height="680"><img
-                                    src="https://www.deltatrak.com/assets/videos/vimeo/468329190.jpg"></a>
-                            DeltaTrak In transit Recorder
-                        </div>
-    
-                        <div>
-                            <a href="https://player.vimeo.com/video/468329178?playsinline=0" class="modal_link"
-                                data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
-                                data-modal-iframe="true" data-modal-inner-width="1200"
-                                data-modal-inner-height="680"><img
-                                    src="https://www.deltatrak.com/assets/videos/vimeo/468329178.jpg"></a>
-                            DeltTrak In transit Recorder Chinese
-                        </div>
-    
-                        <div>
-                            <a href="https://player.vimeo.com/video/468329256?playsinline=0" class="modal_link"
-                                data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
-                                data-modal-iframe="true" data-modal-inner-width="1200"
-                                data-modal-inner-height="680"><img
-                                    src="https://www.deltatrak.com/assets/videos/vimeo/468329256.jpg"></a>
-                            DeltaTrak In-transit Recorder (español)
-                        </div>
-    
-                        <div>
-                            <a href="https://vimeo.com/showcase/7681415/embed?playsinline=0" class="modal_link"
-                                data-modal-class-name="vimeo playlist is_video no_title" data-modal-video="true"
-                                data-modal-iframe="true" data-modal-inner-width="1200"
-                                data-modal-inner-height="680"><img
-                                    src="https://www.deltatrak.com/assets/videos/vimeo/7681415.jpg"></a>
-                            FlashLink Certified Vaccine USB PDF Data Logger with Glycol Bottle - Intro & User
-                            Guides
-                        </div>
-    
-                        <div>
-                            <a href="https://player.vimeo.com/video/468292579?playsinline=0" class="modal_link"
-                                data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
-                                data-modal-iframe="true" data-modal-inner-width="1200"
-                                data-modal-inner-height="680"><img
-                                    src="https://www.deltatrak.com/assets/videos/vimeo/468292579.jpg"></a>
-                            TagIt Shipper Instructions Video
-                        </div>
-    
-                        <div>
-                            <a href="https://player.vimeo.com/video/468292821?playsinline=0" class="modal_link"
-                                data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
-                                data-modal-iframe="true" data-modal-inner-width="1200"
-                                data-modal-inner-height="680"><img
-                                    src="https://www.deltatrak.com/assets/videos/vimeo/468292821.jpg"></a>
-                            TagIt Receiver Instructions Video
-                        </div>
-    
-                        <div>
-                            <a href="https://player.vimeo.com/video/468334564?playsinline=0" class="modal_link"
-                                data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
-                                data-modal-iframe="true" data-modal-inner-width="1200"
-                                data-modal-inner-height="680"><img
-                                    src="https://www.deltatrak.com/assets/videos/vimeo/468334564.jpg"></a>
-                            Cold Chain iToken Video Webinar
-                        </div>
+                                    src="{{ video.preview_image | media }}"></a>
+                            {{ video.title }}
+                            </div>
+                        {%  endfor%}
     
                     </div>
     

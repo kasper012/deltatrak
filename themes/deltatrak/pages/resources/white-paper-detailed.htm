@@ -1,0 +1,63 @@
+title = ""
+url = "/resources/white-papers/:id?"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+[whitepapers]
+==
+use Gadimliestudio\Whitepapers\Models\Whitepaper;
+public function onStart() {
+$whitepaper = Whitepaper::find($this->param('id'));
+$this->page->title = $whitepaper->title;
+$this['whitepaper'] = $whitepaper;
+}
+==
+<div class="row-fluid"  style="padding: 0 4%">
+    <main id="content" role="main" class="span12">
+        <!-- Begin Content -->
+
+        <div id="system-message-container">
+        </div>
+
+        <div class="item-page download-page" itemscope="" itemtype="https://schema.org/Article">
+            <meta itemprop="inLanguage" content="en-GB">
+
+
+            <div class="icons">
+
+                <div class="btn-group pull-right">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-550"
+                        aria-label="User tools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="icon-cog" aria-hidden="true"></span>
+                        <span class="caret" aria-hidden="true"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-550">
+                        <li class="print-icon"> <a
+                                href="/resources/white-papers/preventing-a-produce-labor-shortage?tmpl=component&amp;print=1&amp;layout=default"
+                                title="Print article < Preventing a Produce Labor Shortage >"
+                                onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;"
+                                rel="nofollow"> <span class="icon-print" aria-hidden="true"></span>
+                                Print </a> </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div itemprop="articleBody">
+                <a class="pdf" href="{{ whitepaper.file | media }}" data-uk-modal="{center:true}" download><img
+                        src="{{ whitepaper.image | media }}"><span>Download
+                        PDF</span></a>
+
+                {{ whitepaper.full_description | raw }}
+            </div>
+
+
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- End Content -->
+    </main>
+</div>
+
+

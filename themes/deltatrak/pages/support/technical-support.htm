@@ -2,88 +2,45 @@ title = "Techincal Support"
 url = "/support/technical-support"
 layout = "default"
 ==
-<div class="container-fluid pt-0">
-    <div class="moduletable mod-page-title narrow">
+<div class="moduletable mod-page-title narrow">
 
-        <div class="mod-title-wrap">
-            <H1 class="mod-title-heading">
-                Support and Technical Services</H1>
-
-        </div>
+    <div class="mod-title-wrap">
+        <H1 class="mod-title-heading">
+            {{ this.page.title }}</H1>
 
     </div>
-    <div class="moduletable breadcrumb">
-        <div aria-label="Breadcrumbs" role="navigation">
-            <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb breadcrumb">
-                <li class="active">
-                    <span class="divider icon-location"></span>
-                </li>
 
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../index.html%3FrCH=2.html" class="pathway"><span
-                            itemprop="name">Home</span></a>
+</div>
+<div class="moduletable breadcrumb">
+    <div aria-label="Breadcrumbs" role="navigation">
+        <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb breadcrumb">
+            <li class="active">
+                <span class="divider icon-location"></span>
+            </li>
 
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="1">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">
-                        Support </span>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ 'home' | page }}" class="pathway"><span
+                        itemprop="name">{{ 'Home' |_ }}</span></a>
 
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="2">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-                    <span itemprop="name">
-                        Technical Support </span>
-                    <meta itemprop="position" content="3">
-                </li>
-            </ul>
-        </div>
+                <span class="divider">
+                    <img src="media/system/images/arrow.png" alt="" /> </span>
+                <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+                <span itemprop="name">
+                    {{ this.page.title }} </span>
+                <meta itemprop="position" content="2">
+            </li>
+        </ul>
     </div>
+</div>
 
-    <div class="row-fluid mt-5">
-        <main id="content" role="main" class="span12">
-            <!-- Begin Content -->
+<div class="row-fluid mt-5" style="padding: 0 4%">
+    <main id="content" role="main" class="span12">
+        <!-- Begin Content -->
 
-            <div id="system-message-container">
-            </div>
+        {% content 'technical-support' %}
 
-            <div class="item-page" itemscope itemtype="https://schema.org/Article">
-                <meta itemprop="inLanguage" content="en-GB" />
-
-
-                <div class="icons">
-
-                    <div class="btn-group pull-right">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-15"
-                            aria-label="User tools" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <span class="icon-cog" aria-hidden="true"></span>
-                            <span class="caret" aria-hidden="true"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-15">
-                            <li class="print-icon"> <a
-                                    href="tech-support%3Ftmpl=component&amp;print=1&amp;layout=default.html"
-                                    title="Print article < Support and Technical Services >"
-                                    onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;"
-                                    rel="nofollow"> <span class="icon-print" aria-hidden="true"></span>
-                                    Print </a> </li>
-                        </ul>
-                    </div>
-
-                </div>
-            <div itemprop="articleBody" class="mt-5">
-                {% content 'technical-support' %}
-            </div>
-
-
-            </div>
-            <div class="clearfix"></div>
-
-            <!-- End Content -->
-        </main>
-    </div>
+        <!-- End Content -->
+    </main>
 </div>

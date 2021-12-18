@@ -44,10 +44,10 @@ text-shadow: -1px 2px 4px rgba(0,0,0,0.1);
     <div itemprop="articleBody">
 <div class="home-static dark">
 <div>
-<h1><img src="{{ 'assets/images/logos-icons/Cold_Chain_Integrity_Logo_rgb.png' | theme }}"></h1>
-<h3>Empowering the Cold Chain with innovative end-to-end solutions using technology to connect suppliers, customers and intermediaries with <span style="white-space: nowrap">On-Demand Visibility.</span></h3>
+<h1><img src="{{ company.dark_logo | media }}"></h1>
+<h3>{{ company.homepage_banner_text | raw }}</h3>
 </div>
-<p class="scroller"><a href="index.html%3FrCH=2.html#solutions" data-uk-smooth-scroll></a></p>
+<p class="scroller"><a href="#solutions" data-uk-smooth-scroll></a></p>
 </div>
 
 
@@ -56,77 +56,99 @@ text-shadow: -1px 2px 4px rgba(0,0,0,0.1);
 <div class="uk-cover dti-fade-in uk-position-relative" style="height: 92vh; background-color: #fff;">
 <div id="panel" class="uk-slidenav-position bkg-tint-x" data-uk-slideshow="{autoplay:false,kenburns:true,autoplayInterval:14000}">
 <ul class="uk-slideshow uk-slideshow-fullscreen">
-<li><img src="{{ 'assets/images/headers/ColdChain_bkgd-4.jpg' | theme }}" alt="Cold Chain Integrity"></li>
+<li><img src="{{ company.homepage_banner_image | media }}" alt=""></li>
 </ul>
 </div>
-<div class="dti-slide-in chain"> </div>
+<div class="dti-slide-in chain" style="background-image: url({{ company.homepage_banner_animated_image }}) !important;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-size: contain;
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 100%;"> </div>
 </div>
 
 <div class="dti-fade-in tracker"> </div>
 
 <div class="dti-fade-in home-static">
 <div>
-<h1><img src="{{ 'assets/images/logos-icons/Cold_Chain_Integrity_Logo_white.png' | theme }}"></h1>
-<h3>Empowering the Cold Chain with innovative end-to-end solutions using technology to connect suppliers, customers and intermediaries with <span style="white-space: nowrap">On-Demand Visibility.</span></h3>
+<!-- <h1>
+    <img src="{{ 'assets/images/logos-icons/Cold_Chain_Integrity_Logo_white.png' | theme }}">
+</h1> -->
+<h3>{{ company.homepage_banner_text | raw }}</h3>
 </div>
-<p class="scroller"><a href="index.html%3FrCH=2.html#solutions" data-uk-smooth-scroll></a></p>
+<p class="scroller"><a href="#solutions" data-uk-smooth-scroll></a></p>
 </div>
+
+
+
+
+
+
+<div id="food-sol" class="scroll-anchor-food"></div>
 
 <div id="solutions" class="scroll-anchor"></div>
 
 <div class="home-static-solutions">
-<div>
-<h2>Innovative Cold Chain Solutions</h2>
-<h5>Many industry verticals have a cold chain element, whether it is Food, Pharmaceuticals, Floral, or even Aero-Space, but each one has its own unique requirements to meet established Guide-Lines or Regulations. DeltaTrak is the recognized Innovator for supplying products that exceed industry requirements for maintaining Supply Chain Integrity, from End to End.</h5>
+    <div>
+        {{ company.homepage_solutions_text | raw }}
 
-<div class="flex">
+        <div class="flex">
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<ul class="switch-scroll" data-uk-switcher="{connect:'#content-1'}">
-<li style="display: none;"><a href="index.html%3FrCH=2.html#">Item</a></li>
-<li><a href="index.html%3FrCH=2.html#food-sol" data-uk-smooth-scroll>
-<div class="sticker blue"><i class="dt-icon-corn"></i></div>
-<h4>Food</h4>
-<p>From harvesting to the shelf to the table, consumers expect quality, freshness and peak condition for all the food they purchase.</p>
-</a></li>
-</ul>
-</div>
+            <div class="dt-width-1-5 dt-width-sm-1-1">
+                <ul class="switch-scroll" data-uk-switcher="{connect:'#content-1'}">
+                    <li style="display: none;"><a href="#">Item</a>
+                    </li>
+                    <li><a href="#food-sol" data-uk-smooth-scroll>
+                            <div class="sticker blue"><i class="dt-icon-corn"></i></div>
+                            <h4>Food</h4>
+                            <p>From harvesting to the shelf to the table, consumers expect
+                                quality, freshness and peak condition for all the food they
+                                purchase.</p>
+                        </a></li>
+                </ul>
+            </div>
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<a href="solutions/life-science-solutions%3FrCH=2.html">
-<div class="sticker blue"><i class="dt-icon-flask"></i></div>
-<h4>Life Science</h4>
-<p>The life sciences industry is the most highly regulated, in order to ensure product efficacy and patient safety.</p>
-</a>
-</div>
+            <div class="dt-width-1-5 dt-width-sm-1-1">
+                <a href="{{ 'solutions/life-science-solutions/main' | page }}">
+                    <div class="sticker blue"><i class="dt-icon-flask"></i></div>
+                    <h4>Life Science</h4>
+                    <p>The life sciences industry is the most highly regulated, in order to
+                        ensure product efficacy and patient safety.</p>
+                </a>
+            </div>
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<a href="solutions/food-safety-solutions%3FrCH=2.html">
-<div class="sticker blue"><i class="dt-icon-cutlery"></i></div>
-<h4>Food Safety</h4>
-<p>The food industry is constantly challenged to deliver and serve food that is safe to eat.</p>
-</a>
-</div>
+            <div class="dt-width-1-5 dt-width-sm-1-1">
+                <a href="{{ 'solutions/food-safety-solutions/main' | page }}">
+                    <div class="sticker blue"><i class="dt-icon-cutlery"></i></div>
+                    <h4>Food Safety</h4>
+                    <p>The food industry is constantly challenged to deliver and serve food
+                        that is safe to eat.</p>
+                </a>
+            </div>
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<a href="solutions/aerospace-and-industrial-solutions%3FrCH=2.html">
-<div class="sticker blue"><i class="dt-icon-fighter-jet"></i></div>
-<h4>Aerospace and Industrial</h4>
-<p>Visibility and traceability of TATS materials ensure the quality and integrity of finished products.</p>
-</a>
-</div>
+            <div class="dt-width-1-5 dt-width-sm-1-1">
+                <a href="{{ 'solutions/aerospace-and-industrial-solutions/main' | page }}">
+                    <div class="sticker blue"><i class="dt-icon-fighter-jet"></i></div>
+                    <h4>Aerospace and Industrial</h4>
+                    <p>Visibility and traceability of TATS materials ensure the quality and
+                        integrity of finished products.</p>
+                </a>
+            </div>
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<a href="solutions/in-transit-and-distribution-solutions%3FrCH=2.html">
-<div class="sticker blue"><i class="dt-icon-truck"></i></div>
-<h4>In-Transit and Distribution</h4>
-<p>Logistics companies play a crucial role in preserving temperature-sensitive cargo as it is shipped around the globe.</p>
-</a>
-</div>
+            <div class="dt-width-1-5 dt-width-sm-1-1">
+                <a href="{{ 'solutions/in-transit-and-distribution-solutions/main' | page }}">
+                    <div class="sticker blue"><i class="dt-icon-truck"></i></div>
+                    <h4>In-Transit and Distribution</h4>
+                    <p>Logistics companies play a crucial role in preserving
+                        temperature-sensitive cargo as it is shipped around the globe.</p>
+                </a>
+            </div>
 
-</div><!-- END FLEX CONTAINER -->
+        </div><!-- END FLEX CONTAINER -->
 
-</div>
+    </div>
 </div>
 
 
@@ -134,54 +156,76 @@ text-shadow: -1px 2px 4px rgba(0,0,0,0.1);
 
 <!-- BEGIN HIDDEN CONTENT FOR FOOD SOLUTIONS -->
 <ul id="content-1" class="uk-switcher">
-<li style="display: none;">Never Seen</li>
-<li>
+    <li style="display: none;">Never Seen</li>
+    <li>
 
-<div id="food-sol" class="scroll-anchor-food"></div>
+        <div id="food-sol" class="scroll-anchor-food"></div>
 
-<div class="home-static-solutions auto-height">
+        <div class="home-static-solutions auto-height">
 
-<div id="food-inner" class="flex">
+            <div id="food-inner" class="flex">
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<a href="solutions/food-solutions/produce-floral%3FrCH=2.html">
-<div class="sticker blue"><img src="{{ 'assets/images/solution-pages/icon-food-produce.png' | theme }}" alt=""></div>
-<h4>Produce/Floral</h4>
-<p>From the moment of harvest, temperature and ethylene management are critical to maximize freshness, quality and shelf life.</p>
-</a>
-</div>
+                <div class="dt-width-1-5 dt-width-sm-1-1">
+                    <a href="{{ 'solutions/food-solutions/produce-floral/main' | page }}">
+                        <div class="sticker blue"><img
+                                src="https://www.deltatrak.com/images/solution-pages/icon-food-produce.png"
+                                alt=""></div>
+                        <h4>Produce/Floral</h4>
+                        <p>From the moment of harvest, temperature and ethylene management
+                            are critical to maximize freshness, quality and shelf life.</p>
+                    </a>
+                </div>
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<a href="solutions/food-solutions/meat%3FrCH=2.html">
-<div class="sticker blue"><img src="{{ 'assets/images/solution-pages/icon-food-meat.png' | theme }}" alt=""></div>
-<h4>Meat</h4>
-<p>Meat producers strive to maximize livestock productivity and reduce pathogens that cause foodborne illness.</p>
-</a>
-</div>
+                <div class="dt-width-1-5 dt-width-sm-1-1">
+                    <a href="{{ 'solutions/food-solutions/meat/main' | page }}">
+                        <div class="sticker blue"><img
+                                src="https://www.deltatrak.com/images/solution-pages/icon-food-meat.png"
+                                alt=""></div>
+                        <h4>Meat</h4>
+                        <p>Meat producers strive to maximize livestock productivity and
+                            reduce pathogens that cause foodborne illness.</p>
+                    </a>
+                </div>
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<a href="solutions/food-solutions/poultry%3FrCH=2.html">
-<div class="sticker blue"><img src="{{ 'assets/images/solution-pages/icon-food-poultry.png' | theme }}" alt=""></div>
-<h4>Poultry</h4>
-<p>Heat stress in the breeding houses, barns and hatcheries, can causes health risks, and poor production performance.</p>
-</a>
-</div>
+                <div class="dt-width-1-5 dt-width-sm-1-1">
+                    <a href="{{ 'solutions/food-solutions/poultry/main' | page }}">
+                        <div class="sticker blue"><img
+                                src="https://www.deltatrak.com/images/solution-pages/icon-food-poultry.png"
+                                alt=""></div>
+                        <h4>Poultry</h4>
+                        <p>Heat stress in the breeding houses, barns and hatcheries, can
+                            causes health risks, and poor production performance.</p>
+                    </a>
+                </div>
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<a href="solutions/food-solutions/dairy%3FrCH=2.html">
-<div class="sticker blue"><img src="{{ 'assets/images/solution-pages/icon-food-dairy.png' | theme }}" alt=""></div>
-<h4>Dairy</h4>
-<p>The prevention of the introduction of harmful toxins in dairy products depends on good temperature management for storage and transportation.</p>
-</a>
-</div>
+                <div class="dt-width-1-5 dt-width-sm-1-1">
+                    <a href="{{ 'solutions/food-solutions/dairy/main' | page }}">
+                        <div class="sticker blue"><img
+                                src="https://www.deltatrak.com/images/solution-pages/icon-food-dairy.png"
+                                alt=""></div>
+                        <h4>Dairy</h4>
+                        <p>The prevention of the introduction of harmful toxins in dairy
+                            products depends on good temperature management for storage and
+                            transportation.</p>
+                    </a>
+                </div>
 
-<div class="dt-width-1-5 dt-width-sm-1-1">
-<a href="solutions/food-solutions/seafood%3FrCH=2.html">
-<div class="sticker blue"><img src="{{ 'assets/images/solution-pages/icon-food-seafood.png' | theme }}" alt=""></div>
-<h4>Seafood</h4>
-<p>Seafood is one of the most highly perishable food groups, and responsible for a majority of foodborne illnesses.</p>
-</a>
-</div>
+                <div class="dt-width-1-5 dt-width-sm-1-1">
+                    <a href="{{ 'solutions/food-solutions/seafood/main' | page }}">
+                        <div class="sticker blue"><img
+                                src="https://www.deltatrak.com/images/solution-pages/icon-food-seafood.png"
+                                alt=""></div>
+                        <h4>Seafood</h4>
+                        <p>Seafood is one of the most highly perishable food groups, and
+                            responsible for a majority of foodborne illnesses.</p>
+                    </a>
+                </div>
+
+            </div><!-- END FLEX CONTAINER -->
+        </div>
+
+    </li>
+</ul><!-- END HIDDEN CONTENT -->
 
 </div><!-- END FLEX CONTAINER -->
 </div>

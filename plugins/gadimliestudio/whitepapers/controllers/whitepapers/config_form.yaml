@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Whitepaper
+
+# Model Form Field configuration
+form: $/gadimliestudio/whitepapers/models/whitepaper/fields.yaml
+
+# Model Class name
+modelClass: Gadimliestudio\Whitepapers\Models\Whitepaper
+
+# Default redirect location
+defaultRedirect: gadimliestudio/whitepapers/whitepapers
+
+# Create page
+create:
+    title: New Whitepaper
+    redirect: gadimliestudio/whitepapers/whitepapers/update/:id
+    redirectClose: gadimliestudio/whitepapers/whitepapers
+
+# Update page
+update:
+    title: Edit whitepaper data
+    redirect: gadimliestudio/whitepapers/whitepapers
+    redirectClose: gadimliestudio/whitepapers/whitepapers
+
+# Preview page
+preview:
+    title: Show whitepaper

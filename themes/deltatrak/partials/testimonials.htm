@@ -1,0 +1,49 @@
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      {% for testimonial in company.testimonials %}
+        <div class="swiper-slide">
+            <div class="slide" style="width:auto">
+                <div class="bt-row bt-row-first" style="width:100%">
+                    <div class="bt-inner">
+
+
+                        <div class="bt-introtext">
+                            <div class="testimonial">
+
+                                <p>{{ testimonial.comment | raw }}</p>
+
+                                <p class="citation">{{ testimonial.name }}<br />
+                                    <span>{{ testimonial.company }}</span>
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--end bt-inner -->
+                </div>
+                <!--end bt-row -->
+                <div style="clear: both;"></div>
+
+            </div>
+        </div>
+      {% endfor %}
+
+
+
+
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>

@@ -58,6 +58,9 @@ class Company extends ComponentBase
         
         $company->anniversary_pic = $settings->anniversary_pic;
 
+
+        $company->testimonials = $settings->testimonials;
+
         $company->support = $settings->support;
 
         $this->page['company'] = $company;

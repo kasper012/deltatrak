@@ -258,6 +258,20 @@ tabs:
                         cssClass: col-md-12
 
 
+        testimonials:
+            tab: Testimonials
+            type: repeater
+            prompt: Add new testimonial
+            form:
+                fields:
+                    name: 
+                        label: Name and surname
+                    company:
+                        label: Company
+                    comment:
+                        label: Comment
+                        type: richeditor
+
 
 
 # Contacts        

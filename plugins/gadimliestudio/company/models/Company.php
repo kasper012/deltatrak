@@ -23,7 +23,17 @@ class Company extends Model
       'counters',
       'team',
       'docs',
-      'faq'
+      'faq',
+      'homepage_banner_text',
+      'homepage_solutions_text',
+      'support',
+      'white_papers',
+      'partners',
+      'solution_briefs',
+      'team',
+      'event',
+      'documents',
+      'testimonials',
 
     ];    
 

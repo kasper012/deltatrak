@@ -58,7 +58,7 @@ class Plugin extends PluginBase
     {
         return [
             'company' => [
-                'label' => 'Şirkət haqqında məlumat',
+                'label' => 'Company information',
                 'description' => '',
                 'category' => 'Gadimlie Studio',
                 'class' => 'Gadimliestudio\Company\Models\Company',

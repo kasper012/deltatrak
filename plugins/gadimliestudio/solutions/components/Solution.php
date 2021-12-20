@@ -9,7 +9,7 @@ class Solution extends ComponentBase
     {
         return [
             'name'        => 'Solution Component',
-            'description' => 'Solutions of Clean City'
+            'description' => 'Solutions'
         ];
     }
 

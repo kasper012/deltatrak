@@ -116,14 +116,11 @@ public function onStart() {
                         <!-- NAV TO PRODUCTS-->
                         <h5>Selected DeltaTrak Cut to Cool Solutions</h5>
                         <p class="link-2">
-                            <a href="../../../reusable-ble-data-loggers%3FrCH=2.html"><span>Reusable
-                                    BLE Data Loggers</span><img
-                                    src="https://www.deltatrak.com/images/solution-pages/buttons/ble.jpg"
-                                    alt="" /></a>
-                            <a href="../../../telematics-fcs2%3FrCH=2.html"><span>FlashTrak
-                                    Telematics FCS2</span><img
-                                    src="https://www.deltatrak.com/images/solution-pages/buttons/fcs2-non-facility.jpg"
-                                    alt="" /></a>
+                            {{ solutions[0].title }}
+                            {% for solution_product in solutions.products %}
+                                {{ solution }}
+                                {{ solution_product.title }}
+                            {% endfor %}
                         </p>
                     </div>
                 </div>
@@ -136,4 +133,5 @@ public function onStart() {
 
     </div>
     <div class="clearfix"></div>
+
 </div>

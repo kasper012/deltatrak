@@ -25,6 +25,7 @@ class CreateSolutionsTable extends Migration
             $table->text('currently_text')->nullable();
             $table->text('currently_image')->nullable();
 
+            $table->text('products')->nullable();
 
             $table->text('product_about_text')->nullable();
 

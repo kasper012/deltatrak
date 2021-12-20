@@ -257,7 +257,26 @@ tabs:
                         span: storm
                         cssClass: col-md-12
 
-
+        documents:
+            tab: Certificate
+            type: repeater
+            prompt: Add new certificate
+            form:
+                fields:
+                    title:
+                        label: Certificate title
+                        span: storm
+                        cssClass: col-md-6
+                    file:
+                        label: Certificate
+                        type: mediafinder
+                        span: storm
+                        cssClass: col-md-6
+                    about:
+                        label: About certificate
+                        span: storm
+                        cssClass: col-md-12
+                        type: richeditor
         testimonials:
             tab: Testimonials
             type: repeater

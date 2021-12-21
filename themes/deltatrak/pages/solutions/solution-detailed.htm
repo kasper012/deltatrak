@@ -4,6 +4,8 @@ layout = "default"
 is_hidden = 0
 
 
+
+
 [viewBag]
 
 ==
@@ -117,12 +119,10 @@ public function onStart() {
                         <h5>{{'Selected DeltaTrak Cut to Cool Solutions'|_}}</h5>
                         <p class="link-2">
                             {% for solution_product in solutions.products %}
-                                {{ solution }}
-                                {{ solution_product.title }}
+                                <a href="{{ product.link }}"><span>{{ product.title }}</span><img
+                                    src={{ product.image | media }}"
+                                    alt="" /></a>
                             {% endfor %}
-                            <a href="{{ product.link }}"><span>{{ product.title | media }}</span><img
-                                src={{ product.image | media }}"
-                                alt="" /></a>
                         </p>
                     </div>
                 </div>

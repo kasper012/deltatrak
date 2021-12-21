@@ -7,9 +7,9 @@ layout = "default"
 
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
-                Events Calendar</H1>
+                {{'Events Calendar'|_}}</H1>
 
-            <p>Visit us at our upcoming shows and events</p>
+            <p>{{'Visit us at our upcoming shows and events'|_}}</p>
         </div>
     </div>
     <div class="moduletable breadcrumb">
@@ -19,27 +19,7 @@ layout = "default"
                     <span class="divider icon-location"></span>
                 </li>
 
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../index.html%3FrCH=2.html" class="pathway"><span
-                            itemprop="name">Home</span></a>
-
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="1">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">
-                        About </span>
-
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="2">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-                    <span itemprop="name">
-                        Events Calendar </span>
-                    <meta itemprop="position" content="3">
-                </li>
+                {% partial 'breadcrumbs/about-breadcrumb' %}
             </ul>
         </div>
     </div>
@@ -79,15 +59,15 @@ layout = "default"
                 <div itemprop="articleBody">
                     {% for event in company.event %}
                     {% if now |date('U') < event.start_date |date('U')  %}
-                    <h1 class="wide eee text-center">Upcoming Events</h1>
+                    <h1 class="wide eee text-center">{{'Upcoming Events'|_}}</h1>
                     {% else %}
-                    <h1 class="wide eee text-center">Recent Events</h1>
+                    <h1 class="wide eee text-center">{{'Recent Events'|_}}</h1>
                     {% endif %}
                     <div class="event">
                         <div data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:100}"><img
                                 src="{{ event.image | media }}" alt="" />
                         </div>
-                        <p data-uk-scrollspy="{cls:'uk-animation-fade', delay:400}"><strong>{{ event.title }}<br /><sup> (National Grocers Association)</sup><br /> {{ event.date_start | date('M') }}&nbsp;{{ event.start_date | date('d') }}-{{ event.finish_date | date('d') }}
+                        <p data-uk-scrollspy="{cls:'uk-animation-fade', delay:400}"><strong>{{ event.title }}<br /><sup></sup><br /> {{ event.date_start | date('M') }}&nbsp;{{ event.start_date | date('d') }}-{{ event.finish_date | date('d') }}
                             {{ event.date_start | date('Y') }}</strong><br />
                                 {{ event.address }}
                         </p>

@@ -7,13 +7,9 @@ layout = "default"
 
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
-                Calibration and Certification Services - 17025</H1>
+               {{' Calibration and Certification Services - 17025'|_}}</H1>
 
         </div>
-
-
-
-
 
     </div>
     <div class="moduletable breadcrumb">
@@ -23,27 +19,7 @@ layout = "default"
                     <span class="divider icon-location"></span>
                 </li>
 
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../index.html%3FrCH=2.html" class="pathway"><span
-                            itemprop="name">Home</span></a>
-
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="1">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">
-                        Services </span>
-
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="2">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-                    <span itemprop="name">
-                        17025 Calibration Services </span>
-                    <meta itemprop="position" content="3">
-                </li>
+                {% partial 'breadcrumbs/services' %}
             </ul>
         </div>
     </div>
@@ -107,7 +83,7 @@ layout = "default"
                 </div>
 
                 <div class="wide eee py-5">
-                    <h3 class="text-center">Our Accreditations and Certifications</h3>
+                    <h3 class="text-center">{{'Our Accreditations and Certifications'|_}}</h3>
                     <table class="plain">
                         {% for document in company.documents %}
                         <tr>

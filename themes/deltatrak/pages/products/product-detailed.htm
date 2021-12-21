@@ -81,13 +81,13 @@ public function onStart() {
                                     class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                     id="tab-specifications" data-toggle="tab" data-id="specifications"
                                     role="tab" aria-controls="specifications" aria-selected="true"><span
-                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">Specifications</span></a>
+                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Specifications'|_}}</span></a>
                             </li>
                             <li class="rl_tabs-tab nn_tabs-tab nav-item"><a href="#literature"
                                     title="Literature" class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                     id="tab-literature" data-toggle="tab" data-id="literature"
                                     role="tab" aria-controls="literature" aria-selected="false"><span
-                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">Literature</span></a>
+                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Literature'|_}}</span></a>
                             </li>
 
                         </ul>
@@ -98,20 +98,20 @@ public function onStart() {
                                 aria-hidden="false" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
                                     <a id="anchor-specifications" class="anchor"></a>
-                                    Specifications
+                                    {{'Specifications'|_}}
                                 </h2>
                                 <table>
                                     <caption>{{ product.title }}</caption>
                                     <thead>
                                         <tr>
-                                            <th scope="col">Feature</th>
-                                            <th scope="col">Specification</th>
+                                            <th scope="col">{{'Feature'|_}}</th>
+                                            <th scope="col">{{'Specification'|_}}</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <td colspan="2">DeltaTrak manufactures products under an ISO
-                                                9001:2015 registered quality management system</td>
+                                            <td colspan="2">{{'DeltaTrak manufactures products under an ISO
+                                                9001:2015 registered quality management system'|_}}</td>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -130,18 +130,18 @@ public function onStart() {
                                 role="tabpanel" aria-labelledby="tab-literature" aria-hidden="true" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
                                     <a id="anchor-literature" class="anchor"></a>
-                                    Literature
+                                    {{'Literature'|_}}
                                 </h2><a href="{{ product.literature_file | media }}"
                                     target="_blank"> <img
                                         src="{{ product.literature_image | media }}"
                                         alt="FlashCheck Lollipop Waterproof Min/Max Digital Thermometer w/105mm Probe" />
-                                    <br />Download {{ product.title }} Probe Spec Sheet</a>
+                                    <br />{{'Download'|_}} {{ product.title }} {{'Probe Spec Sheet'|_}}</a>
                             </div>
                             <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="support" role="tabpanel"
                                 aria-labelledby="tab-support" aria-hidden="true" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
                                     <a id="anchor-support" class="anchor"></a>
-                                    Support
+                                    {{'Support'|_}}
                                 </h2><!-- START: Modules Anywhere -->
 
 

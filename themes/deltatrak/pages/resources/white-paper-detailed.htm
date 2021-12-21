@@ -46,8 +46,7 @@ $this['whitepaper'] = $whitepaper;
 
             <div itemprop="articleBody">
                 <a class="pdf" href="{{ whitepaper.file | media }}" data-uk-modal="{center:true}" download><img
-                        src="{{ whitepaper.image | media }}"><span>Download
-                        PDF</span></a>
+                        src="{{ whitepaper.image | media }}"><span>{{ 'Download' |_}}</span></a>
 
                 {{ whitepaper.full_description | raw }}
             </div>

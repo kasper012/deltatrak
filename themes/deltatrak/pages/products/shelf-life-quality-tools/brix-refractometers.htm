@@ -17,42 +17,8 @@ url= '/products/shelf-life-quality-tools/brix-refractometers'
                 <li class="active">
                     <span class="divider icon-location"></span>
                 </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="{{ 'home' | page }}" class="pathway"><span
-                            itemprop="name">Home</span></a>
-                    <span class="divider">
-                        <img src="media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="1">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">
-                        Products </span>
+                {% partial 'breadcrumbs/products/shelf-life-quality-tools' %}
 
-                    <span class="divider">
-                        <img src="media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="2">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">
-                          </span>
-
-                    <span class="divider">
-                        <img src="media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="3">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">
-                        Shelf Life Quality Tools </span>
-
-                    <span class="divider">
-                        <img src="media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="4">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-                    <span itemprop="name">
-                        {{ this.page.title }} </span>
-                    <meta itemprop="position" content="5">
-                </li>
             </ul>
         </div>
     </div>
@@ -87,7 +53,7 @@ url= '/products/shelf-life-quality-tools/brix-refractometers'
                                         data-uk-lightbox> <img
                                             src="{{ product.product_image | media }}"
                                             alt="" /></a>
-                                </div>
+                                                                {% if product.key_features %}
                                 <div class="key-features"><b>Key Features:</b>
                                     <ul>
                                         {% for feature in product.key_features %}
@@ -95,18 +61,17 @@ url= '/products/shelf-life-quality-tools/brix-refractometers'
                                         {% endfor %}
                                     </ul>
                                 </div>
+                                {% endif %}>
 
+                                {% if product.applications %}
                                 <div class="prod-app"><b>Applications:</b> {{ product.applications | raw }}</div>
                                 <div class="product read-more">
                                     <p class="readmore">
-                                        <a class="btn"
-                                            href="/products/{{product.id}}"
-                                            itemprop="url"
-                                            aria-label="{{ product.title }}">
-                                            <span class="icon-chevron-right" aria-hidden="true"></span>
-                                            Read more ... </a>
+                                        <a class="btn" href="/products/{{product.id}}" itemprop="url" aria-label="{{ product.title }}">
+                                            <span class="icon-chevron-right" aria-hidden="true"></span> {{ 'Read more ...' |_ }} </a>
                                     </p>
                                 </div>
+                                {% endif %}
 
                             </div><!-- end delta-product-category -->
                         </div>

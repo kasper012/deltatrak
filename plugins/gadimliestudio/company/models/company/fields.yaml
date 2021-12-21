@@ -256,6 +256,30 @@ tabs:
                         label: Place
                         span: storm
                         cssClass: col-md-12
+        system_software_docs:
+            tab: Software System overview
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        span: storm
+                        cssClass: col-md-12
+                    file:
+                        label: file
+                        type: mediafinder
+                        span: storm
+                        cssClass: col-md-6
+                    preview_image:
+                        label: Preview image
+                        type: mediafinder
+                        span: storm
+                        cssClass: col-md-6
+                    about:
+                        label: About
+                        type: richeditor
+                        span: storm
+                        cssClass: col-md-12
 
         documents:
             tab: Certificate

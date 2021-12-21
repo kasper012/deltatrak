@@ -89,75 +89,21 @@ fields:
         prompt: Add solution product
         form:
             fields:
+                link:
+                    label: Link
+                    cssClass: col-md-6
+                image:
+                    type: mediafinder
+                    label: Image
+                    cssClass: col-md-6
+
                 title:
                     label: Product name
                     span: storm
-                    cssClass: col-sm-6  
+                    cssClass: col-sm-12  
                     required: true
                 
-                status_type:
-                    label: Type
-                    type: dropdown
-                    span: storm
-                    cssClass: col-sm-6
-                    options:
-                        first-first: Thermometers - Digital & Min/Max Thermometers
-                        first-second: Thermometers - Certified Thermometers
-                        first-third: Thermometers - Thermo-Hygrometers
-                        first-fourth: Thermometers - Infrared Non-Contact Thermometers 
-                        first-fifth: Thermometers - Thermocouple Thermometer Type K
-                        first-sixth: Thermometers - Heat/Cool Thermometers
-                        first-seventh: Thermometers - Bi Metal Thermometers
-                        
 
-                        second-first: Chart Recorders - Circular Chart Recorders
-                        second-second: Chart Recorders - Electronic Circular Chart Recorders
-                        second-third: Chart Recorders - In-Transit Chart Recorders
-                        second-fourth: Chart Recorders - Digital Display Chart Recorders
-
-                        third-first: Data Loggers - High Temperature Data Loggers
-                        third-second: Data Loggers - In-Transit Loggers
-                        third-third: Data Loggers - In-Transit BLE Loggers
-                        third-fourth: Data Loggers - In-Transit PDF Loggers
-                        third-fifth: Data Loggers - In-Transit Real Time Loggers
-                        third-sixth: Data Loggers - Multi-Use Data Loggers
-                        third-seventh: Data Loggers - Reusable Data Loggers
-                        third-eighth: Data Loggers - Reusable BLE Data Loggers
-                        third-ninth: Data Loggers - Reusable PDF Data Loggers
-                        third-tenth: Data Loggers - Reusable Real Time Loggers
-
-                        fourth-first: Time and Temperature Indicators - Warmmark Labels
-                        fourth-second: Time and Temperature Indicators - TempDot Plus Labels
-
-
-                        fifth-first: Vaccine Monitoring - COVID-19 Vaccine Solutions
-                        fifth-second: Vaccine Monitoring - Certified Alarm Thermometers
-                        fifth-third: Vaccine Monitoring - Certified Vaccine USB PDF Data Loggers
-                        fifth-fourth: Vaccine Monitoring - Vaccine Electronic Shipping Indicator
-                        fifth-fifth: Vaccine Monitoring - Wireless Refrigerator Monitor
-                        fifth-sixth: Vaccine Monitoring - Vaccine Monitor Card
-
-
-                        sixth-first: RF Wireless Monitoring - Telematics Wireless System
-                        sixth-second: RF Wireless Monitoring - FlashTrak Telematics FCS2
-
-                        seventh-first: Thermal Labels - High Temperature Thermal Labels
-                        seventh-second: Thermal Labels - Coldmark Labels
-                        seventh-third: Thermal Labels - Freeze Indicator Labels
-                        seventh-fourth: Thermal Labels - Blood Temp Labels
-
-                        eitghth-first: Shelf Life Quality Tools - Ethylene Absorption
-                        eitghth-second: Shelf Life Quality Tools - Salinity Refractometers
-                        eitghth-third: Shelf Life Quality Tools - Brix Refractometers
-                        eitghth-fourth: Shelf Life Quality Tools - Penetrometers
-                        eitghth-fifth: Shelf Life Quality Tools - ISFET pH Meters
-
-                        ninth-first: HACCP Food Safety Tools - Food Safety Products
-                        ninth-second: HACCP Food Safety Tools - Kitchen Timers
-                        ninth-third: HACCP Food Safety Tools - Alcohol Wipes
-
-                        tenth-first: Software Solutions - ColdTrak
-                        tenth-second: Software Solutions - FlashLink Manager
 
 
 

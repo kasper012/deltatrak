@@ -7,7 +7,7 @@ layout = "default"
 
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
-                Videos</H1>
+                {{ 'Videos' }}</H1>
     
         </div>
     
@@ -19,27 +19,8 @@ layout = "default"
                     <span class="divider icon-location"></span>
                 </li>
     
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../index.html%3FrCH=2.html" class="pathway"><span
-                            itemprop="name">Home</span></a>
-    
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="1">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../resources%3FrCH=2.html" class="pathway"><span
-                            itemprop="name">Resources</span></a>
-    
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="2">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-                    <span itemprop="name">
-                        Videos </span>
-                    <meta itemprop="position" content="3">
-                </li>
+                {% partial 'breadcrumbs/resources' %}
+
             </ul>
         </div>
     </div>
@@ -77,11 +58,7 @@ layout = "default"
 
     
                 <div itemprop="articleBody">
-                    <p>DeltaTrak is committed to providing its customers with the knowledge and tools needed to
-                        improve their processes and remain competitive. DeltaTrak strives to continually build
-                        educational tools to increase the viewer’s expertise in a myriad of disciplines. From
-                        this page you can access multiple educational videos including product training,
-                        solution training, technology presentations, and more.&nbsp;</p>
+                    <p>{% content 'video-heading' %}</p>
     
                     <div class="vimeo thumbs text-center">
                         {% for video in company.video %}

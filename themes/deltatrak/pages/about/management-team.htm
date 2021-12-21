@@ -7,9 +7,9 @@ layout = "default"
 
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
-                Management Team</H1>
+                {{'Management Team'|_}}</H1>
 
-            <p>Meet the DeltaTrak Leadership Group</p>
+            <p>{{'Meet the DeltaTrak Leadership Group'|_}}</p>
         </div>
 
     </div>
@@ -20,27 +20,7 @@ layout = "default"
                     <span class="divider icon-location"></span>
                 </li>
 
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../index.html%3FrCH=2.html" class="pathway"><span
-                            itemprop="name">Home</span></a>
-
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="1">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">
-                        About </span>
-
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="2">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-                    <span itemprop="name">
-                        Management Team </span>
-                    <meta itemprop="position" content="3">
-                </li>
+                {% partial 'breadcrumbs/about-breadcrumb' %}
             </ul>
         </div>
     </div>

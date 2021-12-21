@@ -13,7 +13,8 @@ class Company extends Model
 
     public $jsonable = [
       
-      'support'
+      'support',
+      'system_software_docs',
 
     ];   
     public $translatable = [

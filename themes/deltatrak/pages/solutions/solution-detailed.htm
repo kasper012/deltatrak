@@ -27,9 +27,9 @@ public function onStart() {
                 <ul class="spy-nav"
                     data-uk-scrollspy-nav="{closest:'li', smoothscroll:true, topoffset:-400}">
                     <li class="top uk-active"><a href="#top-spacer"></a></li>
-                    <li class=""><a href="#problem-1">Problem</a></li>
-                    <li class=""><a href="#current-1">Currently</a></li>
-                    <li class=""><a href="#solution-1">Solutions</a></li>
+                    <li class=""><a href="#problem-1">{{'Problem'|_}}</a></li>
+                    <li class=""><a href="#current-1">{{'Currently'|_}}</a></li>
+                    <li class=""><a href="#solution-1">{{'Solutions'|_}}</a></li>
                     <li class="exit"><a href="
                         {% if solution.type == 'first-first' %}{{ 'solutions/food-solutions/produce-floral/main' | page }}
                         {% elseif solution.type == 'first-second' %}{{ 'solutions/food-solutions/meat/main' | page }}
@@ -49,7 +49,7 @@ public function onStart() {
 
 
                         " class="close"
-                            title="Back to Produce/Floral Solutions">BACK</a></li>
+                            title="Back to Produce/Floral Solutions">{{'BACK'|_}}</a></li>
                 </ul>
             </div>
 
@@ -114,13 +114,15 @@ public function onStart() {
                     </div>
                     <div class="solution-exit-nav">
                         <!-- NAV TO PRODUCTS-->
-                        <h5>Selected DeltaTrak Cut to Cool Solutions</h5>
+                        <h5>{{'Selected DeltaTrak Cut to Cool Solutions'|_}}</h5>
                         <p class="link-2">
-                            {{ solutions[0].title }}
                             {% for solution_product in solutions.products %}
                                 {{ solution }}
                                 {{ solution_product.title }}
                             {% endfor %}
+                            <a href="{{ product.link }}"><span>{{ product.title | media }}</span><img
+                                src={{ product.image | media }}"
+                                alt="" /></a>
                         </p>
                     </div>
                 </div>

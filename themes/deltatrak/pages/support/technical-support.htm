@@ -17,20 +17,7 @@ layout = "default"
             <li class="active">
                 <span class="divider icon-location"></span>
             </li>
-
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ 'home' | page }}" class="pathway"><span
-                        itemprop="name">{{ 'Home' |_ }}</span></a>
-
-                <span class="divider">
-                    <img src="media/system/images/arrow.png" alt="" /> </span>
-                <meta itemprop="position" content="1">
-            </li>
-            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-                <span itemprop="name">
-                    {{ this.page.title }} </span>
-                <meta itemprop="position" content="2">
-            </li>
+            {% partial 'breadcrumbs/support' %}
         </ul>
     </div>
 </div>

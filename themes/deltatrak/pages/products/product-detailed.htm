@@ -57,7 +57,7 @@ public function onStart() {
                         </ul>
                     </div>
                     {% if product.application %}
-                        <div class="prod-app"><b>Applications:</b> {{ product.applications | raw }}</div>
+                        <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
                     {% endif %}
                 </div><!-- End Prod-Left -->
 

@@ -3,7 +3,12 @@ url = "/resources/white-papers/:id?"
 layout = "default"
 is_hidden = 0
 
+
 [viewBag]
+localeUrl[ru] = "/resursi/beliye-bumagi/:id?"
+localeUrl[az] = "/resurslar/ag-vereqler/:id?"
+localeTitle[ru] = "Белые бумаги"
+localeTitle[az] = "Ağ vərəqlər"
 [whitepapers]
 ==
 use Gadimliestudio\Whitepapers\Models\Whitepaper;

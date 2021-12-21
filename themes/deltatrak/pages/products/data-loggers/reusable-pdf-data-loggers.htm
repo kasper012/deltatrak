@@ -54,7 +54,7 @@ url= '/products/data-loggers/reusable-pdf-data-loggers'
                                             src="{{ product.product_image | media }}"
                                             alt="" /></a>
                                                                 {% if product.key_features %}
-                                <div class="key-features"><b>Key Features:</b>
+                                <div class="key-features"><b>{{'Key Features'|_}}:</b>
                                     <ul>
                                         {% for feature in product.key_features %}
                                         <li>{{ feature.feature }}</li>
@@ -64,7 +64,7 @@ url= '/products/data-loggers/reusable-pdf-data-loggers'
                                 {% endif %}>
 
                                 {% if product.applications %}
-                                <div class="prod-app"><b>Applications:</b> {{ product.applications | raw }}</div>
+                                <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
                                 <div class="product read-more">
                                     <p class="readmore">
                                         <a class="btn" href="/products/{{product.id}}" itemprop="url" aria-label="{{ product.title }}">

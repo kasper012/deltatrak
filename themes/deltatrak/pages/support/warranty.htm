@@ -1,110 +1,39 @@
 title = "Warranty"
 url = "/support/warranty"
 layout = "default"
+
+[viewBag]
+localeUrl[ru] = "/podderjka/qarantiya"
+localeUrl[az] = "/destek/zemanet"
+localeTitle[ru] = "Гарантия"
+localeTitle[az] = "Zəmanət"
 ==
-<div class="container-fluid pt-0">
-    <div class="moduletable mod-page-title narrow">
+<div class="moduletable mod-page-title narrow">
 
-        <div class="mod-title-wrap">
-            <H1 class="mod-title-heading">
-                Warranty</H1>
-
-        </div>
-
-
-
-
+    <div class="mod-title-wrap">
+        <H1 class="mod-title-heading">
+            {{ this.page.title }}</H1>
 
     </div>
-    <div class="moduletable breadcrumb">
-        <div aria-label="Breadcrumbs" role="navigation">
-            <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb breadcrumb">
-                <li class="active">
-                    <span class="divider icon-location"></span>
-                </li>
 
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../index.html%3FrCH=2.html" class="pathway"><span
-                            itemprop="name">Home</span></a>
-
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="1">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">
-                        Support </span>
-
-                    <span class="divider">
-                        <img src="../media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="2">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-                    <span itemprop="name">
-                        Warranty </span>
-                    <meta itemprop="position" content="3">
-                </li>
-            </ul>
-        </div>
+</div>
+<div class="moduletable breadcrumb">
+    <div aria-label="Breadcrumbs" role="navigation">
+        <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb breadcrumb">
+            <li class="active">
+                <span class="divider icon-location"></span>
+            </li>
+            {% partial 'breadcrumbs/support' %}
+        </ul>
     </div>
+</div>
 
-    <div class="row-fluid mt-0">
-        <main id="content" role="main" class="span12">
-            <!-- Begin Content -->
+<div class="row-fluid mt-5" style="padding: 0 4%">
+    <main id="content" role="main" class="span12">
+        <!-- Begin Content -->
 
-            <div id="system-message-container">
-            </div>
+        {% content 'warranty' %}
 
-            <div class="item-page" itemscope itemtype="https://schema.org/Article">
-                <meta itemprop="inLanguage" content="en-GB" />
-
-
-                <div class="icons">
-
-                    <div class="btn-group pull-right">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-19"
-                            aria-label="User tools" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <span class="icon-cog" aria-hidden="true"></span>
-                            <span class="caret" aria-hidden="true"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-19">
-                            <li class="print-icon"> <a
-                                    href="warranty%3Ftmpl=component&amp;print=1&amp;layout=default.html"
-                                    title="Print article < Warranty >"
-                                    onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;"
-                                    rel="nofollow"> <span class="icon-print" aria-hidden="true"></span>
-                                    Print </a> </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
-
-
-                <dl class="fields-container">
-                    <dd class="field-entry custom-code display-none"><span class="field-value ">
-                            <style>
-                                .center-block {
-                                    display: inline-block;
-                                    margin: 20px;
-                                    text-align: left;
-                                    vertical-align: top;
-                                }
-                            </style>
-                        </span>
-                    </dd>
-                </dl>
-                <div itemprop="articleBody" class="mt-5">
-                    {% content 'warranty' %}
-                </div>
-
-
-            </div>
-            <div class="clearfix"></div>
-
-            <!-- End Content -->
-        </main>
-    </div>
+        <!-- End Content -->
+    </main>
 </div>

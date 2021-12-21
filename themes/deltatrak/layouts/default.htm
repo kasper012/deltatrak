@@ -182,6 +182,16 @@ default = 0
         .swiper-scrollbar {
             display: none;
         }
+        .footer-list {
+            flex-wrap: wrap;
+        }
+        .footer-list li {
+            width: 100% !important;
+        }
+
+        .bottom-banner {
+            display: none;
+        }
     </style>
     <script type="application/json"
         class="joomla-script-options new">{"csrf.token":"53b93d72b68c584f30abfd539bbffdb4","system.paths":{"root":"","base":""}}</script>
@@ -608,7 +618,7 @@ default = 0
                 <div class="foot-1">
                     <div class="moduletable">
                         <h3>{{'Worldwide'|_}}</h3>
-                        <ul class="nav menu mod-list">
+                        <ul class="nav menu mod-list  footer-list">
                             <li class="item-256"><a href="https://www.deltatrak.com/" target="_blank"
                                     rel="noopener noreferrer">{{'DeltaTrak USA'|_}}</a></li>
                             <li class="item-252"><a href="http://deltatrakchina.com.cn/" target="_blank"
@@ -631,38 +641,26 @@ default = 0
                 <div class="foot-2">
                     <div class="moduletable">
                         <h3>{{'About Us'|_}}</h3>
-                        <ul class="nav menu mod-list">
-                            <li class="item-257"><a href="http://www.dtijapan.co.jp/" target="_blank"
+                        <ul class="nav menu mod-list  footer-list">
+                            <li class="item-257"><a href="{{'about/company-overview'|page}}" target="_blank"
                                 rel="noopener noreferrer">{{'Company Overview'|_}}</a></li>
-                        <li class="item-720"><a href="https://www.deltatraksouthpacific.com" target="_blank"
+                        <li class="item-720"><a href="{{'about/management-team'|page}}" target="_blank"
                                 rel="noopener noreferrer">{{'Management Team'|_}}</a></li>
-                        <li class="item-830"><a href="https://www.deltatrak.co.za" target="_blank"
+                        <li class="item-830"><a href="{{'about/events-calendar'|page}}" target="_blank"
                                 rel="noopener noreferrer">{{'Events Calendar'|_}}</a></li>
-                                <li class="item-256"><a href="https://www.deltatrak.com/" target="_blank"
+                                <li class="item-256"><a href="{{'about/testimonials'|page}}" target="_blank"
                                     rel="noopener noreferrer">{{'Testimonials'|_}}</a></li>
-                            <li class="item-252"><a href="http://deltatrakchina.com.cn/" target="_blank"
+                            <li class="item-252"><a href="{{'about/partners'|page}}" target="_blank"
                                     rel="noopener noreferrer">{{'Partners'|_}}</a></li>
-                            <li class="item-253"><a href="http://dtiap.com/" target="_blank"
-                                    rel="noopener noreferrer">{{'DeltaTrak Asia Pacific'|_}}</a></li>
-                            <li class="item-254"><a href="http://deltatrakmexico.com/" target="_blank"
-                                    rel="noopener noreferrer">{{'DeltaTrak Mexico'|_}}</a></li>
-                            <li class="item-255"><a href="http://www.deltatraksouthamerica.com/" target="_blank"
-                                    rel="noopener noreferrer">{{'DeltaTrak South America'|_}}</a></li>
-                            <li class="item-257"><a href="http://www.dtijapan.co.jp/" target="_blank"
-                                    rel="noopener noreferrer">{{'DeltaTrak Japan'|_}}</a></li>
-                            <li class="item-720"><a href="https://www.deltatraksouthpacific.com" target="_blank"
-                                    rel="noopener noreferrer">{{'DeltaTrak South Pacific'|_}}</a></li>
-                            <li class="item-830"><a href="https://www.deltatrak.co.za" target="_blank"
+                            <li class="item-830"><a href="{{'about/solution-partner'|page}}" target="_blank"
                                     rel="noopener noreferrer">{{'Solution Partners'|_}}</a></li>
-
-
                         </ul>
                     </div>
                 </div>
                 <div class="foot-3">
                     <div class="moduletable">
                         <h3>{{'Support'|_}}</h3>
-                        <ul class="nav menu mod-list">
+                        <ul class="nav menu mod-list  footer-list ">
                             <li class="item-166"><a href="{{ 'support/technical-support' | page }}"
                                     class="dt-icon-briefcase">{{'Technical Support'|_}}</a></li><br/>
                             <li class="item-170"><a href="{{ 'support/warranty' | page }}"

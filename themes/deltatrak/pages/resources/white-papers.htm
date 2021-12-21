@@ -2,13 +2,20 @@ title = "White Papers"
 url = "/resources/white-papers"
 layout = "default"
 [whitepapers]
+
+
+[viewBag]
+localeUrl[ru] = "/resursi/beliye-bumagi"
+localeUrl[az] = "/resurslar/ag-vereqler"
+localeTitle[ru] = "Белые бумаги"
+localeTitle[az] = "Ağ vərəqlər"
 ==
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
 
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
-                White Papers</H1>
+                {{'White Papers'|_}}</H1>
     
         </div>
     
@@ -75,8 +82,8 @@ layout = "default"
     
                             <a class="pdf" href="{{ whitepaper.file | media }}"
                                 download><img
-                                    src="{{ whitepaper.image | media}}"><span>Download
-                                    PDF</span></a>
+                                    src="{{ whitepaper.image | media}}"><span>{{'Download
+                                    PDF'|_}}</span></a>
                             <div id="modal-wp14" class="uk-modal">
 
                             </div>
@@ -85,10 +92,10 @@ layout = "default"
                                 {{ whitepaper.description | raw }}
                             </p>    
                             <p class="readmore">
-                                <a class="btn" href="{{ '' }}"
+                                <a class="btn" href="{{ 'resources/white-paper-detailed' | page }}/{{ whitepaper.id }}"
                                     itemprop="url" aria-label="Read more:  Preventing a Produce Labor Shortage">
                                     <span class="icon-chevron-right" aria-hidden="true"></span>
-                                    Read more ... </a>
+                                    {{'Read more ...'|_}} </a>
                             </p>
     
     

@@ -1,14 +1,14 @@
-title = 'Digital Display Chart Recorders'
+title = 'ISFET pH Meters'
 layout = 'default'
-url= '/products/chart-recorders/digital-display-chart-recorders'
+url= '/products/shelf-life-quality-tools/isfet-ph-meters'
 
 [products]
-
 [viewBag]
-localeUrl[ru] = 'produkti/registratori-diagramm/registratori-diagramm-s-tsifrovim-displyem'
-localeUrl[az] = 'məhsullar/diaqramm-qeydləri/rəqəmsal-displey-ilə-registratorlar-diaqram'
-localeTitle[ru] = 'Регистраторы диаграмм с цифровым дисплеем'
-localeTitle[az] = 'Rəqəmsal displey qrafik yazıcıları'
+localeUrl[ru] = "/produkti/instrumenti-dlya-kontrolya-kachestva/izmeriteli-ph-isfet"
+localeUrl[az] = "/mehsullar/keyfiyyet-kontrolu-uchun-aletler/ph-saygaclari-isfet"
+localeTitle[ru] = "Измерители pH ISFET"
+localeTitle[az] = "PH sayğacları ISFET"
+
 ==
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
@@ -23,7 +23,8 @@ localeTitle[az] = 'Rəqəmsal displey qrafik yazıcıları'
                 <li class="active">
                     <span class="divider icon-location"></span>
                 </li>
-                {% partial 'breadcrumbs/products/chart-recorders' %}
+                {% partial 'breadcrumbs/products/shelf-life-quality-tools' %}
+
             </ul>
         </div>
     </div>
@@ -37,7 +38,7 @@ localeTitle[az] = 'Rəqəmsal displey qrafik yazıcıları'
             <div class="delta-products blog" itemscope itemtype="https://schema.org/Blog">
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
-                        {% if product.status_type == 'second-fourth' %}
+                        {% if product.status_type == 'eitghth-fifth' %}
                     <div class="prod-block span4">
                         <div class="item column-1" itemprop="blogPost" itemscope
                             itemtype="https://schema.org/BlogPosting">
@@ -58,8 +59,7 @@ localeTitle[az] = 'Rəqəmsal displey qrafik yazıcıları'
                                         data-uk-lightbox> <img
                                             src="{{ product.product_image | media }}"
                                             alt="" /></a>
-                                </div>
-                                {% if product.key_features %}
+                                                                {% if product.key_features %}
                                 <div class="key-features"><b>{{'Key Features'|_}}:</b>
                                     <ul>
                                         {% for feature in product.key_features %}
@@ -67,7 +67,8 @@ localeTitle[az] = 'Rəqəmsal displey qrafik yazıcıları'
                                         {% endfor %}
                                     </ul>
                                 </div>
-                                {% endif %}
+                                {% endif %}>
+
                                 {% if product.applications %}
                                 <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
                                 <div class="product read-more">

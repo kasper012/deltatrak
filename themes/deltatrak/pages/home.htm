@@ -65,10 +65,10 @@ layout = "default"
                     <div id="panel" class="uk-slidenav-position bkg-tint-x"
                         data-uk-slideshow="{autoplay:false,kenburns:true,autoplayInterval:14000}">
                         <ul class="uk-slideshow uk-slideshow-fullscreen">
-                            <li><img src="{{ company.homepagebanner_image | media }}" alt=""></li>
+                            <li><img src="{{ company.homepage_banner_image | media }}" alt=""></li>
                         </ul>
                     </div>
-                    <div class="dti-slide-in chain" style="background-image: url({{ company.homepagebanner_animated_image }}) !important;
+                    <div class="dti-slide-in chain" style="background-image: url({{ company.homepage_banner_animated_image }}) !important;
     position: absolute;
     top: 0px;
     width: 100%;
@@ -102,7 +102,7 @@ layout = "default"
                 <div class="home-static-solutions">
                     <div>
                         {{ company.homepagesolutions_text | raw }}
-
+                        {{ company }}
                         <div class="flex">
 
                             <div class="dt-width-1-5 dt-width-sm-1-1">

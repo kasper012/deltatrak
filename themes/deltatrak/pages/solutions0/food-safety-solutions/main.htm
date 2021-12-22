@@ -1,13 +1,6 @@
-title = "Meat Cold Chain Solutions"
-url = "/solutions/food-solutions/meat"
+title = "Food Safety Solutions"
+url = "/solutions/food-safety-solutions"
 layout = "default"
-
-
-
-localeUrl[ru] = 'resheniya/produkti-pitaniya/myaso'
-localeUrl[az] = 'heller/qida-mehsullari/soyuq-zencir-et-helleri'
-localeTitle[ru] = 'Решения для мясопроизводства'
-localeTitle[az] = 'Ət istehsalı üçün həllər'
 ==
 <div class="row-fluid">
     <main id="content" role="main" class="span12">
@@ -36,13 +29,13 @@ localeTitle[az] = 'Ət istehsalı üçün həllər'
 
                     <div class="intro-message">
                         <div>
-                            {% content 'meat' %}
+                            {% content 'food-safety-solutions' %}
                         </div>
                     </div><!-- end Intro -->
 
                     <div class="hotspots">
                         {% for solution in solutions %}
-                        {% if solution.type == 'first-second' %}
+                        {% if solution.type == 'third' %}
                         <div class="sticker pos-{{ loop.index }}-{{ loop.length }} {% if loop.first %}green {% elseif loop.index == 2 %}blue {% elseif loop.index == 3 %}teal{% elseif loop.index == 4 %}yellow{% elseif loop.index == 5 %}red{% elseif loop.index == 6 %}orange{% elseif loop.index == 7 %}teal{% endif %}  "><a
                                 href="{{ 'solutions/solution-detailed' | page({id: solution.id}) }}"><img
                                     src="{{ solution.icon | media }}"

@@ -30,6 +30,10 @@ fields:
 tabs:
     fields:
 # Main Info
+        coldchain_integrity_logo:
+            label: Cold Chain Integrity Logo
+            type: mediafinder
+            tab: Pages content 
         homepage_banner_image:
             label: Home page banner image
             type: mediafinder
@@ -42,7 +46,6 @@ tabs:
             label: Home page banner text
             type: richeditor
             tab: Pages content
-
 
         homepage_solutions_text:
             label: Home page solutions text

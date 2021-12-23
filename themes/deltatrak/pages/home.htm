@@ -82,10 +82,10 @@ layout = "default"
 
                 <div class="dti-fade-in home-static">
                     <div>
-                        <!-- <h1>
-    <img src="{{ 'assets/images/logos-icons/Cold_Chain_Integrity_Logo_white.png' | theme }}">
-</h1> -->
-                        <h3>{{ company.homepagebanner_text | raw }}</h3>
+                        <h1>
+    <img src="{{ company.coldchain_integrity_logo | media }}">
+</h1>
+                        <h3>{{ company.homepage_banner_text | raw }}</h3>
                     </div>
                     <p class="scroller"><a href="#solutions" data-uk-smooth-scroll></a></p>
                 </div>
@@ -101,8 +101,7 @@ layout = "default"
 
                 <div class="home-static-solutions">
                     <div>
-                        {{ company.homepagesolutions_text | raw }}
-                        {{ company }}
+                        {{ company.homepage_solutions_text | raw }}
                         <div class="flex">
 
                             <div class="dt-width-1-5 dt-width-sm-1-1">

@@ -62,6 +62,10 @@ class Company extends ComponentBase
         $company->testimonials = $settings->testimonials;
 
         $company->support = $settings->support;
+        
+
+        $company->coldchain_integrity_logo = $settings->coldchain_integrity_logo;
+
 
         $this->page['company'] = $company;
     }

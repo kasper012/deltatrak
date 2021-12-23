@@ -20,7 +20,7 @@ class Plugin extends PluginBase
             'name'        => 'products',
             'description' => 'No description provided yet...',
             'author'      => 'gadimlie',
-            'icon'        => 'icon-rocket'
+            'icon'        => 'icon-shopping-cart'
         ];
     }
 
@@ -125,7 +125,7 @@ class Plugin extends PluginBase
             'products' => [
                 'label'       => 'Products',
                 'url'         => Backend::url('gadimliestudio/products/products'),
-                'icon'        => 'icon-rocket',
+                'icon'        => 'icon-shopping-cart',
                 'permissions' => ['gadimliestudio.products.*'],
                 'order'       => 500,
             ],

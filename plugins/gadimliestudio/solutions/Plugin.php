@@ -20,7 +20,7 @@ class Plugin extends PluginBase
             'name'        => 'solutions',
             'description' => 'No description provided yet...',
             'author'      => 'gadimlie',
-            'icon'        => 'icon-rocket'
+            'icon'        => 'icon-check-square'
         ];
     }
 
@@ -125,7 +125,7 @@ class Plugin extends PluginBase
             'solutions' => [
                 'label'       => 'Solutions',
                 'url'         => Backend::url('gadimliestudio/solutions/solutions'),
-                'icon'        => 'icon-rocket',
+                'icon'        => 'icon-check-square',
                 'permissions' => ['gadimliestudio.solutions.*'],
                 'order'       => 500,
             ],

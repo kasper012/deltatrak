@@ -125,7 +125,7 @@ class Plugin extends PluginBase
             'whitepapers' => [
                 'label'       => 'Whitepapers',
                 'url'         => Backend::url('gadimliestudio/whitepapers/whitepapers'),
-                'icon'        => 'icon-rocket',
+                'icon'        => 'icon-file',
                 'permissions' => ['gadimliestudio.whitepapers.*'],
                 'order'       => 500,
             ],

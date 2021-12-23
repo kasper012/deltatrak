@@ -37,53 +37,55 @@ localeTitle[az] = "Yüksək temperatur etiketləri"
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
                         {% if product.status_type == 'seventh-first' %}
-                    <div class="prod-block span4">
-                        <div class="item column-1" itemprop="blogPost" itemscope
-                            itemtype="https://schema.org/BlogPosting">
-
-
-                            <!--<h3 style="color: red;">This is the custom Item layout</h3>-->
-                            <div class="delta-product-category">
-
-                                <!--<h3 class="prod-model">Model 11036</h3>-->
-                                <div class="page-header">
-                                    <h2 itemprop="name">
-                                                    <a href="/products/{{product.id}}" itemprop="url">
-                                        <span class="sup"></span> {{ product.title }}	</a>
-                                            </h2>
-                                </div>
-                                <div class="prod-image"><a
-                                        href="{{ product.product_image | media }}"
-                                        data-uk-lightbox> <img
-                                            src="{{ product.product_image | media }}"
-                                            alt="" /></a>
-                                                                {% if product.key_features %}
-                                <div class="key-features"><b>{{'Key Features'|_}}:</b>
-                                    <ul>
-                                        {% for feature in product.key_features %}
-                                        <li>{{ feature.feature }}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                                {% endif %}>
-
-                                {% if product.applications %}
-                                <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
-                                <div class="product read-more">
-                                    <p class="readmore">
-                                        <a class="btn" href="/products/{{product.id}}" itemprop="url" aria-label="{{ product.title }}">
-                                            <span class="icon-chevron-right" aria-hidden="true"></span> {{ 'Read more ...' |_ }} </a>
-                                    </p>
-                                </div>
-                                {% endif %}
-
-                            </div><!-- end delta-product-category -->
+                        <div class="col-md-4">
+                            <div class="prod-block ml-0">
+                                    <div class="item column-1" itemprop="blogPost" itemscope
+                                        itemtype="https://schema.org/BlogPosting">
+        
+        
+                                        <!--<h3 style="color: red;">This is the custom Item layout</h3>-->
+                                        <div class="delta-product-category">
+        
+                                            <!--<h3 class="prod-model">Model 11036</h3>-->
+                                            <div class="page-header">
+                                                <h2 itemprop="name">
+                                                                <a href="/products/{{product.id}}" itemprop="url">
+                                                    <span class="sup"></span> {{ product.title }}	</a>
+                                                        </h2>
+                                            </div>
+                                            <div class="prod-image"><a
+                                                    href="{{ product.product_image | media }}"
+                                                    data-uk-lightbox> <img
+                                                        src="{{ product.product_image | media }}"
+                                                        alt="" /></a>
+                                            </div>
+                                            <div class="key-features"><b>{{'Key Features'|_}}:</b>
+                                                <ul>
+                                                    {% for feature in product.key_features %}
+                                                    <li>{{ feature.feature }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+        
+                                            <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
+                                            <div class="product read-more">
+                                                <p class="readmore">
+                                                    <a class="btn"
+                                                        href="/products/{{product.id}}"
+                                                        itemprop="url"
+                                                        aria-label="{{ product.title }}">
+                                                        <span class="icon-chevron-right" aria-hidden="true"></span>
+                                                        {{'Read more...' |_}} </a>
+                                                </p>
+                                            </div>
+        
+                                        </div><!-- end delta-product-category -->
+                                    </div>
+                                    <!-- end item -->
+                            </div>
                         </div>
-                        <!-- end item -->
-                    </div><!-- end span -->
-                        {% endif %}
-                    {% endfor %}
-                </div><!-- end row -->
+                {% endif %}
+            {% endfor %}
             </div>
             <div class="clearfix"></div>
             <!-- End Content -->

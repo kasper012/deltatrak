@@ -9,7 +9,7 @@ class Product extends ComponentBase
     {
         return [
             'name'        => 'Product Component',
-            'description' => 'Products of Clean City'
+            'description' => 'Products'
         ];
     }
 

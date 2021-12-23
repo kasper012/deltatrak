@@ -84,7 +84,7 @@ fields:
         type: richeditor
 
 
-    products:
+    selected:
         type: repeater
         prompt: Add solution product
         form:
@@ -102,6 +102,12 @@ fields:
                     span: storm
                     cssClass: col-sm-12  
                     required: true
+    test:
+        type: repeater
+        form:
+            fields:
+                title:
+                    label: Title
                 
 
 

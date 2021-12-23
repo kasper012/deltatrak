@@ -49,8 +49,8 @@ class Solution extends Model
      * @var array Attributes to be cast to JSON
      */
     protected $jsonable = [
-        'images',
-        'products'
+        'selected',
+        'test'
     ];
 
     /**

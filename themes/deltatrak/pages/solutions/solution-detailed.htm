@@ -1,22 +1,24 @@
-title = "Solution"
 url = "/solution/:id?"
 layout = "default"
+title = "Solution"
 is_hidden = 0
 
-
 [viewBag]
-localeUrl[ru] = 'resheniya/:id?'
-localeUrl[az] = '/heller/:id?'
-localeTitle[ru] = 'Решение'
-localeTitle[az] = 'Həll'
+localeUrl[ru] = "resheniya/:id?"
+localeUrl[az] = "/heller/:id?"
+localeTitle[ru] = "Решение"
+localeTitle[az] = "Həll"
 
+[solutions]
 ==
+<?php
 use Gadimliestudio\Solutions\Models\Solution;
 public function onStart() {
     $solution = Solution::find($this->param('id'));
     $this->page->title = $solution->title;
     $this['solution'] = $solution;
 }
+?>
 ==
 <div itemprop="articleBody">
     <div id="top" class="green full-modal full-page">
@@ -48,12 +50,8 @@ public function onStart() {
                         {% elseif solution.type == 'fourth' %}{{ 'solutions/aerospace-industrial-solutions/main' | page }}
                         {% endif %}
                         {% if solution.type == 'fivth' %}{{ 'solutions/in-transit-distribution-solutions/main' | page }}
-                        {% endif %}
-
-
-
-                        " class="close"
-                            title="Back to Produce/Floral Solutions">{{'BACK'|_}}</a></li>
+                        {% endif %}" class="close"
+                            title="">{{'BACK'|_}}</a></li>
                 </ul>
             </div>
 
@@ -115,15 +113,21 @@ public function onStart() {
                     <div class="text-130"
                         data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:400}">
                         {{ solution.product_about_text | raw }}
+                        {{ solution }}
                     </div>
                     <div class="solution-exit-nav">
                         <!-- NAV TO PRODUCTS-->
                         <h5>{{'Selected DeltaTrak Cut to Cool Solutions'|_}}</h5>
                         <p class="link-2">
-                            {% for solution_product in solutions.products %}
-                                <a href="{{ product.link }}"><span>{{ product.title }}</span><img
-                                    src={{ product.image | media }}"
+                            {{ solution.products }}
+                            {% for solution_product in solution.selected_solutions %}
+                                <a href="{{ solution_product.link }}"><span>{{ solution_product.title }}</span><img
+                                    src={{ solution_product.image | media }}"
                                     alt="" /></a>
+                            {% endfor %}
+
+                            {% for test in solution.test %}
+                                    {{ test.title }}
                             {% endfor %}
                         </p>
                     </div>

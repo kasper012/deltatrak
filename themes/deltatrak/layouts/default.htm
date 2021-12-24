@@ -192,6 +192,11 @@ default = 0
         .bottom-banner {
             display: none;
         }
+
+        a:hover {
+            text-decoration: none !important;
+            color: white !important;
+        }
     </style>
     <script type="application/json"
         class="joomla-script-options new">{"csrf.token":"53b93d72b68c584f30abfd539bbffdb4","system.paths":{"root":"","base":""}}</script>
@@ -259,107 +264,119 @@ default = 0
     <!-- DTI ADD: Off Canvas -->
     <input type="checkbox" id="nav-trigger" class="nav-trigger" />
     <label for="nav-trigger"></label>
+
     <div class="off-canvas">
         <div class="moduletable">
-    
+
         </div>
-        <div class="moduletable">
+        <div class="moduletable" style="padding-top: 50px">
             <div class="accordeonck ">
-                <ul class="menu" id="accordeonck272" accordeonck_done="1">
-                    <li id="item-102" class="accordeonck headingck item102 first parent parent level1 " data-level="1"><span
-                            class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
+                <ul class="menu" id="accordeonck272">
+                    <li id="item-102" class="accordeonck headingck item102 first parent parent level1 " data-level="1">
+                        <span class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
                                 class="mega column-2 accordeonck " href="javascript:void(0);">Products<span
                                     class="accordeonckdesc"></span></a></span>
                         <ul class="content_1 accordeonck" style="display:none;">
                             <li id="item-617" class="accordeonck headingck item617 first level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class=" promo menu-promo accordeonck " href="/">
+                                    class="accordeonck_outer "><a class=" promo menu-promo accordeonck "
+                                        href="index.html%3FrCH=2.html">
                                         <!-- START: Modules Anywhere -->
-    
-                                    </a>
-                                    <div class="custom menu-promo"><a class=" promo menu-promo accordeonck " href="/">
+
+                                        <div class="custom menu-promo">
                                             <h3>Our Newest Product Innovations</h3>
                                             <p>DeltaTrak is committed to continuous development in new technologies to
-                                                improve ease of use, reliability, accuracy and real time data access.</p>
-                                        </a>
-                                        <p class="link-3"><a class=" promo menu-promo accordeonck " href="/">
-                                            </a><a href="/covid-19-vaccine-solutions"><span>COVID-19 Vaccine Monitoring
-                                                    Solutions</span><img
-                                                    src="https://www.deltatrak.com/images/solution-pages/buttons/covid-19-vaccine-solutions.jpg"
-                                                    alt=""></a>
-                                            <a href="/in-transit-ble-loggers"><span>In-Transit BLE Loggers</span><img
-                                                    src="https://www.deltatrak.com/images/solution-pages/buttons/ble-in-transit.jpg"
-                                                    alt=""></a>
-                                            <a href="/in-transit-real-time-loggers"><span>In-Transit Real Time
-                                                    Loggers</span><img
-                                                    src="https://www.deltatrak.com/images/solution-pages/buttons/rtl-in-transit.jpg"
-                                                    alt=""></a>
-                                        </p>
-                                    </div>
-                                    <!-- END: Modules Anywhere --><span class="accordeonckdesc"></span>
-                                </span></li>
+                                                improve ease of use, reliability, accuracy and real time data access.
+                                            </p>
+                                            <p class="link-3">
+                                                <a href="{{ 'products/vaccine-monitoring/covid-19-vaccine-solutions' | page }}"><span>COVID-19 Vaccine
+                                                        Monitoring Solutions</span><img
+                                                        src="{{ 'assets/images/solution-pages/buttons/covid-19-vaccine-solutions.jpg' | theme }}"
+                                                        alt="" /></a>
+                                                <a href="{{ 'products/data-loggers/in-transit-ble-loggers' | page }}"><span>In-Transit BLE
+                                                        Loggers</span><img
+                                                        src="{{ 'assets/images/solution-pages/buttons/ble-in-transit.jpg' | theme }}"
+                                                        alt="" /></a>
+                                                <a href="{{ 'products/data-loggers/in-transit-real-time-loggers' | page }}"><span>In-Transit
+                                                        Real Time Loggers</span><img
+                                                        src="{{ 'assets/images/solution-pages/buttons/rtl-in-transit.jpg' | theme }}"
+                                                        alt="" /></a>
+                                            </p>
+                                        </div>
+                                        <!-- END: Modules Anywhere --><span class="accordeonckdesc"></span>
+                                    </a></span></li>
                             <li id="item-343" class="accordeonck item343 parent parent level2 " data-level="2"><span
                                     class="accordeonck_outer toggler toggler_2"><span class="toggler_icon"></span><a
-                                        class="separator  mega column one accordeonck " href="javascript:void(0);">Column 1
-                                        of 2<span class="accordeonckdesc"></span></a></span>
+                                        class="separator  mega column one accordeonck "
+                                        href="javascript:void(0);">Column 1 of 2<span
+                                            class="accordeonckdesc"></span></a></span>
                                 <ul class="content_2 accordeonck" style="display:none;">
                                     <li id="item-114" class="accordeonck headingck item114 first parent parent level3 "
                                         data-level="3"><span class="accordeonck_outer toggler toggler_3"><span
                                                 class="toggler_icon"></span><a class="dt-icon-thermometer accordeonck "
-                                                href="javascript:void(0);">{{'Thermometers'|_}}<span
+                                                href="javascript:void(0);">Thermometers<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-144" class="accordeonck item144 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class=" new accordeonck "
-                                                        href="{{ 'products/thermometers/digital-min-max-thermometers' | page }}">Digital &amp; Min/Max
-                                                        Thermometers<span class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-144" class="accordeonck item144 first level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class=" new accordeonck "
+                                                        href="{{ 'products/thermometers/digital-min-max-thermometers' | page }}">Digital &amp;
+                                                        Min/Max Thermometers<span
+                                                            class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-143" class="accordeonck item143 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/thermometers/certified-thermometers' | page }}">Certified Thermometers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/thermometers/certified-thermometers' | page }}">Certified
+                                                        Thermometers<span class="accordeonckdesc"></span></a></span>
+                                            </li>
                                             <li id="item-145" class="accordeonck item145 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/thermometers/thermo-hygrometers' | page }}">Thermo-Hygrometers<span
                                                             class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-124" class="accordeonck item124 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/thermometers/infra-red-non-contact-thermometers' | page }}">Infrared Non-Contact
-                                                        Thermometers<span class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/thermometers/infra-red-non-contact-thermometers' | page }}">Infrared
+                                                        Non-Contact Thermometers<span
+                                                            class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-146" class="accordeonck item146 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/thermometers/thermocouple-thermometer-type-k' | page }}">Thermocouple Thermometer
-                                                        Type K<span class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/thermometers/thermocouple-thermometer-type-k' | page }}">Thermocouple
+                                                        Thermometer Type K<span
+                                                            class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-199" class="accordeonck item199 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/thermometers/heat-cool-thermometers' | page }}">Heat/Cool Thermometers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-142" class="accordeonck item142 last level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/thermometers/bi-metal-thermometers' | page }}">Bi Metal Thermometers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/thermometers/heat-cool-thermometers' | page }}">Heat/Cool
+                                                        Thermometers<span class="accordeonckdesc"></span></a></span>
+                                            </li>
+                                            <li id="item-142" class="accordeonck item142 last level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/thermometers/bi-metal-thermometers' | page }}">Bi Metal
+                                                        Thermometers<span class="accordeonckdesc"></span></a></span>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li id="item-116" class="accordeonck headingck item116 parent parent level3 "
                                         data-level="3"><span class="accordeonck_outer toggler toggler_3"><span
-                                                class="toggler_icon"></span><a class="dt-icon-chartrecorder accordeonck "
+                                                class="toggler_icon"></span><a
+                                                class="dt-icon-chartrecorder accordeonck "
                                                 href="javascript:void(0);">Chart Recorders<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-153" class="accordeonck item153 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/chart-recorders/circular-chart-recorders' | page }}">Circular Chart Recorders<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-153" class="accordeonck item153 first level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/chart-recorders/circular-chart-recorders' | page }}">Circular Chart
+                                                        Recorders<span class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-152" class="accordeonck item152 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/chart-recorders/electronic-circular-chart-recorders' | page }}"> Electronic Circular
-                                                        Chart Recorders<span class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/chart-recorders/electronic-circular-chart-recorders' | page }}">
+                                                        Electronic Circular Chart Recorders<span
+                                                            class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-150" class="accordeonck item150 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/chart-recorders/in-transit-chart-recorders' | page }}"> In-Transit Chart Recorders<span
-                                                            class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-151" class="accordeonck item151 last level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/chart-recorders/digital-display-chart-recorders' | page }}"> Digital Display Chart
+                                                        href="{{ 'products/chart-recorders/in-transit-chart-recorders' | page }}"> In-Transit Chart
                                                         Recorders<span class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-151" class="accordeonck item151 last level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/chart-recorders/digital-display-chart-recorders' | page }}"> Digital
+                                                        Display Chart Recorders<span
+                                                            class="accordeonckdesc"></span></a></span></li>
                                         </ul>
                                     </li>
                                     <li id="item-115" class="accordeonck headingck item115 parent parent level3 "
@@ -368,46 +385,49 @@ default = 0
                                                 href="javascript:void(0);">Data Loggers<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-155" class="accordeonck item155 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/data-loggers/high-temperature-data-loggers' | page }}">High Temperature Data
-                                                        Loggers<span class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-155" class="accordeonck item155 first level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/data-loggers/high-temperature-data-loggers' | page }}">High
+                                                        Temperature Data Loggers<span
+                                                            class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-148" class="accordeonck item148 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/data-loggers/in-transit-loggers' | page }}">In-Transit Loggers<span
                                                             class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-752" class="accordeonck item752 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/data-loggers/in-transit-ble-loggers' | page }}">In-Transit BLE Loggers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/data-loggers/in-transit-ble-loggers' | page }}">In-Transit BLE
+                                                        Loggers<span class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-149" class="accordeonck item149 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/data-loggers/in-transit-pdf-loggers' | page }}">In-Transit PDF Loggers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/data-loggers/in-transit-pdf-loggers' | page }}">In-Transit PDF
+                                                        Loggers<span class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-339" class="accordeonck item339 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/data-loggers/in-transit-real-time-loggers' | page }}">In-Transit Real Time
-                                                        Loggers<span class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/data-loggers/in-transit-real-time-loggers' | page }}">In-Transit Real
+                                                        Time Loggers<span class="accordeonckdesc"></span></a></span>
+                                            </li>
                                             <li id="item-220" class="accordeonck item220 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/data-loggers/multi-use-data-loggers' | page }}">Multi-Use Data Loggers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/data-loggers/multi-use-data-loggers' | page }}">Multi-Use Data
+                                                        Loggers<span class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-221" class="accordeonck item221 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/data-loggers/reusable-data-loggers' | page }}">Reusable Data Loggers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/data-loggers/reusable-data-loggers' | page }}">Reusable Data
+                                                        Loggers<span class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-338" class="accordeonck item338 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/data-loggers/reusable-ble-data-loggers' | page }}">Reusable BLE Data Loggers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/data-loggers/reusable-ble-data-loggers' | page }}">Reusable BLE Data
+                                                        Loggers<span class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-222" class="accordeonck item222 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/data-loggers/reusable-pdf-data-loggers' | page }}">Reusable PDF Data Loggers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-649" class="accordeonck item649 last level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/data-loggers/reusable-real-time-loggers' | page }}">Reusable Real Time Loggers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/data-loggers/reusable-pdf-data-loggers' | page }}">Reusable PDF Data
+                                                        Loggers<span class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-649" class="accordeonck item649 last level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/data-loggers/reusable-real-time-loggers' | page }}">Reusable Real
+                                                        Time Loggers<span class="accordeonckdesc"></span></a></span>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li id="item-224" class="accordeonck headingck item224 parent parent level3 "
@@ -416,12 +436,12 @@ default = 0
                                                 href="javascript:void(0);">Time and Temperature Indicators<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-225" class="accordeonck item225 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
+                                            <li id="item-225" class="accordeonck item225 first level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/time-temperature-indicators/warmmark-labels' | page }}">WarmMark Labels<span
                                                             class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-228" class="accordeonck item228 last level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
+                                            <li id="item-228" class="accordeonck item228 last level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/time-temperature-indicators/tempdot-plus-labels' | page }}">TempDot Plus Labels<span
                                                             class="accordeonckdesc"></span></a></span></li>
                                         </ul>
@@ -432,40 +452,43 @@ default = 0
                                                 href="javascript:void(0);">Vaccine Monitoring<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-805" class="accordeonck item805 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/vaccine-monitoring/covid-19-vaccine-solutions' | page }}">COVID-19 Vaccine Solutions<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-805" class="accordeonck item805 first level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/vaccine-monitoring/covid-19-vaccine-solutions' | page }}">COVID-19 Vaccine
+                                                        Solutions<span class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-230" class="accordeonck item230 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/vaccine-monitoring/certified-alarm-thermometers' | page }}">Certified Alarm
-                                                        Thermometers<span class="accordeonckdesc"></span></a></span></li>
+                                                        Thermometers<span class="accordeonckdesc"></span></a></span>
+                                            </li>
                                             <li id="item-233" class="accordeonck item233 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/vaccine-monitoring/certified-vaccine-usb-pdf-data-loggers' | page }}">Certified Vaccine USB
-                                                        PDF Data Loggers<span class="accordeonckdesc"></span></a></span>
-                                            </li>
+                                                        href="{{ 'products/vaccine-monitoring/certified-vaccine-usb-pdf-data-loggers' | page }}">Certified
+                                                        Vaccine USB PDF Data Loggers<span
+                                                            class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-804" class="accordeonck item804 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/vaccine-monitoring/vaccine-electronic-shipping-indicator' | page }}">Vaccine Electronic
-                                                        Shipping Indicator<span class="accordeonckdesc"></span></a></span>
-                                            </li>
+                                                        href="{{ 'products/vaccine-monitoring/vaccine-electronic-shipping-indicator' | page }}">Vaccine
+                                                        Electronic Shipping Indicator<span
+                                                            class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-232" class="accordeonck item232 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/vaccine-monitoring/wireless-refrigerator-monitor' | page }}">Wireless Refrigerator
-                                                        Monitor<span class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-340" class="accordeonck item340 last level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/vaccine-monitoring/vaccine-monitor-card' | page }}">Vaccine Monitor Card<span
+                                                        href="{{ 'products/vaccine-monitoring/wireless-refrigerator-monitor' | page }}">Wireless
+                                                        Refrigerator Monitor<span
                                                             class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-340" class="accordeonck item340 last level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/vaccine-monitoring/vaccine-monitor-card' | page }}">Vaccine Monitor
+                                                        Card<span class="accordeonckdesc"></span></a></span></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
                             <li id="item-344" class="accordeonck item344 parent parent level2 " data-level="2"><span
                                     class="accordeonck_outer toggler toggler_2"><span class="toggler_icon"></span><a
-                                        class="separator  mega column two accordeonck " href="javascript:void(0);">Column 2
-                                        of 2<span class="accordeonckdesc"></span></a></span>
+                                        class="separator  mega column two accordeonck "
+                                        href="javascript:void(0);">Column 2 of 2<span
+                                            class="accordeonckdesc"></span></a></span>
                                 <ul class="content_2 accordeonck" style="display:none;">
                                     <li id="item-227" class="accordeonck headingck item227 first parent parent level3 "
                                         data-level="3"><span class="accordeonck_outer toggler toggler_3"><span
@@ -473,14 +496,15 @@ default = 0
                                                 href="javascript:void(0);">RF Wireless Monitoring<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-235" class="accordeonck item235 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/rf-wireless-monitoring/telematics-wireless-system' | page }}">Telematics Wireless System<span
-                                                            class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-262" class="accordeonck item262 first last level4 " data-level="4">
+                                            <li id="item-235" class="accordeonck item235 first level4 " data-level="4">
                                                 <span class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/rf-wireless-monitoring/flashtrak-telematics-fcs2' | page }}">FlashTrak Telematics FCS2<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/rf-wireless-monitoring/telematics-wireless-system' | page }}">Telematics
+                                                        Wireless System<span class="accordeonckdesc"></span></a></span>
+                                            </li>
+                                            <li id="item-262" class="accordeonck item262 first last level4 "
+                                                data-level="4"><span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/rf-wireless-monitoring/flashtrak-telematics-fcs2' | page }}">FlashTrak Telematics
+                                                        FCS2<span class="accordeonckdesc"></span></a></span></li>
                                         </ul>
                                     </li>
                                     <li id="item-120" class="accordeonck headingck item120 parent parent level3 "
@@ -489,20 +513,21 @@ default = 0
                                                 href="javascript:void(0);">Thermal Labels<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-236" class="accordeonck item236 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/thermal-labels/high-temperature-thermal-labels' | page }}">High Temperature Thermal
-                                                        Labels<span class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-236" class="accordeonck item236 first level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/thermal-labels/high-temperature-thermal-labels' | page }}">High
+                                                        Temperature Thermal Labels<span
+                                                            class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-237" class="accordeonck item237 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/thermal-labels/coldmark-labels' | page }}">ColdMark Labels<span
                                                             class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-238" class="accordeonck item238 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/thermal-labels/freeze-indicator-labels' | page }}">Freeze Indicator Labels<span
-                                                            class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-239" class="accordeonck item239 last level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/thermal-labels/freeze-indicator-labels' | page }}">Freeze Indicator
+                                                        Labels<span class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-239" class="accordeonck item239 last level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/thermal-labels/blood-temp-labels' | page }}">Blood Temp Labels<span
                                                             class="accordeonckdesc"></span></a></span></li>
                                         </ul>
@@ -513,14 +538,15 @@ default = 0
                                                 href="javascript:void(0);">Shelf Life Quality Tools<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-241" class="accordeonck item241 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
+                                            <li id="item-241" class="accordeonck item241 first level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/shelf-life-quality-tools/ethylene-absorption' | page }}">Ethylene Absorption<span
                                                             class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-242" class="accordeonck item242 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/shelf-life-quality-tools/brix-refractometers' | page }}">Salinity Refractometers<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                                        href="{{ 'products/shelf-life-quality-tools/salinity-refractometers' | page }}">Salinity
+                                                        Refractometers<span class="accordeonckdesc"></span></a></span>
+                                            </li>
                                             <li id="item-243" class="accordeonck item243 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/shelf-life-quality-tools/brix-refractometers' | page }}">Brix Refractometer<span
@@ -529,8 +555,8 @@ default = 0
                                                     class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/shelf-life-quality-tools/penetrometers' | page }}">Penetrometers<span
                                                             class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-245" class="accordeonck item245 last level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
+                                            <li id="item-245" class="accordeonck item245 last level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/shelf-life-quality-tools/isfet-ph-meters' | page }}">ISFET pH Meters<span
                                                             class="accordeonckdesc"></span></a></span></li>
                                         </ul>
@@ -541,16 +567,16 @@ default = 0
                                                 href="javascript:void(0);">HACCP Food Safety Tools<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-246" class="accordeonck item246 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
-                                                        href="{{ 'products/hacpp-food-quality-tools/food-safety-products' | page }}">Food Safety Products<span
-                                                            class="accordeonckdesc"></span></a></span></li>
+                                            <li id="item-246" class="accordeonck item246 first level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
+                                                        href="{{ 'products/hacpp-food-quality-tools/food-safety-products' | page }}">Food Safety
+                                                        Products<span class="accordeonckdesc"></span></a></span></li>
                                             <li id="item-247" class="accordeonck item247 level4 " data-level="4"><span
                                                     class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/hacpp-food-quality-tools/kitchen-timers' | page }}">Kitchen Timers<span
                                                             class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-248" class="accordeonck item248 last level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
+                                            <li id="item-248" class="accordeonck item248 last level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/hacpp-food-quality-tools/alcohol-wipes' | page }}">Alcohol Wipes<span
                                                             class="accordeonckdesc"></span></a></span></li>
                                         </ul>
@@ -561,12 +587,12 @@ default = 0
                                                 href="javascript:void(0);">Software Solutions<span
                                                     class="accordeonckdesc"></span></a></span>
                                         <ul class="content_3 accordeonck" style="display:none;">
-                                            <li id="item-250" class="accordeonck item250 first level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
+                                            <li id="item-250" class="accordeonck item250 first level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/software-solutions/coldtrak' | page }}">ColdTrak<span
                                                             class="accordeonckdesc"></span></a></span></li>
-                                            <li id="item-251" class="accordeonck item251 last level4 " data-level="4"><span
-                                                    class="accordeonck_outer "><a class="accordeonck "
+                                            <li id="item-251" class="accordeonck item251 last level4 " data-level="4">
+                                                <span class="accordeonck_outer "><a class="accordeonck "
                                                         href="{{ 'products/software-solutions/flashlink-manager' | page }}">FlashLink Manager<span
                                                             class="accordeonckdesc"></span></a></span></li>
                                         </ul>
@@ -576,160 +602,165 @@ default = 0
                         </ul>
                     </li>
                     <li id="item-128" class="accordeonck headingck item128 parent parent level1 " data-level="1"><span
-                            class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
-                                class="accordeonck " href="javascript:void(0);">Solutions<span
-                                    class="accordeonckdesc"></span></a></span>
-                        <ul class="content_1 accordeonck" style="display:none;">
-                            <li id="item-323" class="accordeonck item323 first parent parent level2 " data-level="2"><span
-                                    class="accordeonck_outer toggler toggler_2"><span class="toggler_icon"></span><a
-                                        class="dt-icon-corn accordeonck " href="javascript:void(0);">Food Solutions<span
-                                            class="accordeonckdesc"></span></a></span>
-                                <ul class="content_2 accordeonck" style="display:none;">
-                                    <li id="item-366" class="accordeonck item366 first level3 " data-level="3"><span
-                                            class="accordeonck_outer "><a class="accordeonck "
-                                                href="{{ 'solutions/food-solutions/produce-floral/main' | page }}">Produce / Floral<span
-                                                    class="accordeonckdesc"></span></a></span></li>
-                                    <li id="item-367" class="accordeonck item367 first level3 " data-level="3"><span
-                                            class="accordeonck_outer "><a class="accordeonck "
-                                                href="{{ 'solutions/food-solutions/meat/main' | page }}">Meat<span
-                                                    class="accordeonckdesc"></span></a></span></li>
-                                    <li id="item-401" class="accordeonck item401 first level3 " data-level="3"><span
-                                            class="accordeonck_outer "><a class="accordeonck "
-                                                href="{{ 'solutions/food-solutions/poultry/main' | page }}>Poultry<span
-                                                    class="accordeonckdesc"></span></a></span></li>
-                                    <li id="item-368" class="accordeonck item368 first level3 " data-level="3"><span
-                                            class="accordeonck_outer "><a class="accordeonck "
-                                                href="{{ 'solutions/food-solutions/dairy/main' | page }}">Dairy<span
-                                                    class="accordeonckdesc"></span></a></span></li>
-                                    <li id="item-369" class="accordeonck item369 first last level3 " data-level="3"><span
-                                            class="accordeonck_outer "><a class="accordeonck "
-                                                href="{{ 'solutions/food-solutions/seafood/main' | page }}">Seafood<span
-                                                    class="accordeonckdesc"></span></a></span></li>
-                                </ul>
-                            </li>
-                            <li id="item-322" class="accordeonck item322 first level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-flask accordeonck "
-                                        href="{{ 'solutions/life-science-solutions/main' | page }}">Life Science Solutions<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-321" class="accordeonck item321 first level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-cutlery accordeonck "
-                                        href="{{ 'solutions/food-safety-solutions/main' | page }}">Food Safety Solutions<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-325" class="accordeonck item325 first level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-fighter-jet accordeonck "
-                                        href="{{ 'solutions/aerospace-industrial-solutions/main' | page }}">Aerospace and Industrial
-                                        Solutions<span class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-324" class="accordeonck item324 first last level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-truck accordeonck "
-                                        href="{{ 'solutions/in-transit-distribution-solutions/main' | page }}">In-Transit and Distribution
-                                        Solutions<span class="accordeonckdesc"></span></a></span></li>
-                        </ul>
-                    </li>
-                    <li id="item-138" class="accordeonck headingck item138 first parent parent level1 " data-level="1"><span
-                            class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
-                                class=" fly-out accordeonck " href="javascript:void(0);">Support<span
-                                    class="accordeonckdesc"></span></a></span>
-                        <ul class="content_1 accordeonck" style="display:none;">
-                            <li id="item-166" class="accordeonck item166 first level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-briefcase accordeonck "
-                                        href="{{ 'support/technical-support' | page }}">Technical Support<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-170" class="accordeonck item170 level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-shield accordeonck "
-                                        href="{{ 'support/warranty' | page }}">Warranty<span class="accordeonckdesc"></span></a></span>
-                            </li>
-                            <li id="item-171" class="accordeonck item171 first level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-software accordeonck "
-                                        href="{{ 'support/software-drivers' | page }}">Software and Drivers<span
-                                            class="accordeonckdesc"></span></a></span></li>
-    
-                        </ul>
-                    </li>
+                        class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
+                            class="accordeonck " href="javascript:void(0);">Solutions<span
+                                class="accordeonckdesc"></span></a></span>
+                    <ul class="content_1 accordeonck" style="display:none;">
+                        <li id="item-323" class="accordeonck item323 first parent parent level2 " data-level="2"><span
+                                class="accordeonck_outer toggler toggler_2"><span class="toggler_icon"></span><a
+                                    class="dt-icon-corn accordeonck " href="javascript:void(0);">Food Solutions<span
+                                        class="accordeonckdesc"></span></a></span>
+                            <ul class="content_2 accordeonck" style="display:none;">
+                                <li id="item-366" class="accordeonck item366 first level3 " data-level="3"><span
+                                        class="accordeonck_outer "><a class="accordeonck "
+                                            href="{{ 'solutions/food-solutions/produce-floral/main' | page }}">Produce / Floral<span
+                                                class="accordeonckdesc"></span></a></span></li>
+                                <li id="item-367" class="accordeonck item367 first level3 " data-level="3"><span
+                                        class="accordeonck_outer "><a class="accordeonck "
+                                            href="{{ 'solutions/food-solutions/meat/main' | page }}">Meat<span
+                                                class="accordeonckdesc"></span></a></span></li>
+                                <li id="item-401" class="accordeonck item401 first level3 " data-level="3"><span
+                                        class="accordeonck_outer "><a class="accordeonck "
+                                            href="{{ 'solutions/food-solutions/poultry/main' | page }}>Poultry<span
+                                                class="accordeonckdesc"></span></a></span></li>
+                                <li id="item-368" class="accordeonck item368 first level3 " data-level="3"><span
+                                        class="accordeonck_outer "><a class="accordeonck "
+                                            href="{{ 'solutions/food-solutions/dairy/main' | page }}">Dairy<span
+                                                class="accordeonckdesc"></span></a></span></li>
+                                <li id="item-369" class="accordeonck item369 first last level3 " data-level="3"><span
+                                        class="accordeonck_outer "><a class="accordeonck "
+                                            href="{{ 'solutions/food-solutions/seafood/main' | page }}">Seafood<span
+                                                class="accordeonckdesc"></span></a></span></li>
+                            </ul>
+                        </li>
+                        <li id="item-322" class="accordeonck item322 first level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-flask accordeonck "
+                                    href="{{ 'solutions/life-science-solutions/main' | page }}">Life Science Solutions<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-321" class="accordeonck item321 first level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-cutlery accordeonck "
+                                    href="{{ 'solutions/food-safety-solutions/main' | page }}">Food Safety Solutions<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-325" class="accordeonck item325 first level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-fighter-jet accordeonck "
+                                    href="{{ 'solutions/aerospace-industrial-solutions/main' | page }}">Aerospace and Industrial
+                                    Solutions<span class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-324" class="accordeonck item324 first last level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-truck accordeonck "
+                                    href="{{ 'solutions/in-transit-distribution-solutions/main' | page }}">In-Transit and Distribution
+                                    Solutions<span class="accordeonckdesc"></span></a></span></li>
+                    </ul>
+                </li>
+
                     <li id="item-618" class="accordeonck headingck item618 parent parent level1 " data-level="1"><span
-                            class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
-                                class=" fly-out accordeonck " href="javascript:void(0);">Services<span
-                                    class="accordeonckdesc"></span></a></span>
-                        <ul class="content_1 accordeonck" style="display:none;">
-                            <li id="item-167" class="accordeonck item167 first level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-check-circle accordeonck "
-                                        href="{{ 'services/validation' | page }}">Validation and Qualification<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-423" class="accordeonck item423 level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="fa-cog accordeonck "
-                                        href="{{ 'services/calibration-services' | page }}">Calibration Services<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-169" class="accordeonck item169 level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-cogs accordeonck "
-                                        href="{{ 'services/17025-calibration-services' | page }}">17025 Calibration Services<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-354" class="accordeonck item354 last level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-recycle accordeonck "
-                                        href="{{ 'services/gogreen' | page }}">GoGreen Recycling Program<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                        </ul>
-                    </li>
-                    <li id="item-139" class="accordeonck item139 parent parent level1 " data-level="1"><span
-                            class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
-                                class="accordeonck " href="javascript:void(0);">Resources<span
-                                    class="accordeonckdesc"></span></a></span>
-                        <ul class="content_1 accordeonck" style="display:none;">
-                            <li id="item-164" class="accordeonck item164 first level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-television accordeonck "
-                                        href="{{ 'resources/videos' | page }}">Videos<span class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-274" class="accordeonck item274 level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-file-o accordeonck "
-                                        href="{{ 'resources/white-papers' | page }}">White Papers<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-275" class="accordeonck item275 level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-file-text-o accordeonck "
-                                        href="{{ 'resources/solution-briefs' | page }}">Solution Briefs<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-276" class="accordeonck item276 last level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-floppy-o accordeonck "
-                                        href="{{ 'resources/software-system-overview' | page }}">Software/Systems Overview<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                        </ul>
-                    </li>
-                    <li id="item-125" class="accordeonck headingck item125 parent parent level1 " data-level="1"><span
-                            class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
-                                class="accordeonck " href="javascript:void(0);">About<span
-                                    class="accordeonckdesc"></span></a></span>
-                        <ul class="content_1 accordeonck" style="display:none;">
-                            <li id="item-157" class="accordeonck item157 first level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-clipboard accordeonck "
-                                        href="{{ 'about/company-overview' | page }}">Company Overview<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-264" class="accordeonck item264 level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-sitemap accordeonck "
-                                        href="{{ 'about/management-team' | page }}">Management Team<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-160" class="accordeonck item160 level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-calendar accordeonck "
-                                        href="{{ 'about/events-calendar' | page }}">Events Calendar<span
-                                            class="accordeonckdesc"></span></a></span></li>
-    
-                            <li id="item-614" class="accordeonck item614 level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="fa-comment accordeonck "
-                                        href="{{ 'about/testimonials' | page }}">Testimonials<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                            <li id="item-161" class="accordeonck item161 level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-exchange accordeonck "
-                                        href="{{ 'about/partners' | page }}">Partners<span class="accordeonckdesc"></span></a></span>
-                            </li>
-                            <li id="item-162" class="accordeonck item162 last level2 " data-level="2"><span
-                                    class="accordeonck_outer "><a class="dt-icon-users accordeonck "
-                                        href="{{ 'about/solution-partners' | page }}">Solution Partners<span
-                                            class="accordeonckdesc"></span></a></span></li>
-                        </ul>
-                    </li>
-                    <li id="item-106" class="accordeonck item106 last level1 " data-level="1"><span
-                            class="accordeonck_outer "><a class="accordeonck " href="{{ 'contact-us' | page }}">Contact<span
+                        class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
+                            class=" fly-out accordeonck " href="javascript:void(0);">Services<span
+                                class="accordeonckdesc"></span></a></span>
+                    <ul class="content_1 accordeonck" style="display:none;">
+                        <li id="item-167" class="accordeonck item167 first level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-check-circle accordeonck "
+                                    href="{{ 'services/validation' | page }}">Validation and Qualification<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-423" class="accordeonck item423 level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="fa-cog accordeonck "
+                                    href="{{ 'services/calibration-services' | page }}">Calibration Services<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-169" class="accordeonck item169 level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-cogs accordeonck "
+                                    href="{{ 'services/17025-calibration-services' | page }}">17025 Calibration Services<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-354" class="accordeonck item354 last level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-recycle accordeonck "
+                                    href="{{ 'services/gogreen' | page }}">GoGreen Recycling Program<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                    </ul>
+                </li>
+                <li id="item-138" class="accordeonck headingck item138 first parent parent level1 " data-level="1"><span
+                    class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
+                        class=" fly-out accordeonck " href="javascript:void(0);">Support<span
+                            class="accordeonckdesc"></span></a></span>
+                <ul class="content_1 accordeonck" style="display:none;">
+                    <li id="item-166" class="accordeonck item166 first level2 " data-level="2"><span
+                            class="accordeonck_outer "><a class="dt-icon-briefcase accordeonck "
+                                href="{{ 'support/technical-support' | page }}">Technical Support<span
                                     class="accordeonckdesc"></span></a></span></li>
+                    <li id="item-170" class="accordeonck item170 level2 " data-level="2"><span
+                            class="accordeonck_outer "><a class="dt-icon-shield accordeonck "
+                                href="{{ 'support/warranty' | page }}">Warranty<span class="accordeonckdesc"></span></a></span>
+                    </li>
+                    <li id="item-171" class="accordeonck item171 first level2 " data-level="2"><span
+                            class="accordeonck_outer "><a class="dt-icon-software accordeonck "
+                                href="{{ 'support/software-drivers' | page }}">Software and Drivers<span
+                                    class="accordeonckdesc"></span></a></span></li>
+
+                </ul>
+            </li>
+                    <li id="item-139" class="accordeonck item139 parent parent level1 " data-level="1"><span
+                        class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
+                            class="accordeonck " href="javascript:void(0);">Resources<span
+                                class="accordeonckdesc"></span></a></span>
+                    <ul class="content_1 accordeonck" style="display:none;">
+                        <li id="item-164" class="accordeonck item164 first level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-television accordeonck "
+                                    href="{{ 'resources/videos' | page }}">Videos<span class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-274" class="accordeonck item274 level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-file-o accordeonck "
+                                    href="{{ 'resources/white-papers' | page }}">White Papers<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-275" class="accordeonck item275 level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-file-text-o accordeonck "
+                                    href="{{ 'resources/solution-briefs' | page }}">Solution Briefs<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-276" class="accordeonck item276 last level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-floppy-o accordeonck "
+                                    href="{{ 'resources/software-system-overview' | page }}">Software/Systems Overview<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                    </ul>
+                </li>
+                    
+                    <li id="item-125" class="accordeonck headingck item125 parent parent level1 " data-level="1"><span
+                        class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
+                            class="accordeonck " href="javascript:void(0);">About<span
+                                class="accordeonckdesc"></span></a></span>
+                    <ul class="content_1 accordeonck" style="display:none;">
+                        <li id="item-157" class="accordeonck item157 first level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-clipboard accordeonck "
+                                    href="{{ 'about/company-overview' | page }}">Company Overview<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-264" class="accordeonck item264 level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-sitemap accordeonck "
+                                    href="{{ 'about/management-team' | page }}">Management Team<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-160" class="accordeonck item160 level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-calendar accordeonck "
+                                    href="{{ 'about/events-calendar' | page }}">Events Calendar<span
+                                        class="accordeonckdesc"></span></a></span></li>
+
+                        <li id="item-614" class="accordeonck item614 level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="fa-comment accordeonck "
+                                    href="{{ 'about/testimonials' | page }}">Testimonials<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                        <li id="item-161" class="accordeonck item161 level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-exchange accordeonck "
+                                    href="{{ 'about/partners' | page }}">Partners<span class="accordeonckdesc"></span></a></span>
+                        </li>
+                        <li id="item-162" class="accordeonck item162 last level2 " data-level="2"><span
+                                class="accordeonck_outer "><a class="dt-icon-users accordeonck "
+                                    href="{{ 'about/solution-partners' | page }}">Solution Partners<span
+                                        class="accordeonckdesc"></span></a></span></li>
+                    </ul>
+                </li>
+                    <li id="item-106" class="accordeonck item106 last level1 " data-level="1"><span
+                            class="accordeonck_outer "><a class="accordeonck "
+                                href="{{ 'contact-us' | page }}">Contact<span class="accordeonckdesc"></span></a></span>
+                    </li>
                 </ul>
             </div>
         </div>
-    
+
     </div>
+
+
     <div class="off-canvas-mask"> </div>
     <!-- END Off Canvas -->
 

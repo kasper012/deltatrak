@@ -16,19 +16,21 @@ class CreateSolutionsTable extends Migration
             
             $table->text('type')->nullable();
             $table->text('icon')->nullable();
+
             $table->text('banner_text')->nullable();
             $table->text('banner_image')->nullable();
 
             $table->text('problem_text')->nullable();
-
             $table->text('problem_image')->nullable();
             $table->text('currently_text')->nullable();
+
             $table->text('currently_image')->nullable();
-
-            $table->text('selected')->nullable();
-
             $table->text('product_about_text')->nullable();
+            $table->text('selected')->nullable();
             $table->text('test')->nullable();
+            $table->text('key_features')->nullable();
+
+
 
 
 

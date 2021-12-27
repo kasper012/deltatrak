@@ -5,7 +5,7 @@
 columns:
 
     title:
-        label: Solution
+        label: Solution name
         searchable: true
         span: storm
         cssClass: col-md-12

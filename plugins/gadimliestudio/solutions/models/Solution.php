@@ -9,15 +9,7 @@ class Solution extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
-    public $implement = [
-        'RainLab.Translate.Behaviors.TranslatableModel'
-      ];
-    
-    public $translatable = [
-        'title',
-        'excerpt',
-        'description',
-    ];
+
 
     /**
      * @var string The database table used by the model.
@@ -50,7 +42,8 @@ class Solution extends Model
      */
     protected $jsonable = [
         'selected',
-        'test'
+        'test',
+        'key_features'
     ];
 
     /**

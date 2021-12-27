@@ -49,7 +49,7 @@ public function onStart() {
                         {% if solution.type == 'third' %}{{ 'solutions/food-safety-solutions/main' | page }}
                         {% elseif solution.type == 'fourth' %}{{ 'solutions/aerospace-industrial-solutions/main' | page }}
                         {% endif %}
-                        {% if solution.type == 'fivth' %}{{ 'solutions/in-transit-distribution-solutions/main' | page }}
+                        {% if solution.type == 'fifth' %}{{ 'solutions/in-transit-distribution-solutions/main' | page }}
                         {% endif %}" class="close"
                             title="">{{'BACK'|_}}</a></li>
                 </ul>
@@ -105,35 +105,36 @@ public function onStart() {
                 </div>
             </section>
             <!--  -------------  END CURRENT ----------------  -->
+           
+									<!--  -------------  SOLUTION ----------------  -->
+									<div id="solution-1" class="scroll-anchor"></div>
+									<section id="solution" class="exit">
+										<div>
+											<div class="text-130"
+												data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:400}">
+												<h2>Eliminating guesswork</h2>
+												<h4>DeltaTrak’s monitoring solutions eliminate temperature guesswork
+													through reliable, accurate, NSF certified thermometers, calibrated
+													to NIST traceable standards. Data can be stored for audits and
+													regulatory compliance.</h4>
+											</div>
+											<div class="solution-exit-nav">
+												<!-- NAV TO PRODUCTS-->
+												<h5>Selected DeltaTrak Cooking Solutions</h5>
+												<p class="link-3">
+                                                    {% for selected in solution.selected %}
+                                                    <a href="{{ selected.link }}"><span>{{ selected.title }}</span><img
+                                                        src="{{ selected.image | media }}"
+                                                        alt="" /></a>
+                                                    {% endfor %}
+												</p>
+											</div>
+										</div>
+									</section>
+									<!--  -------------  END SOLUTION ----------------  -->
 
-            <!--  -------------  SOLUTION ----------------  -->
-            <div id="solution-1" class="scroll-anchor"></div>
-            <section id="solution" class="exit">
-                <div>
-                    <div class="text-130"
-                        data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:400}">
-                        {{ solution.product_about_text | raw }}
-                        {{ solution }}
-                    </div>
-                    <div class="solution-exit-nav">
-                        <!-- NAV TO PRODUCTS-->
-                        <h5>{{'Selected DeltaTrak Cut to Cool Solutions'|_}}</h5>
-                        <p class="link-2">
-                            {{ solution.products }}
-                            {% for solution_product in solution.selected_solutions %}
-                                <a href="{{ solution_product.link }}"><span>{{ solution_product.title }}</span><img
-                                    src={{ solution_product.image | media }}"
-                                    alt="" /></a>
-                            {% endfor %}
 
-                            {% for test in solution.test %}
-                                    {{ test.title }}
-                            {% endfor %}
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <!--  -------------  END SOLUTION ----------------  -->
+
 
 
         </div>

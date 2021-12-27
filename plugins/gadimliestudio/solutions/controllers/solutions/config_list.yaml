@@ -9,13 +9,13 @@ list: $/gadimliestudio/solutions/models/solution/columns.yaml
 modelClass: Gadimliestudio\Solutions\Models\Solution
 
 # List Title
-title: Manage solution
+title: Manage solutions
 
 # Link URL for each record
 recordUrl: gadimliestudio/solutions/solutions/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: Solutions list is empty
+noRecordsMessage: There is no solution here
 
 # Records to display per page
 recordsPerPage: 20

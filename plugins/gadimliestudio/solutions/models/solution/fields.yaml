@@ -17,7 +17,7 @@ fields:
         label: Type
         type: dropdown
         span: storm
-        cssClass: col-md-4 
+        cssClass: col-md-4
         options:
             first-first: Food Solutions - Produce Floral
             first-second: Food Solutions - Meat
@@ -102,13 +102,7 @@ fields:
                     span: storm
                     cssClass: col-sm-12  
                     required: true
-    test:
-        type: repeater
-        form:
-            fields:
-                title:
-                    label: Title
-                
+
 
 
 

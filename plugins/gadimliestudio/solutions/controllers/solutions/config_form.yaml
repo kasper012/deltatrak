@@ -16,7 +16,7 @@ defaultRedirect: gadimliestudio/solutions/solutions
 
 # Create page
 create:
-    title: New solution
+    title: New Solution
     redirect: gadimliestudio/solutions/solutions/update/:id
     redirectClose: gadimliestudio/solutions/solutions
 

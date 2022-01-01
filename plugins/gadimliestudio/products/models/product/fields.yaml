@@ -91,30 +91,24 @@ fields:
         span: storm
         cssClass: col-sm-6
         label: Main Info
-    key_features:
-        type: repeater
+
+
+    key_features2:
+        type: richeditor
         label: Key Features
         span: storm
         cssClass: col-md-12
-        form:
-            fields:
-                feature:
-                    label: Feature item
-    specifications:
-        type: repeater
+
+    specifications2:
+        type: richeditor
         label: Specifications
         span: storm
         cssClass: col-md-12
-        form:
-            fields:
-                feature:
-                    label: Feature
-                    span: storm
-                    cssClass: col-md-6 
-                specification:
-                    label: Specification
-                    span: storm
-                    cssClass: col-md-6
+    models:
+        type: richeditor
+        label: Models
+        span: storm
+        cssClass: col-md-12
         
     product_image:
         type: mediafinder

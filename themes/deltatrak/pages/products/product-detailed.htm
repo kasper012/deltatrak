@@ -14,27 +14,186 @@ public function onStart() {
     $this['product'] = $product;
 }
 ==
-<div class="container-fluid p-5">
+<style>
+    .prod-intro li {
+        line-height: 1.25em;
+        padding-bottom: 0.5em;
+    }
+    .product-layout {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+</style>
+<div class="container-fluid pt-0">
+    <div class="moduletable breadcrumb">
+        <div aria-label="Breadcrumbs" role="navigation">
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb breadcrumb">
+                <li class="active">
+                    <span class="divider icon-location"></span>
+                </li>
 
+                {% if product.status_type == 'first-first' %}
+                {% partial 'breadcrumbs/products/thermometers' %}
+                {% elseif product.status_type == 'first-second' %}
+                {% partial 'breadcrumbs/products/thermometers' %}
+                {% endif %}
+
+                {% if product.status_type == 'first-third' %}
+                {% partial 'breadcrumbs/products/thermometers' %}
+                {% elseif product.status_type == 'first-fourth' %}
+                {% partial 'breadcrumbs/products/thermometers' %}
+                {% endif %}
+
+                {% if product.status_type == 'first-fifth' %}
+                {% partial 'breadcrumbs/products/thermometers' %}
+                {% elseif product.status_type == 'first-sixth' %}
+                {% partial 'breadcrumbs/products/thermometers' %}
+                {% endif %}
+
+                {% if product.status_type == 'first-seventh' %}
+                {% partial 'breadcrumbs/products/thermometers' %}
+                {% elseif product.status_type == 'second-first' %}
+                {% partial 'breadcrumbs/products/chart-recorders' %}
+                {% endif %}
+
+
+                {% if product.status_type == 'second-second' %}
+                {% partial 'breadcrumbs/products/chart-recorders' %}
+                {% elseif product.status_type == 'second-third' %}
+                {% partial 'breadcrumbs/products/chart-recorders' %}
+                {% endif %}
+
+                {% if product.status_type == 'second-fourth' %}
+                {% partial 'breadcrumbs/products/chart-recorders' %}
+                {% elseif product.status_type == 'third-first' %}
+                {% partial 'breadcrumbs/products/data-loggers' %}
+                {% endif %}
+
+                {% if product.status_type == 'third-second' %}
+                {% partial 'breadcrumbs/products/data-loggers' %}
+                {% elseif product.status_type == 'third-third' %}
+                {% partial 'breadcrumbs/products/data-loggers' %}
+                {% endif %}
+
+                {% if product.status_type == 'third-fourth' %}
+                {% partial 'breadcrumbs/products/data-loggers' %}
+                {% elseif product.status_type == 'third-fifth' %}
+                {% partial 'breadcrumbs/products/data-loggers' %}
+                {% endif %}
+
+                {% if product.status_type == 'third-sixth' %}
+                {% partial 'breadcrumbs/products/data-loggers' %}
+                {% elseif product.status_type == 'third-seventh' %}
+                {% partial 'breadcrumbs/products/data-loggerss' %}
+                {% endif %}
+
+                {% if product.status_type == 'third-eighth' %}
+                {% partial 'breadcrumbs/products/data-loggers' %}
+                {% elseif product.status_type == 'third-ninth' %}
+                {% partial 'breadcrumbs/products/data-loggers' %}
+                {% endif %}
+
+                {% if product.status_type == 'third-tenth' %}
+                {% partial 'breadcrumbs/products/data-loggers' %}
+                {% elseif product.status_type == 'fourth-first' %}
+                {% partial 'breadcrumbs/products/time-temperature-indicators' %}
+                {% endif %}
+
+
+
+                {% if product.status_type == 'fourth-second' %}
+                {% partial 'breadcrumbs/products/time-temperature-indicators' %}
+                {% elseif product.status_type == 'fifth-first' %}
+                {% partial 'breadcrumbs/products/vaccine-monitoring' %}
+                {% endif %}
+
+                {% if product.status_type == 'fifth-second' %}
+                {% partial 'breadcrumbs/products/vaccine-monitoring' %}
+                {% elseif product.status_type == 'fifth-third' %}
+                {% partial 'breadcrumbs/products/vaccine-monitoring' %}
+                {% endif %}
+
+                {% if product.status_type == 'fifth-fourth' %}
+                {% partial 'breadcrumbs/products/vaccine-monitoring' %}
+                {% elseif product.status_type == 'fifth-fifth' %}
+                {% partial 'breadcrumbs/products/vaccine-monitoring' %}
+                {% endif %}
+
+                {% if product.status_type == 'fifth-sixth' %}
+                {% partial 'breadcrumbs/products/vaccine-monitoring' %}
+                {% elseif product.status_type == 'sixth-first' %}
+                {% partial 'breadcrumbs/products/rf-wireless-monitoring' %}
+                {% endif %}
+
+                {% if product.status_type == 'sixth-second' %}
+                {% partial 'breadcrumbs/products/rf-wireless-monitoring' %}
+                {% elseif product.status_type == 'seventh-first' %}
+                {% partial 'breadcrumbs/products/thermal-labels' %}
+                {% endif %}
+
+                {% if product.status_type == 'seventh-second' %}
+                {% partial 'breadcrumbs/products/thermal-labels' %}
+                {% elseif product.status_type == 'seventh-third' %}
+                {% partial 'breadcrumbs/products/thermal-labels' %}
+                {% endif %}
+
+                {% if product.status_type == 'seventh-fourth' %}
+                {% partial 'breadcrumbs/products/thermal-labels' %}
+                {% elseif product.status_type == 'eitghth-first' %}
+            
+                {% partial 'breadcrumbs/products/shelf-life-quality-tools' %}
+                {% endif %}
+
+                {% if product.status_type == 'eitghth-second' %}
+                {% partial 'breadcrumbs/products/shelf-life-quality-tools' %}
+                {% elseif product.status_type == 'eitghth-third' %}
+                {% partial 'breadcrumbs/products/shelf-life-quality-tools' %}
+                {% endif %}
+
+                {% if product.status_type == 'eitghth-fourth' %}
+                {% partial 'breadcrumbs/products/shelf-life-quality-tools' %}
+                {% elseif product.status_type == 'eitghth-fifth' %}
+                {% partial 'breadcrumbs/products/shelf-life-quality-tools' %}
+                {% endif %}
+
+                {% if product.status_type == 'ninth-first' %}
+                {% partial 'breadcrumbs/products/haccp-food-quality-tools' %}
+                {% elseif product.status_type == 'ninth-second' %}
+                {% partial 'breadcrumbs/products/haccp-food-quality-tools' %}
+                {% endif %}
+
+                {% if product.status_type == 'ninth-third' %}
+                {% partial 'breadcrumbs/products/haccp-food-quality-tools' %}
+                {% elseif product.status_type == 'tenth-first' %}
+                {% partial 'breadcrumbs/products/software-solutions' %}
+                {% endif %}
+
+                {% if product.status_type == 'tenth-second' %}
+                {% partial 'breadcrumbs/products/software-solutions' %}
+                {% endif %}
+
+
+                
+            </ul>
+        </div>
+    </div>
     <div class="product-layout item-page " itemscope itemtype="https://schema.org/Product">
         <meta itemprop="inLanguage" content="en-GB" />
 
         <div class="product-delta">
 
-            <h1 class="prod-title"><span itemprop="name">{{ product.title }}</span></h1>
-
-
-
+            <h1 class="prod-title mt-3 mb-3"><span itemprop="name">{{ product.title }}</span></h1>
+            
             <div class="prod-top">
                 <div class="prod-right">
                     <div class="prod-image" itemprop="image"><a
                             href="{{ product.product_image | media }}"
                             data-uk-lightbox> <img
                                 src="{{ product.product_image | media }}"
-                                alt="FlashCheck Lollipop Waterproof Min/Max Digital Thermometer w/105mm Probe" /></a>
+                                alt="" /></a>
                     </div>
                     <div class="prod-order"><a class="button order"
-                            data-uk-modal="{target:'#order'}">Order</a>
+                            data-uk-modal="{target:'#order'}">{{'Order'|_}}</a>
                         <div id="order" class="uk-modal">
                             <div class="uk-modal-dialog uk-panel-box uk-panel-box-delta">
                                 <iframe class="order"
@@ -49,14 +208,11 @@ public function onStart() {
 
                     <div class="prod-intro">
                         <p>{{ product.short_info }}</p>
-
-                        <ul>
-                            {% for feature in product.key_features %}
-                            <li class="pb-3">{{ feature.feature }}</li>
-                            {% endfor %}
-                        </ul>
+                        {% if product.key_features2 %}
+                            {{ product.key_features2 | raw }}
+                        {% endif %}
                     </div>
-                    {% if product.application %}
+                    {% if product.applications %}
                         <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
                     {% endif %}
                 </div><!-- End Prod-Left -->
@@ -76,55 +232,73 @@ public function onStart() {
                         <!--googleoff: index-->
                         <a id="rl_tabs-scrollto_1" class="anchor rl_tabs-scroll nn_tabs-scroll"></a>
                         <ul class="nav nav-tabs" id="set-rl_tabs-1" role="tablist" style="margin-bottom: 0;">
+
                             <li class="rl_tabs-tab nn_tabs-tab nav-item active"><a
+                                href="#models" title="Models"
+                                class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                id="tab-models" data-toggle="tab" data-id="models"
+                                role="tab" aria-controls="models" aria-selected="true"><span
+                                    class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Models'|_}}</span></a>
+                            </li>
+                            {% if product.specifications2 %}
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item "><a
                                     href="#specifications" title="Specifications"
                                     class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                     id="tab-specifications" data-toggle="tab" data-id="specifications"
                                     role="tab" aria-controls="specifications" aria-selected="true"><span
                                         class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Specifications'|_}}</span></a>
                             </li>
-                            <li class="rl_tabs-tab nn_tabs-tab nav-item"><a href="#literature"
+                            {% endif %}
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item "><a
+                                href="#user-guide" title="Modeuser-guidels"
+                                class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                id="tab-user-guide" data-toggle="tab" data-id="user-guide"
+                                role="tab" aria-controls="user-guide" aria-selected="true"><span
+                                    class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'User guide'|_}}</span></a>
+                            </li>
+
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item"><a                                                                  href="#literature"
                                     title="Literature" class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                     id="tab-literature" data-toggle="tab" data-id="literature"
                                     role="tab" aria-controls="literature" aria-selected="false"><span
                                         class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Literature'|_}}</span></a>
                             </li>
-
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item"><a href="#videos"
+                                title="Literature" class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                id="tab-literature" data-toggle="tab" data-id="literature"
+                                role="tab" aria-controls="literature" aria-selected="false"><span
+                                    class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Literature'|_}}</span></a>
+                            </li>
                         </ul>
                         <!--googleon: index-->
                         <div class="tab-content" style="border: 1px solid #ddd;border-top: none;">
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane active" id="specifications"
-                                role="tabpanel" aria-labelledby="tab-specifications"
-                                aria-hidden="false" style="padding: 12px;">
+
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane active" id="models"
+                            role="tabpanel" aria-labelledby="tab-models"
+                            aria-hidden="false" style="padding: 12px;">
+                                <h2 class="rl_tabs-title nn_tabs-title">
+                                    <a id="anchor-models" class="anchor"></a>
+                                    {{'Models'|_}}
+                                </h2>
+                                {{ product.specifications2 | raw }}
+
+                            </div>
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="specifications"
+                            role="tabpanel" aria-labelledby="tab-specifications"
+                            aria-hidden="false" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
                                     <a id="anchor-specifications" class="anchor"></a>
                                     {{'Specifications'|_}}
                                 </h2>
-                                <table>
-                                    <caption>{{ product.title }}</caption>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">{{'Feature'|_}}</th>
-                                            <th scope="col">{{'Specification'|_}}</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="2">{{'DeltaTrak manufactures products under an ISO
-                                                9001:2015 registered quality management system'|_}}</td>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        {% for specification in product.specifications %}
-                                        <tr>  
-                                            <td>{{ specification.feature }}</td>
-                                            <td>{{ specification.specification }}</td>
-                                        </tr>
-                                        {% endfor %}
+                                {{ product.specifications2 | raw }}
 
-                                    </tbody>
-                                </table>
-
+                            </div>
+                            
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="user-guide"
+                                role="tabpanel" aria-labelledby="tab-user-guide" aria-hidden="true" style="padding: 12px;">
+                                    <h2 class="rl_tabs-title nn_tabs-title"><a id="anchor-user-guide" class="anchor"></a>{{ 'User guide' |_ }}</h2>
+                                    <a class="ui-btn" href="{{ product.user_guide | media }}" title="User Instructions" download>{{'User Instructions'|_}}</a>
+                
                             </div>
                             <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="literature"
                                 role="tabpanel" aria-labelledby="tab-literature" aria-hidden="true" style="padding: 12px;">
@@ -137,15 +311,23 @@ public function onStart() {
                                         alt="FlashCheck Lollipop Waterproof Min/Max Digital Thermometer w/105mm Probe" />
                                     <br />{{'Download'|_}} {{ product.title }} {{'Probe Spec Sheet'|_}}</a>
                             </div>
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="support" role="tabpanel"
-                                aria-labelledby="tab-support" aria-hidden="true" style="padding: 12px;">
-                                <h2 class="rl_tabs-title nn_tabs-title">
-                                    <a id="anchor-support" class="anchor"></a>
-                                    {{'Support'|_}}
-                                </h2><!-- START: Modules Anywhere -->
+                            <div id="videos" class="rl_tabs-print">
+                                <h2 class="rl_tabs-title nn_tabs-title"><a id="anchor-videos" class="anchor"></a>Videos</h2>
+                                <div class="vimeo thumbs text-center">
+            
+                                    <div>
+                                        <a href="https://player.vimeo.com/video/551640697?playsinline=0" class="modal_link"
+                                            data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
+                                            data-modal-iframe="true" data-modal-inner-width="1200"
+                                            data-modal-inner-height="680"><img
+                                                src="https://www.deltatrak.com/assets/videos/vimeo/551640697.jpg"></a>
+                                        RTL-Prime 3G Solutions
+                                    </div>
+            
+                                </div>
+            
+                            </div>
 
-
-                        </div>
                     </div><!-- END: Tabs -->
 
                 </div><!-- End Prod-Tabs -->

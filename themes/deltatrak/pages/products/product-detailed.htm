@@ -232,46 +232,57 @@ public function onStart() {
                         <!--googleoff: index-->
                         <a id="rl_tabs-scrollto_1" class="anchor rl_tabs-scroll nn_tabs-scroll"></a>
                         <ul class="nav nav-tabs" id="set-rl_tabs-1" role="tablist" style="margin-bottom: 0;">
+                            {% if product.models %}
 
                             <li class="rl_tabs-tab nn_tabs-tab nav-item active"><a
-                                href="#models" title="Models"
+                                href="#models" title="{{'Models'|_}}"
                                 class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                 id="tab-models" data-toggle="tab" data-id="models"
                                 role="tab" aria-controls="models" aria-selected="true"><span
                                     class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Models'|_}}</span></a>
                             </li>
+                            {% endif %}
+
                             {% if product.specifications2 %}
                             <li class="rl_tabs-tab nn_tabs-tab nav-item "><a
-                                    href="#specifications" title="Specifications"
+                                    href="#specifications" title="{{'Specifications'|_}}"
                                     class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                     id="tab-specifications" data-toggle="tab" data-id="specifications"
                                     role="tab" aria-controls="specifications" aria-selected="true"><span
                                         class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Specifications'|_}}</span></a>
                             </li>
                             {% endif %}
+                            {% if product.userguide_file %}
+
                             <li class="rl_tabs-tab nn_tabs-tab nav-item "><a
-                                href="#user-guide" title="Modeuser-guidels"
+                                href="#user-guide" title="{{'Modeuser-guidels'|_}}"
                                 class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                 id="tab-user-guide" data-toggle="tab" data-id="user-guide"
                                 role="tab" aria-controls="user-guide" aria-selected="true"><span
                                     class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'User guide'|_}}</span></a>
                             </li>
+                            {% endif %}
+                            {% if product.accessories %}
 
                             <li class="rl_tabs-tab nn_tabs-tab nav-item"><a                                                                  href="#literature"
-                                    title="Literature" class="rl_tabs-toggle nn_tabs-toggle nav-link"
-                                    id="tab-literature" data-toggle="tab" data-id="literature"
-                                    role="tab" aria-controls="literature" aria-selected="false"><span
-                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Literature'|_}}</span></a>
+                                    title="{{'Accesories'|_}}" class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                    id="tab-accessories" data-toggle="tab" data-id="accessories"
+                                    role="tab" aria-controls="accessories" aria-selected="false"><span
+                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Accesories'|_}}</span></a>
                             </li>
+                            {% endif %}
+                            {% if product.videos %}
                             <li class="rl_tabs-tab nn_tabs-tab nav-item"><a href="#videos"
-                                title="Literature" class="rl_tabs-toggle nn_tabs-toggle nav-link"
-                                id="tab-literature" data-toggle="tab" data-id="literature"
+                                title="{{'Videos'|_}}" class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                id="tab-videos" data-toggle="tab" data-id="literature"
                                 role="tab" aria-controls="literature" aria-selected="false"><span
-                                    class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Literature'|_}}</span></a>
+                                    class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Videos'|_}}</span></a>
                             </li>
+                            {% endif %}
+
                         </ul>
                         <!--googleon: index-->
-                        <div class="tab-content" style="border: 1px solid #ddd;border-top: none;">
+                        <div class="tab-content" style="border: 1px solid #ddd;border-top: none;overflow: hidden">
 
                             <div class="tab-pane rl_tabs-pane nn_tabs-pane active" id="models"
                             role="tabpanel" aria-labelledby="tab-models"
@@ -280,9 +291,10 @@ public function onStart() {
                                     <a id="anchor-models" class="anchor"></a>
                                     {{'Models'|_}}
                                 </h2>
-                                {{ product.specifications2 | raw }}
+                                {{ product.models | raw }}
 
                             </div>
+
                             <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="specifications"
                             role="tabpanel" aria-labelledby="tab-specifications"
                             aria-hidden="false" style="padding: 12px;">
@@ -298,8 +310,33 @@ public function onStart() {
                                 role="tabpanel" aria-labelledby="tab-user-guide" aria-hidden="true" style="padding: 12px;">
                                     <h2 class="rl_tabs-title nn_tabs-title"><a id="anchor-user-guide" class="anchor"></a>{{ 'User guide' |_ }}</h2>
                                     <a class="ui-btn" href="{{ product.user_guide | media }}" title="User Instructions" download>{{'User Instructions'|_}}</a>
-                
                             </div>
+
+
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="literature"
+                                role="tabpanel" aria-labelledby="tab-literature" aria-hidden="true" style="padding: 12px;">
+                                <h2 class="rl_tabs-title nn_tabs-title"><a id="anchor-accessories" class="anchor"></a>{{'Accessories'|_}}
+                                </h2>
+                                {% for accessory in product.accessories %}
+                                <div class="moduletable">
+                                    <h3>{{ accessory.title }}</h3>
+            
+            
+                                    <div class="custom">
+                                        <div class="dt-width-1-2 dt-width-sm-1-1">
+                                            {{ accessory.about | raw }}
+                                        </div>
+            
+                                        <div class="dt-width-1-2  dt-width-sm-1-1 text-center">
+                                            <img src="{{ accessory.image | media }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                {% endfor %}
+
+                            </div>
+                            
                             <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="literature"
                                 role="tabpanel" aria-labelledby="tab-literature" aria-hidden="true" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
@@ -308,23 +345,32 @@ public function onStart() {
                                 </h2><a href="{{ product.literature_file | media }}"
                                     target="_blank"> <img
                                         src="{{ product.literature_image | media }}"
-                                        alt="FlashCheck Lollipop Waterproof Min/Max Digital Thermometer w/105mm Probe" />
-                                    <br />{{'Download'|_}} {{ product.title }} {{'Probe Spec Sheet'|_}}</a>
+                                        alt="" />
+                                    <br />{{'Download'|_}} {{ product.title }}</a>
                             </div>
-                            <div id="videos" class="rl_tabs-print">
-                                <h2 class="rl_tabs-title nn_tabs-title"><a id="anchor-videos" class="anchor"></a>Videos</h2>
-                                <div class="vimeo thumbs text-center">
-            
-                                    <div>
-                                        <a href="https://player.vimeo.com/video/551640697?playsinline=0" class="modal_link"
-                                            data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
-                                            data-modal-iframe="true" data-modal-inner-width="1200"
-                                            data-modal-inner-height="680"><img
-                                                src="https://www.deltatrak.com/assets/videos/vimeo/551640697.jpg"></a>
-                                        RTL-Prime 3G Solutions
+
+
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="videos"
+                                role="tabpanel" aria-labelledby="tab-videos" aria-hidden="true" style="padding: 12px;">
+                                <h2 class="rl_tabs-title nn_tabs-title">
+                                    <a id="anchor-videos" class="anchor"></a>
+                                    {{'Video'|_}}
+                                </h2>
+                                <div class="row">
+                                    {% for video in product.videos %}
+                                    <div class="vimeo thumbs text-center col-md-6 p-5">
+                                            <a href="{{ video.link }}" class="modal_link"
+                                                data-modal-class-name="vimeo is_video no_title" data-modal-video="true"
+                                                data-modal-iframe="true" data-modal-inner-width="1200"
+                                                data-modal-inner-height="680"><img
+                                                    src="{{ video.preview_image | media }}"></a>
+                                            {{ video.title }}
                                     </div>
-            
+                                    {% endfor %}
                                 </div>
+                            </div>
+
+
             
                             </div>
 

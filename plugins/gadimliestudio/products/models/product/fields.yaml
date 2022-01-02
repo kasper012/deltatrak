@@ -12,7 +12,6 @@ fields:
         label: Product name
         span: storm
         cssClass: col-sm-6  
-        required: true
     
     status_type:
         label: Type
@@ -114,17 +113,51 @@ fields:
         type: mediafinder
         label: Product image
         span: storm
-        cssClass: col-md-4
+        cssClass: col-md-3
     literature_image:
         type: mediafinder
-        label: Support document preview (image) 
+        label: Literature document preview (image) 
         span: storm
-        cssClass: col-md-4
+        cssClass: col-md-3
     literature_file:
         type: mediafinder
-        label: Support document (file)
+        label: Literature document (file)
         span: storm
-        cssClass: col-md-4
+        cssClass: col-md-3
+    userguide_file:
+        type: mediafinder
+        label: User guide (file)
+        span: storm
+        cssClass: col-md-3
+    
+    accessories:
+        label: Accessories
+        type: repeater
+        prompt: Add new accessory
+        form:
+            fields:
+                title:
+                    label: Title
+                about:
+                    label: About
+                    type: richeditor
+                image:
+                    label: Image
+                    type: mediafinder
+
             
+    videos:
+        type: repeater
+        label: Videos
+        prompt: Add new video
+        form:
+            fields:
+                title:
+                    label: Title
+                preview_image:
+                    label: Preview image
+                    type: mediafinder
+                link:
+                    label: Link
     
 

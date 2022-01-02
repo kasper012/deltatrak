@@ -828,7 +828,7 @@ default = 0
                                                 </p>
                                                 <p class="link-3">
                                                     {% for product in products | slice(0,3) %}
-                                                    <a href="{{ 'products/product-detailed' | page }}/{{ product.id }}"><span>{{
+                                                    <a href="{{ 'products/product-detailed' | page({id:product.id}) }}"><span>{{
                                                             product.title }}</span><img
                                                             src="{{ product.product_image | media }}" alt="" /></a>
                                                     {% endfor %}

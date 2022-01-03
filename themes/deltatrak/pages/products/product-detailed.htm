@@ -209,7 +209,6 @@ public function onStart() {
                     <div class="prod-intro">
                         <p>{{ product.short_info }}</p>
                         {% if product.key_features2 %}
-                        Key features:
                             {{ product.key_features2 | raw }}
                         {% endif %}
                     </div>
@@ -263,9 +262,21 @@ public function onStart() {
                                     class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'User guide'|_}}</span></a>
                             </li>
                             {% endif %}
+
+                            {% if product.literature_file %}
+
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item "><a
+                                href="#literature" title="{{'Literature'|_}}"
+                                class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                id="tab-literature" data-toggle="tab" data-id="literature"
+                                role="tab" aria-controls="user-guide" aria-selected="true"><span
+                                    class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Literature'|_}}</span></a>
+                            </li>
+                            {% endif %}
+
                             {% if product.accessories %}
 
-                            <li class="rl_tabs-tab nn_tabs-tab nav-item"><a                                                                  href="#literature"
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item"><a    href="#accessories"                                                                href="#literature"
                                     title="{{'Accesories'|_}}" class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                     id="tab-accessories" data-toggle="tab" data-id="accessories"
                                     role="tab" aria-controls="accessories" aria-selected="false"><span
@@ -290,7 +301,6 @@ public function onStart() {
                             aria-hidden="false" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
                                     <a id="anchor-models" class="anchor"></a>
-                                    {{'Models'|_}}
                                 </h2>
                                 {{ product.models | raw }}
 
@@ -310,12 +320,12 @@ public function onStart() {
                             <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="user-guide"
                                 role="tabpanel" aria-labelledby="tab-user-guide" aria-hidden="true" style="padding: 12px;">
                                     <h2 class="rl_tabs-title nn_tabs-title"><a id="anchor-user-guide" class="anchor"></a>{{ 'User guide' |_ }}</h2>
-                                    <a class="ui-btn" href="{{ product.user_guide | media }}" title="User Instructions" download>{{'User Instructions'|_}}</a>
+                                    <a class="ui-btn" href="{{ product.userguide_file | media }}" title="User Instructions" download>{{'User Instructions'|_}}</a>
                             </div>
 
 
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="literature"
-                                role="tabpanel" aria-labelledby="tab-literature" aria-hidden="true" style="padding: 12px;">
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="accessories"
+                                role="tabpanel" aria-labelledby="tab-accessories" aria-hidden="true" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title"><a id="anchor-accessories" class="anchor"></a>{{'Accessories'|_}}
                                 </h2>
                                 {% for accessory in product.accessories %}

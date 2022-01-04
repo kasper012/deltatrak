@@ -37,7 +37,7 @@ localeTitle[az] = "WarmMark Etiketləri"
             <div class="delta-products blog" itemscope itemtype="https://schema.org/Blog">
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
-                        {% if product.status_type == 'fourth-second' %}
+                        {% if product.status_type == 'fourth-firth' %}
                         <div class="col-md-4">
                             <div class="prod-block ml-0">
                                     <div class="item column-1" itemprop="blogPost" itemscope
@@ -62,7 +62,7 @@ localeTitle[az] = "WarmMark Etiketləri"
                                             </div>
                                             <div class="key-features"><b>{{'Key Features'|_}}:</b>
                                                 <ul>
-                                                    {% for feature in product.key_features %}
+                                                    {% for feature in product.key_features2 %}
                                                     <li>{{ feature.feature }}</li>
                                                     {% endfor %}
                                                 </ul>

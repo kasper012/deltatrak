@@ -43,7 +43,7 @@ localeTitle[az] = 'Həyat elmləri həlləri'
                     <div class="hotspots">
                         {% for solution in solutions %}
                         {% if solution.type == 'second' %}
-                        <div class="sticker pos-{{ loop.index }}-{{ loop.length }} {% if loop.first %}green {% elseif loop.index == 2 %}blue {% elseif loop.index == 3 %}teal{% elseif loop.index == 4 %}yellow{% elseif loop.index == 5 %}red{% elseif loop.index == 6 %}orange{% elseif loop.index == 7 %}teal{% endif %}  "><a
+                         <div class="sticker    solution-icon"><a
                                 href="{{ 'solutions/solution-detailed' | page({id: solution.id}) }}"><img
                                     src="{{ solution.icon | media }}"
                                     alt="" />

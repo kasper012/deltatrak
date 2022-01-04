@@ -70,7 +70,9 @@ localeTitle[az] = "Menecment komandası"
                         {% for member in company.team %}
                         <div class="head">
                             <a href="#{{ loop.index}}" data-uk-modal><img
+
                                     src="{{  member.image | media }}"
+
                                     alt="Frederick Wu" /></a>
                             <h4>{{ member.name }}</h4>
                             <p>{{ member.post }}</p>

@@ -295,18 +295,7 @@ public function onStart() {
                         </ul>
                         <!--googleon: index-->
                         <div class="tab-content" style="border: 1px solid #ddd;border-top: none;overflow: hidden">
-
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane active" id="models"
-                            role="tabpanel" aria-labelledby="tab-models"
-                            aria-hidden="false" style="padding: 12px;">
-                                <h2 class="rl_tabs-title nn_tabs-title">
-                                    <a id="anchor-models" class="anchor"></a>
-                                </h2>
-                                {{ product.models | raw }}
-
-                            </div>
-
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="specifications"
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane active" id="specifications"
                             role="tabpanel" aria-labelledby="tab-specifications"
                             aria-hidden="false" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
@@ -316,6 +305,17 @@ public function onStart() {
                                 {{ product.specifications2 | raw }}
 
                             </div>
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane " id="models"
+                            role="tabpanel" aria-labelledby="tab-models"
+                            aria-hidden="false" style="padding: 12px;">
+                                <h2 class="rl_tabs-title nn_tabs-title">
+                                    <a id="anchor-models" class="anchor"></a>
+                                </h2>
+                                {{ product.models | raw }}
+
+                            </div>
+
+
                             
                             <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="user-guide"
                                 role="tabpanel" aria-labelledby="tab-user-guide" aria-hidden="true" style="padding: 12px;">

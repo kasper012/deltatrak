@@ -91,12 +91,17 @@ fields:
         cssClass: col-sm-6
         label: Main Info
 
+    key_features3:
+        type: richeditor
+        label: Key Features on product list
+        span: storm
+        cssClass: col-md-6
 
     key_features2:
         type: richeditor
         label: Key Features
         span: storm
-        cssClass: col-md-12
+        cssClass: col-md-6
 
     specifications2:
         type: richeditor

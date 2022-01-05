@@ -22,6 +22,8 @@ class Product extends Model
         'models',
         'accessories',
         'videos',
+        'key_features3',
+        
 
     ];
 

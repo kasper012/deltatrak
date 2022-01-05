@@ -63,13 +63,12 @@ localeTitle[az] = "Çoxfunksiyalı məlumat Loggerləri"
                                                         src="{{ product.product_image | media }}"
                                                         alt="" /></a>
                                             </div>
+                                            {% if  product.key_features3 %}
                                             <div class="key-features"><b></b>
-                                                <ul>
-                                                    {% for feature in product.key_features2 %}
-                                                    <li>{{ feature.feature }}</li>
-                                                    {% endfor %}
-                                                </ul>
+                                                <div class="prod-app"><b>{{'Key features'|_}}:</b> </div>
+                                                {{ product.key_features3 | raw }}
                                             </div>
+                                            {% endif %}
         
                                             <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
                                             <div class="product read-more">

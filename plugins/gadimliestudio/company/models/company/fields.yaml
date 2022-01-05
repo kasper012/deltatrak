@@ -124,26 +124,7 @@ tabs:
                         label: Preview image
                         type: mediafinder
                     
-        white_papers:
-            type: repeater
-            tab: White papers
-            prompt: Add new whitepaper
-            form:
-                fields:
-                    title:
-                        label: Title
-                    description:
-                        label: Description on whitepapers list
-                        type: richeditor
-                    image:
-                        label: Document image
-                        type: mediafinder
-                    file:
-                        label: Document (file)
-                        type: mediafinder
-                    full_description:
-                        label: Full description
-                        type: richeditor
+
 
 
 
@@ -269,7 +250,7 @@ tabs:
                         span: storm
                         cssClass: col-md-12
                     file:
-                        label: file
+                        label: File
                         type: mediafinder
                         span: storm
                         cssClass: col-md-6

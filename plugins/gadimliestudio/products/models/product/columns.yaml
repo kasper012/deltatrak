@@ -4,10 +4,14 @@
 
 columns:
 
+    id:
+        label: ID
+        searchable: true
+        span: storm
+        cssClass: col-md-1
     title:
         label: Product name
         searchable: true
         span: storm
-        cssClass: col-md-12
-
+        cssClass: col-md-11
 

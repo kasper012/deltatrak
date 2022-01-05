@@ -1,6 +1,6 @@
-title = "Management team"
 url = "/about/management-team"
 layout = "default"
+title = "Management team"
 
 [viewBag]
 localeUrl[ru] = "/komanda-menedjmenta"
@@ -8,7 +8,6 @@ localeUrl[az] = "/menecment-komandasi"
 localeTitle[ru] = "Команда менеджмента"
 localeTitle[az] = "Menecment komandası"
 ==
-
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
 
@@ -71,7 +70,9 @@ localeTitle[az] = "Menecment komandası"
                         {% for member in company.team %}
                         <div class="head">
                             <a href="#{{ loop.index}}" data-uk-modal><img
-                                    src="{{ member.image | media }}"
+
+                                    src="{{  member.image | media }}"
+
                                     alt="Frederick Wu" /></a>
                             <h4>{{ member.name }}</h4>
                             <p>{{ member.post }}</p>

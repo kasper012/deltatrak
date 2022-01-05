@@ -213,6 +213,29 @@ default = 0
         }
 
 
+        .uk-modal.uk-open::after {
+    box-shadow: none;
+    color: rgb(255, 255, 255);
+    content: "";
+    cursor: pointer;
+    font-family: delta;
+    font-size: 40px;
+    font-weight: 100;
+    height: 1.3em;
+    line-height: 1em;
+    position: fixed;
+    right: 11px;
+    text-align: center;
+    top: 11px;
+    width: 1.3em;
+    background: none 0px 0px repeat scroll transparent;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+    border-radius: 100px;
+    padding: 3.5px;
+        }
     </style>
     <script type="application/json"
         class="joomla-script-options new">{"csrf.token":"53b93d72b68c584f30abfd539bbffdb4","system.paths":{"root":"","base":""}}</script>
@@ -1745,8 +1768,17 @@ default = 0
                                     }
     
                                 }
-                                
                             </script>
+
+<script>
+    var tab_arr = document.getElementsByClassName("prod-tab-custom-item")
+    tab_arr[0].classList.add('active')
+</script>
+
+<script>
+    var content_arr = document.getElementsByClassName("custom-tab-item-content")
+    content_arr[0].classList.add('active')
+</script>
     <script
         type="text/javascript">        document.addEventListener("DOMContentLoaded", function (event) { if (!navigator.cookieEnabled) { document.getElementById('redim-cookiehint-bottom').remove(); } }); function cookiehintfadeOut(el) { el.style.opacity = 1; (function fade() { if ((el.style.opacity -= .1) < 0) { el.style.display = "none"; } else { requestAnimationFrame(fade); } })(); } function cookiehintsubmit(obj) { document.cookie = 'reDimCookieHint=1; expires=Fri, 17 Dec 2021 23:59:59 GMT;57; path=/'; cookiehintfadeOut(document.getElementById('redim-cookiehint-bottom')); return true; } function cookiehintsubmitno(obj) { document.cookie = 'reDimCookieHint=-1; expires=0; path=/'; cookiehintfadeOut(document.getElementById('redim-cookiehint-bottom')); return true; }</script>
 </body>

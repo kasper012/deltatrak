@@ -31,8 +31,9 @@ class CreateProductsTable extends Migration
             $table->text('userguide_file')->nullable();
             $table->text('accessories')->nullable();
             $table->text('videos')->nullable();
+            $table->text('key_features3')->nullable();
 
-
+            
 
             $table->text('literature_image')->nullable();
 

@@ -232,9 +232,18 @@ public function onStart() {
                         <!--googleoff: index-->
                         <a id="rl_tabs-scrollto_1" class="anchor rl_tabs-scroll nn_tabs-scroll"></a>
                         <ul class="nav nav-tabs" id="set-rl_tabs-1" role="tablist" style="margin-bottom: 0;">
+                            {% if product.specifications2 %}
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item  prod-tab-custom-item"><a
+                                    href="#specifications" title="{{'Specifications'|_}}"
+                                    class="rl_tabs-toggle nn_tabs-toggle nav-link"
+                                    id="tab-specifications" data-toggle="tab" data-id="specifications"
+                                    role="tab" aria-controls="specifications" aria-selected="true"><span
+                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Specifications'|_}}</span></a>
+                            </li>
+                            {% endif %}
                             {% if product.models %}
-
-                            <li class="rl_tabs-tab nn_tabs-tab nav-item active"><a
+                            
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item  prod-tab-custom-item"><a
                                 href="#models" title="{{'Models'|_}}"
                                 class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                 id="tab-models" data-toggle="tab" data-id="models"
@@ -243,18 +252,9 @@ public function onStart() {
                             </li>
                             {% endif %}
 
-                            {% if product.specifications2 %}
-                            <li class="rl_tabs-tab nn_tabs-tab nav-item "><a
-                                    href="#specifications" title="{{'Specifications'|_}}"
-                                    class="rl_tabs-toggle nn_tabs-toggle nav-link"
-                                    id="tab-specifications" data-toggle="tab" data-id="specifications"
-                                    role="tab" aria-controls="specifications" aria-selected="true"><span
-                                        class="rl_tabs-toggle-inner nn_tabs-toggle-inner">{{'Specifications'|_}}</span></a>
-                            </li>
-                            {% endif %}
                             {% if product.userguide_file %}
 
-                            <li class="rl_tabs-tab nn_tabs-tab nav-item "><a
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item  prod-tab-custom-item"><a
                                 href="#user-guide" title="{{'Modeuser-guidels'|_}}"
                                 class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                 id="tab-user-guide" data-toggle="tab" data-id="user-guide"
@@ -265,7 +265,7 @@ public function onStart() {
 
                             {% if product.literature_file %}
 
-                            <li class="rl_tabs-tab nn_tabs-tab nav-item "><a
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item  prod-tab-custom-item"><a
                                 href="#literature" title="{{'Literature'|_}}"
                                 class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                 id="tab-literature" data-toggle="tab" data-id="literature"
@@ -276,7 +276,7 @@ public function onStart() {
 
                             {% if product.accessories %}
 
-                            <li class="rl_tabs-tab nn_tabs-tab nav-item"><a    href="#accessories"                                                                href="#literature"
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item prod-tab-custom-item"><a    href="#accessories"                                                                href="#literature"
                                     title="{{'Accesories'|_}}" class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                     id="tab-accessories" data-toggle="tab" data-id="accessories"
                                     role="tab" aria-controls="accessories" aria-selected="false"><span
@@ -284,7 +284,7 @@ public function onStart() {
                             </li>
                             {% endif %}
                             {% if product.videos %}
-                            <li class="rl_tabs-tab nn_tabs-tab nav-item"><a href="#videos"
+                            <li class="rl_tabs-tab nn_tabs-tab nav-item prod-tab-custom-item"><a href="#videos"
                                 title="{{'Videos'|_}}" class="rl_tabs-toggle nn_tabs-toggle nav-link"
                                 id="tab-videos" data-toggle="tab" data-id="literature"
                                 role="tab" aria-controls="literature" aria-selected="false"><span
@@ -295,7 +295,9 @@ public function onStart() {
                         </ul>
                         <!--googleon: index-->
                         <div class="tab-content" style="border: 1px solid #ddd;border-top: none;overflow: hidden">
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane active" id="specifications"
+                            {% if product.specifications2 %}
+
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane custom-tab-item-content" id="specifications"
                             role="tabpanel" aria-labelledby="tab-specifications"
                             aria-hidden="false" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
@@ -305,7 +307,9 @@ public function onStart() {
                                 {{ product.specifications2 | raw }}
 
                             </div>
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane " id="models"
+                            {% endif %}
+                            {% if product.models %}
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane custom-tab-item-content" id="models"
                             role="tabpanel" aria-labelledby="tab-models"
                             aria-hidden="false" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
@@ -316,15 +320,35 @@ public function onStart() {
                             </div>
 
 
-                            
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="user-guide"
+                            {% endif %}
+
+                            {% if product.userguide_file %}
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane custom-tab-item-content" id="user-guide"
                                 role="tabpanel" aria-labelledby="tab-user-guide" aria-hidden="true" style="padding: 12px;">
                                     <h2 class="rl_tabs-title nn_tabs-title"><a id="anchor-user-guide" class="anchor"></a>{{ 'User guide' |_ }}</h2>
                                     <a class="ui-btn" href="{{ product.userguide_file | media }}" title="User Instructions" download>{{'User Instructions'|_}}</a>
                             </div>
+                            {% endif %}
 
 
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="accessories"
+                            {% if product.literature_file %}
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane custom-tab-item-content" id="literature"
+                                role="tabpanel" aria-labelledby="tab-literature" aria-hidden="true" style="padding: 12px;">
+                                <h2 class="rl_tabs-title nn_tabs-title">
+                                    <a id="anchor-literature" class="anchor"></a>
+                                    {{'Literature'|_}}
+                                </h2><a href="{{ product.literature_file | media }}"
+                                    target="_blank"> <img
+                                        src="{{ product.literature_image | media }}"
+                                        alt="" />
+                                    <br />{{'Download'|_}} {{ product.title }}</a>
+                            </div>
+
+                            {% endif %}
+
+                            {% if product.accessories %}
+
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane custom-tab-item-content" id="accessories"
                                 role="tabpanel" aria-labelledby="tab-accessories" aria-hidden="true" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title"><a id="anchor-accessories" class="anchor"></a>{{'Accessories'|_}}
                                 </h2>
@@ -347,21 +371,13 @@ public function onStart() {
                                 {% endfor %}
 
                             </div>
-                            
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="literature"
-                                role="tabpanel" aria-labelledby="tab-literature" aria-hidden="true" style="padding: 12px;">
-                                <h2 class="rl_tabs-title nn_tabs-title">
-                                    <a id="anchor-literature" class="anchor"></a>
-                                    {{'Literature'|_}}
-                                </h2><a href="{{ product.literature_file | media }}"
-                                    target="_blank"> <img
-                                        src="{{ product.literature_image | media }}"
-                                        alt="" />
-                                    <br />{{'Download'|_}} {{ product.title }}</a>
-                            </div>
+                            {% endif %}
 
 
-                            <div class="tab-pane rl_tabs-pane nn_tabs-pane" id="videos"
+
+                            {% if product.videos %}
+
+                            <div class="tab-pane rl_tabs-pane nn_tabs-pane custom-tab-item-content" id="videos"
                                 role="tabpanel" aria-labelledby="tab-videos" aria-hidden="true" style="padding: 12px;">
                                 <h2 class="rl_tabs-title nn_tabs-title">
                                     <a id="anchor-videos" class="anchor"></a>
@@ -379,10 +395,8 @@ public function onStart() {
                                     </div>
                                     {% endfor %}
                                 </div>
-                            </div>
-
-
-            
+                            </div>       
+                            {% endif %}     
                             </div>
 
                     </div><!-- END: Tabs -->

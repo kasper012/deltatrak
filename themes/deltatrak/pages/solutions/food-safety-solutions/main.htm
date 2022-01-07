@@ -1,13 +1,12 @@
-title = "Food Safety Solutions"
 url = "/solutions/food-safety-solutions"
 layout = "default"
-
+title = "Food Safety Solutions"
 
 [viewBag]
-localeUrl[ru] = 'resheniya/bezopasnost-pishevix-produktov'
-localeUrl[az] = 'heller/qida-tehlukəsizliyi'
-localeTitle[ru] = 'Безопасность пищевых продуктов'
-localeTitle[az] = 'Qida Təhlükəsizliyi'
+localeUrl[ru] = "resheniya/bezopasnost-pishevix-produktov"
+localeUrl[az] = "heller/qida-tehlukəsizliyi"
+localeTitle[ru] = "Безопасность пищевых продуктов"
+localeTitle[az] = "Qida Təhlükəsizliyi"
 ==
 <div class="row-fluid">
     <main id="content" role="main" class="span12">
@@ -51,37 +50,7 @@ localeTitle[az] = 'Qida Təhlükəsizliyi'
                             </a></div>
                             {% endif %}
                         {% endfor %}
-                        <script>
-                            var arr = document.getElementsByClassName("solution-icon")
-                            var length = arr.length
-                            for(let i = 0; i<length; i++){
-                                var newClass = 'pos-'+ (i+1) + '-' + length
-                               arr[i].classList.add(newClass)   
-                                if (i == 0) {
-                                    arr[i].classList.add("green")   
-                                }
-                                else if (i == 1 ) {
-                                    arr[i].classList.add("blue")   
-                                }
-                                else if (i == 2 ) {
-                                    arr[i].classList.add("teal")   
-                                }
-                                else if (i == 3 ) {
-                                    arr[i].classList.add("yellow")   
-                                }
-                                else if (i == 4 ) {
-                                    arr[i].classList.add("red")   
-                                }
-                                else if (i == 5 ) {
-                                    arr[i].classList.add("orange")   
-                                }
-                                else if (i == 6 ) {
-                                    arr[i].classList.add("teal")   
-                                }
 
-                            }
-                            
-                        </script>
                     </div><!-- end Hotspots -->
 
                 </div><!-- end imageMap -->

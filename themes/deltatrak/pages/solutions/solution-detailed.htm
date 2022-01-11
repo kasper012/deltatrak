@@ -112,15 +112,11 @@ public function onStart() {
 										<div>
 											<div class="text-130"
 												data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:400}">
-												<h2>Eliminating guesswork</h2>
-												<h4>DeltaTrak’s monitoring solutions eliminate temperature guesswork
-													through reliable, accurate, NSF certified thermometers, calibrated
-													to NIST traceable standards. Data can be stored for audits and
-													regulatory compliance.</h4>
+                                                {{ solution.product_about_text | raw }}
 											</div>
 											<div class="solution-exit-nav">
 												<!-- NAV TO PRODUCTS-->
-												<h5>Selected DeltaTrak Cooking Solutions</h5>
+												<h5>{{ 'Selected DeltaTrak Cooking Solutions' |_ }}</h5>
 												<p class="link-3">
                                                     {% for selected in solution.selected %}
                                                     <a href="{{ selected.link }}"><span>{{ selected.title }}</span><img

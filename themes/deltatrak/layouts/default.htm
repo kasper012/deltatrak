@@ -1496,177 +1496,243 @@ default = 0
     </div>
 
 
-    <div class="custom">
-        <div class="bottom-banner">{{'Operational Status re: Covid-19'|_}} &nbsp;<a href="#notice1" role="button"
-                class="button" data-toggle="modal" style="padding: 5px 12px;">{{'View'|_}}</a></div>
+<div class="custom">
+	<div class="bottom-banner">Operational Status re: Covid-19 &nbsp;<a href="#notice1" role="button" class="button" data-toggle="modal" style="padding: 5px 12px;">View</a></div>
 
-        <div id="notice1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="notice1Label"
-            aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-            </div>
-            <div class="modal-body">
+<div id="notice1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="notice1Label" aria-hidden="true">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+</div>
+<div class="modal-body">
 
-                <div style="max-width: 800px;">
+<div style="max-width: 800px;">
 
-                    <p><img src="" style="width: 200px;" />
-                    </p>
-
-                    <p>March 18, 2021</p>
-
-                    <p>Operational Status re. COVID-19</p>
-
-                    <p>As the situation surrounding the COVID-19 virus continues to evolve, DeltaTrak Inc. is planning
-                        for an uninterrupted supply of those product and services we offer. As an essential provider to
-                        the Life Science, Food Safety, Agriculture and Transportation industries, we’re committed to
-                        taking the necessary steps to ensure our employee’s safety while maintaining a high level of
-                        operational capability.</p>
-
-                    <p>To date, we’ve taken the following measures:</p>
-
-                    <ul>
-                        <li>Maximized the capacity of our manufacturing sites, while implementing strict preventive
-                            measures according to CDC, local, and regional Administrative guidelines related to employee
-                            safety.</li>
-                        <li>Implemented employee screening for early detection of illness.</li>
-                        <li>Implemented flexible work schedules to allow for redundancy of key responsibilities and
-                            reduce exposure opportunities for employees.</li>
-                        <li>Bolstered inventory levels through expedited freight, and alternate sourcing strategies.
-                        </li>
-                        <li>Pre-positioned inventory at multiple domestic distribution points.</li>
-                    </ul>
-
-                    <p>As of today, DeltaTrak’s supply chain is fully operational, and for the majority of items,
-                        inventory levels remain at normal levels.</p>
-
-                    <p>We encourage our customers to review their product requirements beyond their regular order
-                        patterns to buffer against circumstances beyond our control.</p>
-
-                    <p>Should you require additional information regarding this matter, please contact me at the address
-                        listed below.</p>
-
-                    <p>Best Regards,</p>
-
-                    <p>Stephen Hibbs<br />
-                        VP of Operations<br />
-                        DeltaTrak Inc.<br />
-                        1236 Doker Dr.<br />
-                        Modesto CA, 95351 USA<br />
-                        <a href="cdn-cgi/l/email-protection.html" class="__cf_email__"
-                            data-cfemail="98ebf0f1fafaebd8fc">[email&#160;protected]</a>eltatrak.com<br />
-                        209-565-9276
-                    </p>
-                </div>
+{% content 'covid-19' %}
+</div>
 
 
-            </div>
-        </div>
+</div>
+</div>
 
-        <style>
-            body.site.fluid {
-                margin-bottom: 40px;
-            }
+<style>
+body.site.fluid {
+    margin-bottom: 40px;
+}
+.modal-backdrop {
+    z-index: 99998;
+}
+.custom .bottom-banner {
+    position: fixed;
+    z-index: 999998;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #009aaa;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 6px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+#redim-cookiehint-bottom {
+    z-index: 99999;
+    bottom: 40px;
+}
+div.modal.fade.in {
+    top: 5%;
+    width: 800px;
+    max-width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding-bottom: 5px;
+    z-index: 99999;
+}
+.modal-header {
+    padding: 0;
+    border-bottom: 0;
+}
+.modal-body {
+    width: 100%;
+    position: relative;
+    max-height: 84vh;
+    padding: 3%;
+    overflow-y: auto;
+}
+.modal-header .close {
+    margin-top: 2px;
+    position: absolute;
+    right: -9px;
+    top: -8px;
+    background: teal;
+    opacity: 1;
+    color: #fff;
+    text-shadow: none;
+    font-size: 40px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    z-index: 9999;
+    overflow: hidden;
+    text-align: center;
+    line-height: 0;
+    padding: 12px;
+}
+.modal-header .close::after {
+    content: "×";
+    font-family: arial;
+    color: #fff;
+    font-size: inherit;
+    position: absolute;
+    left: 4px;
+    top: 23px;
+}
+.modal-body li {
+    line-height: 1.2em;
+    padding-bottom: 0.5em;
+}
+.bottom-banner .button:hover {
+    box-shadow: 0 0 0px 2px rgba(255,255,255,0.5) inset;
+}
 
-            .modal-backdrop {
-                z-index: 99998;
-            }
+@media screen and (max-width: 550px) {
+#designstudio-button {
+    bottom: 40px !important;
+}
+.modal-header .close {
+    right: 3px;
+}
+}
+</style></div>
 
-            .custom .bottom-banner {
-                position: fixed;
-                z-index: 999998;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: #009aaa;
-                color: #fff;
-                text-align: center;
-                height: 40px;
-                font-size: 18px;
-                line-height: 20px;
-                padding: 6px;
-                font-weight: 500;
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            }
 
-            #redim-cookiehint-bottom {
-                z-index: 99999;
-                bottom: 40px;
-            }
 
-            div.modal.fade.in {
-                top: 5%;
-                width: 800px;
-                max-width: 90%;
-                left: 50%;
-                transform: translateX(-50%);
-                margin: 0;
-                padding-bottom: 5px;
-                z-index: 99999;
-            }
 
-            .modal-header {
-                padding: 0;
-                border-bottom: 0;
-            }
 
-            .modal-body {
-                width: 100%;
-                position: relative;
-                max-height: 84vh;
-                padding: 3%;
-                overflow-y: auto;
-            }
+<div class="custom covid-status">
+	<div class="bottom-banner">Operational Status re: Covid-19 &nbsp;<a href="#notice1" role="button" class="button" data-toggle="modal" style="padding: 5px 12px;">View</a></div>
 
-            .modal-header .close {
-                margin-top: 2px;
-                position: absolute;
-                right: -9px;
-                top: -8px;
-                background: teal;
-                opacity: 1;
-                color: #fff;
-                text-shadow: none;
-                font-size: 40px;
-                width: 45px;
-                height: 45px;
-                border-radius: 100px;
-                z-index: 9999;
-                overflow: hidden;
-                text-align: center;
-                line-height: 0;
-                padding: 12px;
-            }
+<div id="notice1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="notice1Label" aria-hidden="true">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+</div>
+<div class="modal-body">
 
-            .modal-header .close::after {
-                content: "×";
-                font-family: arial;
-                color: #fff;
-                font-size: inherit;
-                position: absolute;
-                left: 4px;
-                top: 23px;
-            }
+<div style="max-width: 800px;">
 
-            .modal-body li {
-                line-height: 1.2em;
-                padding-bottom: 0.5em;
-            }
+{% content 'covid-19' %}
+</div>
 
-            .bottom-banner .button:hover {
-                box-shadow: 0 0 0px 2px rgba(255, 255, 255, 0.5) inset;
-            }
 
-            @media screen and (max-width: 550px) {
-                #designstudio-button {
-                    bottom: 40px !important;
-                }
+</div>
+</div>
 
-                .modal-header .close {
-                    right: 3px;
-                }
-            }
-        </style>
-    </div>
+<style>
+body.site.fluid {
+    margin-bottom: 40px;
+}
+.modal-backdrop {
+    z-index: 99998;
+}
+.custom .bottom-banner {
+    position: fixed;
+    z-index: 999998;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #009aaa;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 6px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+#redim-cookiehint-bottom {
+    z-index: 99999;
+    bottom: 40px;
+}
+div.modal.fade.in {
+    top: 5%;
+    width: 800px;
+    max-width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding-bottom: 5px;
+    z-index: 99999;
+}
+.modal-header {
+    padding: 0;
+    border-bottom: 0;
+}
+.modal-body {
+    width: 100%;
+    position: relative;
+    max-height: 84vh;
+    padding: 3%;
+    overflow-y: auto;
+}
+.modal-header .close {
+    margin-top: 2px;
+    position: absolute;
+    right: -9px;
+    top: -8px;
+    background: teal;
+    opacity: 1;
+    color: #fff;
+    text-shadow: none;
+    font-size: 40px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    z-index: 9999;
+    overflow: hidden;
+    text-align: center;
+    line-height: 0;
+    padding: 12px;
+}
+.modal-header .close::after {
+    content: "×";
+    font-family: arial;
+    color: #fff;
+    font-size: inherit;
+    position: absolute;
+    left: 4px;
+    top: 23px;
+}
+.modal-body li {
+    line-height: 1.2em;
+    padding-bottom: 0.5em;
+}
+.bottom-banner .button:hover {
+    box-shadow: 0 0 0px 2px rgba(255,255,255,0.5) inset;
+}
+
+@media screen and (max-width: 550px) {
+#designstudio-button {
+    bottom: 40px !important;
+}
+.modal-header .close {
+    right: 3px;
+}
+}
+</style></div>
+
+
+
+
+
+
+
+
+
+
 
 
     <div class="custom">
@@ -1700,18 +1766,70 @@ default = 0
         </div>
     </div>
 
+    <div class="cook-banner" style="display: none">
+        <p>
+            By using our website, you agree to our 
+            <a href="insert-link">cookie policy</a>
+          </p>
+    </div>
+    <style>
+        .cook-banner {
+  position: fixed;
+  bottom: 150px;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.close {
+  height: 20px;
+  background-color: #777;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+    </style>
 
-    <div id="redim-cookiehint-bottom">
+
+
+    <script>
+        if (localStorage.getItem("cookieSeen") != "shown") {
+            $(".cook-banner").delay(2000).fadeIn();
+            localStorage.setItem("cookieSeen","shown")
+            };
+            $(".close").click(function() {
+            $(".cook-banner").fadeOut();
+            })
+    </script>
+    
+    <div id="redim-cookiehint-bottom" style="display: none;">
         <div id="redim-cookiehint">
-            <div class="cookiecontent"> Our site uses cookies. By continuing to use our site you are agreeing to our
-                cookie policy. </div>
-            <div class="cookiebuttons"> <a id="cookiehintsubmit" onclick="return cookiehintsubmit(this);" href=""
-                    class="btn">Accept</a>
+            <div class="cookiecontent"> {{ 'Our site uses cookies. By continuing to use our site you are agreeing to our
+                cookie policy.'| _ }} </div>
+            <div class="cookiebuttons"> <a id="cookiehintsubmit" onclick="hideCookiesBanner()"
+                    class="btn">{{"Accept"|_}}</a>
                 <div class="text-center" id="cookiehintinfo"> </div>
             </div>
             <div class="clr"></div>
         </div>
     </div>
+
+    <script>
+        function hideCookiesBanner() {
+            var parent = document.getElementById("redim-cookiehint-bottom")
+            var child = document.getElementById("redim-cookiehint")
+            parent.removeChild(child);
+        }
+    </script>
+
+
     <script>
         const swiper = new Swiper('.swiper', {
             // Optional parameters
@@ -1732,36 +1850,36 @@ default = 0
 
         });
     </script>
-                            <script>
-                                var arr = document.getElementsByClassName("solution-icon")
-                                var length = arr.length
-                                for(let i = 0; i<length; i++){
-                                    var newClass = 'pos-'+ (i+1) + '-' + length
-                                   arr[i].classList.add(newClass)   
-                                    if (i == 0) {
-                                        arr[i].classList.add("green")   
-                                    }
-                                    else if (i == 1 ) {
-                                        arr[i].classList.add("blue")   
-                                    }
-                                    else if (i == 2 ) {
-                                        arr[i].classList.add("teal")   
-                                    }
-                                    else if (i == 3 ) {
-                                        arr[i].classList.add("yellow")   
-                                    }
-                                    else if (i == 4 ) {
-                                        arr[i].classList.add("red")   
-                                    }
-                                    else if (i == 5 ) {
-                                        arr[i].classList.add("orange")   
-                                    }
-                                    else if (i == 6 ) {
-                                        arr[i].classList.add("teal")   
-                                    }
-    
-                                }
-                            </script>
+    <script>
+        var arr = document.getElementsByClassName("solution-icon")
+        var length = arr.length
+        for(let i = 0; i<length; i++){
+            var newClass = 'pos-'+ (i+1) + '-' + length
+            arr[i].classList.add(newClass)   
+            if (i == 0) {
+                arr[i].classList.add("green")   
+            }
+            else if (i == 1 ) {
+                arr[i].classList.add("blue")   
+            }
+            else if (i == 2 ) {
+                arr[i].classList.add("teal")   
+            }
+            else if (i == 3 ) {
+                arr[i].classList.add("yellow")   
+            }
+            else if (i == 4 ) {
+                arr[i].classList.add("red")   
+            }
+            else if (i == 5 ) {
+                arr[i].classList.add("orange")   
+            }
+            else if (i == 6 ) {
+                arr[i].classList.add("teal")   
+            }
+
+        }
+    </script>
 
 <script>
     var tab_arr = document.getElementsByClassName("prod-tab-custom-item")

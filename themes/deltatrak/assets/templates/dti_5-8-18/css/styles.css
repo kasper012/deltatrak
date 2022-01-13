@@ -238,3 +238,23 @@
 }
 
 
+ .swiper-button-next {
+  width: 100% !important;
+}
+
+.swiper-button-prev {
+  width: 40px !important;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-prev:after {
+    content: '' !important;
+    background: url(https://www.deltatrakeurope.be/modules/mod_bt_contentslider/tmpl/css/../images/re-left.png) right center no-repeat !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-next:after {
+  content: '' !important;
+  background: url(https://www.deltatrakeurope.be/modules/mod_bt_contentslider/tmpl/css/../images/re-right.png) right center no-repeat !important;
+  width: 100% !important;
+  height: 100% !important;
+}

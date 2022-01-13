@@ -1,6 +1,6 @@
 
 {% if company.testimonials %}
-<div class="swiper">
+<div class="swiper pt-5">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
@@ -39,14 +39,37 @@
 
       ...
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-  
+
+
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   
     <!-- If we need scrollbar -->
     <div class="swiper-scrollbar"></div>
+    {% if this.page.id != 'about-testimonials' %}
+
+    <h3 class="testimonial-button mb-5 mt-n5">
+        <a href="{{ 'about/testimonials' | page }}"><span>{{'View all testimonials' |_ }} <i class="fas fa-angle-right"></i>  </span></a>
+    </h3>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    {% endif %}
   </div>
   {% endif %}
+  <style>
+  .testimonial-button {
+    background: #00548b;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 7px 12px;
+    border-radius: 12px  0;
+    white-space: nowrap;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .testimonial-button a,.testimonial-button a:hover {
+      color: white !important
+  }
+
+    </style>

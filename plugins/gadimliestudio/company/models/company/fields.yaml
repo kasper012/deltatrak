@@ -80,21 +80,22 @@ tabs:
                                 soft_name:
                                     label: Name of soft
                                     span: storm
-                                    cssClass: col-md-6
+                                    cssClass: col-md-4
                                 soft_image:
                                     label: Soft image
                                     span: storm
-                                    cssClass: col-md-6
+                                    cssClass: col-md-4
                                     type: mediafinder
+                                soft_version:
+                                    label: Version
+                                    span: storm
+                                    cssClass: col-md-4
                                 soft_short_desc:
                                     label: Short description of soft
                                     span: storm
                                     cssClass: col-md-6
                                     type: richeditor
-                                soft_version:
-                                    label: Version
-                                    span: storm
-                                    cssClass: col-md-6
+
                                 download:
                                     label: File
                                     type: mediafinder
@@ -106,9 +107,16 @@ tabs:
                                     cssClass: col-md-6
                                     type: datepicker
                                     mode: date
+                                instruction:
+                                    label: Instruction
+                                    span: storm
+                                    cssClass: col-md-6
+                                    type: mediafinder
                                 soft_desc:
                                     label: Full description of soft
                                     type: richeditor
+                                    span: storm
+                                    cssClass: col-md-12
 
         video:
             type: repeater

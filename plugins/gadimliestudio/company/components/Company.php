@@ -52,6 +52,7 @@ class Company extends ComponentBase
         $company->homepage_banner_animated_image = $settings->homepage_banner_animated_image;
         $company->homepage_solutions_text = $settings->homepage_solutions_text;
         $company->homepage_banner_text = $settings->homepage_banner_text;
+        $company->system_software_docs = $settings->system_software_docs;
 
         $company->is_faq_active = $settings->is_faq_active;
         $company->solution_briefs = $settings->solution_briefs;

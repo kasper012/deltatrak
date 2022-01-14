@@ -90,7 +90,7 @@ localeTitle[az] = "Proqram təminatları və drayverləri"
                                         <div class="accordion-body rl_sliders-body nn_sliders-body collapse"
                                             role="region" aria-labelledby="slider-fpm" aria-hidden="true" id="cat{{ support.id }}-item{{ loop.index }}">
                                             <div class="accordion-inner panel-body">
-                                                <h3 class="rl_sliders-title nn_sliders-title">{{ soft_item.soft_version }}</h3>
+                                                <h3 class="rl_sliders-title nn_sliders-title">{{ soft_item.soft_name }}&nbsp; {{ soft_item.soft_version }}</h3>
                                                 <div class="moduletable">
                                                     <div class="custom">
                                                         {% if soft_item.last_revised %}
@@ -106,7 +106,7 @@ localeTitle[az] = "Proqram təminatları və drayverləri"
                                                             {{ soft_item.soft_desc | raw }}
                                                         </p>
                                                         {% endif %}
-                                                        {% if soft_item.soft_instruction %}
+                                                        {% if soft_item.instruction %}
                                                         <p><a class="button outline" href="{{ soft_item.instruction | media }}" target="_blank">{{ soft_item.soft_name }} {{'Installation Instructions'|_}}</a></p>
                                                         {% endif %}
                                                         {% if soft_item.download %}

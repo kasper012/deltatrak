@@ -73,12 +73,11 @@ localeTitle[az] = "TempDot Plus Etiketləri"
                                             <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
                                             <div class="product read-more">
                                                 <p class="readmore">
-                                                    <a class="btn"
-                                                        href="{{ 'products/product-detailed' | page({id:product.id}) }}"
-                                                        itemprop="url"
-                                                        aria-label="{{ product.title }}">
+
+
+                                                    <a href="{{ 'product/product-detailed' | page({id:product.id}) }}" >
                                                         <span class="icon-chevron-right" aria-hidden="true"></span>
-                                                        {{'Read more...' |_}} </a>
+                                                        {{ 'Read more ...' |_ }}</a>
                                                 </p>
                                             </div>
         

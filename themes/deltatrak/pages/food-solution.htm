@@ -1,6 +1,6 @@
-title = "food solution"
+title = "Food Solutions"
 layout = "default"
-url = "/food-solution"
+url = "/solutions/food-solution"
 ==
 <div class="row-fluid">
 								<main id="content" role="main" class="span12">
@@ -47,56 +47,58 @@ url = "/food-solution"
 
 <div class="home-static-solutions">
 <div>
-{# Content #}
 
-<div class="flex">
+{% content 'food-solution-page-text' %}
 
-                            <div class="dt-width-1-5 dt-width-sm-1-1">
-                                <ul class="switch-scroll" data-uk-switcher="{connect:'#content-1'}">
-                                    <li style="display: none;" aria-expanded="true" class="uk-active"><a href="#">Item</a>
-                                    </li>
-                                    <li aria-expanded="false"><a href="#food-sol" data-uk-smooth-scroll="">
-                                            <div class="sticker blue"><i class="dt-icon-corn"></i></div>
-                                            <h4>{{ Produce/Floral | _ }}</h4>
-                                            <p>{{ From the moment of harvest, temperature and ethylene management are critical to maximize freshness, quality and shelf life. | _ }}</p>
-                                        </a></li>
-                                </ul>
+<div id="food-inner" class="flex">
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/produce-floral/main' | page }}">
+                                        <div class="sticker blue"><img src="https://www.deltatrak.com/images/solution-pages/icon-food-produce.png" alt=""></div>
+                                        <h4>{{ 'Produce/Floral' |_ }}</h4>
+                                        <p>{{ "From the moment of harvest, temperature and ethylene management
+                                            are critical to maximize freshness, quality and shelf life." |_ }}</p>
+                                    </a>
+                                </div>
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/meat/main' | page }}">
+                                        <div class="sticker blue"><img src="https://www.deltatrak.com/images/solution-pages/icon-food-meat.png" alt=""></div>
+                                        <h4>{{ 'Meat' |_ }}</h4>
+                                        <p>{{ "Meat producers strive to maximize livestock productivity and
+                                            reduce pathogens that cause foodborne illness." |_ }}</p>
+                                    </a>
+                                </div>
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/poultry/main' | page }}">
+                                        <div class="sticker blue"><img src="https://www.deltatrak.com/images/solution-pages/icon-food-poultry.png" alt=""></div>
+                                        <h4>{{ 'Poultry' |_ }}</h4>
+                                        <p>{{ "Heat stress in the breeding houses, barns and hatcheries, can
+                                            causes health risks, and poor production performance." |_ }}</p>
+                                    </a>
+                                </div>
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/dairy/mainmain' | page }}">
+                                        <div class="sticker blue"><img src="https://www.deltatrak.com/images/solution-pages/icon-food-dairy.png" alt=""></div>
+                                        <h4>{{ 'Dairy' |_ }}</h4>
+                                        <p>{{ "The prevention of the introduction of harmful toxins in dairy
+                                            products depends on good temperature management for storage and
+                                            transportation." |_ }}</p>
+                                    </a>
+                                </div>
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/seafood/main' | page}}">
+                                        <div class="sticker blue"><img src="https://www.deltatrak.com/images/solution-pages/icon-food-seafood.png" alt=""></div>
+                                        <h4>{{ 'Seafood' |_ }}</h4>
+                                        <p>{{ "Seafood is one of the most highly perishable food groups, and
+                                            responsible for a majority of foodborne illnesses." |_ }}</p>
+                                    </a>
+                                </div>
+
                             </div>
-
-                            <div class="dt-width-1-5 dt-width-sm-1-1">
-                                <a href="https://deltatrak.az/en/solutions/life-science-solutions">
-                                    <div class="sticker blue"><i class="dt-icon-flask"></i></div>
-                                    <h4>{{ Meat | _ }}</h4>
-                                    <p>{{ Meat producers strive to maximize livestock productivity and reduce pathogens that cause foodborne illness. | _ }}</p>
-                                </a>
-                            </div>
-
-                            <div class="dt-width-1-5 dt-width-sm-1-1">
-                                <a href="https://deltatrak.az/en/solutions/food-safety-solutions">
-                                    <div class="sticker blue"><i class="dt-icon-cutlery"></i></div>
-                                    <h4>{{ Poultry | _ }}</h4>
-                                    <p>{{ Heat stress in the breeding houses, barns and hatcheries, can cause health risks, and poor production performance. | _ }}</p>
-                                </a>
-                            </div>
-
-                            <div class="dt-width-1-5 dt-width-sm-1-1">
-                                <a href="">
-                                    <div class="sticker blue"><i class="dt-icon-fighter-jet"></i></div>
-                                    <h4>{{ Dairy | _ }}</h4>
-                                    <p>{{ Poultry | _ }}</p>
-                                </a>
-                            </div>
-
-                            <div class="dt-width-1-5 dt-width-sm-1-1">
-                                <a href="">
-                                    <div class="sticker blue"><i class="dt-icon-truck"></i></div>
-                                    <h4>In-Transit and Distribution </h4>
-                                            <p>Logistics companies play a crucial role in preserving
-                                                temperature-sensitive cargo as it is shipped around the globe.</p>
-                                </a>
-                            </div>
-
-                        </div>
 </div><!-- END FLEX CONTAINER -->
 </div>
 

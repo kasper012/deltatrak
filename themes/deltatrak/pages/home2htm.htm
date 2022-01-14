@@ -1,0 +1,251 @@
+title = "home2.htm"
+layout = "default2"
+url = "/2"
+==
+<div class="row-fluid">
+    <main id="content" role="main" class="span12">
+        <!-- Begin Content -->
+
+        <div id="system-message-container">
+        </div>
+
+        <div class="item-page wide-article" itemscope itemtype="https://schema.org/Article">
+            <meta itemprop="inLanguage" content="en-GB" />
+
+
+
+            <div class="icons">
+
+                <div class="btn-group pull-right">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-116"
+                        aria-label="User tools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="icon-cog" aria-hidden="true"></span>
+                        <span class="caret" aria-hidden="true"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-116">
+                        <li class="print-icon"> <a
+                                href="index.html%3Ftmpl=component&amp;print=1&amp;layout=default.html"
+                                title="Print article < DeltaTrak - Cold Chain Integrity >"
+                                onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;"
+                                rel="nofollow"> <span class="icon-print" aria-hidden="true"></span>
+                                Print </a> </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+            <dl class="fields-container">
+                <dd class="field-entry custom-code display-none"><span class="field-value ">
+                        <style>
+                            .home-static.dark h1,
+                            .home-static.dark h3 {
+                                color: #005e8d;
+                                text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.1);
+                            }
+                        </style>
+                    </span>
+                </dd>
+            </dl>
+            <div itemprop="articleBody">
+                <div class="home-static dark">
+                    <div>
+                        <h1><img src="{{ company.dark_logo | media }}"></h1>
+                        <h3>{{ company.homepagebanner_text | raw }}</h3>
+                    </div>
+                    <p class="scroller"><a href="#solutions" data-uk-smooth-scroll></a></p>
+                </div>
+
+
+
+
+                <div class="uk-cover dti-fade-in uk-position-relative" style="height: 92vh; background-color: #fff;">
+                    <div id="panel" class="uk-slidenav-position bkg-tint-x"
+                        data-uk-slideshow="{autoplay:false,kenburns:true,autoplayInterval:14000}">
+                        <ul class="uk-slideshow uk-slideshow-fullscreen">
+                            <li><img src="{{ company.homepage_banner_image | media }}" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="dti-slide-in chain" style="background-image: url({{ company.homepage_banner_animated_image | media }}) !important;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-size: contain;
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: 100%;"> </div>
+                </div>
+
+                <div class="dti-fade-in tracker"> </div>
+
+                <div class="dti-fade-in home-static">
+                    <div>
+                        <h1>
+                            <img src="{{ company.coldchain_integrity_logo | media }}">
+                        </h1>
+                        <h3>{{ company.homepage_banner_text | raw }}</h3>
+                    </div>
+                    <p class="scroller"><a href="#solutions" data-uk-smooth-scroll></a></p>
+                </div>
+
+
+
+
+
+
+                <div id="food-sol" class="scroll-anchor-food"></div>
+
+                <div id="solutions" class="scroll-anchor"></div>
+
+                <div class="home-static-solutions">
+                    <div>
+                        {{ company.homepage_solutions_text | raw }}
+                        <div class="flex">
+
+                            <div class="dt-width-1-5 dt-width-sm-1-1">
+                                <ul class="switch-scroll" data-uk-switcher="{connect:'#content-1'}">
+                                    <li style="display: none;"><a href="#">Item</a>
+                                    </li>
+                                    <li><a href="#food-sol" data-uk-smooth-scroll>
+                                            <div class="sticker blue"><i class="dt-icon-corn"></i></div>
+                                            <h4>{{'Food'|_}}</h4>
+                                            <p>{{'From harvesting to the shelf to the table, consumers expect
+                                                quality, freshness and peak condition for all the food they
+                                                purchase.'|_}}</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dt-width-1-5 dt-width-sm-1-1">
+                                <a href="{{ 'solutions/life-science-solutions/main' | page }}">
+                                    <div class="sticker blue"><i class="dt-icon-flask"></i></div>
+                                    <h4>{{'Life Science'|_}}</h4>
+                                    <p>{{'The life sciences industry is the most highly regulated, in order to
+                                        ensure product efficacy and patient safety.'|_}}</p>
+                                </a>
+                            </div>
+
+                            <div class="dt-width-1-5 dt-width-sm-1-1">
+                                <a href="{{ 'solutions/food-safety-solutions/main' | page }}">
+                                    <div class="sticker blue"><i class="dt-icon-cutlery"></i></div>
+                                    <h4>{{'Food Safety'|_}}</h4>
+                                    <p>{{'The food industry is constantly challenged to deliver and serve food
+                                        that is safe to eat.'|_}}</p>
+                                </a>
+                            </div>
+
+                            <div class="dt-width-1-5 dt-width-sm-1-1">
+                                <a href="{{ 'solutions/aerospace-and-industrial-solutions/main' | page }}">
+                                    <div class="sticker blue"><i class="dt-icon-fighter-jet"></i></div>
+                                    <h4>{{'Aerospace and Industrial'|_}}</h4>
+                                    <p>{{'Visibility and traceability of TATS materials ensure the quality and
+                                        integrity of finished products.'|_}}</p>
+                                </a>
+                            </div>
+
+                            <div class="dt-width-1-5 dt-width-sm-1-1">
+                                <a href="{{ 'solutions/in-transit-and-distribution-solutions/main' | page }}">
+                                    <div class="sticker blue"><i class="dt-icon-truck"></i></div>
+                                    <h4>{{'In-Transit and Distribution'|_}} </h4>
+                                            <p>{{'Logistics companies play a crucial role in preserving
+                                                temperature-sensitive cargo as it is shipped around the globe.'|_}}</p>
+                                </a>
+                            </div>
+
+                        </div><!-- END FLEX CONTAINER -->
+
+                    </div>
+                </div>
+
+
+
+
+                <!-- BEGIN HIDDEN CONTENT FOR FOOD SOLUTIONS -->
+                <ul id="content-1" class="uk-switcher">
+                    <li style="display: none;">{{'Never Seen'|_}}</li>
+                    <li>
+
+                        <div id="food-sol" class="scroll-anchor-food"></div>
+
+                        <div class="home-static-solutions auto-height">
+
+                            <div id="food-inner" class="flex">
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/produce-floral/main' | page }}">
+                                        <div class="sticker blue"><img
+                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-produce.png"
+                                                alt=""></div>
+                                        <h4>{{'Produce/Floral'|_}}</h4>
+                                        <p>{{'From the moment of harvest, temperature and ethylene management
+                                            are critical to maximize freshness, quality and shelf life.'|_}}</p>
+                                    </a>
+                                </div>
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/meat/main' | page }}">
+                                        <div class="sticker blue"><img
+                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-meat.png"
+                                                alt=""></div>
+                                        <h4>{{'Meat'|_}}</h4>
+                                        <p>{{'Meat producers strive to maximize livestock productivity and
+                                            reduce pathogens that cause foodborne illness.'|_}}</p>
+                                    </a>
+                                </div>
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/poultry/main' | page }}">
+                                        <div class="sticker blue"><img
+                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-poultry.png"
+                                                alt=""></div>
+                                        <h4>{{'Poultry'|_}}</h4>
+                                        <p>{{'Heat stress in the breeding houses, barns and hatcheries, can
+                                            causes health risks, and poor production performance.'|_}}</p>
+                                    </a>
+                                </div>
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/dairy/main' | page }}">
+                                        <div class="sticker blue"><img
+                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-dairy.png"
+                                                alt=""></div>
+                                        <h4>{{'Dairy'|_}}</h4>
+                                        <p>{{'The prevention of the introduction of harmful toxins in dairy
+                                            products depends on good temperature management for storage and
+                                            transportation.'|_}}</p>
+                                    </a>
+                                </div>
+
+                                <div class="dt-width-1-5 dt-width-sm-1-1">
+                                    <a href="{{ 'solutions/food-solutions/seafood/main' | page }}">
+                                        <div class="sticker blue"><img
+                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-seafood.png"
+                                                alt=""></div>
+                                        <h4>{{'Seafood'|_}}</h4>
+                                        <p>{{'Seafood is one of the most highly perishable food groups, and
+                                            responsible for a majority of foodborne illnesses.'|_}}</p>
+                                    </a>
+                                </div>
+
+                            </div><!-- END FLEX CONTAINER -->
+                        </div>
+
+                    </li>
+                </ul><!-- END HIDDEN CONTENT -->
+
+            </div><!-- END FLEX CONTAINER -->
+        </div>
+
+        </li>
+        </ul><!-- END HIDDEN CONTENT -->
+
+</div>
+
+</div>
+<div class="clearfix"></div>
+
+<!-- End Content -->
+</main>
+</div>

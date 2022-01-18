@@ -15,7 +15,6 @@ localeTitle[az] = "Tədbirlər kalendarı"
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
                 {{'Events Calendar'|_}}</H1>
-
             <p>{{'Visit us at our upcoming shows and events'|_}}</p>
         </div>
     </div>
@@ -39,8 +38,6 @@ localeTitle[az] = "Tədbirlər kalendarı"
 
             <div class="item-page" itemscope itemtype="https://schema.org/Article">
                 <meta itemprop="inLanguage" content="en-GB" />
-
-
                 <div class="icons">
 
                     <div class="btn-group pull-right">
@@ -64,11 +61,11 @@ localeTitle[az] = "Tədbirlər kalendarı"
 
 
 <div itemprop="articleBody">
+    <h1 class="wide eee text-center">{{'Upcoming Events'|_}}</h1>
+
     {% for event in company.event %}
     {% if now |date('U') < event.start_date |date('U') %}
-    <h1 class="wide eee text-center">{{ loop.index }}{{'Upcoming Events'|_}}</h1>
-    {% endif %}
-    {% if now |date('U') < event.start_date |date('U') %}
+
 
     <div class="event">
         <div data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:100}"><img
@@ -83,12 +80,9 @@ localeTitle[az] = "Tədbirlər kalendarı"
 
     {% endfor %} 
     
-    <h3>Divideeer</h3>
+    <h1 class="wide eee text-center">{{'Recent Events'|_}}</h1>
 
     {% for event in company.event %}
-    {% if now |date('U') > event.start_date |date('U') and loop.first  %}
-    <h1 class="wide eee text-center">{{'Recent Events'|_}}</h1>
-    {% endif %}
     {% if now |date('U') > event.start_date |date('U') %}
 
     <div class="event">

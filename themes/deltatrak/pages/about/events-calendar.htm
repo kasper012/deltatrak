@@ -30,7 +30,6 @@ localeTitle[az] = "Tədbirlər kalendarı"
             </ul>
         </div>
     </div>
-
     <div class="row-fluid">
         <main id="content" role="main" class="span12">
             <!-- Begin Content -->
@@ -63,27 +62,50 @@ localeTitle[az] = "Tədbirlər kalendarı"
 
                 </div> 
 
-                <div itemprop="articleBody">
-                    {% for event in company.event %}
-                    {% if now |date('U') < event.start_date |date('U')  %}
-                    <h1 class="wide eee text-center">{{'Upcoming Events'|_}}</h1>
-                    {% else %}
-                    <h1 class="wide eee text-center">{{'Recent Events'|_}}</h1>
-                    {% endif %}
-                    <div class="event">
-                        <div data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:100}"><img
-                                src="{{ event.image | media }}" alt="" />
-                        </div>
-                        <p data-uk-scrollspy="{cls:'uk-animation-fade', delay:400}"><strong>{{ event.title }}<br /><sup></sup><br /> {{ event.date_start | date('M') }}&nbsp;{{ event.start_date | date('d') }}-{{ event.finish_date | date('d') }}
-                            {{ event.date_start | date('Y') }}</strong><br />
-                                {{ event.address }}
-                        </p>
-                    </div>
 
-                    {% endfor %}
+<div itemprop="articleBody">
+    {% for event in company.event %}
+    {% if now |date('U') < event.start_date |date('U') %}
+    <h1 class="wide eee text-center">{{ loop.index }}{{'Upcoming Events'|_}}</h1>
+    {% endif %}
+    {% if now |date('U') < event.start_date |date('U') %}
+
+    <div class="event">
+        <div data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:100}"><img
+                src="{{ event.image | media }}" alt="" />
+        </div>
+        <p data-uk-scrollspy="{cls:'uk-animation-fade', delay:400}"><strong>{{ event.title }}<br /><sup></sup><br /> {{ event.start_date | date('M') }}&nbsp;{{ event.start_date | date('d') }}-{{ event.finish_date | date('d') }}
+            {{ event.start_date | date('Y') }}</strong><br />
+                {{ event.address }}
+        </p>
+    </div>
+    {% endif %}
+
+    {% endfor %} 
+    
+    <h3>Divideeer</h3>
+
+    {% for event in company.event %}
+    {% if now |date('U') > event.start_date |date('U') and loop.first  %}
+    <h1 class="wide eee text-center">{{'Recent Events'|_}}</h1>
+    {% endif %}
+    {% if now |date('U') > event.start_date |date('U') %}
+
+    <div class="event">
+        <div data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:100}"><img
+                src="{{ event.image | media }}" alt="" />
+        </div>
+        <p data-uk-scrollspy="{cls:'uk-animation-fade', delay:400}"><strong>{{ event.title }}<br /><sup></sup><br /> {{ event.start_date | date('M') }}&nbsp;{{ event.start_date | date('d') }}-{{ event.finish_date | date('d') }}
+            {{ event.start_date | date('Y') }}</strong><br />
+                {{ event.address }}
+        </p>
+    </div>
+    {% endif %}
+
+    {% endfor %}                                
 
 
-                </div>
+</div>
             </div>
             <div class="clearfix"></div>
 

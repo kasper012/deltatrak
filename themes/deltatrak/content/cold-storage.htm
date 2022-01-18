@@ -7,7 +7,7 @@
     }
 
 
-    .accordeon-btn.collapsed::before {
+    .accordeon-btn::before {
         content: "";
     display: inline-block;
     font-family: fontawesome;
@@ -32,20 +32,27 @@
         border-left: none;
         border-right: none;
     }
-
-    .accordeon-btn::before {
-        content: "";
-    }
 </style>
 
 <div itemprop="articleBody" class="px-5">
-    <div class="customcontentbox" style="margin-top: 0px;"><img style="margin-bottom: 20px;" src="/images/logos-icons/FlashTrakTelematicsLogo_RGB.gif" alt="FlashTrakTelematics Logo"><img style="margin: 7px 25px 30px 12px; float: left;" src="/images/logos-icons/Telematics_Mobile_Network_14C1.gif" alt="Telematics Mobile Network">
-        <p>The FlashTrak Telematics Real-Time Mobile Solution provides the tools to monitor trucks 24/7 as they travel across the country. It offers the ability to monitor commodities with ambient temperature, GPS location, actual product temperature using
-            DeltaTrak's unique Product Emulation feature, and keep up to date with specific alerts which can be determined by the user's needs. The data is uploaded to ColdTrak Data Central cloud-based service using either the cellular data network or
-            WiFi, at which point the user has access from anywhere in the world.</p>
-        <p>In this solution, the shipper of the temperature sensitive products uses FlashTrak TM Data Loggers to record ambient air and/or actual product temperature, and uses ColdTrak Data Central to set parameters for alert notifications. The FlashTrak
-            TM Data Loggers are mounted inside truck trailers and wirelessly communicate temperature measurements to a Mobile Control System (MCS) that is installed in the truck cab. The solution provides real-time monitoring of the products and notifies
-            the user of temperature excursions by audio alarms, text messages, and emails. All of the data is automatically uploaded to ColdTrak Data Central, where it is analyzed and reports are generated.</p>
+    <div class="customcontentbox" style="margin-top: 0px;"><img style="margin-bottom: 20px;"
+            src="/images/logos-icons/FlashTrakTelematicsLogo_RGB.gif" alt="FlashTrakTelematics Logo"><img
+            style="float: left; margin-left: 12px; margin-top: 7px; margin-bottom: 60px; margin-right: 25px;"
+            src="/images/logos-icons/Telematics_Facility_Network_14C1.gif" alt="Telematics Facility Network 14C1">
+        <p>The FlashTrak Telematics Cold-Storage Facility solution shall provide temperature monitoring of products being
+            stored in a cold storage warehouse and display information on a data enabled tablet via the Facility Control
+            System (FCS). It will offer the customer the ability to keep a close watch on their cold storage warehouse
+            temperatures using a combination of our Loggers and Repeaters (optional). The data will be uploaded to ColdTrak
+            Data Central using either the cellular data network or WiFi at which point the customer has access to it
+            anywhere in the world.</p>
+        <p>In this solution, the shipper of the temperature sensitive products will use FlashTrak TM Data Loggers to record
+            ambient air and/or product temperature within a facility. The FlashTrak TM/TMX Data Loggers are in strategic
+            locations to give a wide coverage area and can be mounted anywhere the customer wishes to monitor air
+            temperature. The combination of loggers and repeaters will communicate wirelessly with the Facility Control
+            System (FCS) installed where management can view temperatures on the tablet in real time. All of the data will
+            be automatically uploaded to ColdTrak where reports and alarm conditions can be pre-set for notification as
+            needed.</p>
+
 
             <div class="accordion" id="accordionExample">
                 <div class="card">
@@ -53,7 +60,7 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block accordeon-btn text-left" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                                 GeoFence
-                      </button>
+                    </button>
                         </h2>
                     </div>
             
@@ -71,7 +78,7 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block accordeon-btn text-left" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
                                 Mobile M2M Data Service
-                      </button>
+                    </button>
                         </h2>
                     </div>
             
@@ -146,6 +153,22 @@
                     </div>
                 </div>
             
+
+                <!-- wake-on -->
+                <div class="card">
+                    <div class="card-header" id="heading12">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block accordeon-btn text-left" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+                                Wake-On-Radio Logger
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse12" class="collapse show" aria-labelledby="heading12" data-parent="#accordionExample">
+                        <div class="card-body">
+                            The FlashTrak Telematics system automatically detects when a data logger is within RF range of a FlashTrak Telematics Master Control Unit (MCS), and it will wake up and send data. Real-time and historic temperature statistics can be viewed in both numerical and graphical formats. This has applications in both air-transit and in-transit models because it conserves the battery of the logger by putting it into hibernation when not reporting data to the MCS. This feature is especially important for air shipments because it ensures that logger signals are not transmitted during flight, to avoid possible interference with airplane navigation systems.        </div>
+                    </div>
+                </div>
                 <!-- 6 -->
             
                 <div class="card">
@@ -215,14 +238,13 @@
                     <div class="card-header" id="heading8">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block accordeon-btn text-left" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
-                                FlashTrak Telematics Mobile Control System (MCS)		  </button>
+                                Facility Control System (FCS)		  </button>
                         </h2>
                     </div>
             
                     <div id="collapse8" class="collapse show" aria-labelledby="heading8" data-parent="#accordionExample">
                         <div class="card-body">
-                            The FlashTrak MCS is the main control unit in mobile applications where it will be traveling with a truck/trailer unit, and is able to report temperature in real-time. The MCS is self contained in a sealed plastic case and has provisions for power connection to a constant 12-volt power source. The primary responsibility of the MCS is to collect data from the TM Loggers and upload information to ColdTrak Data Central cloud-based service. It also provides GPS coordinates of the truck. No driver interaction is required with FlashTrak equipment.
-                        </div>
+                            The FlashTrak FCS is the main control unit which collects data from the loggers and uploads information to DeltaTrak’s ColdTrak Data Central cloud-based service. The FCS includes a 7 inch tablet that is visible through the clear case cover so users can view temperature readings in real-time. The FCS runs on A/C power using the provided plug-in type wall transformer for primary power, and has a battery back-up to maintain power and network connections up to 24 hours.                    </div>
                     </div>
                 </div>
             
@@ -273,15 +295,12 @@
                     </div>
                 </div>
             </div>
+
+
+
+
             </div>
 
-        <p></p>
+
     </div>
 </div>
-
-
-
-
-
-
-

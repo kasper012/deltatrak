@@ -1,6 +1,6 @@
-title = "GoGreen"
 url = "/services/gogreen"
 layout = "default"
+title = "GoGreen"
 
 [viewBag]
 localeUrl[ru] = "/uslugi/gogreen"
@@ -25,27 +25,7 @@ localeTitle[az] = "GoGreen"
                     <span class="divider icon-location"></span>
                 </li>
 
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="index.html%3FrCH=2.html" class="pathway"><span
-                            itemprop="name">{{'Home'|_}}</span></a>
-
-                    <span class="divider">
-                        <img src="media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="1">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">
-                        {{'Services'|_}} </span>
-
-                    <span class="divider">
-                        <img src="media/system/images/arrow.png" alt="" /> </span>
-                    <meta itemprop="position" content="2">
-                </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-                    <span itemprop="name">
-                        {{'GoGreen Recycling Program'|_}} </span>
-                    <meta itemprop="position" content="3">
-                </li>
+               {% partial "breadcrumbs/services" %}
             </ul>
         </div>
     </div>

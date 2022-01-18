@@ -8,6 +8,12 @@ localeUrl[az] = "/destek/texniki-destek"
 localeTitle[ru] = "Техническая поддержка"
 localeTitle[az] = "Texniki dəstək"
 ==
+<style>
+    .font-size-150 {
+        font-size: 150% !important;
+    }
+</style>
+
 <div class="moduletable mod-page-title narrow">
 
     <div class="mod-title-wrap">
@@ -32,9 +38,29 @@ localeTitle[az] = "Texniki dəstək"
     <main id="content" role="main" class="span12">
         <!-- Begin Content -->
 
-        {% content 'technical-support' %}
+        {% content 'technical-support-1' %}
+
+        <!-- End Content -->
+    </main>
+        <div class="wide eee text-150 text-center " style="margin: 30px -5%; padding: 40px 6%; font-size: 150% !important">
+        <h3 class="font-size-150">Our Availability</h3>
+        <p>Our technical support team is available to assist customers with product inquiries, calibration questions, troubleshooting and repairs. Contact our technical support staff at +32&nbsp;3&nbsp;455&nbsp;61&nbsp;25 or <span id="cloakc9bda05cc1c1ebbc83226d48a1c17504"><a href="mailto:techsupport@deltatrakeurope.az">techsupport@deltatrakeurope.az</a></span></p>
+        </div>
+         <main id="content" role="main" class="span12">
+        <!-- Begin Content -->
+
+        {% content 'technical-support-2' %}
 
         <!-- End Content -->
     </main>
 </div>
+
+{# <div class="row-fluid mt-5" style="padding: 0 4%">
+    <main id="content" role="main" class="span12">
+        <!-- Begin Content -->
+
+       
+
+        <!-- End Content -->
+    </main> #}
 {% partial "support-navigation" %}

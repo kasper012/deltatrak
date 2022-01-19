@@ -1,14 +1,14 @@
-title = 'Thermo-Hygrometers'
-layout = 'default'
-url= '/products/thermometers/thermo-hygrometers'
+url = "/products/thermometers/thermo-hygrometers"
+layout = "default"
+title = "Thermo-Hygrometers"
 
 [products]
 
 [viewBag]
-localeUrl[ru] = 'produkti/termometri/termogigrometri'
-localeUrl[az] = 'məhsullar/termometrlər/termohiqrometrlər'
-localeTitle[ru] = 'Термогигрометры'
-localeTitle[az] = 'Termohiqrometrlər'
+localeUrl[ru] = "produkti/termometri/termogigrometri"
+localeUrl[az] = "məhsullar/termometrlər/termohiqrometrlər"
+localeTitle[ru] = "Термогигрометры"
+localeTitle[az] = "Termohiqrometrlər"
 ==
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
@@ -36,11 +36,11 @@ localeTitle[az] = 'Termohiqrometrlər'
             </div>
             <!--<h3 style="color: red;">This is the custom Blog layout</h3>-->
             <div class="delta-products blog" itemscope itemtype="https://schema.org/Blog">
-                <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
+                <div class="prod-row items-row cols-3 row-0 row-fluid clearfix" style="margin-bottom: 30px;">
                     {% for product in products %}
                         {% if product.status_type == 'first-third' %}
-                        <div class="col-md-4">
-                            <div class="prod-block ml-0">
+                        <div class="col-md-6">
+                            <div class="prod-block ml-0 h-100">
                                     <div class="item column-1" itemprop="blogPost" itemscope
                                         itemtype="https://schema.org/BlogPosting">
         

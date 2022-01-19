@@ -20,6 +20,18 @@ public function onStart() {
 }
 ?>
 ==
+<style>
+@media(min-width: 576px)
+{
+    .mod-title-wrap{
+    margin-top: 106px;}
+}
+@media(max-width: 960px){
+   .mod-title-wrap{
+       margin-top: 69px;
+   }
+}
+</style>
 <div itemprop="articleBody">
     <div id="top" class="green full-modal full-page">
         <div class="solution-inner">
@@ -50,7 +62,7 @@ public function onStart() {
                         {% elseif solution.type == 'fourth' %}{{ 'solutions/aerospace-industrial-solutions/main' | page }}
                         {% endif %}
                         {% if solution.type == 'fifth' %}{{ 'solutions/in-transit-distribution-solutions/main' | page }}
-                        {% endif %}" class="close"
+                        {% endif %}" class="close bg-white"
                             title="">{{'BACK'|_}}</a></li>
                 </ul>
             </div>
@@ -59,8 +71,9 @@ public function onStart() {
             <div id="top-spacer"></div>
             <div>
                 <div class="moduletable mod-page-title">
-
-                    <div class="mod-title-wrap" style="background-image: url({{ solution.banner_image | media }})">
+                    <div class="mod-title-wrap" style="background-image: url({{ solution.banner_image | media }}); height: 40vh;">
+                        <h1 class="mod-title-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+  {{ solution.title }}</font></font></h1>
                         {{ solution.banner_text | raw }}
                     </div>
 

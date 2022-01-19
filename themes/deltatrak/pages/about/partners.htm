@@ -1,6 +1,6 @@
-title = "Partners"
 url = "/about/partners"
 layout = "default"
+title = "Partners"
 
 [viewBag]
 localeUrl[ru] = "/partneri"
@@ -9,7 +9,7 @@ localeTitle[ru] = "Партнёры"
 localeTitle[az] = "Partnyorlar"
 ==
 <div class="container-fluid pt-0">
-    <div class="moduletable mod-page-title narrow">
+    <div class="moduletable mod-page-title narrow" style="background-color:#0099A8;">
 
         <div class="mod-title-wrap">
             <H1 class="mod-title-heading">
@@ -68,8 +68,8 @@ localeTitle[az] = "Partnyorlar"
                     <div class="dt-width-4-10 dt-width-md-1-2 dt-width-sm-1-1" style="padding: 0 10px 30px 0;">
                         <h4>{{ partner.name }}</h4>
                         <p>{{ partner.address }}<br />
-                            Tel: {{ partner.phone }}<br />
-                            Fax: {{ partner.fax }}<br />
+                             {{ partner.phone }}<br />
+                             {{ partner.fax }}<br />
                             Email: {% for email in partner.email %}
                                     <a href="mailto:{{ email.email }}">{{ email.email }}</a>
                                     {% endfor %}

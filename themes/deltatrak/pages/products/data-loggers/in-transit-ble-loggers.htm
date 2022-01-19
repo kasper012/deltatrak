@@ -1,13 +1,13 @@
-title = 'İn-Transit BLE Loggers'
-layout = 'default'
-url= '/products/data-loggers/in-transit-ble-loggers'
-
+url = "/products/data-loggers/in-transit-ble-loggers"
+layout = "default"
+title = "İn-Transit BLE Loggers"
 
 [viewBag]
 localeUrl[ru] = "/produkti/ble-loggeri-intransit"
 localeUrl[az] = "/mehsullar/intransit-ble-loggerleri"
 localeTitle[ru] = "BLE-логгеры In-Transit"
 localeTitle[az] = "In-Transit BLE Loggerləri"
+
 [products]
 ==
 <div class="container-fluid pt-0">
@@ -36,11 +36,11 @@ localeTitle[az] = "In-Transit BLE Loggerləri"
             </div>
             <!--<h3 style="color: red;">This is the custom Blog layout</h3>-->
             <div class="delta-products blog" itemscope itemtype="https://schema.org/Blog">
-                <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
+                <div class="prod-row items-row cols-3 row-0 row-fluid clearfix" style="margin-bottom: 30px;">
                     {% for product in products %}
                         {% if product.status_type == 'third-third' %}
-                        <div class="col-md-4">
-                            <div class="prod-block ml-0">
+                        <div class="col-md-6">
+                            <div class="prod-block ml-0 h-100">
                                     <div class="item column-1" itemprop="blogPost" itemscope
                                         itemtype="https://schema.org/BlogPosting">
         

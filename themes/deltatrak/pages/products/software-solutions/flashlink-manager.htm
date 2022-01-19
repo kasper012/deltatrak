@@ -1,12 +1,12 @@
-title = 'Flashlink Manager'
-layout = 'default'
-url= '/products/software-solutions/flashlink-manager'
+url = "/products/software-solutions/flashlink-manager"
+layout = "default"
+title = "Flashlink Manager"
 
 [products]
+
 [viewBag]
 localeUrl[ru] = "/produkti/po/flashlink-manager"
 localeUrl[az] = "/mehsullar/proqram-teminatlar/flashlink-manager"
-
 ==
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
@@ -37,8 +37,8 @@ localeUrl[az] = "/mehsullar/proqram-teminatlar/flashlink-manager"
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
                         {% if product.status_type == 'tenth-second' %}
-                        <div class="col-md-4">
-                            <div class="prod-block ml-0">
+                        <div class="col-md-6" style="padding-bottom: 30px;">
+                            <div class="prod-block ml-0 h-100">
                                     <div class="item column-1" itemprop="blogPost" itemscope
                                         itemtype="https://schema.org/BlogPosting">
         

@@ -1,8 +1,9 @@
-title = 'Vaccine Monitor Card'
-layout = 'default'
-url= '/products/vaccine-monitoring/vaccine-monitor-card'
+url = "/products/vaccine-monitoring/vaccine-monitor-card"
+layout = "default"
+title = "Vaccine Monitor Card"
 
 [products]
+
 [viewBag]
 localeUrl[ru] = "/produkti/monitoring-vakstin/karta-monitorinqa-vakstin/"
 localeUrl[az] = "/mehsullar/vaksin-monitorinqi/vaksin-monitoring-xeritesi"
@@ -38,50 +39,52 @@ localeTitle[az] = "Vaksin monitorinq xəritəsi"
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
                         {% if product.status_type == 'fifth-sixth' %}
-                        <div class="col-md-4">
-                            <div class="prod-block ml-0">
-                                    <div class="item column-1" itemprop="blogPost" itemscope
-                                        itemtype="https://schema.org/BlogPosting">
-        
-        
-                                        <!--<h3 style="color: red;">This is the custom Item layout</h3>-->
-                                        <div class="delta-product-category">
-        
-                                            <!--<h3 class="prod-model">Model 11036</h3>-->
-                                            <div class="page-header">
-                                                <h2 itemprop="name">
-                                                                <a href="/products/{{product.id}}" itemprop="url">
-                                                    <span class="sup"></span> {{ product.title }}	</a>
-                                                        </h2>
-                                            </div>
-                                            <div class="prod-image"><a
-                                                    href="{{ product.product_image | media }}"
-                                                    data-uk-lightbox> <img
-                                                        src="{{ product.product_image | media }}"
-                                                        alt="" /></a>
-                                            </div>
-                                            {% if  product.key_features3 %}
-                                            <div class="key-features"><b></b>
-                                                <div class="prod-app"><b>{{'Key features'|_}}:</b> </div>
-                                                {{ product.key_features3 | raw }}
-                                            </div>
-                                            {% endif %}
-        
-                                            <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
-                                            <div class="product read-more">
-                                                <p class="readmore">
-                                                    <a 
-                                                        href="{{ 'products/product-detailed' | page({id:product.id}) }}"
-                                                        itemprop="url"
-                                                        aria-label="{{ product.title }}">
-                                                        <span class="icon-chevron-right" aria-hidden="true"></span>
-                                                        {{'Read more...' |_}} </a>
-                                                </p>
-                                            </div>
-        
-                                        </div><!-- end delta-product-category -->
-                                    </div>
-                                    <!-- end item -->
+                        <div class="container">
+                            <div class="col-md-12">
+                                <div class="prod-block ml-0">
+                                        <div class="item column-1" itemprop="blogPost" itemscope
+                                            itemtype="https://schema.org/BlogPosting">
+            
+            
+                                            <!--<h3 style="color: red;">This is the custom Item layout</h3>-->
+                                            <div class="delta-product-category">
+            
+                                                <!--<h3 class="prod-model">Model 11036</h3>-->
+                                                <div class="page-header">
+                                                    <h2 itemprop="name">
+                                                                    <a href="/products/{{product.id}}" itemprop="url">
+                                                        <span class="sup"></span> {{ product.title }}	</a>
+                                                            </h2>
+                                                </div>
+                                                <div class="prod-image"><a
+                                                        href="{{ product.product_image | media }}"
+                                                        data-uk-lightbox> <img
+                                                            src="{{ product.product_image | media }}"
+                                                            alt="" /></a>
+                                                </div>
+                                                {% if  product.key_features3 %}
+                                                <div class="key-features"><b></b>
+                                                    <div class="prod-app"><b>{{'Key features'|_}}:</b> </div>
+                                                    {{ product.key_features3 | raw }}
+                                                </div>
+                                                {% endif %}
+            
+                                                <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
+                                                <div class="product read-more">
+                                                    <p class="readmore">
+                                                        <a 
+                                                            href="{{ 'products/product-detailed' | page({id:product.id}) }}"
+                                                            itemprop="url"
+                                                            aria-label="{{ product.title }}">
+                                                            <span class="icon-chevron-right" aria-hidden="true"></span>
+                                                            {{'Read more...' |_}} </a>
+                                                    </p>
+                                                </div>
+            
+                                            </div><!-- end delta-product-category -->
+                                        </div>
+                                        <!-- end item -->
+                                </div>
                             </div>
                         </div>
                     {% endif %}
@@ -93,3 +96,10 @@ localeTitle[az] = "Vaksin monitorinq xəritəsi"
         </main>
     </div>
 </div>
+
+<style>
+    .container{
+     border: none !important;
+     box-shadow: none !important;
+    }
+</style>

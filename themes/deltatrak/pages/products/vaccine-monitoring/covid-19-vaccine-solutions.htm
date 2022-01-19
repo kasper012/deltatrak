@@ -1,8 +1,9 @@
-title = 'COVID-19 Vaccine Solutions'
-layout = 'default'
-url= '/products/vaccine-monitoring/covid-19-vaccine-solutions'
+url = "/products/vaccine-monitoring/covid-19-vaccine-solutions"
+layout = "default"
+title = "COVID-19 Vaccine Solutions"
 
 [products]
+
 [viewBag]
 localeUrl[ru] = "/produkti/monitoring-vaktsin/resheniya-dlya-vakstin-covid-19"
 localeUrl[az] = "/mehsullar/vaksin-monitorinqi/covid-19-uchun-vaksin-helleri"
@@ -38,8 +39,8 @@ localeTitle[az] = "COVID-19 vaksin üçün həllər"
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
                         {% if product.status_type == 'fifth-first' %}
-                        <div class="col-md-4">
-                            <div class="prod-block ml-0">
+                        <div class="col-md-4" style="padding-bottom: 30px;">
+                            <div class="prod-block ml-0 h-100">
                                     <div class="item column-1" itemprop="blogPost" itemscope
                                         itemtype="https://schema.org/BlogPosting">
         

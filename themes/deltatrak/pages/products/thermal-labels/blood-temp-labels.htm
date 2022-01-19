@@ -1,8 +1,9 @@
-title = 'Blood Temp Labels'
-layout = 'default'
-url= '/products/thermal-labels/blood-temp-labels'
+url = "/products/thermal-labels/blood-temp-labels"
+layout = "default"
+title = "Blood Temp Labels"
 
 [products]
+
 [viewBag]
 localeUrl[ru] = "/produkti/termoetiketki/etiketki-temperatury-krovi"
 localeUrl[az] = "/mehsullar/termoetiketleri/qan-temperaturu-etiketleri"
@@ -38,8 +39,8 @@ localeTitle[az] = "Qan temperaturu etiketləri"
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
                         {% if product.status_type == 'seventh-fourth' %}
-                        <div class="col-md-4">
-                            <div class="prod-block ml-0">
+                        <div class="col-md-6" style="padding-bottom: 30px;">
+                            <div class="prod-block ml-0 h-100">
                                     <div class="item column-1" itemprop="blogPost" itemscope
                                         itemtype="https://schema.org/BlogPosting">
         

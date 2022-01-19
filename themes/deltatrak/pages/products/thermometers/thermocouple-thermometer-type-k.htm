@@ -1,14 +1,14 @@
-title = 'Thermocouple Thermometer Type K'
-layout = 'default'
-url= '/products/thermometers/thermocouple-thermometer-type-k'
+url = "/products/thermometers/thermocouple-thermometer-type-k"
+layout = "default"
+title = "Thermocouple Thermometer Type K"
 
 [products]
 
 [viewBag]
-localeUrl[ru] = 'produkti/termometri/termometr-s-termoparoy-tip-K'
-localeUrl[az] = 'məhsullar/termometrlər/K-tipli-termocüt-termometr'
-localeTitle[ru] = 'Термометр с термопарой тип K'
-localeTitle[az] = 'K tipli termocüt termometr'
+localeUrl[ru] = "produkti/termometri/termometr-s-termoparoy-tip-K"
+localeUrl[az] = "məhsullar/termometrlər/K-tipli-termocüt-termometr"
+localeTitle[ru] = "Термометр с термопарой тип K"
+localeTitle[az] = "K tipli termocüt termometr"
 ==
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
@@ -36,11 +36,11 @@ localeTitle[az] = 'K tipli termocüt termometr'
             </div>
             <!--<h3 style="color: red;">This is the custom Blog layout</h3>-->
             <div class="delta-products blog" itemscope itemtype="https://schema.org/Blog">
-                <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
+                <div class="prod-row items-row cols-3 row-0 row-fluid clearfix" style="margin-bottom: 30px;">
                     {% for product in products %}
                         {% if product.status_type == 'first-fifth' %}
-                        <div class="col-md-4">
-                            <div class="prod-block ml-0">
+                        <div class="col-md-6">
+                            <div class="prod-block ml-0 h-100">
                                     <div class="item column-1" itemprop="blogPost" itemscope
                                         itemtype="https://schema.org/BlogPosting">
         

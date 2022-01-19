@@ -1,15 +1,14 @@
-title = 'Food Safety Products'
-layout = 'default'
-url= '/products/hacpp-food-quality-tools/food-safety-products'
+url = "/products/hacpp-food-quality-tools/food-safety-products"
+layout = "default"
+title = "Food Safety Products"
 
 [products]
+
 [viewBag]
 localeUrl[ru] = "/produkti/haccp-instrumenti-dlya-obespecheniya-bezopasnosti-pishevix-produktov-haccp/produkti-dlya-obespecheniya-bezopasnosti-pishevix-produktov"
 localeUrl[az] = "/mehsullar/qida-mehsullarin-tehlukesizliyi-uchun-aletler/qida-mehsullarin-tehlukesizliyi-uchun-mehsullar"
 localeTitle[ru] = "Продукты для обеспечения безопасности продуктов питания"
 localeTitle[az] = "Qida məhsulların təhlükəsizliyi üçün məhsullar"
-
-
 ==
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
@@ -40,8 +39,8 @@ localeTitle[az] = "Qida məhsulların təhlükəsizliyi üçün məhsullar"
                 <div class="prod-row items-row cols-3 row-0 row-fluid clearfix">
                     {% for product in products %}
                         {% if product.status_type == 'ninth-first' %}
-                        <div class="col-md-4">
-                            <div class="prod-block ml-0">
+                        <div class="col-md-4" style="padding-bottom: 30px;">
+                            <div class="prod-block ml-0 h-100">
                                     <div class="item column-1" itemprop="blogPost" itemscope
                                         itemtype="https://schema.org/BlogPosting">
         

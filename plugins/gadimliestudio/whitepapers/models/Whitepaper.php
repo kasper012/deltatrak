@@ -21,6 +21,14 @@ class Whitepaper extends Model
      */
     protected $guarded = ['*'];
 
+    public $translatable = [
+        'title',
+        'description',
+        'full_description',      
+    ];
+
+
+
     /**
      * @var array Fillable fields
      */

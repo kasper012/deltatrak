@@ -7,7 +7,61 @@ localeUrl[ru] = "/kontakti"
 localeUrl[az] = "/elaqe"
 localeTitle[ru] = "Контакты"
 localeTitle[az] = "Əlaqə"
+
+[mainContactForm]
 ==
+
+<style>
+    *{
+       box-sizing: border-box;
+       padding: 0;
+       margin: 0;   
+    }
+   .form-control {
+     border-top-left-radius:15px !important;
+     background-color: #eeeeee !important;
+     box-shadow: #f8b5b5  !important;
+   transition: background-color .5s  !important;
+   
+   }
+   select{
+       font-size:12px !important;
+   }
+   label{
+       font-size:14px !important;
+   }
+   .form-control:hover{
+       background-color: white  !important;
+   }
+   .star {
+     color: red  !important;
+     display: inline  !important;
+     font-size: 20px  !important;
+   }
+   .form-control:focus {
+     border: 2px solid #555  !important;
+     box-shadow: none  !important;
+   }
+   .btn {
+     border-top-left-radius: 20px  !important;
+     width: 136px  !important;
+     background-color: #00488b  !important;
+     color: white  !important;
+   }
+   
+    .icon{
+        margin-top: 8px  !important;
+        margin-right: 10px  !important;
+    }
+   
+   
+    input,select{
+        height: 30px  !important;
+    }
+    body{
+        height: 100vh  !important;
+    }
+    </style>
 <div class="moduletable mod-page-title narrow" style="background-color:#902945;">
 
     <div class="mod-title-wrap">
@@ -92,10 +146,12 @@ localeTitle[az] = "Əlaqə"
 
             <div itemprop="articleBody">
                 <div style="max-width: 700px; margin: 0 auto;">
-                    <iframe width="100%" height="550px" frameborder="0" style="border: 0;"
-                        src="https://analytics.clickdimensions.com/deltatrakcom-a3kza/pages/2dwr8b8meekmu3jjtrgmfw.html"></iframe>
+  <div class="d-flex justify-content-center align-items-center h-100">
+    {% component 'mainContactForm' %}
 
-                    <p>
+</div>
+
+                    <p style="margin-top:50px;">
                         <b>{{'For sales and general information'|_}}:</b><br />
                         <b> {{'Phone'|_}}:</b> {{ company.phone }}<br />
                         <b>{{'Fax'|_}}:</b>&nbsp; &nbsp; &nbsp; {{ company.phone }}
@@ -123,28 +179,3 @@ localeTitle[az] = "Əlaqə"
     </div>
 </div>
 
-<script type="text/javascript">
-    if (typeof (btcModuleIds) == 'undefined') { var btcModuleIds = new Array(); var btcModuleOpts = new Array(); }
-    btcModuleIds.push(262);
-    btcModuleOpts.push({
-        slideEasing: 'easeInQuad',
-        fadeEasing: 'easeInQuad',
-        effect: 'fade,fade',
-        preloadImage: 'https://www.deltatrakeurope.be//modules/mod_bt_contentslider/tmpl/images/loading.gif',
-        generatePagination: false,
-        play: 6000,
-        hoverPause: true,
-        slideSpeed: 500,
-        autoHeight: false,
-        fadeSpeed: 500,
-        equalHeight: true,
-        width: 'auto',
-        height: 'auto',
-        pause: 100,
-        preload: true,
-        paginationClass: 'bt_handles_num',
-        generateNextPrev: false,
-        prependPagination: true,
-        touchScreen: 0
-    });
-</script>

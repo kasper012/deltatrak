@@ -1,0 +1,119 @@
+
+
+
+<!-- our contact -->
+<form class="container" action="#" style="border:none;" method="post" data-request="{{ __SELF__ }}::onSend"  data-request-success="formSuccess(this, context, data, textStatus, jqXHR)" data-request-validate data-request-flash>
+  <div class="row">
+    <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
+    <div class="col-md-6 col-12 me-md-3">
+    <label for="fname">{{ "First name" |_ }} <p class="star">*</p></label><br>
+    <input type="text" class="form-control" required>
+    </div>
+
+    <div class="col-md-6 col-12 ms-md-2">
+      <label for="fname"> {{ "Last Name" |_ }} <p class="star">*</p></label><br>
+      <input type="text" class="form-control">
+    </div>
+    </div>
+  </div>
+
+<div class="row">
+    <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
+    <div class="col-md-6 col-12 me-md-3">
+      <label for="fname"> {{ "Company" |_ }} <p class="star">*</p></label><br>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-md-6 col-12 ms-md-2">
+      <label for="contact"> {{ "Industry" |_ }} <p class="star">*</p></label><br>
+    
+      <select name="contact" id="contact" class="form-control">     
+        <option value="blank"></option>
+        <option value="Automotive"> {{ "Automotive" |_ }}</option>
+        <option value="Beverage"> {{ "Beverage" |_ }}</option>
+        <option value="Bulding Management"> {{ "Bulding Management" |_ }}</option>
+        <option value="Cold Storage"> {{ "Cold Storage" |_ }}</option>
+        <option value="Chemical"> {{ "Chemical" |_ }}</option>
+        <option value="Chef"> {{ "Chef" |_ }}</option>
+        <option value="Confectionery/Bakery">{{ "Confectionery/Bakery" |_ }}</option>
+        <option value="Cruise Lines"> {{ "Cruise Lines" |_ }}</option>
+        <option value="Dairy"> {{ "Dairy" |_ }}</option>
+        <option value="Distributor"> {{ "Distributor" |_ }}</option>
+        <option value="Floral">{{ "Floral" |_ }}</option>
+        <option value="Hospitals"> {{ "Hospitals" |_ }}</option>
+        <option value="Hotel Chains"> {{ "Hotel Chains" |_ }}</option>
+        <option value="Heating Ventilation and Air Conditioning"> {{ "Heating Ventilation and Air Conditioning" |_ }}</option>
+        <option valuee="Electrical">{{ "Electrical" |_ }}</option>
+        <option value="Engineering"> {{ "Engineering" |_ }}</option>
+        <option value="Environmential Health"> {{ "Environmential Health" |_ }}</option>
+        <option valu="Industrial"> {{ "Industrial" |_ }}</option>
+        <option value="Laboratory"> {{ "Laboratory" |_ }}</option>
+           <option value="Live Poultry"> {{ "Live Poultry" |_ }}</option>
+              <option value="Meat"> {{ "Meat" |_ }}</option>
+                 <option value="Pharmaceutical"> {{ "Pharmaceutical" |_ }}</option>
+                    <option value="Packaging"> {{ "Packaging" |_ }}</option>
+                       <option value="Restaurants"> {{ "Restaurants" |_ }}</option>
+                          <option value="Unified School Districts"> {{ "Unified School Districts" |_ }}</option>
+                             <option value="Seafood"> {{ "Seafood" |_ }}</option>
+                             <option value="Supermarkets"> {{ "Supermarkets" |_ }}</option>
+                             <option value="Transporation"> {{ "Transporation" |_ }}</option>
+                             <option value="Utility"> {{ "Utility" |_ }}</option>
+                             <option value="Veterinary"> {{ "Veterinary" |_ }}</option>
+                             <option value="Produce"> {{ "Produce" |_ }}</option>
+      </select>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
+      <div class="col-md-6 col-12  me-md-3">
+        <label for="fname"> {{ "Work Phone" |_ }} <p class="star">*</p></label><br>
+        <input type="text" class="form-control">
+      </div>
+    
+      <div class="col-md-6 col-12 ms-md-2">
+        <label for="fname"> {{ "Email" |_ }} <p class="star">*</p></label><br>
+        <input type="email" class="form-control">
+      </div>
+    </div>
+  </div>
+<div class="row">
+    <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
+      <div class="col-md-6 col-12 me-md-3">
+        <label for="fname"> {{ "State/Province" |_ }} </label><br>
+        <input type="text" class="form-control">
+      </div>
+
+      <div class="col-md-6 col-12 ms-md-2">
+        <label for="fname"> {{ "Country" |_ }} </label><br>
+        <input type="text" class="form-control">
+      </div>
+
+    </div>
+  </div>
+  <div class="d-flex flex-column align-items-center w-100 mt-3">
+    <div class="col-12 message">
+      <label for="fname"> {{ "Message" |_ }} </label><br>
+      <textarea class="form-control" name="msg" id="message" cols="30" rows="5"></textarea>
+      <button class="btn btn-primary fw-bold mt-3 " type="submit"> {{ "Submit" |_ }}</button>
+    </div>
+  </div>
+
+  <br>
+</form>
+
+ 
+<script>
+    function formSuccess(form, context, data, textStatus, jqXHR) {
+       if(data['status'] != 200) 
+           status = 'error'; 
+           else {
+               form.reset();
+               status = 'success'; 
+           }
+       $.oc.flashMsg({
+           'text': data['msg'],
+           'class': status,
+           'interval': 3
+       });
+    }
+</script>

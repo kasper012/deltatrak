@@ -1,5 +1,5 @@
 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-    <a itemprop="item" href="{{ "home" | page }}" class="pathway"><span
+    <a itemprop="item" href="{{ "home" | page }} class="pathway"><span
             itemprop="name">{{'Home'|_}}</span></a>
 
     <span class="divider">
@@ -7,23 +7,23 @@
     <meta itemprop="position" content="1">
 </li>
 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-    <span itemprop="name">
-        {{'Products'|_}} </span>
+    <a itemprop="item" href="{{ "resources" | page }}" class="pathway"><span
+            itemprop="name">{{'Resources'|_}}</span></a>
 
     <span class="divider">
         <img src="{{ 'assets/media/system/images/arrow.png' | theme }}" alt="" /> </span>
     <meta itemprop="position" content="2">
 </li>
 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-    <span itemprop="name">
-        {{'Vaccine Monitoring'|_}} </span>
+    <a itemprop="item" href="{{ "resources/white-papers" | page }}" class="pathway"><span
+            itemprop="name">{{'White Papers'|_}}</span></a>
 
     <span class="divider">
         <img src="{{ 'assets/media/system/images/arrow.png' | theme }}" alt="" /> </span>
-    <meta itemprop="position" content="2">
+    <meta itemprop="position" content="3">
 </li>
 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
     <span itemprop="name">
-        {{ this.page.title }} </span>
-    <meta itemprop="position" content="3">
+       {{ this.page.title }} </span>
+    <meta itemprop="position" content="4">
 </li>

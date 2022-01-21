@@ -1,6 +1,6 @@
-title = "17025 Calibration services"
 url = "/services/17025-calibration-services"
 layout = "default"
+title = "17025 Calibration services"
 
 [viewBag]
 localeUrl[ru] = "/uslugi/17025-kalibrovka"
@@ -90,7 +90,7 @@ localeTitle[az] = "17025 Kalibrovka"
                         {% for document in company.documents %}
                         <tr>
                             <td><a href="{{ document.file }}"
-                                    class="button btn-block" target="_blank" download="">{{ document.title }}</a></td>
+                                    class="button btn-block" target="_blank">{{ document.title }}</a></td>
                             <td>{{ document.about | raw }}</td>
                         </tr>
                         {% endfor %}

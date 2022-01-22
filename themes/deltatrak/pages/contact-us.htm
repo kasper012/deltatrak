@@ -61,12 +61,21 @@ localeTitle[az] = "Əlaqə"
     body{
         height: 100vh  !important;
     }
+
+    .stripe {
+        display: none !important;
+    }
+
+    body.oc-loading * {
+    cursor: auto !important;
+}
+
     </style>
 <div class="moduletable mod-page-title narrow" style="background-color:#902945;">
 
     <div class="mod-title-wrap">
         <H1 class="mod-title-heading">
-            Contact DeltaTrak</H1>
+            {{ 'Contact DeltaTrak' |_ }}</H1>
     </div>
 
 </div>

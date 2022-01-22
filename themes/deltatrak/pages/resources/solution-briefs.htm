@@ -57,8 +57,8 @@ localeTitle[az] = "Həllərin brifləri"
 
                             <a class="pdf" href="{{ brief.file | media }}"
                             download><img
-                                    src="{{ brief.image | media }}" ><span>Download
-                                    PDF</span></a>
+                                    src="{{ brief.image | media }}" ><span> {{ "Download
+                                    PDF" |_ }}</span></a>
                             <p>{{ brief.description | raw }}</p>
                         </div>
                         <!-- end item -->

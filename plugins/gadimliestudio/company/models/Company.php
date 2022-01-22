@@ -33,8 +33,10 @@ class Company extends Model
       'solution_briefs',
       'team',
       'event',
+      'system_software_docs',
       'documents',
       'testimonials',
+      'system_software_docs',
 
     ];    
 

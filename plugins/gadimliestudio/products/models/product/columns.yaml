@@ -14,4 +14,10 @@ columns:
         searchable: true
         span: storm
         cssClass: col-md-11
+    status_type:
+        searchable: true
+        hidden: true
+
+
+
 

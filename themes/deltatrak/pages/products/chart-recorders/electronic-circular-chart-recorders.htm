@@ -76,10 +76,11 @@ localeTitle[az] = "Elektron dairəvi qeydiyyatdan çizelgeleri"
                                                 </div>
                                                 {% endif %}
             
+                                                {% if product.applications %}
                                                 <div class="prod-app"><b>{{'Applications'|_}}:</b> {{ product.applications | raw }}</div>
                                                 <div class="product read-more">
                                                     <p class="readmore">
-                                                        <a 
+                                                        <a
                                                             href="{{ 'products/product-detailed' | page({id:product.id}) }}"
                                                             itemprop="url"
                                                             aria-label="{{ product.title }}">
@@ -87,6 +88,7 @@ localeTitle[az] = "Elektron dairəvi qeydiyyatdan çizelgeleri"
                                                             {{'Read more...' |_}} </a>
                                                     </p>
                                                 </div>
+                                                {% endif %}
             
                                             </div><!-- end delta-product-category -->
                                         </div>

@@ -7,12 +7,12 @@
     <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
     <div class="col-md-6 col-12 me-md-3">
     <label for="fname">{{ "First name" |_ }} <p class="star">*</p></label><br>
-    <input type="text" class="form-control" required>
+    <input type="text" class="form-control" required name="fname">
     </div>
 
     <div class="col-md-6 col-12 ms-md-2">
       <label for="fname"> {{ "Last Name" |_ }} <p class="star">*</p></label><br>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="lname">
     </div>
     </div>
   </div>
@@ -20,13 +20,13 @@
 <div class="row">
     <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
     <div class="col-md-6 col-12 me-md-3">
-      <label for="fname"> {{ "Company" |_ }} <p class="star">*</p></label><br>
-      <input type="text" class="form-control">
+      <label for="company"> {{ "Company" |_ }} <p class="star">*</p></label><br>
+      <input type="text" class="form-control" name="company">
     </div>
     <div class="col-md-6 col-12 ms-md-2">
-      <label for="contact"> {{ "Industry" |_ }} <p class="star">*</p></label><br>
+      <label for="industry"> {{ "Industry" |_ }} <p class="star">*</p></label><br>
     
-      <select name="contact" id="contact" class="form-control">     
+      <select name="industry" id="industry" class="form-control">     
         <option value="blank"></option>
         <option value="Automotive"> {{ "Automotive" |_ }}</option>
         <option value="Beverage"> {{ "Beverage" |_ }}</option>
@@ -66,26 +66,32 @@
   <div class="row">
     <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
       <div class="col-md-6 col-12  me-md-3">
-        <label for="fname"> {{ "Work Phone" |_ }} <p class="star">*</p></label><br>
-        <input type="text" class="form-control">
+        <label for="phone"> {{ "Work Phone" |_ }} <p class="star">*</p></label><br>
+        <input type="tel" class="form-control" name="phone">
       </div>
     
       <div class="col-md-6 col-12 ms-md-2">
-        <label for="fname"> {{ "Email" |_ }} <p class="star">*</p></label><br>
-        <input type="email" class="form-control">
+        <label for="email"> {{ "Email" |_ }} <p class="star">*</p></label><br>
+        <input type="email" class="form-control" name="email">
       </div>
     </div>
   </div>
 <div class="row">
+
+
+
     <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
       <div class="col-md-6 col-12 me-md-3">
-        <label for="fname"> {{ "State/Province" |_ }} </label><br>
-        <input type="text" class="form-control">
+        <label for="state"> {{ "State/Province" |_ }} </label><br>
+        <input type="text" class="form-control" name="state">
       </div>
 
+
+
+
       <div class="col-md-6 col-12 ms-md-2">
-        <label for="fname"> {{ "Country" |_ }} </label><br>
-        <input type="text" class="form-control">
+        <label for="country"> {{ "Country" |_ }} </label><br>
+        <input type="text" class="form-control" name="country">
       </div>
 
     </div>

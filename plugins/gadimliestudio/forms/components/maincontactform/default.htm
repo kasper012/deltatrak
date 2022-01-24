@@ -11,7 +11,7 @@
     </div>
 
     <div class="col-md-6 col-12 ms-md-2">
-      <label for="fname"> {{ "Last Name" |_ }} <p class="star">*</p></label><br>
+      <label for="lname"> {{ "Last Name" |_ }} <p class="star">*</p></label><br>
       <input type="text" class="form-control" name="lname">
     </div>
     </div>
@@ -21,7 +21,7 @@
     <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
     <div class="col-md-6 col-12 me-md-3">
       <label for="company"> {{ "Company" |_ }} <p class="star">*</p></label><br>
-      <input type="text" class="form-control" name="company">
+      <input type="text" class="form-control" >
     </div>
     <div class="col-md-6 col-12 ms-md-2">
       <label for="industry"> {{ "Industry" |_ }} <p class="star">*</p></label><br>
@@ -66,8 +66,8 @@
   <div class="row">
     <div class="d-flex justify-content-center flex-wrap w-100 mt-2">
       <div class="col-md-6 col-12  me-md-3">
-        <label for="phone"> {{ "Work Phone" |_ }} <p class="star">*</p></label><br>
-        <input type="tel" class="form-control" name="phone">
+        <label for="work-phone"> {{ "Work Phone" |_ }} <p class="star">*</p></label><br>
+        <input type="text" class="form-control" name="work-phone">
       </div>
     
       <div class="col-md-6 col-12 ms-md-2">
@@ -98,7 +98,7 @@
   </div>
   <div class="d-flex flex-column align-items-center w-100 mt-3">
     <div class="col-12 message">
-      <label for="fname"> {{ "Message" |_ }} </label><br>
+      <label for="msg"> {{ "Message" |_ }} </label><br>
       <textarea class="form-control" name="msg" id="message" cols="30" rows="5"></textarea>
       <button class="btn btn-primary fw-bold mt-3 " type="submit"> {{ "Submit" |_ }}</button>
     </div>
@@ -107,7 +107,6 @@
   <br>
 </form>
 
- 
 <script>
     function formSuccess(form, context, data, textStatus, jqXHR) {
        if(data['status'] != 200) 

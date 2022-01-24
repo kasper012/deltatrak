@@ -1,6 +1,12 @@
 url = "/resources"
 layout = "default"
 title = "Resources"
+
+[viewBag]
+localeUrl[ru] = "/resursi"
+localeUrl[az] = "/resurslar"
+localeTitle[ru] = "Ресурсы"
+localeTitle[az] = "Resurslar"
 ==
 <div class="container-fluid pt-0">
     <div class="moduletable mod-page-title narrow">
@@ -65,7 +71,12 @@ title = "Resources"
 
                 </div>
                 <div itemprop="articleBody">
-                    {% content "Resources"%}
+                    {% content "resources-text" %}
+                    <h4><a href="{{ 'support/warranty'| page }}"><i class="uk-icon-shield uk-icon-justify uk-icon-small"></i></a>{{ 'Have you purchased a product from DeltaTrak and want to register it? For Warranty Registration, please<a href="/support/warranty"> click here</a> '|_ }}</h4>
+                    <h4><a href="/support/services"><i class="uk-icon-question-circle uk-icon-justify uk-icon-small"></i></a> {{ ' Have questions about our products or services? Find answers<a href="/support/services"> here</a> '|_ }}</h4>
+                    <h4><a href="{{ 'support/software-drivers'| page }}"><i class="uk-icon-cloud-download uk-icon-justify uk-icon-small"></i></a>  {{ 'Need to download software or an upgrade? Click<a href="/support/softwares-drivers">  here</a>'|_}}</h4>
+                    <h4><a href="{{ 'resources/white-papers' | page }}"><i class="uk-icon-file uk-icon-justify uk-icon-small"></i></a> {{' Read about our cold chain management solutions for companies like yours in one of our<a href="/resources/white-papers"> white papers</a> or<a href="/resources/solution-briefs"> solution briefs</a>'|_}}</h4>
+ 
                 </div>
 
 
@@ -76,3 +87,14 @@ title = "Resources"
         </main>
     </div>
 </div>
+<style>
+h4{
+    font-size: 110%;
+    color: #444;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.5em;
+    text-transform: none;
+    line-height: 2;
+}
+</style>

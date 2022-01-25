@@ -846,7 +846,11 @@ default = 0
                 </div>
                 <div class="nav-collapse">
                     <ul class="nav menu nav-pills mod-list">
-                        <li class="item-102 deeper parent"><span class="nav-header mega column-2">{{'Products'|_}}</span>
+                        <li class="item-102 deeper parent
+{% if this.page.id | slice (0,7) == 'product' %}
+active
+{% endif %}
+"><span class="nav-header mega column-2">{{'Products'|_}}</span>
                             <ul class="nav-child unstyled small">
                                 <li class="item-617"><span class="nav-header  promo menu-promo">
                                         <!-- START: Modules Anywhere -->
@@ -883,7 +887,9 @@ default = 0
                                 <li class="item-343 divider deeper parent"><span class="separator  mega column one">
                                     </span>
                                     <ul class="nav-child unstyled small">
-                                        <li class="item-114 deeper parent"><span
+                                        <li class="item-114 deeper parent {{ this.page.id }}{% if this.page.id | slice (0,15) == 'products-thermo' %}
+                                        active
+                                        {% endif %}"><span
                                                 class="nav-header dt-icon-thermometer">{{'Thermometers'|_}}</span>
                                             <ul class="nav-child unstyled small">
                                                 <li class="item-144"><a
@@ -909,7 +915,9 @@ default = 0
                                                         Metal Thermometers'|_}}</a></li>
                                             </ul>
                                         </li>
-                                        <li class="item-116 deeper parent"><span
+                                        <li class="item-116 deeper parent {{ this.page.id }} {% if this.page.id | slice (0,15) == 'products-chart-' %}
+                                        active
+                                        {% endif %}"><span
                                                 class="nav-header dt-icon-chartrecorder">{{'Chart Recorder'|_}}</span>
                                             <ul class="nav-child unstyled small">
                                                 <li class="item-153"><a
@@ -928,7 +936,9 @@ default = 0
                                                         Display Chart Recorders'|_}}</a></li>
                                             </ul>
                                         </li>
-                                        <li class="item-115 deeper parent"><span
+                                        <li class="item-115 deeper parent {{ this.page.id }} {% if this.page.id | slice (0,15) == 'products-data-l' %}
+                                        active
+                                        {% endif %}}"><span
                                                 class="nav-header dt-icon-reusable">{{'Data Loggers'|_}} </span>
                                                     <ul class="nav-child unstyled small">
                                                         <li class="item-155"><a
@@ -972,7 +982,9 @@ default = 0
                                                                 Time Loggers'|_}}</a></li>
                                                     </ul>
                                         </li>
-                                        <li class="item-224 deeper parent"><span
+                                        <li class="item-224 deeper parent {{ this.page.id }} {% if this.page.id | slice (0,15) == 'products-time-t' %}
+                                        active
+                                        {% endif %}"><span
                                                 class="nav-header dt-icon-thermotrace">{{'Time and Temperature
                                                 Indicators'|_}}</span>
                                             <ul class="nav-child unstyled small">
@@ -984,7 +996,9 @@ default = 0
                                                         Plus Labels'|_}}</a></li>
                                             </ul>
                                         </li>
-                                        <li class="item-226 deeper parent"><span
+                                        <li class="item-226 deeper parent {{ this.page.id }} {% if this.page.id | slice (0,15) == 'products-vaccin' %}
+                                        active
+                                        {% endif %}"><span
                                                 class="nav-header dt-icon-flask">{{'Vaccine Monitoring'|_}}</span>
                                             <ul class="nav-child unstyled small">
                                                 <li class="item-805"><a
@@ -1012,10 +1026,12 @@ default = 0
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="item-344 divider deeper parent"><span
+                                <li class="item-344 divider deeper parent "><span
                                         class="separator  mega column two">Column 2 of 2</span>
                                     <ul class="nav-child unstyled small">
-                                        <li class="item-227 deeper parent"><span
+                                        <li class="item-227 deeper parent {{ this.page.id }} {% if this.page.id | slice (0,15) == 'products-rf-wir' %}
+                                        active
+                                        {% endif %}"><span
                                                 class="nav-header dt-icon-wireless two">{{'RF Wireless
                                                 Monitoring'|_}}</span>
                                             <ul class="nav-child unstyled small">
@@ -1028,7 +1044,9 @@ default = 0
                                                         Telematics FCS2'|_}}</a></li>
                                             </ul>
                                         </li>
-                                        <li class="item-120 deeper parent"><span
+                                        <li class="item-120 deeper parent {{ this.page.id }} {% if this.page.id | slice (0,15) == 'products-therma' %}
+                                        active
+                                        {% endif %}"><span
                                                 class="nav-header dt-icon-thermal">{{'Thermal Labels'|_}}</span>
                                             <ul class="nav-child unstyled small">
                                                 <li class="item-236"><a
@@ -1047,7 +1065,9 @@ default = 0
                                                         Labels'|_}}</a></li>
                                             </ul>
                                         </li>
-                                        <li class="item-119 deeper parent"><span
+                                        <li class="item-119 deeper parent {{ this.page.id }} {% if this.page.id | slice (0,15) == 'products-shelf-' %}
+                                        active
+                                        {% endif %}"><span
                                                 class="nav-header dt-icon-shelflife">{{'Shelf Life Quality Tools'|_}}</span>
                                             <ul class="nav-child unstyled small">
                                                 <li class="item-241"><a
@@ -1068,7 +1088,9 @@ default = 0
                                                         Meters'|_}}</a></li>
                                             </ul>
                                         </li>
-                                        <li class="item-123 deeper parent"><span
+                                        <li class="item-123 deeper parent {{ this.page.id }} {% if this.page.id | slice (0,15) == 'products-hacpp-' %}
+                                        active
+                                        {% endif %}"><span
                                                 class="nav-header dt-icon-foodsafety">{{'HACCP Food Safety
                                                 Tools'|_}}</span>
                                             <ul class="nav-child unstyled small">
@@ -1083,7 +1105,9 @@ default = 0
                                                         Wipes'|_}}</a></li>
                                             </ul>
                                         </li>
-                                        <li class="item-117 deeper parent"><span
+                                        <li class="item-117 deeper parent {{ this.page.id }} {% if this.page.id | slice (0,13) == 'products-softwa' %}
+                                        active
+                                        {% endif %}"><span
                                                 class="nav-header dt-icon-software">{{'Software Solutions'|_}}</span>
                                             <ul class="nav-child unstyled small">
                                                 <li class="item-250"><a

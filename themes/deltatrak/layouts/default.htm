@@ -1838,10 +1838,10 @@ div.modal.fade.in {
         </div>
     </div>
 
-    <script>
+    <script type="text/javascript">
         if(localStorage.getItem('somekey')!=null){
             var elem = document.getElementById('redim-cookiehint-bottom');
-            elem.classList.add('d-none');
+            elem.setAttribute("style", "display: none;");
         }
         function hideCookiesBanner() {
             if(localStorage.getItem('somekey')!=null){

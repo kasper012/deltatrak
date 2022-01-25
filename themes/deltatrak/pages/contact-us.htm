@@ -69,6 +69,11 @@ localeTitle[az] = "Əlaqə"
     cursor: auto !important;
 }
 
+
+    .contact-text-wrapper {
+        margin-top: 50px;
+        margin-left: 35px;
+    }
     </style>
 <div class="moduletable mod-page-title narrow" style="background-color:#902945;">
 
@@ -158,13 +163,13 @@ localeTitle[az] = "Əlaqə"
     {% component 'mainContactForm' %}
 </div>
 
-                    <p style="margin-top:50px;margin-left: 35px;">
+                    <p class="contact-text-wrapper">
                         <b>{{'For sales and general information'|_}}:</b><br />
                         <b> {{'Phone'|_}}:</b> {{ company.phone }}<br />
-                        <b>{{'Fax'|_}}:</b>&nbsp; &nbsp; &nbsp; {{ company.phone }}
+                        <b>{{'Fax'|_}}:</b>&nbsp; &nbsp; &nbsp; {{ company.phone }}<br />
                         <b>{{'Email'|_}}:</b> {{ company.email }}
                     </p>
-                    <p><b>{{'For questions or problems with website'|_}}:</b><br />
+                    <p class="contact-text-wrapper"><b>{{'For questions or problems with website'|_}}:</b><br />
                         {{ company.email }}
                     </p>
                 </div>

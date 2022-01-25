@@ -1,4 +1,11 @@
 {% if company.testimonials %}
+<style>
+    @media (max-width:768px) {
+        .citation {
+        margin-right: 20px;
+        }
+    }
+</style>
 <div class="swiper pt-5">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
@@ -9,13 +16,12 @@
                 <div class="bt-row bt-row-first" style="width:100%">
                     <div class="bt-inner">
 
-                         {# <div class="container" style="border:none;border-shadow:none;"> #}
                         <div class="bt-introtext">
                             <div class="testimonial">
 
                                 <p>{{ testimonial.comment | raw }}</p>
 
-                                <p class="citation">{{ testimonial.name }}<br/>
+                                <p class="citation" >{{ testimonial.name }}<br/>
                                     <span>{{ testimonial.company }}</span>
                                 </p>
 
@@ -23,7 +29,6 @@
                         </div>
 
 
-   {# </div> #}
                     </div>
                  
                     <!--end bt-inner -->
@@ -38,7 +43,7 @@
 
 
 
-      ...
+      
     </div>
 
 

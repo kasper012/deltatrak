@@ -262,3 +262,23 @@
 * {
   font-family: 'Montserrat', sans-serif;
 }
+
+
+
+
+.navigation .nav.menu > li > span.promo + .nav-child, .navigation .nav.menu > li > span.mega + .nav-child {
+  width: auto;
+  float: none;
+  left: -60px;
+  top: 80%;
+  height: 0;
+  padding: 0;
+  transition: all 0.15s;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navigation .nav-child .divider {
+  border-bottom: none !important;
+}

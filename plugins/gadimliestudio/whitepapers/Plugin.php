@@ -119,16 +119,16 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerNavigation()
-    {
-        return [
-            'whitepapers' => [
-                'label'       => 'Whitepapers',
-                'url'         => Backend::url('gadimliestudio/whitepapers/whitepapers'),
-                'icon'        => 'icon-file',
-                'permissions' => ['gadimliestudio.whitepapers.*'],
-                'order'       => 500,
-            ],
-        ];
-    }
+    // public function registerNavigation()
+    // {
+    //     return [
+    //         'whitepapers' => [
+    //             'label'       => 'Whitepapers',
+    //             'url'         => Backend::url('gadimliestudio/whitepapers/whitepapers'),
+    //             'icon'        => 'icon-file',
+    //             'permissions' => ['gadimliestudio.whitepapers.*'],
+    //             'order'       => 500,
+    //         ],
+    //     ];
+    // }
 }

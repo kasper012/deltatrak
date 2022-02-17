@@ -95,11 +95,11 @@ localeTitle[az] = "Baş səhifə"
                         </h1>
                         {% elseif activeLocale == 'ru' %}
                             <h1 class="text-white font-weight-bold">
-                                Целостность холодной цепи
+                                {{'Целостность холодной цепи'|_}}
                             </h1>
                         {% else %}
                             <h1 class="text-white font-weight-bold">
-                                Soyuq zəncir bütövlüyü
+                                {{'Soyuq zəncir bütövlüyü'|_}}
                             </h1>
                         {% endif %}
                         <h3>{{ company.homepage_banner_text | raw }}</h3>

@@ -113,11 +113,11 @@ localeTitle[az] = "Proqram təminatları və drayverləri"
                                                         {% if soft_item.download %}
                                                         <a class="button"
                                                             href="#modal-{{ support.id }}-{{ loop.index }}"
-                                                            data-uk-modal="{center:true}">{{'Download'|_}} {{ soft_item.soft_name }}{{ soft_item.soft_version }}</a>
+                                                            data-uk-modal="{center:true}">{{'Download'|_}} {{ soft_item.soft_name }}&nbsp;{{ soft_item.soft_version }}</a>
                                                         {% endif %}
                                                         <div id="modal-{{ support.id }}-{{ loop.index }}" class="uk-modal">
                                                             <div class="uk-modal-dialog uk-panel-box-delta">
-                                                                <p class="title">{{'Download'|_}} {{ soft_item.soft_name }}{{ soft_item.soft_version }}</p>
+                                                                <p class="title">{{'Download'|_}} {{ soft_item.soft_name }}&nbsp;{{ soft_item.soft_version }}</p>
                                                                 <div class="download-box dti-fade-in">
                                                                     
                                                                     <a href="{{ soft_item.download | media }}"

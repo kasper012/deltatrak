@@ -89,7 +89,7 @@ localeTitle[az] = "Baş səhifə"
 
                 <div class="dti-fade-in home-static">
                     <div>
-                        {% if activeLocale == 'en' %}
+                        {% if activeLocale == 'en' and company.coldchain_integrity_logo %}
                         <h1>
                             <img src="{{ company.coldchain_integrity_logo | media }}">
                         </h1>
@@ -97,7 +97,7 @@ localeTitle[az] = "Baş səhifə"
                             <h1 class="text-white font-weight-bold">
                                 {{'Целостность холодной цепи'|_}}
                             </h1>
-                        {% else %}
+                        {% elseif activeLocale == 'az' %}
                             <h1 class="text-white font-weight-bold">
                                 {{'Soyuq zəncir bütövlüyü'|_}}
                             </h1>
@@ -116,7 +116,7 @@ localeTitle[az] = "Baş səhifə"
 
                 <div id="solutions" class="scroll-anchor"></div>
 
-                <div class="home-static-solutions">
+                <div class="home-static-solutions mt-5">
                     <div>
                         {{ company.homepage_solutions_text | raw }}
                         <div class="flex">
@@ -126,7 +126,7 @@ localeTitle[az] = "Baş səhifə"
                                     <li style="display: none;"><a href="#">Item</a>
                                     </li>
                                     <li><a href="#food-sol" data-uk-smooth-scroll>
-                                            <div class="sticker blue"><i class="dt-icon-corn"></i></div>
+                                                <img src="{{ company.home_food | media }}" alt="" class=" h-100">
                                             <h4>{{'Food'|_}}</h4>
                                             <p>{{'From harvesting to the shelf to the table, consumers expect
                                                 quality, freshness and peak condition for all the food they
@@ -137,7 +137,7 @@ localeTitle[az] = "Baş səhifə"
 
                             <div class="dt-width-1-5 dt-width-sm-1-1">
                                 <a href="{{ 'solutions/life-science-solutions/main' | page }}">
-                                    <div class="sticker blue"><i class="dt-icon-flask"></i></div>
+                                    <img src="{{ company.home_lifescience | media }}" alt="" class="">
                                     <h4>{{'Life Science'|_}}</h4>
                                     <p>{{'The life sciences industry is the most highly regulated, in order to
                                         ensure product efficacy and patient safety.'|_}}</p>
@@ -146,7 +146,7 @@ localeTitle[az] = "Baş səhifə"
 
                             <div class="dt-width-1-5 dt-width-sm-1-1">
                                 <a href="{{ 'solutions/food-safety-solutions/main' | page }}">
-                                    <div class="sticker blue"><i class="dt-icon-cutlery"></i></div>
+                                    <img src="{{ company.home_foodsafety | media }}" alt="" class="">
                                     <h4>{{'Food Safety'|_}}</h4>
                                     <p>{{'The food industry is constantly challenged to deliver and serve food
                                         that is safe to eat.'|_}}</p>
@@ -155,7 +155,7 @@ localeTitle[az] = "Baş səhifə"
 
                             <div class="dt-width-1-5 dt-width-sm-1-1">
                                 <a href="{{ 'solutions/aerospace-and-industrial-solutions/main' | page }}">
-                                    <div class="sticker blue"><i class="dt-icon-fighter-jet"></i></div>
+                                    <img src="{{ company.home_aerospace | media }}" alt="" class="">
                                     <h4>{{'Aerospace and Industrial'|_}}</h4>
                                     <p>{{'Visibility and traceability of TATS materials ensure the quality and
                                         integrity of finished products.'|_}}</p>
@@ -164,7 +164,7 @@ localeTitle[az] = "Baş səhifə"
 
                             <div class="dt-width-1-5 dt-width-sm-1-1">
                                 <a href="{{ 'solutions/in-transit-and-distribution-solutions/main' | page }}">
-                                    <div class="sticker blue"><i class="dt-icon-truck"></i></div>
+                                    <img src="{{ company.home_intransit | media }}" alt="" class="">
                                     <h4>{{'In-Transit and Distribution'|_}} </h4>
                                             <p>{{'Logistics companies play a crucial role in preserving
                                                 temperature-sensitive cargo as it is shipped around the globe.'|_}}</p>
@@ -192,9 +192,8 @@ localeTitle[az] = "Baş səhifə"
 
                                 <div class="dt-width-1-5 dt-width-sm-1-1">
                                     <a href="{{ 'solutions/food-solutions/produce-floral/main' | page }}">
-                                        <div class="sticker blue"><img
-                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-produce.png"
-                                                alt=""></div>
+                                        <img src="{{ company.home_produce | media }}" alt="" class="">
+
                                         <h4>{{'Produce/Floral'|_}}</h4>
                                         <p>{{'From the moment of harvest, temperature and ethylene management
                                             are critical to maximize freshness, quality and shelf life.'|_}}</p>
@@ -203,9 +202,8 @@ localeTitle[az] = "Baş səhifə"
 
                                 <div class="dt-width-1-5 dt-width-sm-1-1">
                                     <a href="{{ 'solutions/food-solutions/meat/main' | page }}">
-                                        <div class="sticker blue"><img
-                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-meat.png"
-                                                alt=""></div>
+                                        <img src="{{ company.home_meat | media }}" alt="" class="">
+
                                         <h4>{{'Meat'|_}}</h4>
                                         <p>{{'Meat producers strive to maximize livestock productivity and
                                             reduce pathogens that cause foodborne illness.'|_}}</p>
@@ -214,9 +212,8 @@ localeTitle[az] = "Baş səhifə"
 
                                 <div class="dt-width-1-5 dt-width-sm-1-1">
                                     <a href="{{ 'solutions/food-solutions/poultry/main' | page }}">
-                                        <div class="sticker blue"><img
-                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-poultry.png"
-                                                alt=""></div>
+                                        <img src="{{ company.home_poultry | media }}" alt="" class="">
+
                                         <h4>{{'Poultry'|_}}</h4>
                                         <p>{{'Heat stress in the breeding houses, barns and hatcheries, can
                                             causes health risks, and poor production performance.'|_}}</p>
@@ -225,9 +222,8 @@ localeTitle[az] = "Baş səhifə"
 
                                 <div class="dt-width-1-5 dt-width-sm-1-1">
                                     <a href="{{ 'solutions/food-solutions/dairy/main' | page }}">
-                                        <div class="sticker blue"><img
-                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-dairy.png"
-                                                alt=""></div>
+                                        <img src="{{ company.home_dairy | media }}" alt="" class="">
+
                                         <h4>{{'Dairy'|_}}</h4>
                                         <p>{{'The prevention of the introduction of harmful toxins in dairy
                                             products depends on good temperature management for storage and
@@ -237,9 +233,8 @@ localeTitle[az] = "Baş səhifə"
 
                                 <div class="dt-width-1-5 dt-width-sm-1-1">
                                     <a href="{{ 'solutions/food-solutions/seafood/main' | page }}">
-                                        <div class="sticker blue"><img
-                                                src="https://www.deltatrak.com/images/solution-pages/icon-food-seafood.png"
-                                                alt=""></div>
+                                        <img src="{{ company.home_seafood | media }}" alt="" class="">
+
                                         <h4>{{'Seafood'|_}}</h4>
                                         <p>{{'Seafood is one of the most highly perishable food groups, and
                                             responsible for a majority of foodborne illnesses.'|_}}</p>

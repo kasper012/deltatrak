@@ -68,6 +68,19 @@ class Company extends ComponentBase
         $company->coldchain_integrity_logo = $settings->coldchain_integrity_logo;
 
 
+
+        $company->home_food = $settings->home_food;
+        $company->home_lifescience = $settings->home_lifescience;
+        $company->home_foodsafety = $settings->home_foodsafety;
+        $company->home_aerospace = $settings->home_aerospace;
+        $company->home_intransit = $settings->home_intransit;
+        $company->home_produce = $settings->home_produce;
+        $company->home_meat = $settings->home_meat;
+        $company->home_poultry = $settings->home_poultry;
+        $company->home_dairy = $settings->home_dairy;
+        $company->home_seafood = $settings->home_seafood;
+
+
         $this->page['company'] = $company;
     }
 }

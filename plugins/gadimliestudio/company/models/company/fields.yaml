@@ -335,4 +335,65 @@ tabs:
                         default: fab fa-
                     url:
                         label: Link
-                    
+
+        home_food:
+            type: mediafinder
+            label: Food icon
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_lifescience:
+            type: mediafinder
+            label: Life science 
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_foodsafety:
+            type: mediafinder
+            label: Food safety
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_aerospace:
+            type: mediafinder
+            label: Aerospace
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_intransit:
+            type: mediafinder
+            label: In-transit
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_produce:
+            type: mediafinder
+            label: Produce/Floral icon
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_meat:
+            type: mediafinder
+            label: Meat
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_poultry:
+            type: mediafinder
+            label: Poultry
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_dairy:
+            type: mediafinder
+            label: Dairy
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_seafood:
+            type: mediafinder
+            label: Seafood
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        

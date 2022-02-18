@@ -1,0 +1,942 @@
+a { cursor: pointer; }
+
+
+/* ============== Fade In of Page Title Header ================ */
+.cssanimations .solution-inner .moduletable.mod-page-title {
+    opacity: 0;
+    -webkit-animation-name: dti-fade-in;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-delay: 0.8s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: dti-fade-in;
+    animation-duration: 0.4s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes dti-fade-in {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes dti-fade-in {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Scroll Mouse Icon */
+.scroller.spy-nav {
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    margin: -100px 0 0;
+}
+.scroller a {
+    background-image: url(/images/logos-icons/scroll_mouse_arrows.gif);
+    display: block;
+    width: 60px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+/*.solution-inner .moduletable.mod-page-title::after {
+    content: "";
+    background-image: url(/images/logos-icons/scroll_mouse_arrows.gif);
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background-size: contain;
+    margin-top: -98px;
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+/* Loading Spinner */
+.solution-inner .head + div:before {
+    content: "п„ђ";
+    color: #ddd;
+    font-size: 60px;
+    position: absolute;
+    top: 16vw;
+    font-family: FontAwesome;
+    left: 50%;
+    z-index: -1;
+}
+
+.solution-inner .head + div:before {
+  -webkit-animation: dti-spin 2s infinite linear;
+  animation: dti-spin 2s infinite linear;
+}
+
+@-webkit-keyframes dti-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes dti-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+
+/* ============== Bootstrap Modal Body ================ 
+body div.modal {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1050;
+    width: 100%;
+    margin-left: -50%;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+body div.modal.fade {
+    top: 0%;
+}
+body .modal-backdrop {
+    background-color: #fff;
+}
+div.full-modal.modal.fade.in {
+    top: 0;
+    width: 100%;
+    margin-left: -50%;
+    position: absolute;
+    border: 0;
+}
+*/
+
+/* ============== Inner Modal ================== */
+
+.item-page #top {
+    position: absolute;
+    width: 100%;
+}
+.solution-inner {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    background: #fff;
+    border-radius: 0;
+    color: #555;
+    height: auto;
+    padding: 0;
+    text-align: center;
+    top: 0 !important;
+}
+.full-modal .head {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background: #fff;
+    top: 0;
+    height: calc(4vw + 40px);
+    overflow: hidden;
+}
+.full-modal .head .close {
+    font-size: 70px;
+    font-weight: 300;
+    position: relative;
+    top: -18px;
+    right: 5px;
+    line-height: 70px;
+}
+.scroll-anchor {
+    margin-top: -95px;
+    padding-top: 95px;
+    width: 100%;
+    float: left;
+}
+#top-spacer {
+    height: calc(4vw + 40px);
+    margin-top: -80px;
+}
+.solution-inner section {
+    clear: both;
+    padding: 4% 3% 3%;
+    display: flex;
+    align-items: center;
+    min-height: 85vh;
+}
+
+     .tint.eee { background: rgb(242, 242, 242); }
+.red .tint.eee { background: rgb(242, 238, 238); }
+.blue .tint.eee { background: rgb(241, 246, 248); }
+.teal .tint.eee { background: rgb(237, 243, 243); }
+.green .tint.eee { background: rgb(238, 245, 240); }
+.orange .tint.eee { background: rgb(250, 246, 240); }
+.yellow .tint.eee { background: rgb(248, 246, 241); }
+
+.red .solution-inner .moduletable.mod-page-title { background-color: #C5093B !important; }
+.blue .solution-inner .moduletable.mod-page-title { background-color: #00488B !important; }
+.teal .solution-inner .moduletable.mod-page-title { background-color: #0099A8 !important; }
+.green .solution-inner .moduletable.mod-page-title { background-color: #83962B !important; }
+.orange .solution-inner .moduletable.mod-page-title { background-color: #DB751F !important; }
+.yellow .solution-inner .moduletable.mod-page-title { background-color: #C29610 !important; }
+
+.red .solution-inner h1, .red .solution-inner h2 { color: #C5093B; }
+.blue .solution-inner h1, .blue .solution-inner h2 { color: #00488B; }
+.teal .solution-inner h1, .teal .solution-inner h2 { color: #0099A8; }
+.green .solution-inner h1, .green .solution-inner h2 { color: #71BF43; }
+.orange .solution-inner h1, .orange .solution-inner h2 { color: #F5821F}
+.yellow .solution-inner h1, .yellow .solution-inner h2 { color: #d5a315; }
+
+.solution-inner section.exit {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+.solution-inner h1 {
+    font-size: 3.5vw;
+    margin: 0 0 0 15px;
+    padding: 0.35em 0;
+    float: left;
+    line-height: 1;
+}
+.solution-inner h2 {
+    line-height: 1.25em;
+    padding-top: 0.5em;
+}
+.solution-inner h3, .solution-inner h4, .solution-inner h5, .solution-inner h6 {
+    color: #666;
+    line-height: 1.45;
+}
+.solution-inner section h3, .solution-inner section h4 {
+    text-align: left;
+}
+#content .solution-inner > ul > li {
+    padding-bottom: 0;
+}
+.solution-inner .alert {
+    color: rgba(255,255,255,0.9);
+    background: transparent;
+    border: 0;
+    text-shadow: 1px 1px 9px rgba(0,0,0,0.3);
+    font-size: 4vw;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.solution-inner [class*="dt-width"] {
+    padding: 10px 3%;
+}
+.solution-inner section .border {
+    box-shadow: 8px 7px 14px 3px rgba(0,0,0,0.15);
+    border: 6px solid #fff;
+}
+
+
+/* ============ ScrollSpy Nav ================= */
+
+.full-modal .head ul.spy-nav {
+    float: right;
+    list-style-type: none;
+    margin: 30px;
+    text-align: right;
+}
+.full-modal .head .spy-nav li {
+    display: inline-block;
+}
+.full-modal .head .spy-nav li a {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #aaa;
+    padding: 10px;
+    position: static;
+    margin: 0;
+    float: none;
+    opacity: 1;
+    font-weight: normal;
+}
+.full-modal .head .spy-nav li.uk-active a, .full-modal .head .spy-nav li a:hover {
+    color: #0099a8;
+    background: rgba(0,0,0,0.03);
+}
+.solution-inner .head .spy-nav .top a {
+    border: 1px solid #eee;
+}
+.solution-inner .head .spy-nav .top a::after {
+    font-family: fontawesome;
+    content: "пЃ·";
+}
+.full-modal .head .spy-nav li.exit {
+    margin-left: 18px;
+}
+.full-modal .head .spy-nav li.exit > a {
+    border: 1px solid #eee;
+}
+.full-modal .head .spy-nav li.exit > a::before {
+    content: "п„’ ";
+    font-family: fontawesome;
+}
+
+
+/* ============= HEADER BANNER MODULE ========= */
+
+/* .page-header { display: none; } */
+.solution-inner .mod-title-wrap {
+    min-height: 38vw;
+    background-size: cover;
+    padding-right: 50%;
+    background-position: center right;
+    display: flex;
+    align-items: center;
+}
+.solution-inner h1.mod-title-heading {
+    font-size: calc(3.2vw + 24px);
+    color: #fff;
+    float: none;
+    text-align: left;
+    margin: 0.3em 0 0 7%;
+    display: none;
+}
+.solution-inner .mod-title-wrap p {
+    font-size: calc(1.2vw + 14px);
+    font-weight: 500;
+    text-align: left;
+    padding: 1em .4em 1.4em;
+    word-spacing: 0.15em;
+    line-height: 1.4;
+    margin-left: 6%;
+}
+
+
+
+/* ============ EXIT NAV BUTTONS ============ */
+
+.solution-exit-nav {
+    padding-top: 20px;
+    text-align: center;
+    clear: both;
+}
+.solution-exit-nav > h5 {
+    border-top: 1px solid #ccc;
+    font-weight: 500;
+    padding-top: 20px;
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+.solution-exit-nav > p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.solution-exit-nav > p > a {
+    border-radius: 15px 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    position: relative;
+}
+.solution-exit-nav > p.link-1 > a {
+    margin: 15px 2%;
+    width: 40%;
+    max-width: 375px;
+    min-width: 250px;
+}
+.solution-exit-nav > p.link-2 > a {
+    margin: 15px 2%;
+    width: 34%;
+    max-width: 333px;
+    min-width: 250px;
+}
+.solution-exit-nav > p.link-3 > a {
+    margin: 15px 2%;
+    width: 29%;
+    max-width: 300px;
+    min-width: 250px;
+}
+.solution-exit-nav > p.link-4 > a {
+    margin: 15px 2%;
+    width: 20%;
+    max-width: 300px;
+    min-width: 200px;
+}
+.solution-exit-nav a:hover {
+    box-shadow: 0 0 7px #ccc;
+}
+.solution-exit-nav > p > a > span {
+    background: #00548b;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.25;
+    padding: 8px 14px;
+    position: relative;
+    z-index: 3;
+    transition: all 0.5s;
+    min-height: 3.5em;
+}
+.solution-exit-nav > p > a:hover > span {
+    background: #0099a8;
+}
+.solution-exit-nav a::after {
+    position: absolute;
+    background: rgba(10, 40, 80, 0.15);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    display: block;
+    z-index: 1;
+    transition: all 0.5s;
+}
+.solution-exit-nav a:hover::after {
+    background: transparent;
+}
+.solution-exit-nav img {
+    padding: 12px;
+    transition: all 0.5s;
+}
+.solution-exit-nav a:hover img {
+    padding: 0;
+}
+/* Bullet List of Links */
+.solution-inner section .solution-exit-nav div, .solution-inner section .solution-exit-nav div + div {
+    padding: 0 10px;
+}
+.solution-inner section .solution-exit-nav ul {
+    margin-bottom: 0;
+}
+.solution-exit-nav ul li a::after {
+    position: static;
+}
+
+
+/* ============ STICKERS IN MODALS & PANELS ============ */
+
+.solution-inner .sticker {
+    margin: 10px;
+    width: calc(40px + 2vw);
+    position: relative;
+    float: left;
+}
+.solution-inner .sticker:hover {
+    transform: none;
+}
+.solution-inner .sticker > img {
+    border-width: 4px;
+}
+
+
+/* ============ INTRO OVAL AREA ============ */
+
+.imageMap {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+}
+.imageMap {
+    height: 90vh;
+    max-width: 1400px;
+    width: 95vw;
+}
+.hotspots {
+    height: 90%;
+    left: 3%;
+    position: absolute;
+    top: 0;
+    width: 94%;
+}
+.hotspots * {
+    transition: all 0.3s ease 0s;
+}
+.intro-message {
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    height: 76%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15% 13% 11% 13%;
+    position: relative;
+    text-align: center;
+    top: -5%;
+}
+.intro-message div {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============ STICKERS IN OVAL ============ */
+
+.sticker {
+    position: absolute;
+    text-align: center;
+}
+.sticker:hover {
+    transform: scale(1.2);
+}
+.sticker > a {
+    display: block;
+}
+.sticker img,
+.sticker i{
+    display: block;
+}
+
+.sticker p {
+    color: #fff;
+    display: inline-block;
+    font-weight: 900;
+    left: 50%;
+    line-height: 1.1;
+    margin: 0 0 0 -100%;
+    position: relative;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    top: -0.3em;
+}
+.sticker img, .sticker p, .sticker i {
+    background: #aaa none repeat scroll 0 0;
+    border: 0.45vh solid #fff;
+    border-radius: 100px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.sticker:hover p, .sticker:hover img, .sticker:hover i {
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.orange .sticker img, .sticker.orange img, .sticker.orange p { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(245, 130, 31, 0.4) inset; }
+.orange .sticker:hover img, .sticker.orange:hover p, .sticker.orange:hover img, .solution-inner .sticker.orange > img { background: #F5821F; }
+
+.yellow .sticker img, .sticker.yellow img, .sticker.yellow p { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(255, 204, 5, 0.4) inset; }
+.yellow .sticker:hover img, .sticker.yellow:hover p, .sticker.yellow:hover img, .solution-inner .sticker.yellow > img { background: #FFCC05; }
+
+.blue .sticker img, .sticker.blue img, .sticker.blue p { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(0, 72, 139, 0.4) inset; }
+.blue .sticker:hover img, .sticker.blue:hover p, .sticker.blue:hover img, .solution-inner .sticker.blue > img { background: #00488B; }
+
+.teal .sticker img, .sticker.teal img, .sticker.teal p { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(0, 153, 168, 0.4) inset; }
+.teal .sticker:hover img, .sticker.teal:hover p, .sticker.teal:hover img, .solution-inner .sticker.teal > img { background: #0099A8; }
+
+.green .sticker img, .sticker.green img, .sticker.green p { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(113, 191, 67, 0.4) inset; }
+.green .sticker:hover img, .sticker.green:hover p, .sticker.green:hover img, .solution-inner .sticker.green > img { background: #71BF43; }
+
+.red .sticker img, .sticker.red img, .sticker.red p { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(197, 9, 59, 0.4) inset; }
+.red .sticker:hover img, .sticker.red:hover p, .sticker.red:hover img, .solution-inner .sticker.red > img { background: #C5093B; }
+
+.pos-1-4 { left: 30%; top: 15%; }
+.pos-2-4 { left: 70%; top: 15%; }
+.pos-3-4 { left: 70%; top: 85%; }
+.pos-4-4 { left: 30%; top: 85%; }
+
+.pos-1-5 { left: 25%; top: 13%; }
+.pos-2-5 { left: 75%; top: 13%; }
+.pos-3-5 { left: 91%; top: 58%; }
+.pos-4-5 { left: 50%; top: 90%; }
+.pos-5-5 { left: 9%; top: 58%; }
+
+.pos-1-6 { left: 30%; top: 15%; }
+.pos-2-6 { left: 70%; top: 15%; }
+.pos-3-6 { left: 92%; top: 50%; }
+.pos-4-6 { left: 70%; top: 85%; }
+.pos-5-6 { left: 30%; top: 85%; }
+.pos-6-6 { left: 8%; top: 50%; }
+
+.pos-1-7 { left: 32%; top: 12%; }
+.pos-2-7 { left: 68%; top: 12%; }
+.pos-3-7 { left: 92%; top: 39%; }
+.pos-4-7 { left: 85%; top: 74%; }
+.pos-5-7 { left: 50%; top: 90%; }
+.pos-6-7 { left: 15%; top: 74%; }
+.pos-7-7 { left: 8%; top: 39%; }
+
+.pos-1-8 { left: 35%; top: 11%; }
+.pos-2-8 { left: 65%; top: 11%; }
+.pos-3-8 { left: 89%; top: 31%; }
+.pos-4-8 { left: 89%; top: 66%; }
+.pos-5-8 { left: 65%; top: 89%; }
+.pos-6-8 { left: 35%; top: 89%; }
+.pos-7-8 { left: 11%; top: 66%; }
+.pos-8-8 { left: 11%; top: 31%; }
+
+.intro-message h1 { color: #0099a8; line-height: 1.1 !important; }
+.intro-message h3 { line-height: 1.25; }
+.intro-message h4 { line-height: 1.15; }
+.intro-message p { line-height: 1.1; }
+
+
+
+
+
+/* =========================== MEDIA QUERIES ===============================
+========================================================================= */
+
+@media (orientation : portrait) {
+.intro-message { border: 0.7vw dotted #e5e5e5; }
+.sticker p { font-size: 1.7vw; padding: 0.5vw 1.2vw 0.4vw; }
+.sticker p, .sticker img { border-width: 0.45vw; }
+.sticker { margin: -7vw 0 0 -7vw; width: 14vw; }
+.intro-message h1 { font-size: 7vh; }
+.intro-message h3 { font-size: 3.0vh; }
+.intro-message h4 { font-size: 2.3vh; padding: 0 8%; }
+.intro-message p { font-size: 2vh; }
+.intro-message * { margin: 1.4vw 0 !important; }
+}
+
+@media (orientation : landscape) and (min-device-width : 900px) {
+.intro-message {  border: 0.7vh dotted #e5e5e5; }
+.sticker p { font-size: 1.7vh; padding: 0.5vh 1.2vh 0.4vh;  }
+.sticker p, .sticker img { border-width: 0.45vh; }
+.sticker { margin: -7vh 0 0 -7vh; width: 14vh; }
+.intro-message h1 { font-size: 8vh; }
+.intro-message h3 { font-size: 3.4vh; }
+.intro-message h4 { font-size: 2.5vh; }
+.intro-message p { font-size: 2vh; }
+.intro-message * { margin: 1.4vh 0 !important; }
+} 
+
+
+
+@media screen and (max-width: 1100px) {
+
+.solution-inner h1 {
+    color: #00488b;
+    /* font-size: 270%; */
+    margin: 0.3em 0 0 15px;
+    padding-bottom: 0.2em;
+    float: left;
+}
+.full-modal .head ul.spy-nav { margin: 30px 10px; }
+}
+
+@media screen and (max-device-width: 1024px) and (orientation: landscape) {
+.intro-message h4 { display: none; }
+  .solution-inner section {
+    padding: 8vh 3%;
+    min-height: 40vh;
+}
+}
+
+@media screen and (max-width: 959px) {
+
+div#top {
+    top: 68px;
+}
+.full-modal .head {
+    height: 44px;
+}
+#top-spacer {
+    height: 44px;
+    margin-top: -43px;
+}
+.solution-inner .sticker, .solution-inner .head > h1, .scroller.spy-nav {
+    display: none;
+}
+.full-modal .head ul.spy-nav {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    position: fixed;
+    top: 38px;
+    right: 9px;
+    padding: 1px 0;
+}
+.full-modal .head .spy-nav li.exit {
+    margin-left: 4px;
+}
+.full-modal .head .spy-nav li.uk-active a, .full-modal .head .spy-nav li a:hover {
+    color: #0099a8;
+    background: #eee;
+}
+.full-modal .head .spy-nav li a {
+    font-size: 14px;
+    line-height: 1.25;
+    color: #aaa;
+    padding: 4px 8px;
+    position: static;
+    margin: 0;
+    float: none;
+    opacity: 1;
+    font-weight: normal;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.solution-inner .mod-title-wrap {
+    display: block;
+    float: left;
+    width: 100%;
+}
+.solution-inner h1.mod-title-heading {
+    display: block;
+}
+.solution-inner section {
+    padding: 8vh 3%;
+ /*   display: block; */
+    min-height: 50vh;
+    width: 100%;
+    float: left;
+}
+.solution-inner section div + div { padding-top: 70px; }
+.scroll-anchor { margin-top: 0px !important; padding-top: 0px !important; }
+}
+
+
+@media screen and (orientation : landscape) and (max-device-width : 899px) {
+
+.imageMap {
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 24px;
+}
+.intro-message {
+    border: medium none;
+}
+.intro-message {
+    display: block;
+    height: auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: -3%;
+    width: 100%;
+}
+.intro-message * {
+    margin: 0;
+}
+.intro-message h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    padding-bottom: 14px;
+}
+.intro-message h3 {
+    font-size: 20px;
+    line-height: 1.1;
+    padding-bottom: 12px;
+}
+
+/* .intro-message h3, .intro-message h4 {
+    display: none;
+} */
+
+.hotspots {
+    height: auto;
+    left: -1%;
+    position: relative;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    padding-bottom: 40px;
+    float: left;
+}
+.hotspots > div {
+    display: inline-block;
+    margin: 0;
+    max-width: 140px;
+    padding: 5px 20px;
+    position: static;
+    vertical-align: top;
+    width: 23%;
+}
+.sticker p, .sticker img, .sticker i {
+    border-width: 2px;
+}
+.sticker p {
+    font-size: 12px;
+    padding: 3px 6px;
+}
+  
+.solution-inner section#problem img,
+.solution-inner section#current img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+}
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.solution-inner .sticker { position: absolute; }
+.solution-inner .alert { font-size: 7vw; }
+.mylivechat_inline { display: none; }
+.footer > .container-fluid > p.pull-right { bottom: -20px; }
+  
+.solution-inner section#problem img,
+.solution-inner section#current img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+}
+
+}
+
+@media screen and (max-device-width: 768px) and (orientation: portrait) {
+.intro-message h4 { display: none; }
+}
+
+@media screen and (max-width: 676px) {
+
+.solution-inner section { display: block; }
+.solution-inner section div + div { padding-top: 10px; }
+.solution-inner .alert { font-size: 8vw; }
+.solution-exit-nav > h5 { font-size: 24px; padding-top: 13px; }
+
+.solution-inner .mod-title-wrap {
+    min-height: 55vw;
+    padding-right: 1.5vw;
+}
+.solution-inner h1.mod-title-heading {
+    margin: 0;
+    padding: 26px;
+}
+.solution-inner .mod-title-wrap p {
+    padding: 5em 26px 26px;
+    margin: 0;
+}
+
+}
+
+
+@media screen and (orientation : portrait) and (max-device-width : 599px) {
+
+.imageMap {
+    display: block;
+    top: 0;
+}
+.intro-message {
+    align-items: center;
+    border: 0 none;
+    display: flex;
+    height: 14vh;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.intro-message > div {
+    left: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+.intro-message h1 {
+    font-size: 30px;
+}
+.intro-message h3, .intro-message h4 {
+    display: none;
+}
+.hotspots {
+    height: 80%;
+    left: 0;
+    position: absolute;
+    top: 12%;
+    width: 100%;
+}
+
+.hotspots .sticker.orange a { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(245, 130, 31, 0.4) inset; }
+.hotspots .sticker.orange:hover a { background: #F5821F; }
+
+.hotspots .sticker.yellow a { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(255, 204, 5, 0.4) inset; }
+.hotspots .sticker.yellow:hover a { background: #FFCC05; }
+
+.hotspots .sticker.blue a { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(0, 72, 139, 0.4) inset; }
+.hotspots .sticker.blue:hover a { background: #00488B; }
+
+.hotspots .sticker.teal a { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(0, 153, 168, 0.4) inset; }
+.hotspots .sticker.teal:hover a { background: #0099A8; }
+
+.hotspots .sticker.green a { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(113, 191, 67, 0.4) inset; }
+.hotspots .sticker.green:hover a { background: #71BF43; }
+
+.hotspots .sticker.red a { box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2), 0 0 0 60px rgba(197, 9, 59, 0.4) inset; }
+.hotspots .sticker.red:hover a { background: #C5093B; }
+
+div.sticker[class*="-2"] {
+    height: 21vh;
+}
+div.sticker[class*="-3"] {
+    height: 19vh;
+}
+div.sticker[class*="-4"] {
+    height: 17vh;
+}
+div.sticker[class*="-5"] {
+    height: 15vh;
+}
+div.sticker[class*="-6"] {
+    height: 13vh;
+}
+div.sticker[class*="-7"] {
+    height: 11vh;
+}
+div.sticker[class*="-8"] {
+    height: 9vh;
+}
+.hotspots .sticker {
+    margin: 0;
+    position: static;
+    width: 100%;
+    padding: 4px;
+    text-align: left;
+}
+.sticker:hover {
+    transform: scale(1.0);
+}
+.hotspots .sticker > a {
+    background: #bbb;
+    display: block;
+    border-radius: 100px;
+    border: 2px solid #fff;
+}
+.hotspots .sticker img {
+    max-height: 9vh;
+    max-width: 25%;
+    display: inline-block;
+    transform: scale(1.07);
+}
+div.sticker[class*="-8"] img {
+    max-height: 7.5vh;
+}
+.hotspots .sticker p {
+    font-size: 18px;
+    margin: 0;
+    padding: 0 8px;
+    position: static;
+    width: 75%;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+}
+
+@media screen and (max-width: 368px) {
+.head .spy-nav li.top {
+    display: none;
+}
+}

@@ -1,0 +1,638 @@
+/* Corporate Colors:
+#0099a8 - Teal
+#00548b - Blue
+*/
+
+#system-message-container {
+    position: absolute;
+    top: 155px;
+    z-index: 1011;
+    width: 80vw;
+}
+.layout-edit #system-message-container {
+    position: absolute;
+    z-index: 1011;
+    top: 20px;
+    width: 600px;
+    max-width: 100%;
+}
+
+/* ========== FAQ Tab Sliders Fix ========== */
+
+.prod-tabs .rl_sliders .collapse {
+    height: 0;
+    transition: height .2s;
+}
+
+/* =============== Breadcrumbs ========================== */
+
+[class*="prodcategory"].com_content .breadcrumb.breadcrumb > li:nth-child(4),
+[class*="products"].com_content .breadcrumb.breadcrumb > li:nth-child(4){
+    display: none;
+}
+
+/* ==== Hide Page Title Module on Product Pages === */
+[class*="prodcategory"].com_content.view-article .moduletable.mod-page-title,
+[class*="products"].com_content.view-article .moduletable.mod-page-title{
+    display: none;
+}
+
+/* =============== JOOMLA ARTICLE PRODUCTS ============= */
+
+/* Product Pages */
+
+[class*="prodcategory"].com_content #content.span12,
+[class*="products"].com_content #content.span12 {
+    float: none;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+.product-layout.item-page {
+    float: left;
+    width: 100%;
+}
+.product-layout, .product-delta, .prod-bottom {
+    /* overflow: auto; */
+    clear: both;
+}
+.prod-top {
+    width: 100%;
+    float: left;
+    box-shadow: 0 19px 14px -14px #eee;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+}
+.prod-right {
+    float: right;
+    margin: 0 auto 8px;
+    padding: 18px;
+    text-align: center;
+    width: 55%;
+    max-width: 700px;
+    background: #fff;
+}
+.prod-left {
+    font-size: 120%;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    padding: 30px 3% 0;
+}
+.product-delta h1.prod-title {
+    color: #0099a8;
+    font-size: 46px;
+    line-height: 1.1em;
+    margin: 0 0 8px;
+    padding: 0;
+    text-align: center;
+}
+.product-delta h3.prod-model {
+    color: #777;
+    font-size: 27px;
+    line-height: 1.2em;
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+.prod-intro > ul {
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 28px;
+    padding: 7px 0 27px 30px;
+    list-style-type: none;
+}
+.prod-intro ul li::before {
+    content: "\f04d";
+    font-family: FontAwesome;
+    color: #009aaa;
+    font-size: 50%;
+    position: relative;
+    left: -1.8em;
+    top: -0.3em;
+    width: 0;
+    display: inline-block;
+}
+
+.prod-intro p {
+    font-weight: bold;
+}
+.prod-order {
+    margin: 20px 0;
+}
+.prod-available {
+    margin-top: 30px;
+    color: #910808;
+    padding: 12px;
+    background: #eee;
+    border: 1px solid #e6b4b4;
+}
+.prod-image img, .prod-gallery img, .prod-tabs img {
+    height: auto;
+    max-height: 65vh;
+    max-width: 100%;
+    width: auto;
+}
+.prod-intro ul ul {
+    font-size: 95%;
+    font-weight: normal !important;
+    margin-bottom: 0;
+    margin-top: 0.5em;
+}
+.prod-desc {
+    float: left;
+    clear: both;
+    padding: 15px 40px 0 0;
+    width: 45%;
+}
+.prod-app p {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+.prod-tabs {
+    float: right;
+    width: 55%;
+}
+.prod-image > a {
+    display: block;
+    background: #fff;
+}
+.prod-image > a:hover {
+    box-shadow: 0 0 0 12px #fff, 0 0 12px 12px #ddd;
+    cursor: zoom-in;
+}
+
+
+
+/* product gallery */
+
+.prod-gallery {
+    padding: 0 45px;
+}
+.prod-gallery + .prod-image {
+    display: none;
+}
+.com_content .uk-slidenav-position .uk-slidenav {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+}
+.com_content .uk-slidenav-position .uk-slidenav-previous {
+    left: -60px;
+}
+.com_content .uk-slidenav-position .uk-slidenav-next {
+    right: -60px;
+}
+.com_content .uk-slidenav-position .uk-slidenav-previous::before,
+.com_content .uk-slidenav-position .uk-slidenav-next::before {
+    position: relative;
+    top: 47%;
+}
+
+
+
+/* Tabbed content */
+
+/* hide duplicate module title in fields */
+.moduletable > .custom > .moduletable > h3 {
+    display: none;
+}
+
+.prod-tabs .rl_tabs > .tab-content > .tab-pane .rl_tabs-title {
+    display: block;
+    color: #888;
+    font-size: 100%;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+.prod-tabs .rl_tabs > .tab-content > .tab-pane .rl_tabs-title > a {
+    margin: 0 !important;
+}
+.tab-pane .anchor {
+    display: none !important;
+}
+
+figure {
+    margin: 8px;
+}
+figcaption {
+    font-size: 12px;
+    padding-top: 6px;
+    text-align: center;
+}
+figcaption.small {
+    font-size: 75%;
+    line-height: 1.2;
+}
+#models table img {
+    height: auto;
+    max-height: 300px;
+    max-width: 300px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#literature, #user-guide, #videos {
+    text-align: center;
+    margin-bottom: 15px;
+}
+#literature p, #user-guide p {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 90%;
+    line-height: 1.1;
+    margin: 10px 0%;
+    min-width: 250px;
+    padding: 0 15px 15px;
+    vertical-align: top;
+    width: 32%;
+}
+#literature a, #user-guide a {
+    display: inline-block;
+    margin: 10px 5% 10px;
+    max-width: 90%;
+}
+#literature .thumbs > p {
+    margin: 20px 2%;
+    max-width: 28%;
+    padding: 0;
+    width: 200px;
+}
+#literature img, #user-guide img {
+    box-shadow: 2px 2px 10px #aaa;
+    margin-bottom: 12px;
+    max-height: 425px;
+}
+
+#user-guide .ui-btn {
+    background: #ddd;
+    border-radius: 12px;
+    border: 1px solid #bbb;
+    padding: 20px 30px;
+    font-weight: 500;
+    font-size: 110%;
+}
+#user-guide .ui-btn::before {
+    content: "оЂ»";
+    font-family: delta;
+    display: block;
+    color: #00699e;
+    font-size: 140px;
+    line-height: 1;
+    position: relative;
+    top: 6px;
+}
+.prod-tabs #videos > span, .prod-tabs #videos p {
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 10px #ccc;
+    display: inline-block;
+    margin: 12px 4px;
+    padding: 6px 6px 0;
+    width: 260px;
+}
+.prod-tabs #accessories .moduletable:last-of-type {
+    box-shadow: none;
+    border: none;
+}
+.prod-tabs #accessories .moduletable {
+    padding: 20px;
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+    box-shadow: 0px 30px 15px -30px #eee;
+    border-bottom: 1px solid #eee;
+}
+
+
+.solution-box {
+    display: flex;
+    justify-content: center;
+}
+.solution-box {
+    padding: 0 10px;
+}
+.solution-box > div {
+    padding: 12px;
+}
+.solution-box h4 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #00699e;
+    margin: 0 0 0.2em;
+    background: #f6f6f6;
+    padding: 3px 12px;
+    border-radius: 100px;
+    border: 1px solid #ddd;
+}
+.solution-box h4:nth-of-type(n+2) {
+    margin-top: 1em;
+}
+.solution-box h4::before {
+    font-size: 110%;
+    bottom: -2px;
+    position: relative;
+    padding-right: 5px;
+}
+.solution-box ul {
+    margin-left: 2em;
+}
+#content .solution-box li {
+    list-style-type: none;
+    position: relative;
+    padding: .1em;
+}
+.solution-box li > a::before {
+    content: "\f04b";
+    font-family: FontAwesome;
+    color: #00699e;
+    font-size: 50%;
+    position: absolute;
+    left: -1.4em;
+}
+
+/* category pages */
+
+.prod-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    font-size: 90%;
+}
+
+.prod-row.items-row.cols-1 { max-width: 900px; font-size: 100%; }
+.prod-row.items-row.cols-2 { max-width: 1200px; font-size: 98%; }
+.prod-row.items-row.cols-3 { max-width: 1500px; font-size: 96%; }
+.prod-row.items-row.cols-4 { max-width: 1800px; font-size: 94%; }
+
+.prod-block {
+    padding: 1.5vw;
+    box-shadow: 1px 1px 12px #ddd;
+    border-radius: 20px 0;
+    border: 1px solid #ddd;
+    margin-bottom: 1.7vw;
+    overflow: auto;
+}
+.prod-block .page-header {
+    border: 0;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.prod-block .page-header h2 {
+    font-size: 140%;
+    line-height: 1.2;
+    margin: 0;
+}
+.prod-block .prod-model {
+    margin-top: 6px;
+    font-size: 110%;
+    color: #999;
+}
+.prod-block .prod-image {
+    float: right;
+    max-width: 50%;
+    text-align: center;
+}
+.prod-block .prod-image > a:hover {
+    box-shadow: none;
+}
+.prod-block .prod-image img {
+    max-height: 350px;
+}
+.prod-block .key-features ul {
+    margin-top: 7px;
+}
+.product.read-more {
+    margin-top: 10px;
+}
+.prod-block b {
+    color: #00548b;
+}
+
+
+
+/* read more buttons */
+.product.read-more a.btn span {
+    font-size: 14px;
+}
+.product.read-more a.btn::after {
+    content: "Show Details";
+    font-size: 17px;
+    line-height: 1.3em;
+}
+.product.read-more a.btn {
+    font-size: 0;
+    line-height: 0;
+}
+
+/* ========== Print Button / User Guide Button =========== */
+
+#print-button, #inst-btns {
+    position: absolute;
+    right: 20px;
+    margin-top: -36px;
+}
+#inst-btns {
+    right: 65px;
+}
+#inst-btns > div {
+    display: inline-block;
+    margin-right: 7px;
+}
+#inst-btns a.btn {
+    font-size: 0;
+    line-height: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #00699e;
+    padding: 0 8px;
+    height: 35px;
+}
+#inst-btns a.btn::before {
+    content: "оЂ»";
+    font-family: "delta";
+    font-size: 26px;
+    margin: 0 2px;
+    line-height: 1.2;
+}
+
+#print-button > .icons {
+    display: block;
+}
+#print-button .btn.dropdown-toggle {
+    display: none;
+}
+#print-button .icons .dropdown-menu {
+    display: block;
+    min-width: 0;
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+#print-button .icons .dropdown-menu > li > a {
+    display: block;
+    padding: 5px 10px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #888;
+    white-space: nowrap;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+#print-button .icons .dropdown-menu > li > a:hover, 
+#print-button .icons .dropdown-menu > li > a:focus, 
+#inst-btns a.btn:hover,
+#inst-btns a.btn:focus {
+    color: #fff;
+    border: 1px solid #0099a8;
+    background: #0099a8;
+    text-shadow: none;
+}
+#print-button .icon-print {
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    line-height: 1em;
+    position: relative;
+    top: 3px;
+}
+
+/* ============= Translation Module ============ */
+
+#content .translate {
+    float: left;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+#content .translate select {
+    font-size: 15px;
+    width: auto;
+    padding: 3px;
+}
+
+/* ============== MEDIA QUERIES =============== */
+
+@media (max-width: 1360px) {
+    .prod-row { flex-wrap: wrap; }
+    .prod-row.items-row.cols-4 { padding-left: 2%; }
+    .prod-block.span3 { width: 47.8%; }
+    .prod-block.span3:nth-of-type(3) { margin-left: 0; }
+}
+  
+@media (max-width: 960px) {
+    .prod-block.span4 { width: 100%; margin-left: 0; }
+    .product-delta h1.prod-title { font-size: 33px; }
+    .product-delta h3.prod-model { font-size: 23px; }
+    .prod-desc, .prod-tabs { padding: 0; width: 100%; }
+}
+
+@media (max-width: 767px) {
+    .prod-row { display: block; font-size: 100% !important; padding-left: 0 !important; }
+    .prod-block { padding: 12px; margin-bottom: 20px; width: 100% !important; }
+}
+
+@media (max-width: 676px) {
+.prod-right { width: 100%; }
+.prod-left { width: 100%; float: left; padding-top: 0; }
+
+}
+
+/* ========== Translate Module in Product Article ============ */
+#content > .translate {
+    float: left;
+    margin-top: -20px;
+}
+
+/* =============== PRINT CSS =================== */
+.contentpane.modal .product-layout.item-page {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    float: none;
+}
+
+.contentpane.modal .prod-desc {
+    float: none;
+    clear: both;
+    padding: 43px 0 0 0;
+    width: 100%;
+}
+
+.contentpane.modal #redim-cookiehint,
+.contentpane.modal .prod-order,
+.contentpane.modal #literature,
+.contentpane.modal #videos
+{ display: none; }
+
+.contentpane.modal #print-button { margin-top: 0; }
+.rl_tabs-print {
+    border-top: 1px solid #aaa;
+    width: 100%;
+    margin-top: 30px;
+}
+.contentpane.modal .prod-top {
+    width: 100%;
+    float: left;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+}
+.contentpane.modal .prod-right {
+    margin: 0 auto;
+    padding: 18px 0;
+    width: 100%;
+}
+.contentpane.modal .prod-bottom img {
+    max-width: 50%;
+    width: 400px;
+}
+.contentpane.modal td, .contentpane.modal th {
+    border: 1px solid #ccc;
+    padding: 3px 8px;
+}
+.contentpane.modal .prod-intro > ul {
+    page-break-inside: avoid;
+    clear: both;
+    border: 0;
+}
+.contentpane.modal a.button {
+    display: none;
+}
+
+@media print {
+a:link:after, a:visited:after { display: none; content: ""; }
+  
+table,
+#models,
+.rl_tabs-print,
+.prod-desc
+{ page-break-inside: avoid; break-inside: avoid; }
+  
+@page { margin: 40pt 50pt 30pt; }
+}
+
+
+body.modal {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+/*adding text at the top of the printed page*/
+body::after {
+    content: "В© 2019 DeltaTrak Inc. / 1-800-962-6776";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: teal;
+}
+
+
+

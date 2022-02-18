@@ -1,0 +1,406 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+fields:
+    
+
+tabs:
+    fields:
+# Main Info
+        top_navbar:
+            type: colorpicker
+            label: Top navbar
+            tab: Layout
+
+        is_footer_gradient:
+            type: checkbox
+            label: Is footer gradient?
+            tab: Layout
+
+        footer:
+            type: colorpicker
+            label: Footer background
+            tab: Layout   
+
+        footer_second_color:
+            type: colorpicker
+            tab: Layout
+            label: Footer gradient second color
+
+            
+
+
+
+
+
+
+
+
+
+
+
+        homepage_banner_image:
+            label: Home page banner image
+            type: mediafinder
+            tab: Pages content
+        homepage_banner_animated_image:
+            label: Home page banner animated image
+            type: mediafinder
+            tab: Pages content
+        homepage_banner_text:
+            label: Home page banner text
+            type: richeditor
+            tab: Pages content
+
+        homepage_solutions_text:
+            label: Home page solutions text
+            type: richeditor
+            tab: Pages content
+
+        anniversary_pic:
+            tab: Pages content
+            label: Image on "Colors overview" page
+            type: mediafinder
+
+        support:
+            tab: Support
+            label: Software and drivers
+            type: repeater
+            prompt: Add new category
+            form:
+                fields:
+                    id:
+                        label: ID
+                        span: storm
+                        cssClass: col-md-2
+                    category_name:
+                        label: Category name
+                        span: storm
+                        cssClass: col-md-10
+                    soft_item:
+                        type: repeater
+                        prompt: Add new soft item
+                        form:
+                            fields:
+                                soft_name:
+                                    label: Name of soft
+                                    span: storm
+                                    cssClass: col-md-4
+                                soft_image:
+                                    label: Soft image
+                                    span: storm
+                                    cssClass: col-md-4
+                                    type: mediafinder
+                                soft_version:
+                                    label: Version
+                                    span: storm
+                                    cssClass: col-md-4
+                                soft_short_desc:
+                                    label: Short description of soft
+                                    span: storm
+                                    cssClass: col-md-6
+                                    type: richeditor
+
+                                download:
+                                    label: File
+                                    type: mediafinder
+                                    span: storm
+                                    cssClass: col-md-6
+                                last_revised:
+                                    label: Last revised
+                                    span: storm
+                                    cssClass: col-md-6
+                                    type: datepicker
+                                    mode: date
+                                instruction:
+                                    label: Instruction
+                                    span: storm
+                                    cssClass: col-md-6
+                                    type: mediafinder
+                                soft_desc:
+                                    label: Full description of soft
+                                    type: richeditor
+                                    span: storm
+                                    cssClass: col-md-12
+
+        # video:
+        #     type: repeater
+        #     tab: Video
+        #     prompt: Add new video
+        #     form:
+        #         fields:
+        #             title:
+        #                 label: Video title
+        #             link:
+        #                 label: Video link
+        #             preview_image:
+        #                 label: Preview image
+        #                 type: mediafinder
+                    
+
+
+
+
+
+# Partners 
+        # partners:
+        #     tab: Partners
+        #     type: repeater
+        #     prompt: Add partner info
+        #     form:
+        #         fields:
+        #             name:
+        #                 label: Name
+        #             address:
+        #                 label: Address
+        #             phone:
+        #                 label: Phone
+        #             fax:
+        #                 label: Fax
+        #             partners_site:
+        #                 label: Partner site
+        #             email:
+        #                 type: repeater
+        #                 form:
+        #                     fields:
+        #                         email:
+        #                             label: Email
+#         solution_briefs:
+#             tab: Solution briefs
+#             type: repeater
+#             prompt: Add new brief
+#             form:
+#                 fields:
+#                     title:
+#                         label: Title
+#                     description:
+#                         label: Description
+#                         type: richeditor
+#                     image:
+#                         label: Document image
+#                         type: mediafinder
+#                     file:
+#                         label: Document (file)
+#                         type: mediafinder
+#  FAQ
+
+        # is_faq_active:
+        #     label: FAQ bölməsi aktivdirmi?
+        #     type: radio
+        #     default: no
+        #     tab: FAQ
+        #     options:
+        #         yes: Bəli
+        #         no: Xeyr
+
+        # faq:
+        #     type: repeater
+        #     prompt: Yeni sual-cavab əlavə et
+        #     tab: FAQ
+        #     form:
+        #         fields:
+        #             question:
+        #                 label: Sual
+        #             answer:
+        #                 label: Cavab
+        
+
+        # team:
+        #     tab: Team
+        #     type: repeater
+        #     prompt: Add team member
+        #     form:
+        #         fields:
+        #             image:
+        #                 label: Team member photo
+        #                 type: mediafinder
+        #             name:
+        #                 label: Team member name and surname
+        #             post:
+        #                 label: Team member post
+        #             about:
+        #                 label: Team member about
+        #                 type: richeditor
+
+        # event:
+        #     type: repeater
+        #     prompt: Add new event
+        #     tab: Events
+        #     form:
+        #         fields:
+        #             title:
+        #                 label: Event title
+        #                 span: storm
+        #                 cssClass: col-md-6
+        #             image:
+        #                 label: Event image
+        #                 span: storm
+        #                 cssClass: col-md-6
+        #                 type: mediafinder
+        #             start_date:
+        #                 label: Event start date
+        #                 type: datepicker
+        #                 span: storm
+        #                 cssClass: col-md-6
+        #                 mode: date
+        #             finish_date:
+        #                 label: Event finish date
+        #                 type: datepicker
+        #                 span: storm
+        #                 cssClass: col-md-6
+        #                 mode: date
+        #             address:
+        #                 label: Place
+        #                 span: storm
+        #                 cssClass: col-md-12
+        # system_software_docs:
+        #     tab: Software System overview
+        #     type: repeater
+        #     form:
+        #         fields:
+        #             title:
+        #                 label: Title
+        #                 span: storm
+        #                 cssClass: col-md-12
+        #             file:
+        #                 label: File
+        #                 type: mediafinder
+        #                 span: storm
+        #                 cssClass: col-md-6
+        #             preview_image:
+        #                 label: Preview image
+        #                 type: mediafinder
+        #                 span: storm
+        #                 cssClass: col-md-6
+        #             about:
+        #                 label: About
+        #                 type: richeditor
+        #                 span: storm
+        #                 cssClass: col-md-12
+
+        documents:
+            tab: Certificate
+            type: repeater
+            prompt: Add new certificate
+            form:
+                fields:
+                    title:
+                        label: Certificate title
+                        span: storm
+                        cssClass: col-md-6
+                    file:
+                        label: Certificate
+                        type: mediafinder
+                        span: storm
+                        cssClass: col-md-6
+                    about:
+                        label: About certificate
+                        span: storm
+                        cssClass: col-md-12
+                        type: richeditor
+        testimonials:
+            tab: Testimonials
+            type: repeater
+            prompt: Add new testimonial
+            form:
+                fields:
+                    name: 
+                        label: Name and surname
+                    colors:
+                        label: Colors
+                    comment:
+                        label: Comment
+                        type: richeditor
+
+
+
+# Contacts        
+        phone:
+            tab: Contacts
+            label: Telephone number
+
+
+        fax:
+            tab: Contacts
+            label: Fax
+
+        email:
+            tab: Contacts
+            label: Email
+
+
+        socials:
+            tab: Contacts
+            type: repeater
+            prompt: Add social
+            form:
+                fields:
+                    name:
+                        label: Social network name
+                        default: fab fa-
+                    url:
+                        label: Link
+
+        home_food:
+            type: mediafinder
+            label: Food icon
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_lifescience:
+            type: mediafinder
+            label: Life science 
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_foodsafety:
+            type: mediafinder
+            label: Food safety
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_aerospace:
+            type: mediafinder
+            label: Aerospace
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_intransit:
+            type: mediafinder
+            label: In-transit
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_produce:
+            type: mediafinder
+            label: Produce/Floral icon
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_meat:
+            type: mediafinder
+            label: Meat
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_poultry:
+            type: mediafinder
+            label: Poultry
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_dairy:
+            type: mediafinder
+            label: Dairy
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        home_seafood:
+            type: mediafinder
+            label: Seafood
+            span: storm
+            cssClass: col-md-4
+            tab: Pages content
+        

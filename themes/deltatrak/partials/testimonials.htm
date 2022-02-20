@@ -65,8 +65,9 @@
   <style>
   .testimonial-button {
     display: flex;
+    cursor: pointer;
     justify-content: center;
-    background: #00548b;
+    background: {{ colors.button_background_color }};
     color: #fff;
     font-weight: 700;
     font-size: 16px;
@@ -78,8 +79,8 @@
     margin-top: 40px !important;
     margin-bottom: 40px !important;
   }
-  .testimonial-button a,.testimonial-button a:hover {
-      color: white !important
-  }
+  .testimonial-button a span,.testimonial-button a:hover {
+    color: {{ colors.button_color }} !important;
+    }
 
     </style>

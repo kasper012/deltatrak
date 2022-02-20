@@ -9,7 +9,7 @@ default = 0
 [products]
 
 [solutions]
-
+[Colors]
 [mainContactForm]
 ==
 <!DOCTYPE html>
@@ -60,13 +60,13 @@ default = 0
     <link rel="stylesheet" href="{{ 'assets/templates/bootstrap/bootstrap-reboot.css.map' | theme }}">
     <link rel="stylesheet" href="{{ 'assets/templates/bootstrap/bootstrap-reboot.min.css' | theme }}">
     <link rel="stylesheet" href="{{ 'assets/templates/bootstrap/bootstrap-reboot.min.css.map' | theme }}">
-    <!-- Google Font Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
-    {% endif %}
+        {% endif %}
+        <!-- Google Font Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     {% if this.page.id != 'about-testimonials' %}
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     {% endif %}
@@ -249,6 +249,8 @@ default = 0
         * {
             font-family: 'Montserrat', sans-serif;
         }
+
+
     </style>
     <script type="application/json"
         class="joomla-script-options new">{"csrf.token":"53b93d72b68c584f30abfd539bbffdb4","system.paths":{"root":"","base":""}}</script>
@@ -1082,7 +1084,9 @@ default = 0
     <footer class="footer mt-5" role="contentinfo">
         <div class="container-fluid">
             <hr />
-            <div class="custom footer-main">
+            <div class="custom footer-main" style="{% if colors.is_footer_gradient %}background: linear-gradient(to bottom, {{ colors.footer }} 0%, {{ colors.footer_second_color }} 100%) !important;
+        {% else %}background: {{ colors.footer }};{% endif %}
+            ">
                 <div class="foot-1">
                     <div class="moduletable">
                         <h3>{{'Worldwide'|_}}</h3>
@@ -1309,6 +1313,9 @@ default = 0
         {% component 'extendedLocalePicker' %}
 
         <style>
+            .header {
+                border-top: none !important;
+            }
             .custom-translate-header {
                 position: fixed;
                 z-index: 999;
@@ -1316,7 +1323,7 @@ default = 0
                 right: 0;
                 width: 100%;
                 text-align: right;
-                background: #00699e;
+                background: {{ colors.top_navbar }};
                 padding-right: 8px;
                 height: 29px;
             }
@@ -1605,6 +1612,14 @@ default = 0
                 box-shadow: 0 0 0px 2px rgba(255, 255, 255, 0.5) inset;
             }
 
+            .footer-main .nav.menu li a:hover, .footer-main .nav.menu li a:focus {
+            background-color: transparent !important;
+            color: {{ colors.footer_links_hover }} !important;
+            }
+
+            .mod-title-heading, .footer .moduletable > h3 {
+                color: {{ colors.title_on_colorful_background }} !important;
+            }
             @media screen and (max-width: 550px) {
                 #designstudio-button {
                     bottom: 40px !important;
@@ -1783,7 +1798,37 @@ default = 0
 
         }
     </script>
+    <style>
+        p, b, h1,h2,h3,h4,h5,h6, pre, em, i, small, strong, sub, sup, ins, del, mark, blockquote, li, label,span {
+            color: {{ colors.main_text_color }} !important;
+            cursor: auto !important;
+        }
+        span.nav-header, a,.prod-title span {
+            color: {{ colors.links_color }} !important;
+        }
 
+        .navigation .nav.menu > li > .nav-child > li > .nav-child > li > .nav-child {
+            background: {{ colors.products_list_background }} !important;
+        }
+
+        {% if colors.is_footer_gradient %}
+        .custom.footer-main, .custom.footer-bottom {
+        background: linear-gradient(to bottom, {{ colors.footer }} 0%, {{ colors.footer_second_color }} 100%) !important;
+        {% else %}
+        .custom.footer-main, .custom.footer-bottom { background: {{ colors.footer }};}
+        {% endif %}
+        
+
+        .nav.menu [class^="dt-icon-"]::before, .nav.menu [class*=" dt-icon-"]::before, .nav.menu [class^="fa-"]::before, .nav.menu [class*="fa-"]::before {
+            color: {{ colors.icons_color }}
+        }
+        .readmore>a, a.button {
+            background-color: {{ colors.button_background_color }} !important;
+            color: {{ colors.button_color }} !important;
+        }
+
+
+    </style>
     <script>
         var tab_arr = document.getElementsByClassName("prod-tab-custom-item")
         tab_arr[0].classList.add('active')

@@ -15,7 +15,7 @@ tabs:
             tab: Layout
 
         is_footer_gradient:
-            type: checkbox
+            type: switch
             label: Is footer gradient?
             tab: Layout
 
@@ -28,6 +28,104 @@ tabs:
             type: colorpicker
             tab: Layout
             label: Footer gradient second color
+        
+        products_list_background:
+            type: colorpicker
+            tab: Layout
+            label: Background color for inner product list
+    
+
+
+
+        
+        main_text_color:
+            type: colorpicker
+            tab: Content!!!
+            label: Main text color
+
+        links_color:
+            type: colorpicker
+            tab: Content!!!
+            label: Links color
+
+        footer_links_hover:
+            type: colorpicker
+            tab: Content!!!
+            label: Color of footer links on hover
+
+        title_on_colorful_background:
+            type: colorpicker
+            label: Color of title on colorful background
+            tab: Content!!!
+    
+        button_background_color:
+            type: colorpicker
+            tab: Content!!!
+            label: Button background color
+        button_color:
+            type: colorpicker
+            tab: Content!!!
+            label: Color of text in button
+        icons_color:
+            type: colorpicker
+            tab: Content!!!
+            label: Icons color
+        
+
+
+
+
+        products_bg:
+            type: colorpicker
+            tab: Page banner background
+            label: Products banner background color
+
+        support_bg:
+            type: colorpicker
+            tab: Page banner background
+            label: Technical support banner background color
+        warranty_bg:
+            type: colorpicker
+            tab: Page banner background
+            label: Warranty banner background color
+
+        software_bg:
+            type: colorpicker
+            tab: Page banner background
+            label: Software and drivers - banner background color
+
+        validation:
+            type: colorpicker
+            tab: Page banner background
+            label: Validation banner background color
+
+        calibration:
+            type: colorpicker
+            tab: Page banner background
+            label: Calibration banner background color
+
+        calibration_17025:
+            type: colorpicker
+            tab: Page banner background
+            label: 17025 Calibration banner background color
+
+        gogreen_bg:
+            type: colorpicker
+            tab: Page banner background
+            label: Gogreen banner background color
+
+        about_bg:
+            type: colorpicker
+            tab: Page banner background
+            label: About page banner background color
+
+        contact_bg:
+            type: colorpicker
+            tab: Page banner background
+            label: Contacts banner background color
+            
+
+
 
             
 
@@ -36,371 +134,3 @@ tabs:
 
 
 
-
-
-
-
-
-        homepage_banner_image:
-            label: Home page banner image
-            type: mediafinder
-            tab: Pages content
-        homepage_banner_animated_image:
-            label: Home page banner animated image
-            type: mediafinder
-            tab: Pages content
-        homepage_banner_text:
-            label: Home page banner text
-            type: richeditor
-            tab: Pages content
-
-        homepage_solutions_text:
-            label: Home page solutions text
-            type: richeditor
-            tab: Pages content
-
-        anniversary_pic:
-            tab: Pages content
-            label: Image on "Colors overview" page
-            type: mediafinder
-
-        support:
-            tab: Support
-            label: Software and drivers
-            type: repeater
-            prompt: Add new category
-            form:
-                fields:
-                    id:
-                        label: ID
-                        span: storm
-                        cssClass: col-md-2
-                    category_name:
-                        label: Category name
-                        span: storm
-                        cssClass: col-md-10
-                    soft_item:
-                        type: repeater
-                        prompt: Add new soft item
-                        form:
-                            fields:
-                                soft_name:
-                                    label: Name of soft
-                                    span: storm
-                                    cssClass: col-md-4
-                                soft_image:
-                                    label: Soft image
-                                    span: storm
-                                    cssClass: col-md-4
-                                    type: mediafinder
-                                soft_version:
-                                    label: Version
-                                    span: storm
-                                    cssClass: col-md-4
-                                soft_short_desc:
-                                    label: Short description of soft
-                                    span: storm
-                                    cssClass: col-md-6
-                                    type: richeditor
-
-                                download:
-                                    label: File
-                                    type: mediafinder
-                                    span: storm
-                                    cssClass: col-md-6
-                                last_revised:
-                                    label: Last revised
-                                    span: storm
-                                    cssClass: col-md-6
-                                    type: datepicker
-                                    mode: date
-                                instruction:
-                                    label: Instruction
-                                    span: storm
-                                    cssClass: col-md-6
-                                    type: mediafinder
-                                soft_desc:
-                                    label: Full description of soft
-                                    type: richeditor
-                                    span: storm
-                                    cssClass: col-md-12
-
-        # video:
-        #     type: repeater
-        #     tab: Video
-        #     prompt: Add new video
-        #     form:
-        #         fields:
-        #             title:
-        #                 label: Video title
-        #             link:
-        #                 label: Video link
-        #             preview_image:
-        #                 label: Preview image
-        #                 type: mediafinder
-                    
-
-
-
-
-
-# Partners 
-        # partners:
-        #     tab: Partners
-        #     type: repeater
-        #     prompt: Add partner info
-        #     form:
-        #         fields:
-        #             name:
-        #                 label: Name
-        #             address:
-        #                 label: Address
-        #             phone:
-        #                 label: Phone
-        #             fax:
-        #                 label: Fax
-        #             partners_site:
-        #                 label: Partner site
-        #             email:
-        #                 type: repeater
-        #                 form:
-        #                     fields:
-        #                         email:
-        #                             label: Email
-#         solution_briefs:
-#             tab: Solution briefs
-#             type: repeater
-#             prompt: Add new brief
-#             form:
-#                 fields:
-#                     title:
-#                         label: Title
-#                     description:
-#                         label: Description
-#                         type: richeditor
-#                     image:
-#                         label: Document image
-#                         type: mediafinder
-#                     file:
-#                         label: Document (file)
-#                         type: mediafinder
-#  FAQ
-
-        # is_faq_active:
-        #     label: FAQ bölməsi aktivdirmi?
-        #     type: radio
-        #     default: no
-        #     tab: FAQ
-        #     options:
-        #         yes: Bəli
-        #         no: Xeyr
-
-        # faq:
-        #     type: repeater
-        #     prompt: Yeni sual-cavab əlavə et
-        #     tab: FAQ
-        #     form:
-        #         fields:
-        #             question:
-        #                 label: Sual
-        #             answer:
-        #                 label: Cavab
-        
-
-        # team:
-        #     tab: Team
-        #     type: repeater
-        #     prompt: Add team member
-        #     form:
-        #         fields:
-        #             image:
-        #                 label: Team member photo
-        #                 type: mediafinder
-        #             name:
-        #                 label: Team member name and surname
-        #             post:
-        #                 label: Team member post
-        #             about:
-        #                 label: Team member about
-        #                 type: richeditor
-
-        # event:
-        #     type: repeater
-        #     prompt: Add new event
-        #     tab: Events
-        #     form:
-        #         fields:
-        #             title:
-        #                 label: Event title
-        #                 span: storm
-        #                 cssClass: col-md-6
-        #             image:
-        #                 label: Event image
-        #                 span: storm
-        #                 cssClass: col-md-6
-        #                 type: mediafinder
-        #             start_date:
-        #                 label: Event start date
-        #                 type: datepicker
-        #                 span: storm
-        #                 cssClass: col-md-6
-        #                 mode: date
-        #             finish_date:
-        #                 label: Event finish date
-        #                 type: datepicker
-        #                 span: storm
-        #                 cssClass: col-md-6
-        #                 mode: date
-        #             address:
-        #                 label: Place
-        #                 span: storm
-        #                 cssClass: col-md-12
-        # system_software_docs:
-        #     tab: Software System overview
-        #     type: repeater
-        #     form:
-        #         fields:
-        #             title:
-        #                 label: Title
-        #                 span: storm
-        #                 cssClass: col-md-12
-        #             file:
-        #                 label: File
-        #                 type: mediafinder
-        #                 span: storm
-        #                 cssClass: col-md-6
-        #             preview_image:
-        #                 label: Preview image
-        #                 type: mediafinder
-        #                 span: storm
-        #                 cssClass: col-md-6
-        #             about:
-        #                 label: About
-        #                 type: richeditor
-        #                 span: storm
-        #                 cssClass: col-md-12
-
-        documents:
-            tab: Certificate
-            type: repeater
-            prompt: Add new certificate
-            form:
-                fields:
-                    title:
-                        label: Certificate title
-                        span: storm
-                        cssClass: col-md-6
-                    file:
-                        label: Certificate
-                        type: mediafinder
-                        span: storm
-                        cssClass: col-md-6
-                    about:
-                        label: About certificate
-                        span: storm
-                        cssClass: col-md-12
-                        type: richeditor
-        testimonials:
-            tab: Testimonials
-            type: repeater
-            prompt: Add new testimonial
-            form:
-                fields:
-                    name: 
-                        label: Name and surname
-                    colors:
-                        label: Colors
-                    comment:
-                        label: Comment
-                        type: richeditor
-
-
-
-# Contacts        
-        phone:
-            tab: Contacts
-            label: Telephone number
-
-
-        fax:
-            tab: Contacts
-            label: Fax
-
-        email:
-            tab: Contacts
-            label: Email
-
-
-        socials:
-            tab: Contacts
-            type: repeater
-            prompt: Add social
-            form:
-                fields:
-                    name:
-                        label: Social network name
-                        default: fab fa-
-                    url:
-                        label: Link
-
-        home_food:
-            type: mediafinder
-            label: Food icon
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        home_lifescience:
-            type: mediafinder
-            label: Life science 
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        home_foodsafety:
-            type: mediafinder
-            label: Food safety
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        home_aerospace:
-            type: mediafinder
-            label: Aerospace
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        home_intransit:
-            type: mediafinder
-            label: In-transit
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        home_produce:
-            type: mediafinder
-            label: Produce/Floral icon
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        home_meat:
-            type: mediafinder
-            label: Meat
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        home_poultry:
-            type: mediafinder
-            label: Poultry
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        home_dairy:
-            type: mediafinder
-            label: Dairy
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        home_seafood:
-            type: mediafinder
-            label: Seafood
-            span: storm
-            cssClass: col-md-4
-            tab: Pages content
-        

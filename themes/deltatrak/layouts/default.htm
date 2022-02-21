@@ -774,10 +774,11 @@ default = 0
             <!-- Header -->
             <header class="header" role="banner">
                 <div class="header-inner clearfix">
+                    {% if company.dark_logo %}
                     <a class="brand pull-left" href="{{ 'home' | page }}">
                         <img src="{{ company.dark_logo | media }}" alt="{{ company.name }}" />
                     </a>
-
+                    {% endif %}
                     <!-- <div class="header-search pull-right">
                         <div class="search mod_search226">
                             <form action="index.html%3FrCH=2.html" method="post" class="form-inline" role="search">
@@ -1172,8 +1173,11 @@ default = 0
 
 
                             <div class="uk-panel uk-panel-space uk-text-right" style="line-height: 1.6em;">
+                                {% if company.light_logo %}
                                 <img src="{{ company.light_logo | media }}" class="uk-width" style="width:120px;"
-                                    data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:120, repeat: true}"><br />
+                                    data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:120, repeat: true}">
+                                    <br />
+                                {% endif %}
                                 <p data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">
                                     {% if company.email %}
                                     <a href="mailto:{{ company.email }}"><i

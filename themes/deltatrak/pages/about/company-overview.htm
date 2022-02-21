@@ -40,9 +40,10 @@ localeTitle[az] = "Şirkət haqqında"
             <div class="item-page" itemscope itemtype="https://schema.org/Article">
                 
                 <div itemprop="articleBody" style="margin-top: 3rem">
+                    {%  if company.anniversary_pic %}
                     <div class="pull-right item-image"> <img
                             src="{{ company.anniversary_pic | media }}"> </div>
-
+                    {% endif %}
                             {% content 'company-overview' %}
                 </div>
             </div>

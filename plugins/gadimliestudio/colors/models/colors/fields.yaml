@@ -14,6 +14,11 @@ tabs:
             label: Top navbar
             tab: Layout
 
+        header_bg:
+            type: colorpicker
+            label: Header background
+            tab: Layout
+
         is_footer_gradient:
             type: switch
             label: Is footer gradient?
@@ -32,43 +37,46 @@ tabs:
         products_list_background:
             type: colorpicker
             tab: Layout
-            label: Background color for inner product list
+            label: Background color for menu product list
     
-
+        product_list_color:
+            type: colorpicker
+            tab: Layout
+            label: Color of text in menu product list
 
 
         
         main_text_color:
             type: colorpicker
-            tab: Content!!!
+            tab: Content
             label: Main text color
 
         links_color:
             type: colorpicker
-            tab: Content!!!
+            tab: Content
             label: Links color
 
         footer_links_hover:
             type: colorpicker
-            tab: Content!!!
+            tab: Content
             label: Color of footer links on hover
 
         title_on_colorful_background:
             type: colorpicker
-            label: Color of title on colorful background
-            tab: Content!!!
+            label: Color of text on colorful background
+            tab: Content
     
         button_background_color:
             type: colorpicker
-            tab: Content!!!
+            tab: Content
             label: Button background color
         button_color:
             type: colorpicker
-            tab: Content!!!
+            tab: Content
             label: Color of text in button
         icons_color:
             type: colorpicker
-            tab: Content!!!
+            tab: Content
             label: Icons color
         
 

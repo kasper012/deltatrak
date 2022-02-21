@@ -32,7 +32,7 @@ class Colors extends ComponentBase
         $colors->footer = $settings->footer;
         $colors->footer_second_color = $settings->footer_second_color;
         $colors->products_list_background = $settings->products_list_background;
-
+        $colors->product_list_color = $settings->product_list_color;
         
 
         

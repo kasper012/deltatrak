@@ -222,7 +222,7 @@ pre {
     text-shadow: none;
 }
 .readmore > a {
-    background: #00548b;
+    /* background: #00548b; */
     border: 0 none;
     border-radius: 12px 0;
     box-shadow: none;

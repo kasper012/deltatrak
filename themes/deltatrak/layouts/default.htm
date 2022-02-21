@@ -257,9 +257,16 @@ default = 0
         .nav.menu [class*="fa-"]::before {
             color: {{ colors.icons_color }};
         }
-        .mod-title-heading,.mod-title-subtitle, .footer .moduletable > h3 {
+        .mod-title-heading,.mod-title-subtitle, .footer .moduletable > h3, .moduletable .social-icons p {
                 color: {{ colors.title_on_colorful_background }} !important;
             }
+            .navigation .nav.menu > li > .nav-child > li > .nav-child > li > .nav-child a,.navigation .nav.menu > li > .nav-child > li > .nav-child > li > .nav-child a::before, .fly-out + .nav-child.unstyled.small .nav-child a {
+                color: {{ colors.product_list_color }} !important;
+            }
+        .header {
+            background-color: {{ colors.header_bg }} !important;
+        }
+
     </style>
     <script type="application/json"
         class="joomla-script-options new">{"csrf.token":"53b93d72b68c584f30abfd539bbffdb4","system.paths":{"root":"","base":""}}</script>
@@ -339,7 +346,7 @@ default = 0
                         <span class="accordeonck_outer toggler toggler_1"><span class="toggler_icon"></span><a
                                 class="mega column-2 accordeonck " href="javascript:void(0);">{{'Products'|_}}<span
                                     class="accordeonckdesc"></span></a></span>
-                        <ul class="content_1 accordeonck " style="display:none;">
+                        <ul class="content_1 accordeonck" style="display:none;">
 
                             <li id="item-343" class="accordeonck item343 parent parent level2 " data-level="2"><span
                                     class="accordeonck_outer toggler toggler_2"><span class="toggler_icon"></span><a
@@ -797,10 +804,10 @@ default = 0
                 </div>
                 <div class="nav-collapse">
                     <ul class="nav menu nav-pills mod-list">
-                        <li class="item-138 deeper parent
+                        <li class="item-138 deeper parent nav-item-product-parent
                             {% if this.page.id | slice (0,7) == 'product' %}
                                 active
-                            {% endif %}"><span class="nav-header mega column-2 row">{{'Products'|_}}</span>
+                            {% endif %}"><span class="nav-header mega column-2 row" id="nav-item-product">{{'Products'|_}}</span>
                             <ul class="nav-child unstyled small row">
                                 <li class="item-343 divider deeper parent col-12"><span class="separator  mega column one">
                                     </span>
@@ -1081,7 +1088,7 @@ default = 0
                         <a href="{{ 'about/company-overview' | page }}">{{'About'|_}}</a>
                         
                     </li>
-                    <li class="item-106"><a href="{{ 'contact-us' | page }}">{{'Contact'|_}}</a></li>
+                    <li class="item-106 {% if this.page.id == 'contact-us' %}active{% endif %}"><a href="{{ 'contact-us' | page }}">{{'Contact'|_}}</a></li>
                     </ul>
 
                 </div>
@@ -1246,6 +1253,25 @@ default = 0
                                     background: #d93175;
                                     font-size: 23px;
                                     line-height: 30px;
+                                }
+
+
+
+                                .navigation .nav.menu > li.item-138 > a:hover, .navigation .nav.menu > li.item-138 > a:focus, .navigation .nav.menu > li.item-138.active > a, .navigation .nav.menu > li.item-138 > span:hover, .navigation .nav.menu > li.item-138 > span:focus, .navigation .nav.menu > li.item-138.active > span {
+                                    box-shadow: 0 8px {{ colors.support_bg }} inset, 0 8px 20px rgb(0 0 0 / 5%) inset !important;
+                                }
+
+                                .active#nav-item-product {
+                                    box-shadow: 0 8px {{ colors.product_bg }} inset, 0 8px 20px rgb(0 0 0 / 5%) inset !important;
+                                }
+                                .nav-item-product-parent.active>#nav-item-product {
+                                    box-shadow: 0 8px {{ colors.products_bg }} inset, 0 8px 20px rgb(0 0 0 / 5%) inset !important;
+                                }
+                                #nav-item-product:hover {
+                                    box-shadow: 0 8px {{ colors.products_bg }} inset, 0 8px 20px rgb(0 0 0 / 5%) inset !important;
+                                }
+                                .navigation .nav.menu > li > .nav-child > li > .nav-child > li > .nav-child::after, .fly-out + .nav-child.unstyled.small .nav-child::after {
+                                    border-color: transparent transparent transparent {{ colors.products_list_background }} !important;
                                 }
                             </style>
                         </div>
@@ -1703,6 +1729,13 @@ default = 0
             border-radius: 2px;
             cursor: pointer;
         }
+        .readmore > a, a.button, .btn {
+            background-color: {{ colors.button_background_color }} !important;
+            color: {{ colors.button_color }} !important;
+        }
+        .readmore>a>span {
+            color: {{ colors.button_color }} !important;
+        }
     </style>
 
 
@@ -1829,10 +1862,8 @@ default = 0
         .nav.menu [class^="dt-icon-"]::before, .nav.menu [class*=" dt-icon-"]::before, .nav.menu [class^="fa-"]::before, .nav.menu [class*="fa-"]::before {
             color: {{ colors.icons_color }}
         }
-        .readmore>a, a.button, .btn {
-            background-color: {{ colors.button_background_color }} !important;
-            color: {{ colors.button_color }} !important;
-        }
+
+
 
 
     </style>

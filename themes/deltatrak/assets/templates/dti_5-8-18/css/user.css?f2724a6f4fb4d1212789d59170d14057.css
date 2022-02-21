@@ -1040,7 +1040,7 @@ ul.nav > li.deeper.parent:hover::after {
 .nav.menu [class*=" dt-icon-"]::before, 
 .nav.menu [class^="fa-"]::before, 
 .nav.menu [class*="fa-"]::before {
-    color: #00548b;
+    /* color: #00548b; */
     display: block;
     font-size: 24px;
     font-style: normal !important;

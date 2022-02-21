@@ -250,7 +250,16 @@ default = 0
             font-family: 'Montserrat', sans-serif;
         }
 
-
+        /* drop-down icons */
+        .nav.menu [class^="dt-icon-"]::before, 
+        .nav.menu [class*=" dt-icon-"]::before, 
+        .nav.menu [class^="fa-"]::before, 
+        .nav.menu [class*="fa-"]::before {
+            color: {{ colors.icons_color }};
+        }
+        .mod-title-heading,.mod-title-subtitle, .footer .moduletable > h3 {
+                color: {{ colors.title_on_colorful_background }} !important;
+            }
     </style>
     <script type="application/json"
         class="joomla-script-options new">{"csrf.token":"53b93d72b68c584f30abfd539bbffdb4","system.paths":{"root":"","base":""}}</script>
@@ -1617,9 +1626,7 @@ default = 0
             color: {{ colors.footer_links_hover }} !important;
             }
 
-            .mod-title-heading, .footer .moduletable > h3 {
-                color: {{ colors.title_on_colorful_background }} !important;
-            }
+
             @media screen and (max-width: 550px) {
                 #designstudio-button {
                     bottom: 40px !important;
@@ -1822,7 +1829,7 @@ default = 0
         .nav.menu [class^="dt-icon-"]::before, .nav.menu [class*=" dt-icon-"]::before, .nav.menu [class^="fa-"]::before, .nav.menu [class*="fa-"]::before {
             color: {{ colors.icons_color }}
         }
-        .readmore>a, a.button {
+        .readmore>a, a.button, .btn {
             background-color: {{ colors.button_background_color }} !important;
             color: {{ colors.button_color }} !important;
         }
